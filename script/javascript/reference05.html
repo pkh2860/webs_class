@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -106,6 +106,27 @@
             padding: 3 10px 0 10px;
             font-size: 24px;
         }
+        .sample1 {
+            border-radius: 5px;
+        }
+
+        .sample1 h3 {
+            background: #f2f2f2;
+            font-size: 16px;
+            padding: 20px 20px 15px 20px;
+            border-radius: 5px 5px 0 0;
+            border: 1px solid #e6e6e6;
+        }
+
+        .sample1 pre {
+            margin: 0 !important;
+            border-radius: 0 0 5px 5px !important;
+        }
+
+        div li {
+            border: 1px solid black;
+            
+        }
     </style>
 
     <link rel="stylesheet" href="../assests/css/prism.css">
@@ -113,61 +134,69 @@
 </head>
 
 <body>
-    <h1>변수란?</h1>
-    <p>변수(variables)는 변하는 데이터(값)를 저장할 수 있는 메모리 공간입니다. 데이터를 담을 수 있는 그릇이라 할 수 있죠. 변수에는 데이터가 오직 한 개만 저장됩니다.그러다 보니 새로운 데이터가
-        들어오면 기존에 있던 데이터는 메모리 공간에서 지워지게 됩니다.<br>변수에 저장할 수 있는 데이터의 종류로는 문자형(String),숫자형(Number),논리형(Boolean)그리고
-        빈(Null)데이터가 있습니다.</p>
+    <h1>객체</h1>
+    <p>자바스크립트는 객체 기반 프로그래밍 언어입니다. 객체를 구성하는 요소로는 속성(Property)과 기능(Method)이 있습니다<br>
+        예를 들어 휴대폰은 색상과 크기 등의 속성이 있고, 전화 걸기와 문자 보내기 등의 기능이 있습니다.<br>
+        이렇듯 자바스크립트에는 다양한 객체가 내장되어 있고 객체를 생성할 수도 있습니다.<br>
+        이 장에서는 객체의 개념과 객체의 종류 그리고 객체에 해당하는 메서드와 그 속성에 대해서 알아보겠습니다.</p>
 
-    <h2>변수 선언</h2>
-    <p>변수를 선언할 때는 다음 기본형과 같이 var 키워드를 변수명 앞에 붙입니다. 변수명에는 한글을 사용할 수 없으며,영문과 숫자 그리고 일부 특수문자(_,$)만 포함할 수 있습니다. 변수명은 의미에 맞게
-        만드는 것이 좋습니다. 가령, 수학 시험 점수를 저장하는 변수라면 'mathNum'이라고 이름 지으면 되겠죠.
-        이때 변수명은 단어와 단어의 조합으로 지었고, 두 번째 단어의 첫 글자는 대문자로 표기했습니다. 이는 마치 낙타의 등과 같다고 해서 낙타(Camle)표기법이라 부릅니다. <br>기본형 : var
-        변수명; 또는 var 변수명=값;</p>
+    <h2>객체란?</h2>
+    <p>자바스크립트는 객체(Object) 기반 언어입니다. 객체는 기능과 속성을 가지고 있습니다. 가령, TV에는 <br>
+        켜다,끄다,음을 소거하다,볼륨을 높이다,볼륨을 낮추다 등의 기능이 있습니다 이렇듯 TV라는 객체에는
+        <br>다양한 기능이 있습니다. 이러한 주변의 모든 사물들을 객체라고 합니다</p>
+
+    <hr>
+
+    <p>자바스크립트 역시 다양한 객체가 있습니다. 우리는 앞에서 도큐먼트라는 객체를 사용해 보았고,<br>
+        그 객체에 해당하는 출력 기능도 사용해 보았습니다. <br>자바스크립트에서는 이런 기능들을 메서드(Method)라고 합니다. <br>또한 객체는 속성(property)을 가지고 잇습니다 <br>
+        TV를 예로 들면 TV의 크기나 색상 그리고 무게 등을속성이라고 할 수 있죠.</p>
+
+    <hr>
+
+    <p>자바스크립트 객체의 메서드와 속성을 사용하는 기본형은 다음과 같습니다.</p>
 
     <div id="sample1" class="sample">
         <div class="code">
-            <pre class="line-numbers"><code class="language-js">
-    var 변수명; 또는 var 변수명=값;
+            <pre class="line-numbers"><code class="language-js">기본형:
+    1. 객체.메서드();
+    2.객체.속성; 또는 3. 객체.속성=값;
+
+    //1.객체의 메서드를 실행합니다
+    //2.객체의 속성값을 가져옵니다
+    //3.객체의 속성값을 바꿉니다
 </code></pre>
         </div>
     </div>
 
     <hr>
 
-    <p>변수를 선언하면 변수명으로 데이터를 저장할 수 있는 공간이 생성됩니다. 다음은 box라는 이름을 가진 변수에
-        100이라는 값을 대입한 예제입니다. 초기에는 값이 등록되지 않은 상태(undefined)입니다.box에 100을 대입하면 다음 그림과 같이 변수에 100이 저장됩니다 <br>
+    <p>TV를 예로 들어 메서드와 속성의 사용 방법에 대해 살펴보겠습니다. <br>
+        만일 자바스크립트에서 TV의 기능(메서드)은 다음과 같이 사용해야 합니다.</p>
 
-        <div id="sample1" class="sample">
-            <div class="code">
-                <pre class="line-numbers"><code class="language-js">
-    var box;
-    box=100;
-</code></pre>
-            </div>
-        </div>
-
-        <hr>
-
-        변수에는 하나의 값만 넣을 수 있습니다.
-        만약 box에 값을 두 번 넣으면 어떻게 될까요?<br>다음과 같이 변수box에 새로운 데이터 30이 저장되면 기존에 저장되어 있던 데이터 100은 삭제되고 새로운 데이터 30이 저장됩니다.
-    </p>
-
-    <div id="sample1" class="sample">
-        <div class="code">
-            <pre class="line-numbers"><code class="language-js">
-    05:  &lt;script&gt;
-    06:   var box;
-    07:      box = 100;
-    08:      box = 30;
-    09:      document.write(box); //30
-    10:  &lt;script&gt;
-</code></pre>
-        </div>
+    <div>
+        <li>
+            TV.켜다( ); 또는 TV.끄다( );
+        </li>
     </div>
-    <p>위에서 작성한 문서를 저장한 후 브라우저<br>에서
-        확인하면 변수 box에 마지막으로 저장된 데이터 30이 출력됩니다.</p>
+     
+    <hr>
 
+    <p>다음 메서드를 잘못 사용한 경우입니다.'앞으로 전진해'라는 메서드는 자동차에나 있을 법한 <br>
+        기능이겠죠</p>
 
+        <div>
+            <li>TV.앞으로 전진해( );         (X)</li>
+            <li>자동차.앞으로 전진해( );         (O)</li>
+        </div>
+
+         <hr>
+
+        <p>또한 자바스크립트에서 TV의 너비와 색상,속성 정보를 알고 싶다면 다음과 같이 적용할 수 있습니다.</p>
+
+        <div>
+            <li>TV.width; (tv의 너비) 또는 TV.color; (tv의 색상)// TV의 속성값을 가져옵니다.</li>
+            <li>TV.color=black; //TV의 속성값을 바꿉니다.</li>
+        </div>
     <script src="../assests/js/prism.js"></script>
 </body>
 
