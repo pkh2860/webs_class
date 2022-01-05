@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Eros Romano';
+    src: url('https://imjihyeon00.github.io/portfolio/assets/font/ErosRomanoRegular.eot');
+    src: url('https://imjihyeon00.github.io/portfolio/assets/font/ErosRomanoRegular.eot?#iefix') format('embedded-opentype'),
+        url('https://imjihyeon00.github.io/portfolio/assets/font/ErosRomanoRegular.woff2') format('woff2'),
+        url('https://imjihyeon00.github.io/portfolio/assets/font/ErosRomanoRegular.woff') format('woff'),
+        url('https://imjihyeon00.github.io/portfolio/assets/font/ErosRomanoRegular.svg#ErosRomanoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+body {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+    background: red;
+}
+
+.smooth-scroll {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    will-change: transform;
+    overflow: hidden;
+}
+
+/* layout */
+#contents {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600vw;
+}
+
+#contents>section {
+    width: 100vw;
+    height: 100vh;
+}
+
+#section1 {
+    background: #999;
+}
+
+#section2 {
+    background: #888;
+}
+
+#section3 {
+    background: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section4 {
+    background: #666;
+}
+
+#section5 {
+    background: #555;
+}
+
+#section6 {
+    background: #444;
+}
+
+/* sec3 */
+.sec3 {}
+
+.sec3 h3 {
+    font-size: 8vw;
+    color: #000;
+    font-family: 'Eros Romano';
+    background: #DFD3C3;
+    line-height: 3.4vw;
+    padding-bottom: .8vw;
+    overflow: hidden;
+    margin-bottom: 10vh;
+}
+
+.sec3 li a {
+    color: #DFD3C3;
+}
