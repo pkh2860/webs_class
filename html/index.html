@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Reference</title>
+    <style>
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 500;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'GmarketSans';
+        }
+
+        body {
+            background: #f5f5f5;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid #000;
+        }
+
+        #header h1 {
+            font-weight: 500;
+            padding: 20px 10px 10px 20px;
+        }
+
+        #header strong {
+            font-weight: 300;
+            padding: 10px 20px 10px 10px;
+        }
+
+        #contents {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #contents h2 {
+            font-size: 80px;
+            text-align: center;
+            padding: 5% 5% 5% 5%;
+        }
+
+        #contents h2 em {
+            font-style: normal;
+            /*글씨 기울어진거 고치기*/
+            color: #00db72;
+        }
+
+        #contents .refer {
+            /*id 선택 = #   class 선택 = .  */
+            background: #fff;
+            padding: 60px;
+            border: 1px solid #000;
+        }
+
+        #contents .refer table {
+            /*테이블 디자인*/
+            width: 100%;
+            border: 1px solid #aaa;
+            border-collapse: collapse;  /*테이블 붙히기*/
+        }
+
+        #contents .refer table caption {
+            text-indent: -9999px;
+        }
+
+        #contents .refer table th {
+            border: 1px solid #aaa;
+            padding: 15px;
+            background: #f5f5f5;
+            font-weight: 500;
+        }
+
+        #contents .refer table td {
+            border: 1px solid #aaa;
+            padding: 15px;
+            font-weight: 300;
+        }
+        #contents .refer table tbody tr:hover {  /*마우스 올렸을때 색상 나오게*/
+            background: #00db72;
+            color: #fff;
+            cursor: grab;   /*마우스 커서 바꾸기*/
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1>라인 중학교 1학년 코딩반</h1>
+        <strong>박근혁</strong>
+    </header>
+
+    <main id="contents">
+        <h2>HTML <em>레퍼런스 북</em></h2>
+        <section class="refer">
+            <table>
+                <thead>
+                    <caption>HTML 레퍼런스 속성과 설명을 나타내는 표입니다.</caption>
+                    <colgroup>
+                        <col style="width: 30%"/>
+                        <col style="width: 70%"/>
+                    </colgroup>
+                    <tr>
+                        <th>속성</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;a&gt;</td>
+                        <td>&lt;a&gt; 태그는 다른 페이지 이동을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;abbr&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;acronym&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;address&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;applet&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;area&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;article&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;aside&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;audio&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;b&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;base&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;basefont&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;bdi&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;bdo&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;big&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;blockquote&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;blink&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;body&gt;</td>
+                        <td>&lt;body&gt; 태그는 문서 본문에 해당하는 콘텐츠를 포함하는 영역입니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;br&gt;</td>
+                        <td>&lt;br&gt; 태그는 텍스트를 줄 바꿈할때 쓰는 태그입니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;button&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;canvas&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;caption&gt;</td>
+                        <td>&lt;caption&gt; 태그는 table 요소의 제목을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;center&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;cite&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;code&gt;</td>
+                        <td>&lt;code&gt; 태그는 코드를 나타내는 텍스트를 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;col&gt;</td>
+                        <td>&lt;col&gt; 태그는 &lt;colgroup&gt; 요소에 속하는 갈 열의 속성을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;colgroup&gt;</td>
+                        <td>&lt;colgroup&gt; 태그는 표의 열을 묶는 그룹을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;data&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;datalist&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;dd&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;del&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;details&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;dfn&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;dialog&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;dir&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;div&gt;</td>
+                        <td>&lt;div&gt; 태그는 문서의 영역을 나누거나 그룹화 할 때 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;dl&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;dt&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;em&gt;</td>
+                        <td>&lt;em&gt; 태그는 텍스트를 강조할 때 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;embed&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;fieldset&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;figcaption&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;figure&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;font&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;footer&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;form&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;frame&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;frameset&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;h1&gt; ~ &lt;h6&gt;</td>
+                        <td>&lt;h1&gt; ~ &lt;h6&gt; 태그는 섹션의 제목을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;head&gt;</td>
+                        <td>&lt;head&gt; 태그는 제목과 스크립트, 스타일 시트, 메타 정보 등을 제공하는 영역입니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;header&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;hgroup&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;hr&gt;</td>
+                        <td>&lt;hr&gt; 태그는 요소간의 주제별 구분을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;html&gt;</td>
+                        <td>&lt;html&gt; 태그는 웹 문서의 최상위 요소 문서의 루트를 나타냅니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;i&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;iframe&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;img&gt;</td>
+                        <td>&lt;img&gt; 태그는 웹 문서에서 이미지를 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;ins&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;kbd&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;keygen&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;label&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;legend&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;li&gt;</td>
+                        <td>&lt;li&gt; 태그는 목록의 항목을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;link&gt;</td>
+                        <td>&lt;link&gt; 태그는 외부 파일을 연결할 때 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;main&gt;</td>
+                        <td>&lt;main&gt; 태그는 웹 문서의 주요 콘텐츠 영역을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;map&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;mark&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;marquee&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;menu&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;menuitem&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;meta&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;meter&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;nav&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;noframes&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;noscript&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;object&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;ol&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;optgroup&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;option&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;output&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;p&gt;</td>
+                        <td>&lt;p&gt; 태그는 단락을 나타낼 때 설정합니다..</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;param&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;picture&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;pre&gt;</td>
+                        <td>&lt;pre&gt; 태그는 HTML에 작성한 내용을 그대로 표현합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;pregress&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;q&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;rp&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;rt&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;rtc&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;ruby&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;s&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;samp&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;script&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;section&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;select&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;small&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;source&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;span&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;strike&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;strong&gt;</td>
+                        <td>&lt;strong&gt; 태그는 텍스트의 중요성을 강조할 때 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;style&gt;</td>
+                        <td>&lt;style&gt; 태그는 웹 문서에 스타일 정보를 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;sub&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;summary&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;sup&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;svg&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;table&gt;</td>
+                        <td>&lt;table&gt; 태그는 표를 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;tbody&gt;</td>
+                        <td>&lt;tbody&gt; 태그는 표의 본문 영역을 그룹화합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;td&gt;</td>
+                        <td>&lt;td&gt; 태그는 표의 열(셀)을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;template&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;textarea&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;tfoot&gt;</td>
+                        <td>&lt;tfoot&gt; 태그는 표의 푸터 영역을 그룹화합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;th&gt;</td>
+                        <td>&lt;th&gt; 태그는 행이나 열에 타이틀을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;thead&gt;</td>
+                        <td>&lt;thead&gt; 태그는 표의 헤더 영역을 그룹화합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;time&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;title&gt;</td>
+                        <td>&lt;title&gt; 태그는 브라우저의 제목 또는 탭에 표시되는 문서의 제목을 설정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;tt&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;u&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;ul&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;var&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;video&gt;</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>&lt;wbr&gt;</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+
+</html>
