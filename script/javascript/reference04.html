@@ -107,9 +107,18 @@
             font-size: 24px;
         }
 
-        .table1 {
-            border-spacing: 0;
+        .table {
+            width: 100%;
+            border: 1px solid black;
             border-collapse: collapse;
+        }
+
+        .table tr {
+            border: 1px solid black;
+        }
+
+        .table td {
+            border: 1px solid black;
         }
     </style>
 
@@ -134,14 +143,15 @@
         자바스크립트 커뮤니티에서는 몇 가지 비공식적인 표준을 가지고 있다.<br>
         그 중 하나가 낙타표기법(CamelCase)이다</p>
 
-    <hr>
+    <br>
 
     <p>낙타표기법이란 식별자 이름이 한 단어 이상으로 구성될 경우,<br>
         대소문자를 혼합하여 사용하는 방법이다.</p>
 
-    <hr>
+     <br>
+     
     <div>
-        <table border="1px">
+        <table class=table>
             <tr>
                 <td>num_cake_donuts</td>
                 <td>변수 식별자 이름에 _ 를 사용해서 열러 개의 단어를 분리하는 방법</td>
@@ -157,6 +167,8 @@
         </table>
     </div>
 
+    <br>
+
     <p>변수는 보통 소문자 낙타표기법을 사용하는데 이것은 첫 번째 단어는 모두 소문자이지만<br>
     나머지 단어들은 대문자를 혼합하는 표기법이다</p>
 
@@ -166,13 +178,11 @@
     <p>키워드란 자바 스크립트가 처음 만들어질 때 정해진, 특별한 의미가 있는 단어이다.<br>
     모든 브라우저에서 아래와 같은 키워드들을 지원하며,이 키워드들은 식별자로 정의할 수 없다.</p>
 
-    <br>
-
-    <h3>키워드의 규칙</h3>
-    <p>자바스크립트 키워드는 예약어로서, 변수명으로 사용할 수 없다.</p>
+    <hr>
 
     <div>
-        <table border="1px">
+        <h3>키워드의 종류</h3>
+        <table class=table>
             <tr>
                 <td>break</td>
                 <td>loop문이나 switch문을 종료하기 위해 사용.</td>
@@ -215,6 +225,11 @@
             </tr>
         </table>
     </div>
+
+    <hr>
+
+    <h3>키워드의 규칙</h3>
+    <p>자바스크립트 키워드는 예약어로서, 변수명으로 사용할 수 없다.</p>
 
 
     <script src="../assests/js/prism.js"></script>

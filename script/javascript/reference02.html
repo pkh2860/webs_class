@@ -135,6 +135,7 @@
 
     <p>선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 된다.<br>&lt;script&gt;라는 태그로선언문이 시작된 곳부터 &lt;/script&gt;라는 태그로 종료된 곳까지를 스크립트 영역이라고 부릅니다.
     </p>
+    <br>
     <div id="sample1" class="sample">
         <div class="code">
             <pre class="line-numbers"><code class="language-js">기본형:
@@ -144,10 +145,13 @@
             </code></pre>
         </div>
     </div>
+    <br>
     <p>선언문은 &lt;head&gt;태그 영역 또는 &lt;body&gt;태그 영역에 선언하면 됩니다. 우리나라 개발자의 대부분은 <br> &lt;head&gt;태그 영역에 선언하고 있습니다. 우리도 &lt;head&gt; 태그 영역에 선언하겠습니다. </p>
 
     <hr>
     <p>다음은 선언문을 작성하는 예제입니다. 비주얼 스튜디오 코드를 실행한 후 다음 예제를 보면서 문서를 작성해보세요</p>
+    <br>
+
     <div id="sample1" class="sample">
         <div class="code">
             <pre class="line-numbers"><code class="language-js">
@@ -166,9 +170,8 @@
 </code></pre>
         </div>
     </div>
-    <q>
-        7행 document는 문서 객체이며 문서 출력 메서드인 write( )를 이용하여 <br>데이터를 문서에 출력할때 사용합니다
-    </q>
+    <br>
+    <q>7행 document는 문서 객체이며 문서 출력 메서드인 write( )를 이용하여 <br>데이터를 문서에 출력할때 사용합니다</q>
 
     <hr>
 
@@ -194,10 +197,13 @@
     <hr>
 
     <h2>내부 스크립트 외부로 분리하기</h2>
-    <p>앞의 예제 [statement_c.html]에서 HTML 내부에 작성된 자바스크립트는 마지막에는 외부로 분리하는 작업을 해야 합니다.<br>
+
+    <br>
+
+    <p>HTML 내부에 작성된 자바스크립트는 마지막에는 외부로 분리하는 작업을 해야 합니다.<br>
     그렇게 하면 자바스크립트 소스 찾기도 쉬울 뿐만 아니라 누군가가 소스를 손상시킬 염려도 없습니다.<br>
     즉 외부로 분리하는 주된 목적은 프로젝트 관리를 원활하게 하기 위함입니다. <br>다음은 외부 자바스크립트 연동 코드로 파일을 연결하는 기본형입니다.</p>
-        
+        <br>
     <div id="sample1" class="sample">
         <div class="code">
             <pre class="line-numbers"><code class="language-js">
@@ -205,27 +211,36 @@
 </code></pre>
         </div>
     </div>
+
+    <br>
+
     <p>내부 스크립트를 외부로 분리하려면 따로 파일을 만들어서 저장해야 합니다.<br>즉 HTML 파일과 JS(자바스크립트)파일을 분리하여<br>
         HTML 내에서 JS(자바스크립트)파일을 연동하면 됩니다. </p>
 
         <hr>
 
-        <h3>내부 스크립트 분리하기</h3>
+        <h2>내부 스크립트 분리하기</h2>
+        <br>
         <p>1. JS파일 만들기 = 비주얼 스튜디오 코드에서 빈 문서 열고 다음과 같이 코드를 작성하기</p>
+        <br>
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">
+                <pre class="line-numbers"><code class="language-js">파일이름:js/example.js
     document.write("환영합니다");
     </code></pre>
             </div>
         </div>
-        <hr>
+
+        <br>
+
         <p>2. [import_test.html] 파일을 열어 앞에서 작성한 [example.js]를 연동해 보겠습니다.<br>
         다음과 같이 코드를 작성합니다. 만약 연동이 잘 되지 않으면 src 값에 파일의 전체 경로를 넣어보세요</p>
 
+        <br>
+
         <div id="sample1" class="sample">
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">
+                <pre class="line-numbers"><code class="language-js">파일이름:import_test.html
     01: &lt;!DOCTYPE html&gt;
     02: &lt;html lang="ko"&gt;
     03: &lt;head&gt;
@@ -239,6 +254,9 @@
     </code></pre>
             </div>
         </div>
+
+        <br>
+
         <p>내부 스크립트가 분리되었습니다. 이렇게 분리하면 소스를 분석할 때 찾기 쉬울 뿐 아니라 <br>다른 개발자가 잘못하여 소스를 손상시킬 일도 없겠죠.</p>
 
         <hr>
