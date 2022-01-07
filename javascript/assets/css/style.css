@@ -38,7 +38,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: NexonLv1Gothic;
+    font-family: "NexonLv1Gothic";
 }
 
 li {
@@ -130,7 +130,7 @@ a {
     border: 1px solid #E6E6E6;
     font-weight: 500;
 }
-.script .sample h3 .code pre{
+.script .sample .code pre{
     margin: 0 !important;
     border-radius: 0 0 5px 5px;
 }
