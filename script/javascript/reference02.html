@@ -5,139 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 300;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
-            font-display: swap;
-        }
+    <title>기초문법</title>
 
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 400;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 700;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        * {
-            margin: 0%;
-            padding: 0%;
-            font-family: 'NexonLv1Gothic';
-            line-height: 1.6;
-        }
-
-        body {
-            padding: 5%;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        hr {
-            margin: 5% 0;
-            border-style: dashed;
-            border-color: #e6e6e6;
-            border-width: 0px;
-            border-bottom-width: 1px;
-        }
-
-        h1 {
-            padding-bottom: 20px;
-            font-size: 50px;
-        }
-
-        .list1 li {
-            display: inline;
-        }
-
-        .list1 li a {
-            border: 1px solid #333;
-            padding: 8px 30px 5px 30px;
-            border-radius: 40px;
-            display: inline-block;
-            margin-bottom: 10px;
-
-        }
-
-        .refer {
-            background: #000;
-            color: #fff;
-            padding: 2px 10px 0 8px;
-            border-radius: 30px;
-        }
-
-        h2 {
-            margin-top: 30px;
-            background-color: #000;
-            color: #fff;
-            display: inline-block;
-            margin-bottom: 10px;
-            font-weight: 400;
-            padding: 3 10px 0 10px;
-            font-size: 24px;
-        }
-        .sample1 {
-            border-radius: 5px;
-        }
-
-        .sample1 h3 {
-            background: #f2f2f2;
-            font-size: 16px;
-            padding: 20px 20px 15px 20px;
-            border-radius: 5px 5px 0 0;
-            border: 1px solid #e6e6e6;
-        }
-
-        .sample1 pre {
-            margin: 0 !important;
-            border-radius: 0 0 5px 5px !important;
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="../assests/css/style.css">
     <link rel="stylesheet" href="../assests/css/prism.css">
 
 </head>
 
 <body>
-    <h1>자바스크립트 기초 문법</h1>
+    <div class="arrangement">
+    <h1>기초문법</h1>
+
+    <hr>
+
     <h2>자바스크립트 선언문</h2>
 
     <p>선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 된다.<br>&lt;script&gt;라는 태그로선언문이 시작된 곳부터 &lt;/script&gt;라는 태그로 종료된 곳까지를 스크립트 영역이라고 부릅니다.
     </p>
     <br>
     <div id="sample1" class="sample">
-        <div class="code">
+        <div class="line">
             <pre class="line-numbers"><code class="language-js">기본형:
 &lt;script&gt;
     자바스크립트 코드;
@@ -145,15 +32,19 @@
             </code></pre>
         </div>
     </div>
+
     <br>
+
     <p>선언문은 &lt;head&gt;태그 영역 또는 &lt;body&gt;태그 영역에 선언하면 됩니다. 우리나라 개발자의 대부분은 <br> &lt;head&gt;태그 영역에 선언하고 있습니다. 우리도 &lt;head&gt; 태그 영역에 선언하겠습니다. </p>
 
     <hr>
+
     <p>다음은 선언문을 작성하는 예제입니다. 비주얼 스튜디오 코드를 실행한 후 다음 예제를 보면서 문서를 작성해보세요</p>
+
     <br>
 
     <div id="sample1" class="sample">
-        <div class="code">
+        <div class="line">
             <pre class="line-numbers"><code class="language-js">
     01: &lt;!DOCTYPE html&gt;
     02: &lt;html lang="ko"&gt;
@@ -170,17 +61,24 @@
 </code></pre>
         </div>
     </div>
+
     <br>
+
     <q>7행 document는 문서 객체이며 문서 출력 메서드인 write( )를 이용하여 <br>데이터를 문서에 출력할때 사용합니다</q>
 
     <hr>
 
     <h2>자바스크립트 주석 처리</h2>
+
+    <br>
+
     <p>자바스크립트 선언문 안에서 코드가 아닌 설명글을 넣고 싶을 때는 주석 처리를 하면 됩니다.<br>
     이때 한 줄 주석일 경우에는 '//한줄 설명글'로 작성하고, 여러 줄 주석일 경우에는 '/* 여러줄 설명글*/'로 작성하면 됩니다.</p>
+
+    <br>
     
     <div id="sample1" class="sample">
-        <div class="code">
+        <div class="line">
             <pre class="line-numbers"><code class="language-js">
     //한 줄 설명글인 경우
 
@@ -205,7 +103,7 @@
     즉 외부로 분리하는 주된 목적은 프로젝트 관리를 원활하게 하기 위함입니다. <br>다음은 외부 자바스크립트 연동 코드로 파일을 연결하는 기본형입니다.</p>
         <br>
     <div id="sample1" class="sample">
-        <div class="code">
+        <div class="line">
             <pre class="line-numbers"><code class="language-js">
     &lt;script src="JS" 파일경로&gt;&lt;/script&gt;
 </code></pre>
@@ -224,7 +122,7 @@
         <p>1. JS파일 만들기 = 비주얼 스튜디오 코드에서 빈 문서 열고 다음과 같이 코드를 작성하기</p>
         <br>
         <div id="sample1" class="sample">
-            <div class="code">
+            <div class="line">
                 <pre class="line-numbers"><code class="language-js">파일이름:js/example.js
     document.write("환영합니다");
     </code></pre>
@@ -239,7 +137,7 @@
         <br>
 
         <div id="sample1" class="sample">
-            <div class="code">
+            <div class="line">
                 <pre class="line-numbers"><code class="language-js">파일이름:import_test.html
     01: &lt;!DOCTYPE html&gt;
     02: &lt;html lang="ko"&gt;
@@ -258,7 +156,7 @@
         <br>
 
         <p>내부 스크립트가 분리되었습니다. 이렇게 분리하면 소스를 분석할 때 찾기 쉬울 뿐 아니라 <br>다른 개발자가 잘못하여 소스를 손상시킬 일도 없겠죠.</p>
-
+    </div>
         <hr>
     <script src="../assests/js/prism.js"></script>
 

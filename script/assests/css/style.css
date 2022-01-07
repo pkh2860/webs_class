@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'NexonLv1Gothic';
+    line-height: 1.6;
+}
+
+body {
+    padding: 5%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+hr {
+    margin: 5% 0;
+    border-style: dashed;
+    border-color: #e6e6e6;
+    border-width: 0px;
+    border-bottom-width: 1px;
+}
+
+h1 {
+    padding-bottom: 20px;
+    font-size: 50px;
+}
+
+.list1 li {
+    display: inline;
+}
+
+.list1 li a {
+    border: 1px solid #333;
+    padding: 8px 30px 5px 30px;
+    border-radius: 40px;
+    display: inline-block;
+    margin-bottom: 10px;
+
+}
+
+.refer {
+    background: #000;
+    color: #fff;
+    padding: 2px 10px 0 8px;
+    border-radius: 30px;
+}
+
+h2 {
+    margin-top: 30px;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 400;
+    padding: 3 10px 0 10px;
+    font-size: 24px;
+}
+
+.sample {
+    border-radius: 5px;
+}
+
+.sample h3 {
+    background: #f2f2f2;
+    font-size: 16px;
+    padding: 20px 20px 15px 20px;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #e6e6e6;
+}
+
+.sample pre {
+    margin: 0 !important;
+    border-radius: 0 0 5px 5px !important;
+}
+
+/* 정리 페이지 css */
+.arrangement h1{
+    font-size: 50px;
+}
+.arrangement h2{
+    font-size: 24px;
+    display: block;
+}
+.arrangement .line{
+    border: 1px solid #000;
+    padding: 20px;
+}
+
+.arrangement h3{
+    font-size: 36px;
+}
+.arrangement h4{
+    font-size: 30px;
+}
+.arrangement h5{
+    font-size: 28px;
+}
+.arrangement h6{
+    font-size: 24px;
+}

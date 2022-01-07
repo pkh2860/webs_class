@@ -5,158 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 300;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
-            font-display: swap;
-        }
+    <title>변수</title>
 
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 400;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
-            font-display: swap;
-        }
 
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 700;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        * {
-            margin: 0%;
-            padding: 0%;
-            font-family: 'NexonLv1Gothic';
-            line-height: 1.6;
-        }
-
-        body {
-            padding: 5%;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        hr {
-            margin: 5% 0;
-            border-style: dashed;
-            border-color: #e6e6e6;
-            border-width: 0px;
-            border-bottom-width: 1px;
-        }
-
-        h1 {
-            padding-bottom: 20px;
-            font-size: 50px;
-        }
-
-        .list1 li {
-            display: inline;
-        }
-
-        .list1 li a {
-            border: 1px solid #333;
-            padding: 8px 30px 5px 30px;
-            border-radius: 40px;
-            display: inline-block;
-            margin-bottom: 10px;
-
-        }
-
-        .refer {
-            background: #000;
-            color: #fff;
-            padding: 2px 10px 0 8px;
-            border-radius: 30px;
-        }
-
-        h2 {
-            margin-top: 30px;
-            background-color: #000;
-            color: #fff;
-            display: inline-block;
-            margin-bottom: 10px;
-            font-weight: 400;
-            padding: 3 10px 0 10px;
-            font-size: 24px;
-        }
-    </style>
-
+    <link rel="stylesheet" href="../assests/css/style.css">
     <link rel="stylesheet" href="../assests/css/prism.css">
 
 </head>
 
 <body>
-    <h1>변수란?</h1>
-    <p>변수(variables)는 변하는 데이터(값)를 저장할 수 있는 메모리 공간입니다. 데이터를 담을 수 있는 그릇이라 할 수 있죠. 변수에는 데이터가 오직 한 개만 저장됩니다.그러다 보니 새로운 데이터가
-        들어오면 기존에 있던 데이터는 메모리 공간에서 지워지게 됩니다.<br>변수에 저장할 수 있는 데이터의 종류로는 문자형(String),숫자형(Number),논리형(Boolean)그리고
-        빈(Null)데이터가 있습니다.</p>
+    <div class="arrangement">
+        <h1>변수란?</h1>
+        <p>변수(variables)는 변하는 데이터(값)를 저장할 수 있는 메모리 공간입니다. 데이터를 담을 수 있는 그릇이라 할 수 있죠. 변수에는 데이터가 오직 한 개만 저장됩니다.그러다 보니 새로운
+            데이터가
+            들어오면 기존에 있던 데이터는 메모리 공간에서 지워지게 됩니다.<br>변수에 저장할 수 있는 데이터의 종류로는 문자형(String),숫자형(Number),논리형(Boolean)그리고
+            빈(Null)데이터가 있습니다.</p>
 
         <hr>
 
-    <h2>변수 선언</h2>
-    <p>변수를 선언할 때는 다음 기본형과 같이 var 키워드를 변수명 앞에 붙입니다. 변수명에는 한글을 사용할 수 없으며,영문과 숫자 그리고 일부 특수문자(_,$)만 포함할 수 있습니다. 변수명은 의미에 맞게
-        만드는 것이 좋습니다. 가령, 수학 시험 점수를 저장하는 변수라면 'mathNum'이라고 이름 지으면 되겠죠.
-        이때 변수명은 단어와 단어의 조합으로 지었고, 두 번째 단어의 첫 글자는 대문자로 표기했습니다. 이는 마치 낙타의 등과 같다고 해서 낙타(Camle)표기법이라 부릅니다. <br>기본형 : var
-        변수명; 또는 var 변수명=값;</p>
+        <h2>변수 선언</h2>
+        <p>변수를 선언할 때는 다음 기본형과 같이 var 키워드를 변수명 앞에 붙입니다. 변수명에는 한글을 사용할 수 없으며,영문과 숫자 그리고 일부 특수문자(_,$)만 포함할 수 있습니다. 변수명은 의미에
+            맞게
+            만드는 것이 좋습니다. 가령, 수학 시험 점수를 저장하는 변수라면 'mathNum'이라고 이름 지으면 되겠죠.
+            이때 변수명은 단어와 단어의 조합으로 지었고, 두 번째 단어의 첫 글자는 대문자로 표기했습니다. 이는 마치 낙타의 등과 같다고 해서 낙타(Camle)표기법이라 부릅니다. <br>기본형 : var
+            변수명; 또는 var 변수명=값;</p>
 
-    <div id="sample1" class="sample">
-        <div class="code">
-            <pre class="line-numbers"><code class="language-js">
-    var 변수명; 또는 var 변수명=값;
-</code></pre>
-        </div>
-    </div>
-
-    <hr>
-
-    <p>변수를 선언하면 변수명으로 데이터를 저장할 수 있는 공간이 생성됩니다. 다음은 box라는 이름을 가진 변수에
-        100이라는 값을 대입한 예제입니다. 초기에는 값이 등록되지 않은 상태(undefined)입니다.box에 100을 대입하면 다음 그림과 같이 변수에 100이 저장됩니다 <br>
-        <br>
         <div id="sample1" class="sample">
-            <div class="code">
+            <div class="line">
                 <pre class="line-numbers"><code class="language-js">
-    var box;
-    box=100;
+    var 변수명; 또는 var 변수명=값;
 </code></pre>
             </div>
         </div>
 
         <hr>
 
-        변수에는 하나의 값만 넣을 수 있습니다.
-        만약 box에 값을 두 번 넣으면 어떻게 될까요?<br>다음과 같이 변수box에 새로운 데이터 30이 저장되면 기존에 저장되어 있던 데이터 100은 삭제되고 새로운 데이터 30이 저장됩니다.
-    </p>
-    <br>
-    <div id="sample1" class="sample">
-        <div class="code">
-            <pre class="line-numbers"><code class="language-js">
+        <p>변수를 선언하면 변수명으로 데이터를 저장할 수 있는 공간이 생성됩니다. 다음은 box라는 이름을 가진 변수에
+            100이라는 값을 대입한 예제입니다. 초기에는 값이 등록되지 않은 상태(undefined)입니다.box에 100을 대입하면 다음 그림과 같이 변수에 100이 저장됩니다 <br>
+            <br>
+            <div id="sample1" class="sample">
+                <div class="line">
+                    <pre class="line-numbers"><code class="language-js">
+    var box;
+    box=100;
+</code></pre>
+                </div>
+            </div>
+
+            <hr>
+
+            변수에는 하나의 값만 넣을 수 있습니다.
+            만약 box에 값을 두 번 넣으면 어떻게 될까요?<br>다음과 같이 변수box에 새로운 데이터 30이 저장되면 기존에 저장되어 있던 데이터 100은 삭제되고 새로운 데이터 30이 저장됩니다.
+        </p>
+        <br>
+        <div id="sample1" class="sample">
+            <div class="line">
+                <pre class="line-numbers"><code class="language-js">
     05:  &lt;script&gt;
     06:   var box;
     07:      box = 100;
@@ -164,12 +68,12 @@
     09:      document.write(box); //30
     10:  &lt;script&gt;
 </code></pre>
+            </div>
         </div>
+        <br>
+        <p>위에서 작성한 문서를 저장한 후 브라우저<br>에서
+            확인하면 변수 box에 마지막으로 저장된 데이터 30이 출력됩니다.</p>
     </div>
-    <br>
-    <p>위에서 작성한 문서를 저장한 후 브라우저<br>에서
-        확인하면 변수 box에 마지막으로 저장된 데이터 30이 출력됩니다.</p>
-
 
     <script src="../assests/js/prism.js"></script>
 </body>
