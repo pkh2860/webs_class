@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="doc">
+            <h2>자바스크립트 선언문</h2>
+            <p><strong>선언문은</strong> 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 된다.</p>
+            <div class="code">
+<pre><code>&lt;script&gt;
+자바스크립트 코드;
+&lt;/script&gt;
+</code></pre>
+
+</div>
+            <h2>자바스크립트 주석처리</h2>
+            <p>선언문 안에서 코드가 아닌 설명글을 넣고 싶을 때는 주석처리를 하면 됩니다.<br>
+            이때 한 줄 주석일 경우 '//내용'으로 작성하고 여러 줄 주석일 경우에는 /*내용*/으로 작성하면 됩니다.</p>
+            <div class="code">
+<pre><code>//한줄 주석처리
+
+/*
+여러 줄 
+주석 처리
+*/
+</code></pre>
+            </div>
+            <h2>코드 입력시 주의사항</h2>
+            <ul>
+                <li>대, 소문자를 구별합니다.</li>
+                    <div class="code">
+<pre><code>날씨 객체 생성: New date(); (X)
+날씨 객체 생성: New Date(); (O)
+</code></pre> 
+</div>          
+<br>
+                <li>실행문 뒤에는 세미콜론 = ( ; )을 붙여야 합니다.</li>
+                <div class="code">
+<pre><code>document.wrute("hi") document.wrute("bye") (X)
+document.wrute("hi") document.wrute("bye"); (O)
+</code></pre>
+</div>
+<br>
+                <li>문자형 데이터 작성시 큰따옴표 = (" ") 와 작은따옴표 = ('') 겹침 오류에 주의해야합니다.</li>
+                
+                <div class="code">
+<pre><code>document.wrute('외부 글자 안의 "내부 글자"가 있다.'); (O)
+</code></pre>
+</div>
+<br>
+                <li>실행문 작성시 괄호의 짝이 맞아야합니다.</li>
+                <div class="code">
+<pre><code>document.wrute("hi"; (X)
+document.write("bye"); (O)
+</code></pre>
+</div>
+<br>
+                <li>실행문 작성시 한 줄에 한 문장만 작성하는 것이 좋습니다.</li>    
+            </ul>
+
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li ><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li class="active"><a href="reference03.html">자료형</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="doc">
+            <h2>데이터 타입(자료형)</h2>
+            <p>
+                변수에는 여러가지 유형이 들어갈 수 있습니다. 프로그램 언어에 있어 가장 기본적인 요소이며,
+                데이터 타입이라고 합니다. 데이터 타입에는 숫자, 문자열, 논리값, 특수값, 심벌, 객체,
+                함수 등을 표현할 수 있습니다.
+            </p>
+            <br>
+            <h3>숫자(Number)</h3>
+            <p>숫자형(Number)은 숫자를 표현하거나 산술 연산을 하는데 사용되는 데이터 타입이다.<br>
+            기본적으로 (+, -, *, /)등의 산술연산이 가능하며 Math라는 내장객체를 이용하여 수학함수를 이용한 결과를 얻을 수도 있다.</p>
+            <br>
+            <h3>문자열(String)</h3>
+            <p>문자열(String)은 문자열을 표현하는데 사용되는 데이터 타입이다.</p>
+            <br>
+            <h3>논리값(Boolean)</h3>
+            <p>논리값(Boolean)은 불리언 값을 감싸고 있는 객체입니다.</p>
+            <br>
+            <h3>특수값(null)</h3>
+            <p>특수값(null)은 자바스크립트 개발자가 의도적으로 비어있는 값을 부여한 것이다.</p>
+            <br>
+            <h3>특수값(undefined)</h3>
+            <p>특수값(undefined)은 애당초 어떤한 값도 할당되지 않은 것이다.</p>
+            <br>
+            <h3>심벌(symbol)</h3>
+            <p>심벌(symbol)은 고유한 데이터이다 여러개의 symbol에 동일한 description을 넣어도 각 다른 존재로 인식됩니다.<br></p>
+            <div class="code">
+<pre><code>symbol(description)
+
+const a = symbol("id");
+const a = symbol("id");
+
+console.log(a==b); //false
+</code></pre>
+            </div>
+            <p>같은 문자열을 넣었는데 결과 값이 false로 나온다 <br>
+            Symbol은 고유한 존재 이기 때문에 문자열이 같아도 영향을 미치지 않습니다.</p>
+            <br>
+            <h3>객체(Object)</h3>
+            <p>자바스크립트은 객체 기반 프로그래밍 언어이다. 자바스크립트를 구성하는 거의 모든 것이 객체(Object)입니다.</p>
+            <br>
+            <h3>배열(Array)</h3>
+            <p>배열(Array)은 리스트 형태의 고수준 객체인 배열을 생성할 때 사용하는 전역 객체입니다.</p>
+            <br>
+            <h3>함수(Function)</h3>
+            <p>함수(Function)은 하나의 특별한 목적의 작업을 수행하도록 설계된 독립적인 블록을 의미합니다.</p>
+
+        </div>
+    </main>
+</body>
+</html>
