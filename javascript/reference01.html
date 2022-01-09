@@ -43,6 +43,8 @@
 여러 줄 
 주석 처리
 */
+
+&lt;!-- HTML 주석 처리 --&gt;
 </code></pre>
             </div>
             <h2>코드 입력시 주의사항</h2>
@@ -58,8 +60,8 @@
 
                 <li>실행문 뒤에는 세미콜론 = ( ; )을 붙여야 합니다.</li>
                 <div class="code">
-<pre><code>document.wrute("hi") document.wrute("bye") (X)
-document.wrute("hi") document.wrute("bye"); (O)
+<pre><code>document.wrute("bye") (X)
+document.wrute("bye"); (O)
 </code></pre>
 </div>
 
@@ -68,7 +70,10 @@ document.wrute("hi") document.wrute("bye"); (O)
                 <li>문자형 데이터 작성시 큰따옴표 = (" ") 와 작은따옴표 = ('') 겹침 오류에 주의해야합니다.</li>
                 
                 <div class="code">
-<pre><code>document.wrute('외부 글자 안의 "내부 글자"가 있다.'); (O)
+<pre><code>document.wrute
+("그녀가"안녕"이라고 말했다."); (X)
+('그녀가 "안녕"이라고 말했다.'); (O)
+("그녀가\"안녕\"이라고 말했다."); (O)
 </code></pre>
 </div>
 

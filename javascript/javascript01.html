@@ -129,11 +129,26 @@
                 <h3>04. 변수 : 변수의 종류 : 지역변수 + 전역변수 + 매개변수</h3>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    let x = 100;
-    let y = 200;
-    let z = "javascript";
-
     document.write("*** 04. 변수 : 변수의 종류 ***");
+
+    let x = 100; //전역변수
+    let y = 200; //전역변수
+
+    function func() {
+    let x = 100;         //function 안은 지역변수
+    let y = 200;
+    let z = "javascript";    //지역변수
+    x = 200;        //지역변수 100->200
+    y = 300;        //전역변수가 200->300
+
+    document.write("함수 안");
+    document.write(x);
+    document.write(y);
+    document.write(z);
+    }
+    func();
+
+    document.write("함수 밖");
     document.write(x);
     document.write(y);
     document.write(z);
