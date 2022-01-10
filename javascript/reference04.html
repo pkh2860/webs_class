@@ -27,8 +27,43 @@
     <main id="main">
         <div class="doc">
             <h2>for()문</h2>    
-            <p>for()문은 프로그래밍에서 똑같은 코드를 여러번 작성하지 않고 특정 조건에 도달할 때까지 같은 동작을 반복하도록 하는것.</p>
-            <h2>for()문 문법</h2>
+            <p><strong>for( )문</strong>은 조건식을 만족할 때까지 특정 코드를 반복하여 실행합니다. <br>
+                사용 방법은 while 문과 같지만 while 문보다 사용하기 편해 사용 빈도가 높은 편입니다.</p>
+            <br>
+
+            <div class="code">
+<pre><code>기본형:
+for(초깃값; 조건식; 증감식){
+    자바스크립트 코드;
+}
+</code></pre>
+            </div>
+            
+            <br>
+
+            <p>다음은 for문으로 '반복1~ 반복10'까지 i를 증가하며 출력한 예제입니다.</p>
+            <br>
+            <div class="code">
+<pre><code>06:  &lt;script&gt;
+07:          초기값   조건식  증감식
+08:     for(var i = 1; i &lt;= 10; i ++){
+09:         document.write("반복" + i, "&lt;br&gt;")
+10:     }
+11:  &lt;script&gt;
+</code></pre>
+            </div>
+            <h2>for Ench문</h2>
+            <p><strong>for  Ench문</strong>은 오직 <strong>배열(Array)</strong> 객체에서만 사용가능한 메서드입니다. <br>
+            배열의 요소들을 반복하여 작업을 수행할수 있습니다. forEach구문의 인자로 callback함수를 등록할 수 있고, <br>
+            배열의 각 요소들이 반복될 때 이 calback함수가 호출 됩니다. callback 함수에서 배열요소의 인덱스와 값에 접근할 수 있습니다.</p>
+
+            <div class="code">
+<pre><code>var arr = ["가", "나", "다", "라"];
+    arr.forEach(function(item, index, arr2){
+        console.log(item, index, arr2[index+1]);
+    })
+</code></pre>
+            </div>
         </div>
     </main>
 </body>

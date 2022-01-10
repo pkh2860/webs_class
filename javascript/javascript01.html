@@ -525,9 +525,13 @@
             let z = "javascript";    //지역변수
             x = 200;        //지역변수 100->200
             y = 300;        //전역변수가 200->300
+
+            document.querySelector(".result04").innerHTML += "*** 함수 안 ***<br>";
+            document.querySelector(".result04").innerHTML += x + "<br>" + y + "<br>" + z + "<br>";
            }
             func();
-            document.querySelector(".result04").innerHTML = x + "<br>" + y + "<br>" + z;
+            document.querySelector(".result04").innerHTML += "<br>*** 함수 밖 ***<br>";
+            document.querySelector(".result04").innerHTML += x + "<br>" + y + "<br>" + z;
         }
 
         //05. 상수 : 데이터 저장소 + 데이터 변경(x)
