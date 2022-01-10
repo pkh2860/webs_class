@@ -19,14 +19,111 @@
                 <li><a href="reference01.html">기초 문법</a></li>
                 <li><a href="reference02.html">변수</a></li>
                 <li><a href="reference03.html">자료형</a></li>
+                <li><a href="reference04.html">for문</a></li>
+                <li class="active"><a href="reference05.html">연산자</a></li>
             </ul>
         </nav>
     </header>
     <main id="main">
         <div class="doc">
-            <h2>자바스크립트 선언문</h2>
-            <h2>자바스크립트 주석처리</h2>
-            <h2>코드 입력시 주의사항</h2>
+            <h2>연산자</h2>
+            <p><strong>연산자</strong>란 수학 시간에 연산을 할 때도 마찬가지였지만, 컴퓨터를 이용해서 코드를 통해 연산을 할 때도 연산의 방식을 결정하는 기호를 '연산자'라고 부르고 연산되는 대상을 '피연산자'라고 한다.<br>
+            우리에게 가장 익숙한 <strong>+, -, *, /</strong> 이 가장 대표적인 예라고 볼 수 있다.</p>
+
+            <h3>산술연산자</h3>
+            <p>산술연산자는 산수 시간에 배운  더하기(+), 빼기(-), 곱하기(*), 나누기(/), 나머지(%)가 있습니다. <br>
+            산술 연산자로 연산을 하기 위해서는 연산 대상 데이터가 반드시 2개 있어야 합니다. <br>다음은 산술 연산자의 종류와 기본형을 정리한 표입니다.</p>
+            <table>
+                <tr>
+                    <td>종류</td>
+                    <td>기본형</td>
+                    <td>설명</td>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>A+B</td>
+                    <td>더하기</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>A-B</td>
+                    <td>빼기</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>A*B</td>
+                    <td>곱하기</td>
+                </tr>
+                <tr>
+                    <td>/</td>
+                    <td>A/B</td>
+                    <td>나누기</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>A%B</td>
+                    <td>나머지</td>
+                </tr>
+            </table>
+            <p>다음 예제를 통해 더하기, 빼기, 곱하기, 나누기, 나머지 연산자를 어떻게 사용하는지 확인해 보세요.</p>
+            <div class="code">
+<pre><code>6.   &lt;script&gt;
+7:      var num 1 = 15;
+8:      bar num 2 = 2;
+9:      var result;
+10:     result = num1 + num2;
+11:     document.write(result,"&lt;br&gt;"); //17
+12:     reesult = num1 - num2;
+13:     document.write(result,"&lt;br&gt;"); //13
+14:     result = num1 * num2;
+15:     document.write(result,"&lt;br&gt;") //30
+16:     result = num1 / num2;
+17:     document.write(result,"&lt;br&gt;") //7.5
+18:     result = num1 % num;
+19:     document.write(result,"&lt;br&gt;") //1
+20: &lt;/script&gt;
+</code></pre>
+            </div>
+            <br>
+            <h3>문자 결합 연산자</h3>
+            <p>문자 결합 연산자는 피연산자(연산 대상 데이터)가 문자형 데이터입니다.<br>
+            여러 개의 문자를 하나의 문자형 데이터로 결합할 때 사용합니다.</p>
+            <p>다음과 같이 더하기에 피연산자로 문자형 데이터가 한 개라도 포함되어 있으면<br>
+             다른 피연산자의 데이터는 자동으로 문자형 데이터로 형 변환되고 문자 결합이 이루어져<br> 하나의 문자형 데이터를 반환합니다.</p>
+                <div class="code">
+<pre><code>기본형:
+    문자형 데이터 + 문자형 데이터 = 하나의 문자형 데이터
+    ex) "do it" + "javascript" = "do it javascript";
+
+    문자형 데이터 + 숫자형 데이터 = 하나의 문자형 데이터
+    ex)"100" + 200="100200";
+</code></pre>
+            </div>
+            <br>
+
+            <p>다음은 t1, t2, t3, t4라는 변수에 문자와 숫자 데이터를 각각 넣고 하나의 문자 데이터로 결합하는 예제입니다.</p>
+
+            <div class="code">
+<pre><code>06:  &lt;script&gt;
+07:     var t1 = "학교종이";
+08:     var t2 = "땡땡땡";
+09:     var t3 = 8282;
+10:     var t4 = "어서 모이자";
+11:     var result;
+12:
+13:     result = t1 + t2 + t3 + t4;
+14:     document.write(result); //"학교종이 땡땡땡 8282 어서 모이자"
+15:  &lt;/script&gt;
+</code></pre>
+            </div>
+
+            <h3>대입 연산자</h3>
+
+            <h3>증감 연산자</h3>
+
+            <h3>비교 연산자</h3>
+
+            <h3>논리 연산자</h3>
         </div>
     </main>
 </body>

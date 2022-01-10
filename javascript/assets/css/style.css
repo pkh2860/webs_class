@@ -237,3 +237,31 @@ a {
     padding: 2px 5px 0 5px ;
     display: inline-block;
 }
+
+/* result */
+.result h4 {
+    background: #f2f2f2;
+    padding: 10px 20px;
+    font-weight: normal;
+    margin-top: 10px;
+    border-radius:5px 0px ;
+    font-size: 16px;
+}
+.result div {
+    background: #272822;
+    padding: 20px;
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+@media (max-width:800px) {
+    .result h4 {
+        font-size: 14px;
+        padding:10px 15px;
+    }
+    .result div {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
