@@ -1,0 +1,276 @@
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'GmarketSans';
+}
+
+body {
+    background: #F5F5F5;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #F5F5F5;
+}
+
+#header h1 {
+    font-weight: 500;
+    padding: 20px 10px 10px 20px;
+}
+
+#header h1 a {
+    text-decoration: none;
+    color: #000;
+}
+
+#header strong {
+    font-weight: 300;
+    padding: 10px 20px 10px 10px;
+}
+
+#contents {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+#contents h2 {
+    font-size: 80px;
+    text-align: center;
+    padding: 12% 5% 5% 5%;
+}
+
+#contents h2 em {
+    font-style: normal;
+    color: #00DB72;
+}
+
+#contents h2 a {
+    color: #000;
+    text-decoration: none;
+}
+/* menu */
+
+.menu {
+    margin-bottom: 5px;
+}
+
+.menu ul li {
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    background: #00DB72;
+    color: #fff;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.menu ul li.active a {
+    background: #000;
+    color: #00db72;
+}
+/* refer */
+#contents .refer {
+    background: #fff;
+    padding: 60px;
+    border: 1px solid #000;
+    overflow-x: auto;
+}
+#contents .refer table {
+    width: 100%;
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+    border-spacing: 0px
+}
+#contents .refer table th {
+    border: 1px solid #aaa;
+    padding: 15px;
+    background: #f5f5f5;
+    font-weight: 500;
+}
+#contents .refer table td {
+    border: 1px solid #aaa;
+    padding: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+#contents .refer table tbody tr:hover {
+    background: #00db72;
+    color: #fff;
+    cursor: grab;
+}
+
+
+/* refer */
+.refer {
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #000;
+    overflow-x: auto;
+}
+.refer .table {
+    overflow-x: auto;
+}
+
+.refer .table table {
+    width: 100%;
+    border: 1px solid #aaa;
+    border-collapse: collapse;
+    border-spacing: 0px
+}
+.refer .table table th {
+    border: 1px solid #aaa;
+    padding: 15px;
+    background: #f5f5f5;
+    font-weight: 500;
+}
+.refer .table table td {
+    border: 1px solid #aaa;
+    padding: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+/* doc */
+.doc {
+    font-size: 18px;
+    line-height: 1.8;
+}
+.doc h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 40px 0 5px;
+}
+.doc h3:first-child {
+    margin-top: 0;
+}
+.doc h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px 0 5px;
+}
+.doc li {
+    list-style: disc;
+    margin-left: 20px;
+}
+.doc p {
+    margin-bottom: 5px;
+}
+.doc .line {
+    border: 1px solid #cdcdcd;
+    padding: 20px 20px 15px 20px;
+    border-radius: 10px;
+}
+.doc .code {
+    padding: 20px 20px 15px 20px;
+    border-radius: 10px;
+    background: #dedede;
+}
+.doc strong {
+    background: #00db72;
+    font-weight: normal;
+    border-radius: 20px;
+    padding: 2px 15px 0px 15px;
+    display: inline-block;
+    color:#fff;
+}
+
+@media (max-width: 1220px){
+    #contents {
+        width: 96%;
+    }
+}
+@media (max-width: 800px){
+    #contents {
+        width: 100%;
+    }
+    #header h1 {
+        font-size: 18px;
+        padding: 20px 10px 5px 16px;
+    }
+    #header strong {
+        font-size: 14px;
+        padding: 20px 10px 5px 16px;
+    }
+    #contents h2 {
+        font-size: 40px;
+        padding: 80px 0 40px 0;
+    }
+    .menu {
+        margin: 16px 16px 0px 16px;
+    }
+    #refer {
+        background: transparent;
+        border: 0;
+        font-size: 14px;
+        padding: 16px;
+    }
+
+    .refer .table table {
+        min-width: 400px;
+    }
+
+    .refer .table table th {
+        padding: 10px;
+    }
+
+    .refer .table table td {
+        padding: 10px;
+    }
+
+    .doc {
+        font-size: 14px;
+    }
+
+    .doc h3 {
+        font-size: 20px;
+    }
+}

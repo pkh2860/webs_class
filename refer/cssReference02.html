@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>박근혁</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html"><em>Block/Inline</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssReference01.html">기초 문법</a></li>
+                <li class="active"><a href="cssReference02.html">Block/Inline</a></li>
+                <li><a href="cssReference03.html">CSS 단위</a></li>
+                <li><a href="cssReference04.html">CSS 색상</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>Block와 Inline</h3>
+                <h4>Block</h4>
+                <p>Block요소는 모든 인라인 요소를 포함할 수 있고 다른 블럭 요소도 일부 포함 할 수 있습니다.<br>
+                그리고 기본적으로 가로폭 전체의 넓이를 가지는 직사각형 형태가 되며 width, height, margin, padding등을 사용하여<br>
+                형태를 변경하여 레이아웃을 수정할 수 있습니다.<br>
+                그리고 블럭 요소 다음에는 줄바꿈이 이루어집니다.</p>
+
+
+                <h4>Inline</h4>
+                <p>Inline요소는 항상 블록 요소안에 포함되어 있으며 인라인 요소안에 다른 인라인 요소가 포함될 수 있습니다.<br>
+                그리고 기본적으로 컨텐츠가 끝나는 지점까지를 넓이로 가지게 됩니다.<br>
+                그래서 임의로 width, height로 변형을 줄 수가 없습니다.<br>
+                인라인 요소는 line-height로 줄의 높낮이를 조절할 수 있고 text-align으로 텍스트의 중앙,좌,우측 정렬을 할 수 있습니다.<br>
+                그리고 인라인 요소 다음에는 줄바꿈이 없고 우측으로 바로 이어서 표시가 됩니다.</p>
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+    
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>박근혁</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html"><em>CSS 단위</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssReference01.html">기초 문법</a></li>
+                <li><a href="cssReference02.html">Block/Inline</a></li>
+                <li class="active"><a href="cssReference03.html">CSS 단위</a></li>
+                <li><a href="cssReference04.html">CSS 색상</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>CSS 단위</h3>
+                <p>CSS는 길이를 표현하기위한 여러 가지 장치가 있습니다.<br> 많은 CSS 속성을 가지고 "length" 등의 폭, 마진, 패딩, 글꼴 크기, 테두리 폭 등의
+                    <br> 값을,길이는 길이 부 뒤에 숫자 같은 10px, 2EM 등이며
+                    공백으로는 수와 유닛 사이에 나타나지 않을 수있다. 값이 0 인 경우,이 장치는 생략 될 수있다.<br>
+                    일부 CSS 속성의 경우, 음의 길이가 허용됩니다.<br>상대 및 절대 : 단위 길이의 두 종류가있다.                </p>
+            </div>
+            <br>
+            <h4>절대 길이 단위</h4>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>단위</th>
+                            <th>이름</th>
+                            <th>다음과 동일함</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>cm</th>
+                            <td>센티미터</td>
+                            <td>1cm = 96px/2.54</td>
+                        </tr>
+                        <tr>
+                            <th>mm</th>
+                            <td>밀리미터</td>
+                            <td>1mm= 1/10th of 1cm</td>
+                        </tr>
+                        <tr>
+                            <th>Q</th>
+                            <td>4분의 1 밀리미터</td>
+                            <td>1Q = 1/40th of 1cm</td>
+                        </tr>
+                        <tr>
+                            <th>in</th>
+                            <td>인치</td>
+                            <td>1in = 2.54cm = 96px</td>
+                        </tr>
+                        <tr>
+                            <th>pc</th>
+                            <td>Picas</td>
+                            <td>1pc = 1/16th of 1in</td>
+                        </tr>
+                        <tr>
+                            <th>pt</th>
+                            <td>포인트</td>
+                            <td>1pt = 1/72th of 1in</td>
+                        </tr>
+                        <tr>
+                            <th>px</th>
+                            <td>픽셀</td>
+                            <td>1px = 1/96th of 1in</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <p>이러한 값의 대부분은 화면 출력이 아닌 인쇄에 사용될 때 더 유용합니다. <br>
+                예를 들어 일반적으로 화면에 cm를 사용하지 않습니다. 보통 사용하는 유일한 값은 px(픽셀)입니다.</p>
+                <br>
+                <br>
+                <h4>상대 길이 단위</h4>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>단위</th>
+                                <th>관련사항</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>em</th>
+                                <td>요소의 글꼴 크기.</td>
+                            </tr>
+                            <tr>
+                                <th>ex</th>
+                                <td>요소 글꼴의 x-height</td>
+                            </tr>
+                            <tr>
+                                <th>ch</th>
+                                <td>요소 글꼴의 glyph"0"의 사전 길이(너비) 입니다.</td>
+                            </tr>
+                            <tr>
+                                <th>rem</th>
+                                <td>루트 요소의 글꼴 크기.</td>
+                            </tr>
+                            <tr>
+                                <th>lh</th>
+                                <td>요소의 라인 높이</td>
+                            </tr>
+                            <tr>
+                                <th>vw</th>
+                                <td>viewport 너비의 1%</td>
+                            </tr>
+                            <tr>
+                                <th>vh</th>
+                                <td>viewport 높이의 1%</td>
+                            </tr>
+                            <tr>
+                                <th>vmin</th>
+                                <td>viewport 의 작은 치수의 1%</td>
+                            </tr>
+                            <tr>
+                                <th>vmax</th>
+                                <td>viewport 의 큰 차수의 1%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <p>상대 길이 단위는 다른 요소(상위 요소의 글꼴 크기 또는 viewport 크기) 와 관련이 있습니다.<br>
+                    상대 단위를 사용하면 텍스트나 다른 요소의 크기가 페이지의 다른 모든것에 비례하여 조정되도록<br>
+                    신중하게 계획할 수 있다는 이점이 있고 웹 개발에 가장 유용한 단위입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+    
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+</html>

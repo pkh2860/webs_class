@@ -14,16 +14,70 @@
     <!-- style -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/dog.css">
 
     <!-- script -->
     <script src="assets/js/prism.js"></script>
 </head>
 
 <body>
-
-    <header id="header">
-        <h1>Javascript 레퍼런스</h1>
-        <nav> 
+    <main class="javascript">
+        <div class="dog">
+            <div class='wrap'>
+                <div class='body'>
+                    <div class='leg l'>
+                        <div class='paw'></div>
+                    </div>
+                    <div class='leg r'>
+                        <div class='paw'></div>
+                    </div>
+                    <div class='spots'></div>
+                    <div class='head'>
+                        <div class='snout'>
+                            <div class='nose'></div>
+                        </div>
+                        <div class='eyes'></div>
+                        <div class='ear'></div>
+                        <div class='ear right'></div>
+                        <div class='inner'>
+                            <div class='spot'></div>
+                        </div>
+                        <div class='eyes'></div>
+                        <div class='ear'></div>
+                        <div class='ear right'></div>
+                        <div class='inner'>
+                            <div class='spot'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none">
+                <defs>
+                    <filter id="squiggly-0">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0" />
+                        <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="2" />
+                    </filter>
+                    <filter id="squiggly-1">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+                    </filter>
+                    <filter id="squiggly-2">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+                    </filter>
+                    <filter id="squiggly-3">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+                    </filter>
+                    <filter id="squiggly-4">
+                        <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" />
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <h1>Javascript</h1>
+        <nav class="menu">
             <ul>
                 <li><a href="javascript01.html">데이터 저장하기</a></li>
                 <li><a href="javascript02.html">데이터 불러오기</a></li>
@@ -31,11 +85,149 @@
                 <li><a href="javascript04.html">데이터 제어하기</a></li>
             </ul>
         </nav>
-    </header>
-
-    <main id="main">
-       
     </main>
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>;
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>;
+    <script>
+        var $eyes = $('.eyes'),
+            $snout = $('.snout'),
+            $spot = $('.spot'),
+            $nose = $('.nose'),
+            $ear = $('.ear'),
+            $rightear = $('.right'),
+            $leftleg = $('.l'),
+            $rightleg = $('.r'),
+            $leftpaw = $('.l .paw'),
+            $rightpaw = $('.r .paw'),
+            $container = $('.wrap'),
+            $outer = $('body'),
+            container_w = $container.width(),
+            container_h = $container.height();
+
+        $('body').on('mousemove.parallax', function (event) {
+            var pos_x = event.pageX,
+                pos_y = event.pageY,
+                left = 0,
+                bottom = 0,
+                top = 0;
+
+            left = container_w / 0.5 - pos_x;
+            top = container_h / 2 - pos_y;
+            bottom = container_h / 0.25 - (pos_y * 2.5);
+
+
+            TweenMax.to(
+                $snout,
+                1, {
+                    css: {
+                        transform: 'translateX(' + left / -32 + 'px) translateY(' + top / -26 +
+                            'px) translateZ(1px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+            TweenMax.to(
+                $spot,
+                1, {
+                    css: {
+                        transform: 'translateX(' + left / -32 + 'px) translateY(' + top / -56 +
+                            'px) translateZ(1px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+            TweenMax.to(
+                $eyes,
+                1, {
+                    css: {
+                        transform: 'translateX(' + left / -40 + 'px) translateY(' + top / -40 +
+                            'px) translateZ(0px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+            TweenMax.to(
+                $nose,
+                1, {
+                    css: {
+                        transform: 'translateX(' + left / -40 + 'px) translateY(' + top / -50 +
+                            'px) translateZ(0px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+            TweenMax.to(
+                $ear,
+                1, {
+                    css: {
+                        transform: 'rotate(' + bottom / -60 + 'deg) translatex(' + left / 60 +
+                            'px) translateY(' + top / 40 + 'px) translateZ(-2px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+            TweenMax.to(
+                $rightear,
+                1, {
+                    css: {
+                        transform: 'rotate(' + bottom / 60 + 'deg) translatex(' + left / 60 +
+                            'px) translateY(' + top / 40 + 'px) translateZ(-2px)'
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+            TweenMax.to(
+                $leftleg,
+                1, {
+                    css: {
+                        transform: 'rotate(' + left / 30 + 'deg) translateY(' + top / -100 +
+                            'px) translateZ(-2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+            TweenMax.to(
+                $rightleg,
+                1, {
+                    css: {
+                        transform: 'rotate(' + left / 30 + 'deg) translateY(' + top / -100 +
+                            'px) translateZ(-2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+            TweenMax.to(
+                $leftpaw,
+                1, {
+                    css: {
+                        transform: 'rotate(' + left / -30 + 'deg) translateY(' + bottom / -120 +
+                            'px) translatex(' + left / -50 + 'px) translateZ(2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+            TweenMax.to(
+                $rightpaw,
+                1, {
+                    css: {
+                        transform: 'rotate(' + left / -30 + 'deg) translateY(' + bottom / -120 +
+                            'px) translatex(' + left / -50 + 'px) translateZ(2px)',
+                    },
+                    ease: Expo.easeOut,
+                    overwrite: 'all'
+                });
+
+
+        });
+    </script>
 </body>
 
 </html>

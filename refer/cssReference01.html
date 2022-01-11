@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>박근혁</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS<em>기초 문법</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li class="active"><a href="cssReference01.html">기초 문법</a></li>
+                <li><a href="cssReference02.html">Block/Inline</a></li>
+                <li><a href="cssReference03.html">CSS 단위</a></li>
+                <li><a href="cssReference04.html">CSS 색상</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>CSS란?</h3>
+                <p>CSS(Cascading Style Sheets)는 HTML이나 XML로 작성된 문서의 표시 방법을 기술하기 위한 스타일 시트 언어입니다. <br> CSS는 요소가 화면, 종이, 음성이나 다른 매체 상에 어떻게 렌더링 되어야 하는지 지정합니다. <br></p>
+                <br>
+                <br>
+                <h3>CSS 주석 표시</h3>
+                <div class="code">
+<pre><code>/* CSS 주석 표시 */
+</pre></code>
+                </div>
+                <br>
+                <br>
+                <h3>CSS 선언 방법</h3>
+                <h4>내부 스타일</h4>
+                <p>내부 스타일은 웹 문서 안에서 사용할 스타일을 문서 안에 정리한 것을 '내부 스타일 시트'라고 합니다. <br>
+                모든 스타일 정보는<strong> &lt;head&gt;태그와 &lt;/head&gt;태그 안에서 정의해야 하고 &lt;style&gt;태그와 &lt;/style&gt;태그 사이</strong>에 작성합니다.</p>
+                <div class="code">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;내부 스타일 시트 &lt;/title&gt;
+    &lt;style&gt;
+        ul{
+            color:blue;
+            list-style-type:square;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+</code></pre>
+                </div>
+                <br>
+                <br>
+                <h4>외부 스타일</h4>
+                <p>웹사이트를 만들 때 하나의 웹 문서로 끝나는 경우는 거의 없습니다.<br>
+                사이트를 제작할 때 여러 웹 문서에서 사용할 스타일을 별도 파일로 저장해 놓고 필요할 때마다 파일에서 가져와<br>
+                사용하는 것이 일반적입니다. 이렇게 따로 저장해 놓은 스타일 정보를 '외부 스타일 시트'라고 하고 <br>
+                'css'라는 파일 확장자를 사용합니다.</p>
+                <p>외부 스타일 시트를 연결할 때는 <strong>&lt;style&gt;태그 없이 &lt;link&gt;태그만 사용해</strong> 미리 만들어 놓은 <br>
+                외부 스타일 시트 파일을 연결합니다.</p>
+                <div class="code">
+<pre><code>기본형:
+    &lt;link "rel="stylesheet" href="외부 스타일 파일 경로"&gt;
+</code></pre>           
+                </div>
+                <br>
+                <div class="code">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;외부 스타일 시트&lt;/title&gt;
+    &lt;link "rel="stylesheet" href="외부 스타일 파일 경로"&gt;
+&lt;/head&gt;
+</code></pre>   
+                </div>
+                <br>
+                <br>
+                <h4>인라인 스타일</h4>
+                <p>인라인 스타일은 간단한 스타일 정보라면 (&lt;style&gt;&lt;/style&gt;)를 사용하지 않고 스타일을 적용할 대상에 직접 표시합니다.<br>
+                이런 방법을 '인라인 스타일'이라고 합니다.<br>스타일을 적용하고 싶은 부분이 있다면 해당 태그에 style속성을 사용하여<br>
+                <strong>style="속성:속성 값";</strong> 형태로 스타일을 바꿀 수 있습니다.</p>
+                <div class="code">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;인라인 스타일&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 style="color:blue";&gt;제목&lt;/h1&gt;       &lt;--스타일 적용
+    &lt;p&gt;내용&lt;p&gt;
+&lt;/body&gt;
+&lt;html&gt;
+</code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+</html>
