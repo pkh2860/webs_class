@@ -7,7 +7,7 @@ https://pkh2860.github.io/webs_class/
 https://pkh2860.github.io/webs_class/javascript/index.html
 
 ## HTML 레퍼런스
-https://pkh2860.github.io/webs_class/html/index.html
+https://pkh2860.github.io/webs_class/refer/html.html
 
 ## CSS 레퍼런스
-  https://pkh2860.github.io/webs_class/css/index.html
+  https://pkh2860.github.io/webs_class/refer/css.html
