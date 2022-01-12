@@ -463,12 +463,24 @@
      document.write(obj.b[1]);
      document.write(obj.c.x);
      document.write(obj.c.y);
+     obj.d();
      obj.e();
+     obj.f();
 }</code></pre>
                 </div>
                 <div class="result">
                     <h4>결과보기</h4>
-                    <div class="result17"></div>
+                    <div class="result17">
+                        100 <br>
+                        200,300 <br>
+                        200 <br>
+                        300 <br>
+                        400 <br>
+                        500 <br>
+                        "javascript가 실행되었습니다." <br>
+                        "javascript가 실행되었습니다." <br>
+                        "javascript가 실행되었습니다." <br>
+                    </div>
               </div>
             </div>
 
@@ -667,8 +679,7 @@
                }
            } 
 
-           document.querySelector(".result17").innerHTML = obj.a + "<br>" + obj.b + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" + obj.c.x + "<br>" + obj.c.y + "<br>" +obj.e
-
+        //    document.querySelector(".result17").innerHTML = obj.a + "<br>" + obj.b + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" + obj.c.x + "<br>" + obj.c.y + "<br>" 
         }
     </script>
 
