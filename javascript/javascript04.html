@@ -322,7 +322,7 @@
 
             <!-- sample11 -->
             <div id="sample11" class="sample">
-                <h3>10. 중첩 for문</h3>
+                <h3>11. break문</h3>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     //whule문을 이용해서 0~20까지 출력하시요
@@ -347,8 +347,8 @@
                 <div class="result">
                     <h4>결과보기</h4>
                     <div class="result11">
-                       012345678910 <br>
-                       012345678910<br>
+                       12345678910 <br>
+                       12345678910<br>
                     </div>
                 </div>
             </div>
@@ -513,21 +513,21 @@
             //11. break문 
             {
                  //whule문을 이용해서 0~20까지 출력하시요
-                // let num = 0; //num = 0 인데 
-                // while(num <= 20){ //num이 20보다 작아질때까지 출력해라
-                //     document.write(num);
-                //     if(num == 10){
-                //         break;
-                //     }
-                //     num++;
-                // }
+                let num = 0; //num = 0 인데 
+                while(num <= 20){ //num이 20보다 작아질때까지 출력해라
+                    document.write(num);
+                    if(num == 10){
+                        break;
+                    }
+                    num++;
+                }
                 //for문을 이용해서 0~20까지 출력
-                // for(let i=1; i<=20; i++){
-                //     document.write(i)
-                //     if(i == 10){
-                //         break;
-                //     }
-                // }
+                for(let i=1; i<=20; i++){
+                    document.write(i)
+                    if(i == 10){
+                        break;
+                    }
+                }
             }
 
             //12. continue문
