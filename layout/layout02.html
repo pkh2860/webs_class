@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout02</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: #e8f5e9;
+        }
+        #container{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header{
+            width: 1200px;
+            height: 100px;
+            background-color: #c8e6c9;
+        }
+        #nav{
+            width: 1200px;
+            height: 100px;
+            background-color: #a5d6a7;
+        }
+        #contents{
+            width: 1200px;
+        }
+        #footer{
+            width: 1200px;
+            height: 100px;
+            background-color: #43a047;
+            clear: both; /*footer 생기게*/
+        }
+
+        #contents .left{
+            width: 300px;
+            height: 780px;
+            background-color: #81c784;
+            float: left;  /*height를 0으로 인식해서 footer이 사라짐*/
+
+        }
+        #contents .center{
+            width: 600px;
+            height: 780px;
+            background-color: #66bb64;
+            float: left;
+        }
+        #contents .right{
+            width: 300px;
+            height: 780px;
+            background-color: #4caf50;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="contents">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

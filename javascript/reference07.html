@@ -29,15 +29,158 @@
     <main id="main">
         <div class="doc">
             <h2>반복문</h2>
-            <p>...</p>
+            <p>반복문을 이용하면 코드를 원하는 횟수만큼 반복하여 실행할 수 있습니다.<br>
+            가령, "안녕하세요"라는 문구를 100회 출력하려면 출력문을 100번 작성해야 하지만 반복문을 사용한다면 <br>한 줄의 출력문으로
+            100회 출력할 수 있습니다. 반복문에는 <strong>while문, do while, for문 </strong>이 있습니다.</p>
 
             <h3>while문</h3>
-            <h3>for문</h3>
-            <h3>break문</h3>
-            <h3>continue</h3>
-            
+            <p>while문은 조건식을 만족할 때까지 코드를 여러 회 반복하여 실행할 수 있습니다.
+                <br>다음은 while문의 기본형입니다. while문은 조건식을 만족할 때까지 중괄호{...}안에 있는 코드를 반복하여 실행합니다.<br>
+                while문의 실행 순서는 1.조건식을 검사하고, 만족하면 2.중괄호 안에 있는 코드와 증감식을 실행합니다.<br>
+                그리고 3. 다시 조건식을 검사합니다
+            </p>
 
+            <div class="code">
+<pre><code>기본형 : 
+    var 변수 = 초깃값;
+    while(①③조건식){
+        ②
+        자바스크립트 코드;
+        증감식;
+    }
+</code></pre>
+            </div>
+
+            <br>
+            <p>다음은 while 문을 사용해 '안녕하세요1~안녕하세요5'까지 1씩 증가하면서 <br>
+            10회 출력하도록 작성한 예제입니다.</p>
+            <br>
+            <div class="code">
+<pre><code>06: &lt;script&gt; 
+07:     var i = 1;
+08:     while(i &lt;= 5) {
+09:         document.write("안녕하세요" + i, "&lt;br&gt;");
+10:         i++
+11:     }
+12:     document.write("===The End ===")
+13: &lt;/script&gt;
+
+        -  결과 -
+        안녕하세요1
+        안녕하세요2
+        안녕하세요3
+        안녕하세요4
+        안녕하세요5
+      ===The End ===
+</code></pre>
+            </div>
+            <p>08~11행 while문의 조건식 i &lt; 만족 (true)하면 중괄호의 코드를 실행하고 변수 i의 값이 1만큼 증가됩니다.<br>
+            while문은 i가 11이 될 때까지 실행합니다.</p>
+
+
+            <h3>for문</h3>
+            <p>for문은 조건식을 만족할 때까지 특정 코드를 반복하여 실행합니다. <br>
+            사용 방법은 while문과 같지만 whilc문보다 사용하기 편해 사용 빈도가 높은 편입니다.</p>
+            <div class="code">
+<pre><code>기본형 : 
+06: &lt;script&gt; 
+07:          초깃값    조건식  증감식
+08:     for(var i = 1;  i &lt;= 10;  i++)
+09:         document.write("반복" + i, "&lt;br&gt;")  &lt;--중괄호의 코드가 10회 반복해서 실행됩니다
+10:     }
+11: &lt;/script&gt; 
+</code></pre>
+            </div>
             
+            <h3>break문</h3>
+            <p>반복문인 while문 또는 for문에서 break문을 실행하면 조건식과 상관없이 강제로 반복문을 종료합니다.<br>
+            즉, break문은 반복문을 강제로 종료할 때 사용합니다.</p>
+            <br>
+            <div class="code">
+<pre><code>기본형  : 
+    for(초깃값;조건식;증감식){
+        break; //반복문을 강제로 종료합니다.
+        자바스크립트 코드;
+    }
+</code></pre>
+            </div>
+
+            <div class="code">
+<pre><code>기본형  : 
+    var 변수 = 초깃값;
+    while(조건식){
+        break; //반복문을 강제로 종료합니다.
+        자바스크립트 코드;
+        증감식;
+    }
+</code></pre>
+            </div>
+            <br>
+            <p>다음은 for문을 이용하여 1부터 10까지 반복하도록 작성한 예제입니다. <br> 
+            그리고 break문을 사용하여 변수 i의 값이 6일 경우 강제로 반복문을 종료합니다.</p>
+
+            <br>
+            <div class="code">
+<pre><code>06: &lt;script&gt; 
+07:     for(Var i = 1; i &lt;= 10; i++){
+08:         if(i == 6) break;
+09:             document.write(i, &lt;br&gt;)
+10:         }
+11:         document.write("===The End ===");
+12: &lt;script&gt; 
+
+
+         - 결과 -
+            1
+            2
+            3
+            4
+            5
+  ===The End ===
+</code></pre>
+            </div>
+            <br>
+            <p>07~10행 i가 10보다 작거나 같을 때까지 1씩 증가하며 코드를 반복합니다. <br>
+            즉 1부터 시작하여 10이 될 때까지 코드를 10회 반복하여 실행합니다.</p>
+
+            <h3>continue</h3>
+
+            <p>continue문은 반복문에서만 사용할 수 있습니다. while문에 사용할 경우 continue문 다음에 오는 코드는 무시하고 <br>
+            바로 조건식으로 이동해 조건 검사를 합니다. 즉, while문 안에 있는 continue문은 "다음에 오는 코드는 무시하고 조건식에서 조건 검사를 실행해"라고 말하는 것이죠.</p>
+            
+            <p>for문에서 continue문을 실행할 경우에는 continue문 다음에 오는 코드는 무시하고 <br>
+            바로 증감식으로 이동하여 증감 연산을 실행합니다. 즉 for문 안에 있는 continue문은 "다음에 오는 코드는 무시하고 증감식을 바로 실행해"라고 말하는 것이죠 continue문의 기본형은 다음과 같습니다.</p>
+            <div class="code">
+<pre><code>기본형  : 
+    for(초깃값; 조건식; 증감식){
+        continue;
+        자바스크립트 코드;
+    }
+</code></pre>
+            </div>
+            <div class="code">
+<pre><code>기본형  : 
+    var 변수 = 초깃값;
+    while(조건식){
+        증감식;
+        continue;
+        자바스크립트 코드;
+    }
+</code></pre>
+            </div>
+            <br>
+            <p>다음은 for문을 이용해 1부터 10까지 i가 2의 배수일 경우에만 continue문을 실행하여 홀수만 출력하는 예제입니다.</p>
+            <br>
+            <div class="code">
+<pre><code>06: &lt;script&gt;
+07:     for(var i = 1; i &lt;= 10; i ++){
+08:         if(i % 2 == 0) contiune;        //contine문은 반복문 이후의 코드 실행을 건너뛰고 
+09:         document.write(i, " &lt;br&gt;")        다시 반복문의 증감식을 수행합니다
+10:     }
+11:     document.write("===The End===");
+12: &lt;script&gt;
+</code></pre>
+            </div>
             </div>
         </div>
     </main>
