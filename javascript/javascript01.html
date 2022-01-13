@@ -306,6 +306,7 @@
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const obj = new Object();
+
     obj.a = 100;
     obj.b = 200;
     obj.c = "javascript";
@@ -327,11 +328,12 @@
                 <h3>12. 객체 : 데이터를 저장(키와 값) : 표현 방법3</h3>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    const obj = {};
+
     obj.a = 100;
     obj.b = 200;
     obj.c = "javascript";
 
-    document.write("*** 12. 객체 ***");
     document.write(obj.a);
     document.write(obj.b);
     document.write(obj.c);
@@ -372,8 +374,8 @@
                     <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const obj = [
-    {a: 100, b: 200,},
-    {c: "javascript"}
+        {a: 100, b: 200,},
+        {c: "javascript"}
     ]
     document.write("*** 14. 객체 ***");
     document.write(obj[0].a)
