@@ -147,7 +147,9 @@ body {
     font-weight: 300;
     line-height: 1.4;
 }
-
+.refer .table table th a {
+    color:#00db72;
+}
 /* doc */
 .doc {
     font-size: 18px;

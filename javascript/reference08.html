@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li ><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+                <li><a href="reference04.html">for문</a></li>
+                <li><a href="reference05.html">연산자</a></li>
+                <li><a href="reference06.html">조건문</a></li>
+                <li ><a href="reference07.html">반복문</a></li>
+                <li class="active" ><a href="reference08.html">함수</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="doc">
+            <h2>함수</h2>
+            <p>함수는 코드를 메모리에 저장했다가 필요할때마다 호출하여 사용하는거</p>
+            
+            <h3>선언적 함수</h3>
+            <p>함수를 사용하여 코드를 저장한 것을 '함수 정의문'이라고 합니다.<br>
+            변수를 선언할 때 var 키워드를 사용한 것처럼 함수에서 function 키워드를 사용해 변수를 선언합니다.<br>
+            함수 정의문은 다음과 같이 선언합니다.</p>
+            <div class="line">
+                기본형 : <br>
+                function 함수명(){ <br>
+                    &nbsp;&nbsp;자바스크립트 코드;<br>
+                }
+            </div>
+            <br>
+            <p>다음과 같이 익명함수(함수명이 없는 함수)를 선언하고 변수에 참조해도 됩니다.</p>
+            <div class="line">
+                기본형 : <br>
+                참조 변수 = function(){<br>
+                    &nbsp;&nbsp; 자바스크립트 코드<br>
+                }
+            </div>
+            <br>
+            <p>함수 정의문({...}) 안에 작성된 코드는 즉시 실행되지 않습니다. <br>
+            함수는 메모리에 할당되어 대기하고 있다가 함수가 호출되면 실행합니다. 정의되어 있는 함수를 호출하는 
+            기본형은 다음과 같습니다.</p>
+
+            <div class="line">
+                기본형 : <br>
+                함수명 = ();<br>
+                    &nbsp;&nbsp; 또는 참조 변수<br>
+                }
+            </div>
+            <br>
+            <p>다음은 함수 정의문을 이용해 [배경색 바꾸기]버튼을 클릭할 때마다 배경색이 바뀌도록 만든 예제입니다.</p>
+
+            <div class="code">
+<pre><code>06:  &lt;script&gt;
+07:     var color = ["white", "yellow", "aqua", "purple"];
+08:     
+09:     var i = 0;
+10:     function changeColor(){
+11:         i++;
+12:       『 if( i &gt;= color.length) { 
+13:             i = 0;                              &lt;- i의 값이 4 이상이면 i에 0을 대입합니다.
+14:         }                                 』
+15:
+16:         var bodyTag = document.getElementByle("theBody");
+17:         bodyTag.style.backgroundColor = color[i];
+18:         }
+19: &lt;/script&gt;
+20: &lt;/head&gt;
+21: &lt;body id="theBody&gt;    
+22:     &lt;button onclick="changeColor();&gt;    &lt;--버튼을 클릭하면 changeColor()함수를 호출합니다.
+23: &lt;/bodyt&gt;
+</code></pre>
+            </div>
+
+            <h3>매개변수 함수</h3>
+            <p>매개변수가 있는 함수 정의문은 함수를 호출할 때 전달하고자 하는 값을 입력하여 호출할 수 있습니다.<br>
+            이렇게 전달된 값은 매개변수가 받아 함수 정의문에서 사용할 수 있게 됩니다.</p>
+            <br>
+            <p>다음은 함수를 호출할 때 값을 전달하는 기본형입니다.</p>
+            <p>함수를 호출할 때 ⓐ 데이터 1은 ① 매개변수 1에 저장되고 ⓑ 데이터 2는 ② 매개변수 2에 저장됩니다,<br>
+                그리고 ⓒ 데이터는 ③ 매개변수 n에 저장됩니다</p>
+            <div class="code">
+<pre><code>기본형 :                     ①             ②                ③
+    function 함수명(매개변수 1, 매개변수2, ...매개변수n){
+        자바스크립트 코드;
+}               ⓐ           ⓑ         ⓒ
+    함수명(데이터 1, 데이터2, ...데이터 n);
+</code></pre>
+            </div>
+            <br>
+            <p>다음은 함수를 호출했을 때 이름과 사는 지역의 데이터를 함수 정의문의 매개변수 name과 area에 <br>
+            각각 전달하여 함수 안에 있는 실행문의 매개변수에 저장된 데이터를 불러와 출력하는 예제입니다.</p>
+            <div class="code">
+<pre><code>06:  &lt;script&gt;
+07:     function myFnc(name, area){
+08:         document.write("안녕하세요" + name + "입니다.", "&lt;br&gt;");         
+09:         document.write("사는곳은" + area + "입니다.", "&lt;br&gt;&lt;br&gt;");
+10:     }
+11:
+12:     myFnc("박근혁", "경기도");      //안녕하세요 박근혁입니다.
+13:                                              //사는곳은 경기도입니다.
+14:     myFnc("홍당무", "서울");
+15:  &lt;/script&gt;
+</code></pre>
+            </div>
+            <br>
+            
+            <h3>리턴값 함수</h3>
+            <p></p>
+            <p>설명</p>
+            <div class="code"></div>
+
+            <h3>익명 함수</h3>
+            <p>문법</p>
+            <p>설명</p>
+            <div class="code"></div>
+
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>

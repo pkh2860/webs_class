@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+    <div class="top"><a href="#header">Top</a></div>
     <header id="header">
         <h1><a href="index.html">Javascript</a></h1>
         <nav> 
@@ -25,6 +25,9 @@
                 <li><a href="javascript02.html">데이터 불러오기</a></li>
                 <li class="active"><a href="javascript03.html">데이터 실행하기</a></li>
                 <li><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="practice01.html">데이터 연습하기</a></li>
             </ul>
         </nav>
     </header>
@@ -52,6 +55,134 @@
                 <li>04. 클래스</li>
             </ul>
         </div>
+         <!-- //list -->
+
+         <div class="note">
+            <a href="reference04.html">for 문</a>
+            <a href="reference05.html">연산자</a>
+            <a href="reference08.html">함수</a>
+        </div>
+        <!-- //nont -->
+
+        <div class="script">
+             <!-- sample1 -->
+             <div id="sample1" class="sample">
+                <h3>01. 선언적 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(){
+        document.write("함수가 실행되었습니다.");
+    }
+    func();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+                        "함수가 실행되었습니다." <br>
+                    </div>
+                </div>
+            </div>
+            <!-- //sample1 -->
+
+                <!-- sample2 -->
+                <div id="sample2" class="sample">
+                <h3>02. 익명 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const func = function(){
+        document.write("함수가 실행되었습니다")
+    }
+    func();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result02">
+                        "함수가 실행되었습니다." <br>
+                    </div>
+                </div>
+            </div>
+            <!-- //sample2 -->
+
+                <!-- sample3 -->
+                <div id="sample3" class="sample">
+                <h3>03. 매개변수 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(str){
+        document.write(str);
+    }
+    func("함수가 실행되었습니다");
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01">
+                        "함수가 실행되었습니다." <br>
+                    </div>
+                </div>
+            </div>
+            <!-- //sample1 -->
+
+                <!-- sample4 -->
+                <div id="sample1" class="sample">
+                <h3>04. 리턴값 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(){
+        const str = "함수가 실행되었습니다."
+        return str;
+    }
+    document.write(func());
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result04">
+                        "함수가 실행되었습니다." <br>
+                    </div>
+                </div>
+            </div>
+            <!-- //sample1 -->
+        </div>
+        <!-- //script -->
+
+        <script>
+ 
+
+
+            //01.선언적 함수
+            {
+                function func(){
+                    document.write("함수가 실행되었습니다.");
+                }
+                func();
+              
+            }
+            //02.익명 함수 (함수가 변수 안으로 들어감)
+            {
+                const func = function(){
+                    document.write("함수가 실행되었습니다")
+                }
+                func();
+            }
+            //03.매개변수 함수()
+            {
+                function func(str){
+                    document.write(str);
+                }
+                func("함수가 실행되었습니다");
+            }
+            //04.리턴값 함수
+            {
+                function func(){
+                    const str = "함수가 실행되었습니다."
+                    return str;
+                }
+                document.write(func());
+            }
+        </script>
     </main>
 </body>
 
