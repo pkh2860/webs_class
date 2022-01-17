@@ -16,7 +16,7 @@
 
 <body>
     
-    <div class="top"><a href="#header">Top</a></div>
+    <div class="back"><a href="practice01.html">Back</a></div>
 
     <header id="header">
         <h1><a href="index.html">Javascript</a></h1>
@@ -32,8 +32,9 @@
 <pre class="line-numbers"><code class="language-js">{
     let num = 0;
     while(num <=100 ){
-        document.write(num)
-    } num++;
+        console.log(num)
+        num++;
+    } 
 }</code></pre>
             </div>
             <!-- //01 -->
@@ -42,8 +43,8 @@
             <h3>1.2 for문 이용해서 1부터 100까지 출력하는 함수를 작성해주세요.</h3>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    for(let i=0; i<=100 ++i)
-        document.write(i)
+    for(let i=0; i<=100 i++)
+         console.log(i)
 }</code></pre>
             </div>
             <!-- //02 -->
@@ -51,11 +52,37 @@
             <!-- 03 -->
             <h3>1.2 for문 이용해서 1부터 100까지 출력하는 함수를 작성해주세요.</h3>
             <p>조건1. 짝수만 출력하세요</p>
-            <p>조건2. 5의 배수만 출력하세요</p>
+            <p>조건2. 홀수만 출력하세요</p>
 
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    for(i=0; i<= ++i)
+    //짝수
+    for( let i=1; i<=100; i++){
+        if(i % 2 == 0){
+            console.log(i);
+        }
+    }
+
+    for( let i=1; i<=100; i++){
+        if(i % 2 == 0) console.log(i);
+             }
+
+    for( let i=2; i<=100; i+=2){
+        console.log(i);
+    }   
+
+    //홀수
+    for( let i=1; i<=100; i++){
+        if(i % 2 == 1){
+            console.log(i);
+        }
+    }
+
+    for( let i=1; i<=100; i++){
+        if(i % 2 != 0){
+            console.log(i);
+        }
+    }
 
 }</code></pre>
             </div>
@@ -64,7 +91,17 @@
         </div>
     </main>
     <script>
-     
+        {
+            //짝수
+            // for( let i=1; i<=100; i++){
+            //     if(i % 2 == 0) console.log(i);
+            //     }
+
+            for( let i=2; i<=100; i+=2){
+                 console.log(i);
+                }   
+
+        }   
     </script>
 </body>
 

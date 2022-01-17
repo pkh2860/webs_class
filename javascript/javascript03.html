@@ -48,10 +48,10 @@
                 <li>02. 익명 함수</li>
                 <li>03. 매개변수 함수</li>
                 <li>04. 리턴값 함수</li>
-                <li>04. 화살표 함수 : 선언적 함수</li>
-                <li>04. 화살표 함수 : 익명함수</li>
-                <li>04. 화살표 함수 : 리턴값 함수</li>
-                <li>04. 화살표 함수 : 매개변수 함수</li>
+                <li>05. 화살표 함수 : 선언적 함수</li>
+                <li>06. 화살표 함수 : 익명함수</li>
+                <li>07. 화살표 함수 : 리턴값 함수</li>
+                <li>08. 화살표 함수 : 익명함수 + 매개변수 + 리턴값</li>
                 <li>04. 내부 함수</li>
                 <li>04. 즉시실행 함수</li>
                 <li>04. 파라미터 함수</li>
@@ -182,6 +182,8 @@
                 //     document.write(str);
                 // }
                 // func("함수가 실행되었습니다");
+
+                
             }
             //04.리턴값 함수
             {
@@ -190,6 +192,69 @@
                 //     return str;
                 // }
                 // document.write(func());
+            }
+
+            //05. 화살표 함수 : 선언적 함수
+            {
+                // function func(){
+                //     document.write("함수가 실행되었습니다.");
+                // }
+                // func();
+
+                //화살표
+                func= () => {
+                    document.write("함수가 실행되었습니다.5")
+                }
+                // func();
+            }
+
+            //06. 화살표 함수 : 익명 함수
+            {
+                // const func = function(){
+                //     document.write("함수가 실행되었습니다.6")
+                // }
+                // func();
+
+                //화살표
+                const func = () => {
+                    document.write("함수가 실행되었습니다.6")
+                }
+                // func();
+            }
+
+            //07. 화살표 함수 : 리턴값 함수
+            {
+                // function func(){
+                //     const str = "함수가 실행되었습니다7."
+                //     return str
+                // }
+                // document.write(func());
+
+                //화살표
+                func = () => {
+                    const str = "함수가 실행되었습니다7."
+                    return str
+                }
+                // document.write(func());
+                
+            }
+
+            //08. 화살표 함수 : 익명함수 + 매개변수 + 리턴값
+            {
+                const func= (str) => {
+                    return str;
+                }
+                // document.write(func("함수가 실행되었습니다8"))
+            }
+
+            {
+                {
+                    const num = [1,2,3,4,5,6,7,8,9,10]
+
+                    num.forEach(function(el){
+                        document.write(el)
+                    });
+                }
             }
         </script>
     </main>
