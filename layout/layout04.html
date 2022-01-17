@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Layout04</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         #wrap{
             width: 1200px;
             height: 1080px;
-            background-color: #e5f4fd;
+            background-color: #E5F4FD;
             margin: 0 auto;
         }
         #header{
@@ -20,76 +24,50 @@
         #nav{
             width: 1200px;
             height: 100px;
-            display: flex;
-
-        }
-        #nav .left{
-            width: 600px;
-            background-color: #94d2f6;
-        }
-        #nav .right{
-            width: 600px;
-            background-color: #90b9ce;
+            background-color: #94D2F6;
         }
         #contents1{
             width: 1200px;
+            height: 520px;
             display: flex;
         }
-        #contents1 .article1{
+        #contents1 .cont01{
             width: 300px;
             height: 520px;
-            background-color: #70c0f2;
-
+            background-color: #70C0F2;
         }
-        #contents1 .article2{
-            width: 900px;
-            background-color: #5AB3F0;
-        }
-        #contents1 .article2-1{
+        #contents1 .cont02 .cont02-1{
             width: 900px;
             height: 260px;
             background-color: #5AB3F0;
         }
-        #contents1 .article2-2{
+        #contents1 .cont02 .cont02-2{
             width: 900px;
             height: 260px;
             background-color: #4BA6EE;
         }
-
         #contents2{
             width: 1200px;
             height: 260px;
-            background-color: #4599DF;
-        }
-        #contents .aside {
-            width: 270px;
-            height: 520px;
-            background-color: #70c0f2;
-        }
-        #contents .content{
-            display: flex;
-            width: 1200px;
+            background-color: #4599df;
         }
         #footer{
             width: 1200px;
             height: 100px;
-            background-color: #3b86cb;
+            background-color: #3B86CB;
         }
     </style>
 </head>
 <body>
     <div id="wrap">
         <header id="header"></header>
-        <nav id="nav">
-            <div class="left"></div>
-            <div class="right"></div>
-        </nav>
+        <nav id="nav"></nav>
         <section id="contents1">
-            <article class="article1"></article>
-            <article class="article2">
-                <article class="article2-1"></article>
-                <article class="article2-2"></article>
-            </article>
+            <div class="cont01"></div>
+            <div class="cont02">
+                <div class="cont02-1"></div>
+                <div class="cont02-2"></div>
+            </div>
         </section>
         <section id="contents2"></section>
         <footer id="footer"></footer>
