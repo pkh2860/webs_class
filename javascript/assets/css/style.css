@@ -300,13 +300,14 @@ a {
     border-radius:5px 0px ;
     font-size: 16px;
 }
-.result div {
+.result > div {
     background: #272822;
     padding: 20px;
     color: #fff;
     border-radius: 0 0 5px 5px;
     font-size: 16px;
     line-height: 1.4;
+    display: none;
 }
 @media (max-width:800px) {
     .result h4 {
