@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wert {
+            width: 100%;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #EEEBE9;
+        }
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #B9ABA5;
+        }
+        #content {
+            width: 100%;
+            height: 780px;
+            background-color: #886F64;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #4A352F;
+        }
+        .contents {
+            width: 1200px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+        }
+        #content .contents{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        #content .contents .cont1{
+            width: 900px;
+            height: 390px;
+            background-color: #684D43;
+        }
+        #content .contents .cont2{
+            width: 900px;
+            height: 390px;
+            background-color: #584138;
+        }
+        #content .contents .cont3{
+            width: 300px;
+            height: 780px;
+            background-color: #73564A;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wert">
+        <header id="header">
+            <div class="contents"></div>
+        </header>
+        <nav id="nav">
+            <div class="contents"></div>
+
+        </nav>
+        <section id="content">
+            <div class="contents">
+                <div class="cont1"></div>
+                <div class="cont2"></div>
+                <div class="cont3"></div>
+            </div>
+
+        </section>
+        <footer id="footer">
+            <div class="contents"></div>
+
+        </footer>
+    </div>
+    
+</body>
+</html>

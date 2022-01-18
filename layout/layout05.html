@@ -1,97 +1,96 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout05</title>
+    <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        #wrap{
+
+        #wrap {
+            width: 100%;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #EFEBE9;
+        }
+
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #BDAAA4;
+        }
+
+        #contents {
+            width: 100%;
+            height: 780px;
+            background-color: #8d6E63;
+        }
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #4e342E;
+
+        }
+        .container {
             width: 1200px;
             margin: 0 auto;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0,3)
         }
-        #header{
-            width: 1200px;
-            height: 100px;
-            background-color: #CEE5CB;
-        }
-        #nav{
-            width: 1200px;
-            height: 100px;
+        #contents .container {
             display: flex;
-           
+            flex-wrap: wrap;  /*사이즈 맞게 정렬*/
+            flex-direction: column; /*박스정렬*/
         }
-        #nav .nav1{
+        #contents .container .aside{
             width: 400px;
-            height: 100px;
-            background-color: #AFD5AB;
+            height: 780px;
+            background-color: #795548;
         }
-        #nav .nav2{
-            width: 400px;
-            height: 100px;
-            background-color: #82BE7B;
+        #contents .container .article1{
+            width: 800px;
+            height: 390px;
+            background-color: #6d4c41;
         }
-        #nav .nav3{
-            width: 400px;
-            height: 100px;
-            background-color: #AFD5AB;
-        }
-        #content{
-            width: 1200px;
-            height: 700px;
-            display: flex;
-        }
-        #content .contents1 {
-            width: 300px;
-            height: 700px;
-            background-color: #91C58A;
-        }
-        #content .contents2 .contents2-1 {
-            width: 600px;
-            height: 350px;
-            background-color: #7BB972;
-        }
-        #content .contents2 .contents2-2 {
-            width: 600px;
-            height: 350px;
-            background-color: #7BB972;
-        }
-        #content .contents3 {
-            width: 300px;
-            height: 700px;
-            background-color: #67AD5B;
-        }
-        #footer{
-            width: 1200px;
-            height: 100px;
-            background-color: #5D9E52;
+        #contents .container .article2{
+            width: 800px;
+            height: 390px;
+            background-color: #5d4037;
         }
     </style>
 </head>
+
 <body>
     <div id="wrap">
-        <header id="header"></header>
+        <header id="header">
+            <div class="container"></div>
+        </header>
 
         <nav id="nav">
-            <div class="nav1"></div>
-            <div class="nav2"></div>
-            <div class="nav3"></div>
+            <div class="container"></div>
         </nav>
-
-        <section id="content">
-            <div class="contents1"></div>
-            <div class="contents2">
-                <div class="contents2-1"></div>
-                <div class="contents2-2"></div>
+        
+        <section id="contents">    <!-- w100% -->
+            <div class="container"> <!-- w1200px  -->
+                <aside class="aside"></aside> <!-- 3개로 나눔 -->
+                <aside class="article1"></aside>
+                <aside class="article2"></aside>
             </div>
-            <div class="contents3"></div>
         </section>
 
-        <footer id=footer></footer>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
     </div>
 </body>
+
 </html>

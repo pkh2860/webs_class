@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout04</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 1200px;
+            height: 1080px;
+            background-color: #E5F4FD;
+            margin: 0 auto;
+        }
+        #header{
+            width: 1200px;
+            height: 100px;
+            background-color: #BDE3F9;
+        }
+        #nav{
+            width: 1200px;
+            height: 100px;
+            background-color: #94D2F6;
+        }
+        #contents1{
+            width: 1200px;
+            height: 520px;
+            display: flex;
+        }
+        #contents1 .cont01{
+            width: 300px;
+            height: 520px;
+            background-color: #70C0F2;
+        }
+        #contents1 .cont02 .cont02-1{
+            width: 900px;
+            height: 260px;
+            background-color: #5AB3F0;
+        }
+        #contents1 .cont02 .cont02-2{
+            width: 900px;
+            height: 260px;
+            background-color: #4BA6EE;
+        }
+        #contents2{
+            width: 1200px;
+            height: 260px;
+            background-color: #4599df;
+        }
+        #footer{
+            width: 1200px;
+            height: 100px;
+            background-color: #3B86CB;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <section id="contents1">
+            <div class="cont01"></div>
+            <div class="cont02">
+                <div class="cont02-1"></div>
+                <div class="cont02-2"></div>
+            </div>
+        </section>
+        <section id="contents2"></section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
