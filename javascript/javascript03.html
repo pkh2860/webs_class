@@ -127,15 +127,15 @@
                 </div>
                 <div class="result">
                     <h4>결과보기</h4>
-                    <div class="result01">
+                    <div class="result3">
                         "함수가 실행되었습니다." <br>
                     </div>
                 </div>
             </div>
-            <!-- //sample1 -->
+            <!-- //sample3 -->
 
                 <!-- sample4 -->
-                <div id="sample1" class="sample">
+                <div id="sample4" class="sample">
                 <h3>04. 리턴값 함수</h3>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -148,12 +148,93 @@
                 </div>
                 <div class="result">
                     <h4>결과보기</h4>
-                    <div class="result04">
+                    <div class="result4">
                         "함수가 실행되었습니다." <br>
                     </div>
                 </div>
             </div>
-            <!-- //sample1 -->
+            <!-- //sample4 -->
+
+             <!-- sample5 -->
+             <div id="sample5" class="sample">
+                <h3>05. 화살표 함수 : 선언적 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    func= () => {
+        document.write("함수가 실행되었습니다.5")
+    }
+    func();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result5">
+                        "함수가 실행되었습니다.5" <br>
+                    </div>
+                </div>
+            </div>
+            <!-- //sample5 -->
+
+              <!-- sample6 -->
+              <div id="sample6" class="sample">
+                <h3>06. 화살표 함수 : 익명함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const func = () => {
+        document.write("함수가 실행되었습니다.6")
+    }
+    func();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result6">
+                        "함수가 실행되었습니다.6" <br>
+                    </div>
+                </div>
+            </div>
+            <!-- //sample6 -->
+
+                <!-- sample7 -->
+                <div id="sample7" class="sample">
+                <h3>07. 화살표 함수 : 리턴값 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    func = () => {
+        const str = "함수가 실행되었습니다7."
+        return str
+    }
+        document.write(func());
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result7">
+                        "함수가 실행되었습니다.7" <br>
+                    </div>
+                </div>
+            </div>
+            <!-- //sample7 -->
+
+             <!-- sample8 -->
+             <div id="sample8" class="sample">
+                <h3>08. 화살표 함수 : 익명함수 + 매개변수 + 리턴값</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const func= (str) => {
+        return str;
+    }
+    document.write(func("함수가 실행되었습니다8"))
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result7">
+                        "함수가 실행되었습니다.7" <br>
+                    </div>
+                </div>
+            </div>
+            <!-- //sample7 -->
         </div>
         <!-- //script -->
 
@@ -247,15 +328,7 @@
                 // document.write(func("함수가 실행되었습니다8"))
             }
 
-            {
-                {
-                    const num = [1,2,3,4,5,6,7,8,9,10]
-
-                    num.forEach(function(el){
-                        document.write(el)
-                    });
-                }
-            }
+           
         </script>
     </main>
 </body>
