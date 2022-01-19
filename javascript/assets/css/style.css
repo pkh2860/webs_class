@@ -240,9 +240,6 @@ img {
     background-color: rgb(30, 10, 209);
     border-radius: 1.3em;
 }
-.script .sample .view > div.blue img{
-    opacity: 0.3;
-}
 .script .sample .view > div.selected img{
     opacity: 0.3;
 }
