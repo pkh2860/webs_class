@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,159 @@
     <title>Practice01-3</title>
     <!-- style -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="assets/css/prism2.css">
 
-    <!-- script -->
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        table td {
+            border:1px solid #222;
+            font-size: 16px;
+            padding: 15px;
+            font-family: 'NexonLv1Gothic';
+        }
+    </style>
+  
 </head>
+
 <body>
+
+    <div class="back"><a href="practice01.html">Back</a></div>
+
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+    </header>
+
+    <main id="main">
+       
+        <div class="test">
+            <h2>1. 테이블 출력하기</h2>
+            <!-- 01 -->
+            <h3>1.for문을 이용해서 테이블을 출력하시오!</h3>
+
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    let table = "&lt;table&gt;";
+            
+        for (let i=1; i&lt;=5; i++){
+            table += "&lt;tr&gt;";
+                for (let j=1; j&lt;=5; j++){
+                    table += "&lt;td&gt;1&lt;/td&gt;";
+                }
+            table += "&lt;/tr&gt;";
+}</code></pre>
+            </div>
+            <div class="result01"></div>
+            <!-- //01 -->
+            
+
+              <!-- 02 -->
+            <h3>1.2 for문을 이용해서 테이블을 출력하시오!</h3>
+            <p>1~25까지 숫자를 넣으시오!</p>
+
+              <div class="code">
+  <pre class="line-numbers"><code class="language-js">{
+    let num = 1;
+    let table = "&lt;table&gt;";
     
+    for ( let i=1; i&lt;=5; i++){
+        table +="&lt;tr&gt;";
+            for(let j=1; j&gt;=5; j++ ){
+            table +="&lt;td&gt;"+ num+"&lt;/td&gt;";
+            num++;
+          }
+        table +="&lt;/tr&gt;";
+    }
+
+        table +="&lt;/table&gt;"
+  }</code></pre>
+              </div>
+            <div class="result02"></div>
+
+              <!-- //02 -->
+        </div>
+        <!-- <table border="1">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </table> -->
+    </main>
+
+      <!-- script -->
+      <script src="assets/js/prism2.js"></script>
+
+    <script>
+        //01
+        {
+        let table = "<table>";
+            
+        for (let i=1; i<=5; i++){
+            table += "<tr>";
+                for (let j=1; j<=5; j++){
+                    table += "<td>1</td>";
+                }
+            table += "</tr>";
+        }
+
+        table += "</table>";
+
+        document.querySelector(".result01").innerHTML = table;
+         }
+
+        //02
+        {
+            let num = 1;
+            let table = "<table>";
+            
+            for ( let i=1; i<=5; i++){
+                table +="<tr>";
+                    for(let j=1; j<=5; j++ ){
+                    table +="<td>"+ num+"</td>";
+                    num++;
+                  }
+                table +="</tr>";
+            }
+
+                table +="</table>"
+
+        document.querySelector(".result02").innerHTML = table;
+
+        }
+    </script>
+
 </body>
+
 </html>
