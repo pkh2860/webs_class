@@ -40,17 +40,178 @@
     <main id="main">
         <div class="list">
             <ul>
-                <li>01. 변수 : 데이터 저장</li>
+                <li><a href="#sample1">01. 브라우저 객체 : window 객체 메서드 : window.alert() : 알림창 표시하기</a></li>
+                <li><a href="#sample2">02. 브라우저 객체 : window 객체 메서드 : window.confirm() : 확인창 표시하기</a></li>
+                <li><a href="#sample3">03. 브라우저 객체 : window 객체 메서드 : window.prompt() : 입력창 표시하기</a></li>
+                <li>04. 브라우저 객체 : window 객체 메서드 : window.open() : 새로운 창 열기</li>
+                <li>05. 브라우저 객체 : window 객체 메서드 : window.close() : 새로운 창 닫기</li>
+                <li>06. 브라우저 객체 : window 객체 메서드 : window.focus() : 페이지 포커스 설정</li>
+                <li>07. 브라우저 객체 : window 객체 메서드 : window.blur() : 페이지 포커스 벗어났을 때 설정</li>
+                <br>
+                <li>01. 브라우저 객체 : screen 객체 메서드 : </li>
+                <br>
+                <li>01. 브라우저 객체 : lacation 객체 메서드</li>
+                <br>
+                <li>01. 브라우저 객체 : navigator 객체 메서드</li>
+                <li> 07. 브라우저 객체 : navigator 객체 속성 : navigator.appCodeName : 브라우저의 코드명을 반환</li>
+                <li>07. 브라우저 객체 : navigator 객체 속성 : navigator.appName : 브라우저의 이름을 반환</li>
+                <li>07. 브라우저 객체 : navigator 객체 속성 : navigator.appVersion : 브라우저의 버전을 반환</li>
+                <li>07. 브라우저 객체 : navigator 객체 속성 : navigator.cookieEnabled : 브라우저의 쿠키 사용 가능 여부를 반환</li>
+                <li>07. 브라우저 객체 : navigator 객체 속성 : navigator.language : 브라우저에서 사용되는 언어를 반환</li>
+                <li>07. 브라우저 객체 : navigator 객체 속성 : navigator.onLine : 브라우저가 온라인인지 여부를 반환</li>
+                <li>07. 브라우저 객체 : navigator 객체 속성 : navigator.platform : 브라우저가 실행되는 플랫폼 정보를 반환</li>
+                <li> 07. 브라우저 객체 : navigator 객체 속성 : navigator.product : 브라우저에서 사용되는 엔진 이름을 반환</li>
+                <li> 07. 브라우저 객체 : navigator 객체 속성 : navigator.userAgent : 브라우저와 운영체제 정보를 반환</li>
+                <li> 01. 브라우저 객체 : navigator 객체 속성 : navigator.onLine : 네트워크 상태 가져오기(225)</li>
+                <br>
+                <li>01. 브라우저 객체 : history 객체 메서드</li>
             </ul>
         </div>
         <!-- //list -->
         <div class="script">
-            
+             <!-- sample1 -->
+             <div id="sample1" class="sample">
+                <h3>01. 브라우저 객체 : window 객체 메서드 : window.alert() : 알림창 표시하기</h3>
+                <div class="btn">
+                    <a href="#c" class="btn1">버튼을 클릭하면 알림창이 표시됩니다.</a>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const btn = document.querySelector("#sample1 .btn1");
+
+    btn.addEventListener("click", () => {
+        alert("알림창");
+    });
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample1 -->
+
+             <!-- sample2 -->
+             <div id="sample2" class="sample">
+                <h3>02. 브라우저 객체 : window 객체 메서드 : window.confirm() : 확인창 표시하기</h3>
+                <div class="view">
+
+                </div>
+                <div class="btn">
+                    <a href="#c" class="btn1">버튼을 클릭하면 확인창이 표시됩니다.</a>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const btn = document.querySelector("#sample2 .btn1");
+
+    btn.addEventListener("click", () => {
+        const conf = confirm("오늘 공부할 준비가 되었나요?")
+
+        document.querySelector("#sample2 .view").innerText = conf;
+    })
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample2 -->
+
+             <!-- sample3 -->
+             <div id="sample3" class="sample">
+                <h3>03. 브라우저 객체 : window 객체 메서드 : window.prompt() : 입력창 표시하기</h3>
+                <div class="view">
+
+                </div>
+                <div class="btn">
+                    <a href="#c" class="btn1">버튼을 클릭하면 입력창이 표시됩니다.</a>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const btn = document.querySelector("#sample3 .btn1");
+
+    btn.addEventListener("click", () => {
+        const conf = prompt("오늘 공부할 준비가 되었나요?");
+
+        document.querySelector("#sample3 .view").innerText = conf;
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample3 -->
+
+              <!-- sample4 -->
+              <div id="sample4" class="sample">
+                <h3>숙제1. true/false</h3>
+                <div class="view">
+
+                </div>
+                <div class="btn">
+                    <a href="#c" class="btn1">버튼을 클릭하면 입력창이 표시됩니다.</a>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    //만약에 true -> 네 준비 되었습니다.
+    //만약에 false -> 아직 준비 안되었습니다.
+    const btn = document.querySelector("#sample4 .btn1");
+    
+    btn.addEventListener("click", ( ) => {
+        const conf = confirm("오늘 공부할 준비가 되었나요?")
+            if(conf){
+              document.querySelector("#sample4 .view").innerText = "네 준비 되었습니다";
+            } else {
+                document.querySelector("#sample4 .view").innerText = "아직 준비 안되었습니다";
+            }
+    })    
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample4 -->
+
         </div>
         <!-- //script -->
     </main>
     <!-- script -->
     <script>
+        //01. alert
+        {
+            const btn = document.querySelector("#sample1 .btn1");
+
+            btn.addEventListener("click", () => {
+                alert("알림창");
+            });
+        }
+
+        //02. confirm()
+        {  
+            const btn = document.querySelector("#sample2 .btn1");
+
+            btn.addEventListener("click", () => {
+                const conf = confirm("오늘 공부할 준비가 되었나요?")
+
+                document.querySelector("#sample2 .view").innerText = conf;
+            })            
+        }
+
+        //03. prompt()
+        {
+            const btn = document.querySelector("#sample3 .btn1");
+
+            btn.addEventListener("click", () => {
+                const conf = prompt("오늘 공부할 준비가 되었나요?");
+
+                document.querySelector("#sample3 .view").innerText = conf;
+            });
+        }
+
+
+        //숙제
+        {  
+            //만약에 true -> 네 준비 되었습니다.
+            //만약에 false -> 아직 준비 안되었습니다.
+            const btn = document.querySelector("#sample4 .btn1");
+            
+            btn.addEventListener("click", () => {
+                const conf = confirm("오늘 공부할 준비가 되었나요?");
+                    if(conf){
+                      document.querySelector("#sample4 .view").innerText = "네 준비 되었습니다";
+                    } else {
+                        document.querySelector("#sample4 .view").innerText = "아직 준비 안되었습니다";
+                    }
+            });        
+        }
         
     </script>
 </body>

@@ -234,6 +234,33 @@
 
     <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    //리셋
+    document.querySelector("#sample5 .btn0").addEventListener("click", function(){
+        document.querySelectorAll("#sample5 .view > div").forEach(function(el){
+            el.classList.remove("selected", "blue");
+    });
+        document.querySelector("#sample5 .view1").classList.add("selected")
+        document.querySelector("#sample5 .view3").classList.add("selected")
+        document.querySelector("#sample5 .view5").classList.add("selected")
+    });
+
+    //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 삭제합니다
+    document.querySelector("#sample5 .btn1").addEventListener("click", function(){
+        document.querySelectorAll("#sample5 .view > div").forEach(function(el){
+            if(el.classList.contains("selected")){
+                el.classList.remove("selected");
+            };
+        });
+    });
+
+    //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 파란색으로 나오게 하시오
+    document.querySelector("#sample5 .btn2").addEventListener("click", function(){
+    document.querySelectorAll("#sample5 .view > div").forEach(function(el){
+            if(el.classList.contains("selected")){
+                el.classList.toggle("blue");
+            }
+        })  
+    });
 
 }</code></pre>
     </div>
