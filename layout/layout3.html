@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+            background-color: #E1F5FE;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #B3E5FC;
+            margin: 0 auto;
+        }
+        #nav {
+            width: 1200px;
+            height: 100px;
+            background-color: #81D5FA;
+            margin: 0 auto;
+        }
+        #contents {
+            width: 1200px;
+            height: 780px;
+            background-color: #4FC2F8;
+            margin: 0 auto;
+            display: flex;
+        }
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #0288D1;
+            margin: 0 auto;
+        }
+        .cont1 {
+            width: 300px;
+            height: 780px;
+            background-color: #4FC2F8;
+        }
+        .cont2 .cont2-1{
+            width: 900px;
+            height: 260px;
+        }
+        .cont2 .cont2-2{
+            width: 900px;
+            height: 260px;
+            background-color: #03A9F5;
+        }
+        .cont2 .cont2-3{
+            width: 900px;
+            height: 260px;
+            background-color: #039BE6;
+        }
+        .cont2 .cont2-1 .left {
+            width: 450px;
+            height: 260px;
+            background-color: #66C2EB;
+        }
+        .cont2 .cont2-1 .right {
+            width: 450px;
+            height: 260px;
+            background-color: #28B6F6;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <section id="contents">
+            <div class="cont1"></div>
+            <div class="cont2">
+                <div class="cont2-1">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>   
+                <div class="cont2-2"></div>   
+                <div class="cont2-3"></div>   
+            </div>
+        </section>
+        <footer id="footer"></footer>
+</body>
+</html>
