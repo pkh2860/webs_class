@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/html.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/html.png">
+    <link rel="icon" href="../assets/face/html.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>박근혁</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="html.html">HTML<em>기초 문법</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="html.html">속성</a></li>
+                <li><a href="htmlReference01.html">기초 문법</a></li>
+                <li><a href="htmlReference02.html">웹표준/웹접근성/웹호환성</a></li>
+                <li><a href="htmlReference03.html">시멘틱 태그</a></li>
+                <li class="active"><a href="htmlReference04.html">SEO</a></li>
+                <li><a href="htmlReference05.html">그리드 시스템</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>SEO(검색엔진최적화)</h3>
+                <p>SEO는(검색엔진최적화)는 사용자의 검색의도를 명확히 이해하여 고객니즈 기반으로 웹사이트 기능을 개선,콘텐츠를 제작하는 방법입니다.<br>
+                    즉,단순이 검색엔진의 로직에만 맞추는 것이 아니라 웹사이트의 품질,콘텐츠의 질이 함께 개선되어야 페이지 퀄리티가 높아져서
+                    실직적인 효과를 거둘 수 있습니다. 이런 이유로 <br>
+                    검색엔진의 기술적인 요건을 만족하기 위한 테크니컬 seo<br>
+                    키워드 리서치를 통해 컨텐츠의 질을 높이기 위한 콘텐츠 seo<br>
+                    검색엔진과 인터넷의 가장 중요한 원리인 내 웹사이트 링크 확산을 목적으로 하는 링크빌딩 seo<br>
+                    로 분류되고 이에 따라 전문화된 프로세스가 있습니다.<br>
+                    또한 검색엔진은 수집, 정제, 색인, 랭킹이라는 일련의 과정을 거쳐서 웹사이트의 품질을 결정하게 된다고 밝히는데 <br>
+                    이런 과정 또한 앞서 말씀드린 테크니컬(수집) - 콘텐츠(정제/색인) - 링크빌딩의 과정 후 랭킹을 정하게 되기 떄문에 seo프로세스의 일부분입니다.
+                </p>
+                <ul>
+                    <li>수집(크롤링, Crawling) : 검색엔진로봇이 홈페이지의 콘텐츠를 가져옴</li>
+                    <li>정제(정제, Refinedness) : 가져온 콘텐츠를 유사/중복문서,가비지 데이터 등 판별</li>
+                    <li>색인(인덱싱, indexing) : 판별 후 주제뱔로 색인하여 보관</li>
+                    <li>랭킹(순위, Ranking) : 검색의도에 맞춰 색인된 콘텐츠에 미리 순위를 부여한 후 검색어에 따라 제공</li>
+                </ul>
+                <br>
+                <h3>검색엔진 최적화가 필요한 이유</h3>
+                <p>검색엔진 최적화 필요성은 주요 포탈 상위 노출로 광고비가 절감되고 지속적으로 웹사이트 트래픽이 증가 함으로써 검색엔진최적화는 디지털 비즈니스를 하는 사업자에게는 필수적인 영역이 되고 있습니다.</p>
+
+                <br>
+
+                <h3>검색엔진최적화 기초</h3>
+                <p>검색엔진 제목, 메타태그는 테크니컬 seo 요소 중 가장 중요한 항목입니다.<br>
+                사용자의 시야에 보이지 않지만 웹페이지 전체의 내용을 요약해서 검색엔진에게 제공하기 때문입니다.<br>
+                </p>
+
+                <h4>기본형</h4>
+                <div class="code">
+<pre><code>&lt;title&gt;제목&lt;/title&gt;
+    &lt;meta name="description" content="웹페이지 설명"&gt;
+</code></pre>
+            </div>
+
+            <br>
+            
+            <h3>테크니컬 seo는 다음과 같은 요소를 체크합니다</h3>
+            <ul>
+                <li>콘텐츠SEO지원 : title, meta description, h1, h2, 단순URL, 이미지대체 텍스트</li>
+                <li>소셜 친화도 : 소셜미디어 지원, OG대그, 트위터 카드</li>
+                <li>기술최적화 : canonial URL, inline CSS, 대표도메인, conenttype, html doctype, favicon, html5지원, html 상태</li>
+                <li>검색엔진친화도 : sitemap, robots txt, search console/advisor, server error, 구글/네이버 analytics 설정</li>
+                <li>속도최적화 : expires, google speed insight, css/js공간압축, 브라우저캐시설정, http압축</li>
+                <li>서버보안 : ssl설정, 서버보안설정</li>
+            </ul>
+
+            <h3>콘텐츠 seo는 다음과 같은 프로세스를 통해서 콘텐츠를 최적화 합니다.</h3>
+            <ul>
+                <li>1, 핵심/연관 타겟고객 키워드 발굴</li>
+                <li>2. 콘텐츠 별 키워드 최적화</li>
+                <li>3. 키워드 갭 분석</li>
+                <li>4. 키워드 트래킹/포지션 분석 및 경쟁사 벤치마킹</li>
+                <li>5. 콘텐츠 콘텐츠 워싱</li>
+            </ul>
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>

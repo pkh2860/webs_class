@@ -47,31 +47,42 @@
 
             <div class="title">
                 <ul>
-                    <li class="active"><a href="#">기본 선택자</a></li>
+                    <li><a href="#">기본 선택자</a></li>
                     <li><a href="#">계층 선택자</a></li>
                     <li><a href="#">속성 선택자</a></li>
-                    <li><a href="cssSelector01.html">가상 요소</a></li>
+                    <li class="active"><a href="cssSelector01.html">가상 요소</a></li>
                     <li><a href="#">가상 클래스</a></li>
                     <li><a href="#">링크 가상 클래스</a></li>
                     <li><a href="#">폼 클래스</a></li>
                 </ul>
             </div>
 
-            <div class="table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>속성</th>
-                            <th>설명</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>align-content</th>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+            
+        <div class="refer">
+            <div class="doc">
+                <h3>floa:left로 인한 영역깨짐 해결방법</h3>
+                <p>CSS3에서 floa:left로 레이아웃을 잡게 되었을 때, 영역 깨짐(즉, Height 값이 사라져0이 되는 현상)이 발생을 합니다.<br>
+                이 에러를 잡기 위한 방법 4가지 입니다</p>
+
+                <h4>깨지는 영역에 똑같이 Float:left를 사용</h4>
+                <p>모든 박스에 float: left를 사용해야 하며 구조가 복잡해 지면 어디에 float: left를 넣어야 할지 알기가 어려워지므로 추천을 안한다</p>
+                
+                <h4>꺠지는 영역에 Clear:both를 사용</h4>
+                <p>위치를 잡을 수 있으나 구조가 복잡할 때는 어떤 영역이 깨졌는지 찾기가 어렵기에 추천하지 않는다</p>
+
+                <h4>Float을 사용한 상위 박스에게 Overflow: hidden을 사용</h4>
+                <p>현재 가장많이 사용하는 방법이지만 2단 메뉴 사용 시에는 사용 할 수 없음</p>
+                <ul>
+                    <li>.nav {overflow: hidden;}</li>
+                    <li>nav > div {float: left;}</li>
+                </ul>
+
+                <h4>clearfix를 사용</h4>
+                <p>이를 사용해서 특별한 문제점이 발생되지 않아 제일 많이 사용하는 방법입니다.<br>
+                Float 속성을 Clearfix 하기 위해서 가상 선택자 ::after를 사용하면 된다. Float 속성을 적용한 요소들의 부모 컨테이너에 다음과 같은 ::after 스타일을 추가한다</p>
+                <ul>
+                    <li>clearfix :: after {content: ''; display dlock; clear:both;}</li>
+                </ul>
             </div>
         </div>
         <!-- //refer -->
