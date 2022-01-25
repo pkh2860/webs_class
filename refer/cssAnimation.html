@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>박근혁</strong>
+    </header>
+
+    <main id="contents">
+        <h2>CSS <em>레퍼런스 북</em></h2>
+
+        <div class="menu">
+            <ul>
+                <li class="active"><a href="css.html">속성</a></li>
+                <li><a href="cssReference01.html">기초 문법</a></li>
+                <li><a href="cssReference02.html">Block/Inline</a></li>
+                <li><a href="cssReference03.html">CSS 단위</a></li>
+                <li><a href="cssReference04.html">CSS 색상</a></li>
+                <li><a href="cssReference05.html">id/class 차이점</a></li>
+                <li><a href="cssReference06.html">floa</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+
+            <div class="title">
+                <ul>
+                    <li><a href="css.html">Alphaber</a></li>
+                    <li><a href="cssSelector.html">Selector</a></li>
+                    <li><a href="cssFlex.html">flex</a></li>
+                    <li><a href="cssGrid.html">grid</a></li>
+                    <li><a href="cssTransform.html">transform</a></li>
+                    <li class="active"><a href="cssAnimation.html">animation</a></li>
+                </ul>
+            </div>
+
+            <div class="table">
+                <table>
+                    <colgroup>
+                        <col style="width: 10%">
+                        <col style="width: 20%">
+                        <col style="width: 70%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>종류</th>
+                            <th>속성</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="6">변형</th>
+                            <td>transform</td>
+                            <td>transform 속성은 요소의 움직임을 일괄적으로 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>transform-orgin</td>
+                            <td>transform-origin 속성은 요소의 움직임 방향을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>transform-style</td>
+                            <td>transform-style 속성은 요소의 움직임 스타일을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>perspective</td>
+                            <td>perspective 속성은 3D 위치 요소에 약간의 원근감을 주기 위해 z=0 평면과 사용자 사이의 거리를 결정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>perspective-orgin</td>
+                            <td>perspective-origin 속성은 3D를 표현할 때 원근점의 방향을 정의합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>backface-visibility</td>
+                            <td>backface-visibility 속성은 요소의 뒷면을 정의합니다.</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="8">애니메이션</th>
+                            <td>animation</td>
+                            <td>animation 속성은 애니메이션을 정의합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>animation-delay</td>
+                            <td>animation-delay 속성은 요소가 로드된 후 애니메이션이 시작될 때 까지의 시간을 나타냅니다.</td>
+                        </tr>
+                        <tr>
+                            <td>animation-duration</td>
+                            <td>animation-duration 속성은 애니메이션 움직임 시간을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>animation-fill-mode</td>
+                            <td>animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>animation-name</td>
+                            <td>animation-name 속성은 애니메이션 keyframe 이름을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>animation-play-state</td>
+                            <td>animation-play-state 속성은 애니메이션 진행상태를 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>animation-timimg-fuction</td>
+                            <td>animation-timing-function 속성은 움직임의 속도를 정의합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>@keyframes</td>
+                            <td>@keyframes은 애니메이션 시퀀스에 따라 키프레임(또는 웨이포인트)에 대한 스타일을 정의하여 CSS애니메이션 시퀀스의 중간 단계를 제어합니다.</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="5">트랜지션</th>
+                            <td>transition</td>
+                            <td>transition 속성은 요소의 움직임 시간을 일괄적으로 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>transition-delay</td>
+                            <td>transition-delay 속성은 요소의 움직임 지연 시간을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>transition-duration</td>
+                            <td> transition-duration 속성은 요소의 움직임 지속 시간을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>transition-property</td>
+                            <td>transition-property 속성은 요소의 움직임 속성을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>transition-timing-function</td>
+                            <td>transition-timing-function 속성은 요소의 움직임 기능을 설정합니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>

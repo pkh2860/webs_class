@@ -1,55 +1,96 @@
 /* 전체 레이아웃 */
 
 /* 
-    헤더01 float
+    헤더01 float을 사용한 경우
     float으로 인한 영역 깨짐 현상 발생(하이트 값을 인신 못함) 
 
     1. 깨지는 영역에 clear : both; 설정
     2. 부모 영역한테 overflow: hidden; 설정 
     3. 가상의 영역clearfix 속성을 설정
 */
-#header {
-    border-bottom: 1px solid #ccc;
+/* #header {
+    border-bottom: 1px solid #eee;
     padding: 10px;
     min-width: 1200px;
     white-space: nowrap;
-}
-#header .logo {
+    }
+    #header .logo {
     float: left;
     width: 20%;
-}
-#header .logo a {
-    text-align: center;
-    display: inline-block;
-    padding: 25px 28px ;
+    }
+    #header .logo a {
     font-size: 30px;
-}
-#header .logo a em {
-    font-weight: normal;
+    padding: 12px 20px;
+    display: inline-block;
+    }
+    #header .logo em {
     font-size: 18px;
-
-}
-#header .menu {
+    font-weight: 300;
+    }
+    #header .menu {
     float: left;
     width: 60%;
-    text-align: center;
-    font-size: 18px;
-}
-#header .menu li {
+    text-align: center
+    }
+    #header .menu li {
     display: inline;
-}
-#header .menu li a {
+    }
+    #header .menu li a{
     display: inline-block;
-    padding: 31px;
-}
-#header .member {
+    padding: 20px 30px;
+    margin: 0 10px;
+    }
+    #header .member {
     float: right;
     width: 20%;
-    padding: 31px;
-}
-#header .member a {
+    text-align: right;
+    padding: 10px 18px;
+    
+    }
+    #header .member a{
+    display: inline-block;
     border: 1px solid #000;
     border-radius: 50px;
-    padding: 10px;
-    margin: 0 0 3px 10px;
-}
+    padding: 9px 22px;
+    font-size: 16px;
+    } */
+
+
+    /*헤더02 flex를 사용한 경우*/
+
+    /* #header {
+        border-bottom: 1px solid #eee;
+        display: flex;
+        align-items: center
+    }
+    #header .logo{
+        width: 20%;
+    }
+    #header .menu{
+        width: 60%;
+        text-align: center;
+    }
+    #header .menu li {
+        display: inline-block;
+    }
+    #header .member{
+        width: 20%;
+        text-align: right;
+    } */
+
+    #header {
+        border-bottom: 1px solid #eee;
+        display: grid;
+    }
+    #header .logo{
+ 
+    }
+    #header .menu{
+
+    }
+    #header .menu li {
+
+    }
+    #header .member{
+
+    }
