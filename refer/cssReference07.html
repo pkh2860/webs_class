@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>박근혁</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html"><em>벤더 프리픽스</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssReference01.html">기초 문법</a></li>
+                <li><a href="cssReference02.html">Block/Inline</a></li>
+                <li><a href="cssReference03.html">CSS 단위</a></li>
+                <li><a href="cssReference04.html">CSS 색상</a></li>
+                <li><a href="cssReference05.html">id/class 차이점</a></li>
+                <li><a href="cssReference06.html">float</a></li>
+                <li class="active"><a href="cssReference07.html">벤더 프리픽스</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>벤더 프리픽스란?</h3>
+                <p>벤더 프리픽스란 브라우저별로 따로 놀던 CSS3의 속성을 잡아주기 위해서 사용되기 시작된 프리픽스는 <br>
+                마크업시 CSS의 class앞에 -moz-, -webkit-, -o-, -ms-라는 각 브라우저에서 판독이 가능한 접두사를 붙여서 <br>
+                해당 브라우저에서 인식할 수 있게 하는 것을 지칭하고 있습니다.</p>
+               
+                <h4>표준 속성을 우선해야 하므로,벤더 프리픽스가 있는 속성은 속성 앞쪽에 표시하는 것이 원칙입니다.</h4>
+                <p>웹 브라우저 제조사별 벤더 프리픽스는 다음과 같습니다.<br>
+                모질라 파이어폭스를 제외한 나머지 신형 데스크탑,모바일 브라우저는 모두 -webkit-을 사용한다고 보면 되며<br>
+                웹킷 기반의 엔진을 공통으로 사용하기 때문에 벤더 프리픽스를 따로 붙일 필요가 없습니다.</p>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>벤더 프리픽스</th>
+                                <th>웹 브라우저</th>
+                                <th>예</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="7">-webkit-</th>
+                                <td>구글크롬</td>
+                                <td rowspan="7">-webkit-user-select: none;</td>
+                            </tr>
+                            <tr>
+                                <td>안드로이드 내장 브라우저</td>
+                            </tr>
+                            <tr>
+                                <td>구글크롬 for Android</td>
+                            </tr>
+                            <tr>
+                                <td>사파리</td>
+                            </tr>
+                            <tr>
+                                <td>사파리 for ios</td>
+                            </tr>
+                            <tr>
+                                <td>오페라 신버전</td>
+                            </tr>
+                            <tr>
+                                <td>파이어폭스 for ios</td>
+                            </tr>
+                            <tr>
+                                <th>-moz-</th>
+                                <td>파이어폭스</td>
+                                <td>-moz-user-select:none;</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">-ms-</th>
+                                <td>인터넷 익스플로러</td>
+                                <td rowspan="2">-ms-user-select: none;</td>
+                            </tr>
+                            <tr>
+                                <td>구형 엣지</td>
+                            </tr>
+                            <tr>
+                                <th>-o-</th>
+                                <td>오페라 구버전</td>
+                                <td>-o-user-select: none;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+    
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+</html>
