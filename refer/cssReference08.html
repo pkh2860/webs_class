@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
 </head>
+
 <body>
     <header id="header">
         <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
@@ -22,7 +24,7 @@
     </header>
 
     <main id="contents">
-        <h2><a href="css.html"><em>CSS id/clsss</em></a></h2>
+        <h2><a href="css.html"><em>CSS 이미지 표현방법</em></a></h2>
 
         <div class="menu">
             <ul>
@@ -31,30 +33,40 @@
                 <li><a href="cssReference02.html">Block/Inline</a></li>
                 <li><a href="cssReference03.html">CSS 단위</a></li>
                 <li><a href="cssReference04.html">CSS 색상</a></li>
-                <li class="active"><a href="cssReference05.html">id/class 차이점</a></li>
+                <li><a href="cssReference05.html">id/class 차이점</a></li>
                 <li><a href="cssReference06.html">float</a></li>
                 <li><a href="cssReference07.html">벤더 프리픽스</a></li>
-                <li><a href="cssReference08.html">이미지 표현방법</a></li>
+                <li class="active"><a href="cssReference08.html">이미지 표현방법</a></li>
             </ul>
         </div>
         <!-- //menu -->
 
+
         <div class="refer">
             <div class="doc">
-                <h3>ID</h3>
-                <p>CSS에서의 정의 방법은 #id name{속성명:속성값; 속성명:속성값;}이런식으로 적용합니다.<br>
-                id 사용할 때 중요한것은 class와 다르게 한페이지에서 한번만 사용이 가능합니다 id는 페이지 내에서 특정 위치나 태그를 지정하는 것이기 때문에 오직 페이지내에서 한번만 사용할 수 있습니다.</p>
-               
-                <h3>class</h3>
-                <p>자주 사용되는 스타일에 적용하는 것이라고 생각하시면 됩니다 .<br>
-                예를 들어서 빨강색or파란색 등 색상을 미리 지정하고 html에 적용시키는 방법입니다. css에서 정의하는 방법은 <br>
-                .class name{속성명:속성값; 속성명:속성값;}이런식으로 적용합니다</p>
-            </div>
+                <h3>HTML 태그를 통해서 표현하는 방법</h3>
+                <h4>Img 태그</h4>
+                <p>이미지의 의미가 있을 때 img태그를 사용합니다.<br>
+                Alt 태그를 이용해서 대체 문자를 적어야 합니다.</p>
+
+            <div class="code">
+<pre><code>
+    &lt;img src="이미지 주소 기입" alt="대체 문자 기입"&gt;
+</pre></code>
+                </div>
+
+                <h3>CSS 속성을 통해서 표현하는 방법</h3>
+                <h4>Background 속성</h4>
+                <p>이미지가 의미가 없을 때 background 속성을 사용합니다.<br>
+                의미가 없기 때문에 대체 문자를 적을 필요가 없습니다.</p>
+
+                <h3>이미지 스프라이트 기법 (lmage Sprite)</h3>
         </div>
         <!-- //refer -->
     </main>
-    
+
     <!-- script -->
     <script src="assets/js/prism.js"></script>
 </body>
+
 </html>
