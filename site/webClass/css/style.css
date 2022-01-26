@@ -1,5 +1,13 @@
-/* 전체 레이아웃 */
+/*전체 레이아웃 */
 
+/* 컨테이너 */
+#wrap {
+    height: 2000px;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
 /* 
     헤더01 float을 사용한 경우
     float으로 인한 영역 깨짐 현상 발생(하이트 값을 인신 못함) 
@@ -56,41 +64,163 @@
     } */
 
 
-    /*헤더02 flex를 사용한 경우*/
-
+    /*헤더02 flex를 사용한 경우 */
     /* #header {
+        padding: 10px;
         border-bottom: 1px solid #eee;
         display: flex;
-        align-items: center
+        justify-content: space-around;
+        min-width: 1200px;
+        white-space: nowrap;
     }
-    #header .logo{
-        width: 20%;
+    #header .logo{ 
+        flex-grow | flex-shrink | flex-basis
+        flex: 0 0 20%; 
+    } 
+    #header .logo a {
+        font-size: 30px;
+        padding: 12px 18px;
+        display: inline-block;
+    }
+     #header .logo a em {
+        font-size: 18px;
+        font-weight: 300;
     }
     #header .menu{
-        width: 60%;
-        text-align: center;
+        flex: 0 0 60%;    
+        text-align: center; 
     }
     #header .menu li {
         display: inline-block;
+        
+    }
+    #header .menu li a {
+        padding: 20px 30px;
+        display: inline-block;
     }
     #header .member{
-        width: 20%;
+        flex: 0 0 20%; 
         text-align: right;
-    } */
+        padding: 10px 18px;
+    }
+    #header .member a {
+        display: inline-block;
+        padding: 9px 22px;
+        border: 1px solid #000;
+        border-radius: 50px;
+    }  */
 
+
+    /*헤더03 Grid를 사용하는 경우*/
     #header {
+        padding: 10px;
         border-bottom: 1px solid #eee;
+        min-width: 1200px;
+        white-space: nowrap;
         display: grid;
+        grid-template-columns: 20% 60% 20%;
     }
-    #header .logo{
- 
+    #header .logo a {
+        font-size: 30px;
+        padding: 12px 18px;
+        display: inline-block;
     }
-    #header .menu{
-
+    #header .logo a em {
+        font-size: 18px;
+        font-weight: 300;
+    }
+    #header .menu {
+        text-align: center;
     }
     #header .menu li {
-
+        display: inline;
     }
-    #header .member{
-
+    #header .menu li a {
+        padding: 20px 30px;
+        display: inline-block;
+        position: relative;
+        transition: background 0.4s;
     }
+
+    #header .menu li a:hover {
+        background: #f5f5f5;
+        border-radius: 10px;
+    }
+    #header .menu li a:hover {
+        border-bottom: 1px solid #000;
+        text-decoration: underline;
+    }
+
+    #header .member {
+        text-align: right;
+        padding: 10px 18px;
+    }
+    #header .member a {
+        display: inline-block;
+        padding: 9px 22px;
+        border: 1px solid #000;
+        border-radius: 50px;
+        transition: all 0.3s;
+    }
+    #header .member a:hover {
+        background: #000;
+        color: #fff;
+    }
+
+    /* 배너 */
+    #banner {}
+    .img_type {
+        width: 100%;
+        height: 800px;
+        /* background-image: url(../img/bg01.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; */
+
+        background: url(../img/bg1_1.jpg) no-repeat center / cover;
+    }
+
+       /* 웹 사이트에서 이미지를 표현하는 방법
+  1. HTML 태그를 통해서 : img 태그 : 의미가 있는 이미지(로고, 의미) --> alt(대체문자) 꼭 써야함!
+  2. CSS 속성을 통해서 : background 속성 : 의미가 없는 이미지 (배경, 색표현) --> ir효과(대체문자를 css 속성으로 표현)
+  3. 이미지 스프라이트 : background와 ir 효과를 통해서 이미지를 표현 (현재 제일 많이 씀)
+
+   */
+
+  /* 이미지/텍스트 유형 */
+  /* 유형 1 */
+.itType01 {
+    padding: 150px 0;
+    overflow: hidden;
+}
+.itType01 .text {
+    float: left;
+    width: 386.66px;
+    height: 530px;
+    margin-right: 20px;
+    background-color: #ccc;
+}
+.itType01 .img1 {
+    float: left;
+    width: 386.66px;
+    height: 530px;
+    margin-right: 20px;
+    background-image: url(../img/text@1.jpg)
+}
+/* .itType01 .img2 {
+    float: left;
+    width: 386.66px;
+    height: 530px;
+    background-image: url(../img/img_text_bg2.jpg)
+
+} */
+@media (-webkit-min-device-pixel-ratio: 2){
+    .itType01 .img1 {
+         background-image: url(../img/text@2.jpg)
+    }
+}
+@media (-webkit-min-device-pixel-ratio: 3){
+    .itType01 .img1 {
+        background-image: url(../img/text@3.jpg)
+    }
+}
