@@ -50,17 +50,40 @@
                 Alt 태그를 이용해서 대체 문자를 적어야 합니다.</p>
 
             <div class="code">
-<pre><code>
-    &lt;img src="이미지 주소 기입" alt="대체 문자 기입"&gt;
+<pre><code> &lt;img src="이미지 주소 기입" alt="대체 문자 기입"&gt;
 </pre></code>
                 </div>
-
+                <br>
                 <h3>CSS 속성을 통해서 표현하는 방법</h3>
                 <h4>Background 속성</h4>
                 <p>이미지가 의미가 없을 때 background 속성을 사용합니다.<br>
                 의미가 없기 때문에 대체 문자를 적을 필요가 없습니다.</p>
 
+                <div class="code">
+<pre><code> -background: url(이미지 주소) center top repeat-x;
+    -background:url(이미지 주소) no-repeat 9px(가로) 8px(세로);
+</code></pre>
+                </div>
+
+                <br>
                 <h3>이미지 스프라이트 기법 (lmage Sprite)</h3>
+                <ul>
+                    <li>여러 개의 이미지를 하나의 이미지로 합쳐서 관리합니다.</li>
+                    <li>위 기법을 사용하면 이미지 관리가 용이하며 웹페이지의 로딩 시간 및 용량을 줄일 수 있습니다.</li>
+                    <li>위 기법으로 이미지를 넣을 때는 웹표준 준수를 위해 가상으로 대체 문자를 만들어야 합니다.</li>
+                    <li>가상으로 대체 문자를 만들어 주기 위해서는 IR 기법을 사용합니다.</li>
+                    <li>먼저 이미지의 크기를 지정 해주고 Background 태그를 사용해서 이미지를 넣습니다.</li>
+                    <li>그 후에 Background-position을 사용해서 이미지 위치를 지정하여 원하는 이미지를 로딩 합니다.</li>
+                </ul>
+
+
+
+                <div class="code">
+<pre><code>{
+    -width : 23px; height: 23px; background:url(../img/icon.png) no-repeat;
+    -background-position: -150px -120px;
+}</pre></code>
+            </div>
         </div>
         <!-- //refer -->
     </main>
