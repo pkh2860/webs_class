@@ -38,12 +38,18 @@
 <body>
     <noscript>
         "페이지를 보려면 자바스크립트 옵션이 활성화 되어 있어야 합니다."</noscript>
+
+        <div id="skip">
+            <a href="#contents">컨텐츠 바로가기</a>
+        </div> 
+        <!-- //skip -->
     <div id="wrap">
         <header id="header">
             <h1 class="logo">
                <a href="#">WEB <em>class</em></a>
             </h1>
             <nav class="menu">
+                <h2 class="ir_so">메인 메뉴</h2>
                 <ul>
                     <li><a href="#">레이아웃</a></li>
                     <li><a href="#">메뉴 영역</a></li>
@@ -53,36 +59,66 @@
                 </ul>
             </nav>
             <div class="member">
-                <a href="#">회원가입</a>
+                <a href="https://www.figma.com/file/LNrdsu8ZeC0TWYfg1RK7Z2/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0?node-id=0%3A1">회원가입</a>
                 <a href="#">로그인</a>
             </div>
         </header>
         <!-- //header -->
 
         <section id="banner">
+            <h2 class="ir_so">배너 영역</h2>
             <div class="img_type">
            <img src="../webClass/img/bg1_1.jpg" alt="메인배너">
            </div>
         </section>
         <!-- //banner -->
 
-        <section id="content">
-            <div class="img_text_type itType01 container">
+        <section id="contents">
+            <h2 class="ir_so">컨텐츠 영역</h2>
+            <article class="img_text_type itType01 container">
                 <div class="text">
-                    <h2>이미지&텍스트</h2>
-                    <p>사이트 제작에 있어 이미지와
-                        텍스트를 혼합해서 사용하는 경우가 많다.
-                        기본 레이아웃은 동일하기 때문에
-                        이미지나 배치에 따라서
-                        느낌은 얼마든지 다르게 표현할 수 있다
+                    <h3 class="text_title">이미지&텍스트</h3>
+                    <p class="text_desc">사이트 제작에 있어 이미지와<br>
+                        텍스트를 혼합해서 사용하는 경우가 많다.<br>
+                        기본 레이아웃은 동일하기 때문에<br>
+                        이미지나 배치에 따라서<br>
+                        느낌은 얼마든지 다르게 표현할 수 있다<br>
                     </p>
-                    <a href="#">더 많은 유형 살펴보기</a>
+                    <div class="text_more">
+                        <a href="#">
+                        <span>더 많은 유형 살펴보기</span>
+                            <svg width="84" height="8" viewBox="0 0 84 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M83.3536 4.35355C83.5488 4.15829 83.5488 3.84171 83.3536 3.64645L80.1716 0.464466C79.9763 0.269204 79.6597 0.269204 79.4645 0.464466C79.2692 0.659728 79.2692 0.976311 79.4645 1.17157L82.2929 4L79.4645 6.82843C79.2692 7.02369 79.2692 7.34027 79.4645 7.53553C79.6597 7.7308 79.9763 7.7308 80.1716 7.53553L83.3536 4.35355ZM0 4.5H83V3.5H0V4.5Z" fill="#AF3029"/>
+                                </svg>
+                        </a>   
+                    </div>
                 </div>
                 <div class="img1"></div>
                 <div class="img2"></div>
-            </div>
-            <!-- <div class="img_text_type type02"></div>
-            <div class="img_text_type type03"></div> -->
+            </article>
+
+            <!-- //itType02 -->
+            
+            <article class="img_text_type itType02">
+
+                <div class="itType02_left"></div>
+                
+                <div class="itType02_right">
+                    <span class="sub">베스트 여행지 01</span>
+                    <h3 class="title">두바이 부르즈 할리파(Burj Khalifa)</h3>
+                    <p class="desc">
+                        이미지와 텍스트를 같이 사용하는 경우입니다. <br>
+                        CNBC에 따르면 가장 많이 검색이 이뤄진 여행지는 세계에서 가장<br>
+                        높은 건물인 두바이의 부르즈 할리파(Burj Khalifa)였다. <br>
+                        배경으로 텍스트를 나타내는 경우에도 많이 사용합니다.<br>
+                        Gmarket Sans 24px 140%, Light 
+                    </p>
+                    <a href="#" class="view">자세히 보기</a>
+                </div>
+               
+
+            </article>
+            <!-- <div class="img_text_type type03"></div> -->
         </section>
         <!-- //content -->
     </div>

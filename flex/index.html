@@ -1,0 +1,1548 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display : flex</title>
+    <style>
+        /* reset */
+        @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap&subset=korean');
+        @font-face {
+            font-family: 'BBTreeTR';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeTR.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'S-CoreDream-9Black';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        *::before, *::after {box-sizing: border-box;}
+        h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+        em {font-style: normal;}
+        a {text-decoration: none;}
+        hr {
+            width: 100%;
+            border: 0; border-bottom: 2px dashed #762917; background: #F4B861;}
+
+        /* root */
+        :root {
+            font-size: 22px;
+            --brown: #762917;
+            --bg-main: #F4B861;
+            --bg-sub: #FDF2E0;
+            --bg-white: #ffffff;
+            --font-black : "Black Han Sans";
+            --font-bbtree : "BBTreeTR";
+            --font-score : "S-CoreDream-3Light";
+        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 30px !important;}
+        .mt50 {margin-top: 30px !important;}
+
+        /* layout */
+        #content > section {
+            background: var(--bg-main); 
+            padding: 100px 0; 
+        }
+        #main {
+            background: var(--bg-main); 
+            padding-top: 0px !important;
+            padding-bottom: 100px;
+            height: 100vh;
+        }
+        .main-wrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -55%);
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        /* container */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* main */
+        .main__title strong {
+            font-family: var(--font-bbtree);
+            border: 3px solid var(--brown);
+            border-radius: 40px;
+            padding: 7px 20px;
+            color: var(--brown);
+            background: #fff;
+            font-size: 1rem;
+            display: inline-block;
+            margin: 1.4em 0.6em 0.9em 0;
+        }
+        .main__title strong a {
+            color: var(--brown);
+        }
+        .main__desc {
+            background: var(--bg-sub);
+            border: 4px solid var(--brown);
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main__desc::before {
+            content: '';
+            width: 100%;
+            height: 4px;
+            background: #762917;
+            position: absolute;
+            left: 0;
+            bottom: 6px;
+        }
+        .main__desc::after {
+            content: '';
+            width: 100%;
+            height: 4px;
+            background: #762917;
+            position: absolute;
+            left: 0;
+            bottom: 16px;
+        }
+        .main__desc h2 {
+            font-size: 80px;
+            font-family: var(--font-black);
+            color: #fff;
+            -webkit-text-stroke: 3px #762917;
+            font-weight: normal;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+            padding-top: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .main__desc h2::after {
+            content: '';
+            position: absolute;
+            left: 0; bottom: 10px;
+            width: 100%;
+            height: 30px;
+            background: #ffa439;
+            border: 3px solid #762917;
+            z-index: -1;
+            border-radius: 30px;
+        }
+        .main__desc h1 {
+            font-size: 180px;
+            line-height: 1.4;
+            letter-spacing: -10px;
+            font-family: var(--font-black);
+            font-weight: normal;
+            color: #E5774F;
+            -webkit-text-stroke: 3px #762917;
+        }
+        .main__desc h1 strong {
+            font-weight: normal;
+            color: #ffa439;
+        }
+        .main__desc p {
+            font-family: var(--font-bbtree);
+            color: #9E513C;
+            font-size: 36px;
+        }
+
+        /* sample */
+        .sample {
+            background: var(--bg-white);
+            border: 4px solid var(--brown);
+            padding: 5%;
+            position: relative;
+            overflow: hidden;
+        }
+        .sample .deco {
+            position: absolute;
+            left: 50%; top: 0;
+            transform: translatex(-50%);
+            padding-top: 7px;
+            white-space: nowrap;
+        }
+        .sample .deco span {
+            width: 30px; 
+            height: 30px;
+            border: 10px solid var(--brown);
+            display: inline-block;
+            border-radius: 50%;
+            margin: 0 10px;
+            background: var(--bg-main);
+            position: relative;
+        }
+        .sample .deco span::after {
+            content: '';
+            width: 10px; height: 10px;
+            background: var(--brown);
+            position: absolute;
+            left: 50%;
+            top: -17px;
+            transform: translateX(-50%);
+        }
+        .sample__title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sample__title h3 {
+            width: 30%;
+            border: 4px solid var(--brown);
+            font-family: var(--font-black);
+            font-size: 2rem;
+            color: var(--brown);
+            position: relative;
+            text-align: center;
+            padding: .3em 0 .1em 50px;
+        }
+        .sample__title h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 100%;
+            background: #C54435;
+        }
+        .sample__title h3::after {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--brown);
+        }
+        .sample__title p {
+            width: 65%;
+            text-align: left;
+            font-size: 1.2rem;
+            line-height: 1.2;
+            font-family: var(--font-bbtree);
+            color: var(--brown);
+            word-break: keep-all;
+        }
+
+        .sample__sub_title {
+            text-align: center;
+        }
+        .sample__sub_title h2 {
+            font-size: 120px;
+            line-height: 1.4;
+            font-family: 'S-CoreDream-9Black';
+            font-weight: normal;
+            color: #E5774F;
+            -webkit-text-stroke: 3px #762917;
+            padding: 2rem 0;
+        }
+        .sample__sub_title p {
+            font-family: var(--font-bbtree);
+            color: #9E513C;
+            font-size: 1.4rem;
+            line-height: 1.4;
+            padding-bottom: 3rem;
+            word-break: keep-all;
+        }
+
+        .sample__table p {
+            color: var(--brown);
+            font-family: var(--font-score);
+            padding-top: 1rem;
+            line-height: 1.5;
+            font-size: 0.8rem;
+        }
+        .sample__table table {
+            width: 100%;
+            border: 4px solid var(--brown);
+            border-spacing: 0;
+            border-collapse: collapse;
+            font-family: var(--font-score);
+            font-size: 0.7rem;
+        }
+        .sample__table table td,
+        .sample__table table th {
+            border-bottom: 1px solid var(--brown);
+            border-right: 1px solid var(--brown);
+            padding: .8em;
+        }
+        .sample__table table th {
+            border-bottom-width: 2px;
+        }
+        .sample__table table tr:hover {
+            background: #f7d5cd;
+        }
+        .sample__table table caption {
+            text-indent: -9999px;
+        }
+
+        .sample__box {
+            background: #F2F2F2;
+            border: 4px solid var(--brown);
+            border-radius: 20px;
+        }
+        .sample__btn {
+            margin: 20px 0
+        }
+        .sample__btn a {
+            border: 4px solid var(--brown);
+            display: inline-block;
+            color: var(--brown);
+            padding: 10px 30px;
+            margin: 5px 0;
+            border-radius: 30px;
+            font-family: var(--font-score);
+        }
+        .sample__btn a.active {
+            background: var(--brown);
+            color: var(--bg-white)
+        }
+        .sample__plus {
+            text-align: right;
+        }
+        .sample__plus span {
+            border: 3px solid var(--brown);
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 39px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: var(--brown);
+            cursor: pointer;
+        }
+        .sample__plus span:hover {
+            background: var(--bg-main);
+        }
+
+        .sample__point {
+            background: #F2F2F2;
+            border: 4px solid var(--brown);
+            border-radius: 1em;
+            padding: 2rem;
+            line-height: 1.6;
+            font-family: var(--font-score);
+        }
+
+        .flexBox {
+            counter-reset: items;
+            text-align: center;
+            min-height: 400px;
+            padding: 5px;
+        }
+        .itemBox {
+            background: var(--bg-main);
+            box-sizing: border-box;
+            border: 4px solid var(--brown);
+            box-shadow: 0 2px 0 rgba(0,90,250,0.05);
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            border-radius: 5px;
+            line-height: 90px;
+            font-family: var(--font-bbtree);
+            font-size: 2rem;
+            color: var(--brown)
+        }
+        .itemBox::before {
+            counter-increment: items;
+            content: counter(items);
+        }
+
+
+        /* media */
+        @media (max-width: 1420px){
+
+            #main {
+                height: auto;
+            }
+            .main-wrap {
+                position: static;
+                transform: none;
+                width: 100%;
+                max-width: auto;
+            }
+
+            .container {width: calc(100% - 40px);}
+            .main__desc h2 {font-size: 5.6vw;}
+            .main__desc h1 {font-size: 12.3vw;}
+            .sample__title {
+                flex-direction: column; 
+                text-align: left;
+            }
+            .sample__title h3 {width: 100%;}
+            .sample__title p {width: 100%; margin-top: 1em;}
+        }
+        @media (max-width: 800px){
+            :root {font-size: 16px;}
+            hr {border-width: 1px;}
+            #content > section {padding: 50px 0;}
+            #main {padding-bottom: 50px;}
+            #about {padding: 0;}
+            .main__title strong {border-width: 2px;}
+            .main__desc {
+                padding: 50px 0 70px 0;
+                border-width: 2px;
+            }
+            .main__desc::before {
+                height: 2px;
+            }
+            .main__desc::after {
+                height: 2px;
+            }
+            .main__desc h2 {
+                -webkit-text-stroke: 1px #762917;
+                font-size: 30px;
+            }
+            .main__desc h2::after {
+                border-width: 1px;
+                height: 10px;
+                bottom: 5px;
+            }
+            .main__desc h1 {
+                -webkit-text-stroke: 1px #762917;
+                letter-spacing: -1px;
+                font-size: 70px;
+                line-height: 1.1;
+            }
+            .main__desc h1 em {
+                display: block;
+            }
+            .main__desc p {
+                font-size: 20px;
+            }
+            
+            .sample {
+                border-width: 2px;
+            }
+            .sample__title h3 {
+                border-width: 2px;
+            }
+            .sample__title h3::after {
+                width: 2px;
+            }
+            .sample__table table {
+                border-width: 2px;
+            }
+
+            .sample .deco {
+                display: none;
+            }
+            .sample__sub_title h2 {
+                -webkit-text-stroke: 1px #762917;
+                letter-spacing: -1px;
+                font-size: 50px;
+            }
+            .sample__box {
+                border-width: 2px;
+                border-radius: 5px;
+            }
+            .flexBox {
+                min-height: 200px;
+            }
+            .itemBox {
+                border-width: 2px;
+                width: 40px;
+                height: 40px;
+                line-height: 38px;
+                font-size: 1rem;
+                font-weight: bold;
+                margin: 5px;
+            }
+            .sample__btn a {
+                border-width: 2px;
+            }
+            .sample__plus span {
+                border-width: 2px;
+                width: 30px;
+                height: 30px;
+                line-height: 29px;
+            }
+            .sample__point {
+                border-width: 2px;
+                padding: 1rem;
+            }
+            
+        }
+
+        /* dog */
+        .dog {
+            position: absolute;
+            left: 10%;
+            top: 15%;
+            width: 100px;
+            height: 100px;
+            z-index: 1;
+        }
+
+        .dog:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.03);
+            transform: translateY(-30%) scale(1.5);
+        }
+
+        .dog * {
+            position: absolute;
+        }
+
+        .dog-body {
+            top: -50%;
+            animation: dog-body 200ms ease-in-out infinite alternate;
+        }
+
+        .dog-body:before {
+            content: "";
+            position: absolute;
+            bottom: 90%;
+            right: 50%;
+            width: 90%;
+            height: 90%;
+            border-top-left-radius: 100%;
+            border-bottom-left-radius: 10%;
+            border-top-right-radius: 10%;
+            background: rgba(255, 255, 255, 0.4);
+            transform-origin: right bottom;
+            animation: dog-tail-blur 200ms 33.3333333333ms ease-in-out infinite alternate both;
+        }
+
+        @keyframes dog-tail-blur {
+            from {
+                transform: rotate(0);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            to {
+                transform: rotate(90deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes dog-body {
+            from {transform: translateX(-10%);}
+            to {transform: translateX(10%);}
+        }
+
+        .dog-head {
+            animation: dog-head 1800ms cubic-bezier(0.11, 0.79, 0, 0.99) infinite;
+        }
+
+        @keyframes dog-head {
+
+            from,
+            to {
+                transform: rotate(45deg);
+            }
+
+            33.3% {
+                transform: rotate(-45deg);
+            }
+
+            66.6% {
+                transform: rotate(0);
+            }
+        }
+
+        .dog-torso {
+            top: -20%;
+            animation: dog-torso 200ms ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes dog-torso {
+            from {transform: translateX(-5%);}
+            to {transform: translateX(5%);}
+        }
+
+        .dog-eyes {
+            width: 60%;
+            top: 55%;
+            left: 20%;
+            z-index: 1;
+        }
+
+        .dog-eyes:before {
+            content: "";
+            display: block;
+            height: 40px;
+            width: 40px;
+            border-radius: 40px;
+            position: absolute;
+            background: orange;
+            top: -10px;
+            left: -10px;
+            z-index: 0;
+            border: 4px solid white;
+            border-left-width: 0;
+            border-bottom-width: 0;
+            border-top-width: 0;
+            transform: rotate(-45deg);
+        }
+
+        .dog-eye {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #000;
+            z-index: 1;
+            -webkit-animation: dog-eye 1800ms infinite;
+            animation: dog-eye 1800ms infinite;
+        }
+
+        @keyframes dog-eye {
+            from,
+            to {
+                animation-timing-function: step-end;
+                opacity: 1;
+            }
+
+            50%,
+            55% {
+                -webkit-animation-timing-function: step-start;
+                animation-timing-function: step-start;
+                opacity: 0;
+            }
+        }
+
+        .dog-eye:first-child {
+            left: 0;
+        }
+
+        .dog-eye:last-child {
+            right: 0;
+        }
+
+        .dog-muzzle {
+            width: 60%;
+            left: 20%;
+            height: 50%;
+            border-bottom-left-radius: 100%;
+            border-bottom-right-radius: 100%;
+            background: white;
+            bottom: -15%;
+        }
+
+        .dog-muzzle:before,
+        .dog-muzzle:after {
+            content: "";
+            display: block;
+            position: absolute;
+        }
+
+        .dog-muzzle:before {
+            width: 6px;
+            height: 20px;
+            bottom: 0;
+            left: calc(50% - 3px);
+            background: #EAEBEC;
+        }
+
+        .dog-muzzle:after {
+            background: black;
+            width: 20px;
+            height: 15px;
+            bottom: 12px;
+            left: calc(50% - 10px);
+            border-bottom-left-radius: 60% 60%;
+            border-bottom-right-radius: 60% 60%;
+            border-top-left-radius: 50% 40%;
+            border-top-right-radius: 50% 40%;
+        }
+
+        .dog-tongue {
+            width: 40px;
+            height: 100%;
+            left: calc(50% - 20px);
+            z-index: -1;
+            transform-origin: center top;
+            animation: dog-tongue 1800ms -50ms ease-in-out infinite;
+        }
+
+        @keyframes dog-tongue {
+            from,
+            to {transform: rotate(0);}
+            16.6666666667% {transform: rotate(30deg);}
+            33.3333333333%,
+            66.6666666667% {transform: rotate(0);}
+            50%,
+            83.3333333333% {transform: rotate(-20deg);}
+        }
+
+        .dog-tongue:before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 40px;
+            background: #FD3163;
+            animation: dog-tongue-inner 100ms ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes dog-tongue-inner {
+            from {
+                transform: translateY(5%);
+            }
+
+            to {
+                transform: translateY(22%);
+            }
+        }
+
+        @keyframes dog-tongue-inner {
+            from {transform: translateY(5%);}
+            to {transform: translateY(22%);}
+        }
+        .dog-ears {
+            width: 40%;
+            top: 25%;
+            left: 30%;
+            animation: dog-ears 1800ms 100ms ease infinite;
+        }
+
+        @keyframes dog-ears {
+            42.3%,
+            71.6% {transform: rotate(-5deg);}
+            50.3%,
+            79.6% {transform: rotate(5deg);}
+            5% {transform: rotate(5deg);}
+            12% {transform: rotate(-5%);}
+            from,
+            33.3%,
+            66%,
+            to {transform: rotate(0);}
+        }
+
+        .dog-ear {
+            bottom: -10px;
+            height: 50px;
+            width: 50px;
+            background: #EAEBEC;
+            animation-duration: 400ms;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+        }
+
+        .dog-ear:first-child {
+            border-bottom-left-radius: 80%;
+            border-top-right-radius: 80%;
+            right: 100%;
+            box-shadow: inset -15px 15px 0 1px white;
+            transform-origin: right bottom;
+            transform: rotate(10deg);
+        }
+
+        .dog-ear:last-child {
+            border-top-left-radius: 80%;
+            border-bottom-right-radius: 80%;
+            left: 100%;
+            box-shadow: inset 15px 15px 0 0 white;
+            transform-origin: left bottom;
+            transform: rotate(-10deg);
+        }
+
+        .dog-tail {
+            width: 22px;
+            height: 24.2px;
+            background: white;
+            bottom: 40%;
+            border-radius: 11px;
+            left: calc(50% - 11px);
+            transform-origin: center bottom;
+        }
+
+        .dog-tail .dog-tail {
+            animation: dog-tail-segment 200ms ease-in-out infinite alternate;
+        }
+
+        @keyframes dog-tail-segment {
+            from {transform: rotate(-10deg);}
+            to {transform: rotate(10deg);}
+        }
+        .dog-body>.dog-tail {
+            bottom: 90%;
+            animation: dog-tail 200ms ease-in-out infinite alternate;
+        }
+        @keyframes dog-tail {
+            from {transform: rotate(-45deg);}
+            to {transform: rotate(45deg);}
+        }
+        .dog-body,
+        .dog-torso,
+        .dog-head {
+            border-radius: 50%;
+            background: white;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+        .dog-body,
+        .dog-torso {
+            box-shadow: inset 0 -15px 0 0 #EAEBEC;
+        }
+        @media (max-width: 800px){
+            .dog {
+                position: relative;
+                margin: 80px 0 50px 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <section id="main">
+            <div class="container">
+                <div class="main-wrap">
+                    <div class="main__title">
+                        <strong><a href="../index.html">라인 CSS 수업</a></strong><strong>웹스토리보이</strong>
+                    </div>
+                    <div class="main__desc">
+                        <div class="inner">
+                            <div class="dog-wrap">
+                                <div class="dog">
+                                    <div class="dog-body">
+                                        <div class="dog-tail">
+                                            <div class="dog-tail">
+                                                <div class="dog-tail">
+                                                    <div class="dog-tail">
+                                                        <div class="dog-tail">
+                                                            <div class="dog-tail">
+                                                                <div class="dog-tail">
+                                                                    <div class="dog-tail"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dog-torso"></div>
+                                    <div class="dog-head">
+                                        <div class="dog-ears">
+                                            <div class="dog-ear"></div>
+                                            <div class="dog-ear"></div>
+                                        </div>
+                                        <div class="dog-eyes">
+                                            <div class="dog-eye"></div>
+                                            <div class="dog-eye"></div>
+                                        </div>
+                                        <div class="dog-muzzle">
+                                            <div class="dog-tongue"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2>display:flex</h2>
+                            <h1><em>디스플레이</em> <strong>플렉스</strong></h1>
+                            <p>사이트의 레이아웃은 어떻게 작업할까요?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //main -->
+
+        <hr>
+
+        <section id="about">
+            <div class="container">
+                <div class="sample">
+                    <div class="sample__title">
+                        <h3>학습 주제</h3>
+                        <p>
+                            Flexbox는 모던 웹을 위하여 제안된 기존 레이아웃보다 더 세련된 방식의 니즈를 부합하기 위한 CSS3의 새로운 레이아웃 방식입니다.
+                        </p>
+                    </div>
+                    <div class="sample__table mt30">
+                        <p>
+                            flexbox에서 사용하는 속성은 부모요소와 자식요소를 나누어집니다. 전체적인 정렬이나 흐름에 관한 속성은 flex container에서 정의하고 자식 요소의 크기나 순서와 관련된 속성은 flex item에서 정의합니다. 이를 분리해서 적용하는 것이 flex-box에서 가장 중요합니다.<br>
+                            - flex container 속성 : flex-direction, flex-wrap, justify-content, align-items, align-content<br>
+                            - flex item 속성 : flex, flex-grow, flex-shrink, flex-basis, order
+                        </p>
+                        <table>
+                            <caption>그리드의 속성과 설명을 나타내는 표입니다.</caption>
+                            <colgroup>
+                                <col style="width: 30%" />
+                                <col style="width: 70%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>속성</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>align-content</td>
+                                    <td>align-content 속성은 콘텐츠의 상하관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>align-items</td>
+                                    <td>align-items 속성은 콘텐츠 내부의 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>align-self</td>
+                                    <td>align-self 속성은 콘텐츠의 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex</td>
+                                    <td>flex 속성은 콘텐츠의 성질을 flex로 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-basis</td>
+                                    <td>flex-basis 속성은 요소의 기본 단위를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-direction</td>
+                                    <td>flex-direction 속성은 요소의 정렬 방향을 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-flow</td>
+                                    <td>flex-flow 속성은 요소의 정렬 방향과 줄 속성을 설정합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-grow</td>
+                                    <td>flex-grow 속성은 요소의 크기를 숫자를 통해 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-shrink</td>
+                                    <td>flex-shrink 속성은 요소의 크기를 숫자를 통해 줄여줍니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>flex-wrap</td>
+                                    <td>flex-wrap 속성은 요소의 줄 속성을 설정합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>justify-content</td>
+                                    <td>justify-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>justify-items</td>
+                                    <td>justify-items 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>justify-self</td>
+                                    <td>justify-self 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>place-content</td>
+                                    <td>place-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>place-items</td>
+                                    <td>place-items 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>place-self</td>
+                                    <td>place-self 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>order</a></td>
+                                    <td>order 속성은 flex 콘텐츠의 순서를 정의합니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //about -->
+
+        <hr>
+
+
+        <style>
+            .flex1 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items : center;
+            }
+            .item1 {
+                height: auto;
+            }
+        </style>
+
+        <section id="sample1">
+            <div class="container">
+                <div class="sample">
+                    <div class="deco" aria-hidden="true">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                    </div>
+                    <div class="sample__sub_title">
+                        <h2>align-items</h2>
+                        <p>align-content 속성은 콘텐츠의 상하관계 정렬 상태를 정의합니다.</p>
+                    </div>
+                    <div class="sample__box">
+                        <div class="flexBox flex1">
+                            <div class="itemBox item1"></div>
+                            <div class="itemBox item1"></div>
+                            <div class="itemBox item1"></div>
+                            <div class="itemBox item1"></div>
+                            <div class="itemBox item1"></div>
+                        </div>
+                    </div>
+                    <div class="sample__btn flexBtn1">
+                        <a href="#">align-items : stretch</a>
+                        <a href="#" class="active">align-items : center</a>
+                        <a href="#">align-items : flex-start</a>
+                        <a href="#">align-items : flex-end</a>
+                        <a href="#">align-items : baseline</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //sample1 -->
+
+        <hr>
+        
+
+        <style>
+            .flex2 {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+        </style>
+        <section id="sample2">
+            <div class="container">
+                <div class="sample">
+                    <div class="deco">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                    </div>
+                    <div class="sample__sub_title">
+                        <h2>justify-content</h2>
+                        <p>jusify-content 속성은 콘텐츠의 좌우 관계 정렬 상태를 정의합니다.</p>
+                    </div>
+                    <div class="sample__box">
+                        <div class="flexBox flex2">
+                            <div class="itemBox item2"></div>
+                            <div class="itemBox item2"></div>
+                            <div class="itemBox item2"></div>
+                            <div class="itemBox item2"></div>
+                            <div class="itemBox item2"></div>
+                        </div>
+                    </div>
+                    <div class="sample__btn flexBtn2">
+                        <a href="#" class="active">justify-content: normal</a>
+                        <a href="#">justify-content: flex-start</a>
+                        <a href="#">justify-content: flex-end</a>
+                        <a href="#">justify-content: space-between</a>
+                        <a href="#">justify-content: space-around</a>
+                        <a href="#">justify-content: space-evenly</a>
+                        <a href="#">justify-content: center</a>
+                        <a href="#">justify-content: stretch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //sample2 -->
+
+        <hr>
+
+
+        <style>
+            .flex3 {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+        </style>
+        <section id="sample3">
+            <div class="container">
+                <div class="sample">
+                    <div class="deco">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                    </div>
+                    <div class="sample__sub_title">
+                        <h2>flex-direction</h2>
+                        <p>flex-direction 속성은 콘텐츠의 정렬 방향을 정의합니다.</p>
+                    </div>
+                    <div class="sample__box">
+                        <div class="flexBox flex3">
+                            <div class="itemBox item3"></div>
+                            <div class="itemBox item3"></div>
+                            <div class="itemBox item3"></div>
+                            <div class="itemBox item3"></div>
+                            <div class="itemBox item3"></div>
+                        </div>
+                    </div>
+                    <div class="sample__btn flexBtn3">
+                        <a href="#" class="active">flex-direction : row</a>
+                        <a href="#">flex-direction : row-reverse</a>
+                        <a href="#">flex-direction : column;</a>
+                        <a href="#">flex-direction : column-reverse</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //sample3 -->
+
+        <hr>
+
+        <style>
+            .flex4 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-basis : 100px;
+                align-content: center;
+            }
+        </style>
+        <section id="sample4">
+            <div class="container">
+                <div class="sample">
+                    <div class="deco">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                    </div>
+                    <div class="sample__sub_title">
+                        <h2>flex-basis</h2>
+                        <p>flex-basis 속성은 요소의 기본 크기를 정의합니다.</p>
+                    </div>
+                    <div class="sample__box">
+                        <div class="flexBox flex4">
+                            <div class="itemBox item4"></div>
+                            <div class="itemBox item4"></div>
+                            <div class="itemBox item4"></div>
+                            <div class="itemBox item4"></div>
+                            <div class="itemBox item4"></div>
+                        </div>
+                    </div>
+                    <div class="sample__btn flexBtn4">
+                        <a href="#" class="active">flex-basis : 100px</a>
+                        <a href="#">flex-basis : 200px</a>
+                        <a href="#">flex-basis : 300px</a>
+                        <a href="#">flex-basis : 10%</a>
+                        <a href="#">flex-basis : 20%</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //sample4 -->
+
+
+        <hr>
+
+
+        <style>
+            .flex5 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-basis : 100px;
+                align-content: center;
+            }
+            .item5 {
+                flex-grow: 1;
+            }
+        </style>
+        <section id="sample5">
+            <div class="container">
+                <div class="sample">
+                    <div class="deco">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                    </div>
+                    <div class="sample__sub_title">
+                        <h2>flex-grow</h2>
+                        <p>flex-grow 속성은 요소의 크기를 숫자를 통해 확대합니다.</p>
+                    </div>
+                    <div class="sample__box">
+                        <div class="flexBox flex5">
+                            <div class="itemBox item5"></div>
+                            <div class="itemBox item5"></div>
+                            <div class="itemBox item5"></div>
+                            <div class="itemBox item5"></div>
+                            <div class="itemBox item5"></div>
+                        </div>
+                    </div>
+                    <div class="sample__btn flexBtn5">
+                        <a href="#">flex-grow : 0</a>
+                        <a href="#" class="active">flex-grow : 1</a>
+                        <a href="#">flex-grow : 2</a>
+                        <a href="#">flex-grow : 3</a>
+                        <a href="#">flex-grow : 4</a>
+                        <a href="#">flex-grow : 5</a>
+                        <a href="#">flex-grow : 0.5</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //sample5 -->
+
+        <hr>
+
+        <style>
+            .flex6 {
+                display: flex;
+                align-items: center;
+            }
+            .item6 {
+                flex: 1 1 25%;
+            }
+        </style>
+        <section id="sample6">
+            <div class="container">
+                <div class="sample">
+                    <div class="deco">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                    </div>
+                    <div class="sample__sub_title">
+                        <h2>flex-shrink</h2>
+                        <p>flex-shrink 속성은 요소의 크기를 숫자를 통해 줄여줍니다.</p>
+                    </div>
+                    <div class="sample__box">
+                        <div class="flexBox flex6">
+                            <div class="itemBox item6"></div>
+                            <div class="itemBox item6"></div>
+                            <div class="itemBox item6"></div>
+                            <div class="itemBox item6"></div>
+                            <div class="itemBox item6"></div>
+                        </div>
+                    </div>
+                    <div class="sample__btn flexBtn6">
+                        <a href="#">flex-shrink : 0</a>
+                        <a href="#" class="active">flex-shrink : 1</a>
+                        <a href="#">flex-shrink : 2</a>
+                        <a href="#">flex-shrink : 3</a>
+                        <a href="#">flex-shrink : 4</a>
+                        <a href="#">flex-shrink : 5</a>
+                        <a href="#">flex-shrink : 0.5</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //sample6 -->
+
+
+
+        <hr>
+
+        <style>
+            .flex7 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+            }
+            
+        </style>
+        <section id="sample7">
+            <div class="container">
+                <div class="sample">
+                    <div class="deco">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                    </div>
+                    <div class="sample__sub_title">
+                        <h2>flex-wrap</h2>
+                        <p>flex-wrap 속성은 요소의 줄 속성을 정의합니다.</p>
+                    </div>
+                    <div class="sample__plus">
+                        <span class="plus plus7">+</span>
+                        <span class="minus minus7">-</span>
+                    </div>
+                    <div class="sample__box">
+                        <div class="flexBox flex7">
+                            <div class="itemBox item7"></div>
+                            <div class="itemBox item7"></div>
+                            <div class="itemBox item7"></div>
+                            <div class="itemBox item7"></div>
+                            <div class="itemBox item7"></div>
+                            <div class="itemBox item7"></div>
+                            <div class="itemBox item7"></div>
+                            <div class="itemBox item7"></div>
+                            <div class="itemBox item7"></div>
+                            <div class="itemBox item7"></div>
+                            <div class="itemBox item7"></div>
+                            <div class="itemBox item7"></div>
+                            <div class="itemBox item7"></div>
+                            <div class="itemBox item7"></div>
+                            <div class="itemBox item7"></div>
+                        </div>
+                    </div>
+                    <div class="sample__btn flexBtn7">
+                        <a href="#">flex-wrap : nowrap</a>
+                        <a href="#" class="active">flex-wrap : wrap</a>
+                        <a href="#">flex-wrap : wrap-reverse</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //sample7 -->
+
+
+        <hr>
+
+        <style>
+            .flex8 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+            }
+            .item8 {
+                flex: 1 1 10%;
+            }
+        </style>
+        <section id="sample8">
+            <div class="container">
+                <div class="sample">
+                    <div class="deco">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                    </div>
+                    <div class="sample__sub_title">
+                        <h2>flex</h2>
+                        <p>flex 속성은 flex-grow, flex-shrink, flex-basis 속성을 정의합니다.</p>
+                    </div>
+                    <div class="sample__plus">
+                        <span class="plus plus8">+</span>
+                        <span class="minus minus8">-</span>
+                    </div>
+                    <div class="sample__box">
+                        <div class="flexBox flex8">
+                            <div class="itemBox item8"></div>
+                            <div class="itemBox item8"></div>
+                            <div class="itemBox item8"></div>
+                            <div class="itemBox item8"></div>
+                            <div class="itemBox item8"></div>
+                            <div class="itemBox item8"></div>
+                            <div class="itemBox item8"></div>
+                            <div class="itemBox item8"></div>
+                        </div>
+                    </div>
+                    <div class="sample__btn flexBtn8">
+                        <a href="#" class="active">flex : 1 1 10%;</a>
+                        <a href="#">flex : 1 1 20%;</a>
+                        <a href="#">flex : 1 1 30%;</a>
+                        <a href="#">flex : 1 1 40%;</a>
+                        <a href="#">flex : 1 1 100%;</a>
+                        <a href="#">flex : 0 0 10%;</a>
+                        <a href="#">flex : 0 0 20%;</a>
+                        <a href="#">flex : 0 0 30%;</a>
+                        <a href="#">flex : 0 0 40%;</a>
+                        <a href="#">flex : 0 0 100%;</a>
+                    </div>
+                    <div class="sample__point">
+                        /* flex-grow : 단위가 없이 속성 한개만 사용한 경우 */<br>
+                        flex: 1<br>
+                        /* flex-basis : 단위가 있고 속성을 한개만 사용한 경우 */<br>
+                        flex: 100px<br>
+                        /* flex-grow | flex-shrink : 단위가 없고 속성 두개 사용한 경우 */<br>
+                        flex: 1 1;<br>
+                        /* flex-grow | flex-basis */<br>
+                        flex: 1 200px;<br>
+                        /* flex-grow | flex-shrink | flex-basis */<br>
+                        flex: 1 1 100px;<br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //sample8 -->
+
+
+        <style>
+            .flex9 {
+                display: flex;
+    
+                justify-content: center;
+
+            }
+            .item9:last-child {
+                align-self:stretch;
+            }
+        </style>
+        <section id="sample9">
+            <div class="container">
+                <div class="sample">
+                    <div class="deco">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                        <span></span><span></span><span></span><span></span><span></span><span></span> 
+                    </div>
+                    <div class="sample__sub_title">
+                        <h2>align-self</h2>
+                        <p>align-self</p>
+                    </div>
+                    <div class="sample__plus">
+                        <span class="plus plus9">+</span>
+                        <span class="minus minus9">-</span>
+                    </div>
+                    <div class="sample__box">
+                        <div class="flexBox flex9">
+                            <div class="itemBox item9"></div>
+                            <div class="itemBox item9"></div>
+                            <div class="itemBox item9"></div>
+                            <div class="itemBox item9"></div>
+                        </div>
+                    </div>
+                    <div class="sample__btn flexBtn9">
+                        <a href="#" class="active">align-self: flex-start;</a>
+                        <a href="#">align-self:stretch;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //sample9 -->
+    </div>
+    <!-- //content -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        // $("a").on("click", function(e){
+        //     e.preventDefault();
+        // });
+
+        $(".flexBtn1").on("click","a", function(e){
+            e.preventDefault();
+            var attrText = $(this).text();
+            $(".flex1").attr("style",attrText);
+
+            $(".flexBtn1 a").removeClass();
+            $(this).addClass("active");
+        });
+
+        $(".flexBtn2").on("click","a", function(e){
+            e.preventDefault();
+            var attrText = $(this).text();
+            $(".flex2").attr("style",attrText);
+
+            $(".flexBtn2 a").removeClass();
+            $(this).addClass("active");
+        });
+
+        $(".flexBtn3").on("click","a", function(e){
+            e.preventDefault();
+            var attrText = $(this).text();
+            $(".flex3").attr("style",attrText);
+
+            $(".flexBtn3 a").removeClass();
+            $(this).addClass("active");
+        });
+
+        $(".flexBtn4").on("click","a", function(e){
+            e.preventDefault();
+            var attrText = $(this).text();
+            $(".flex4 > div").attr("style",attrText);
+
+            $(".flexBtn4 a").removeClass();
+            $(this).addClass("active");
+        });
+
+        $(".flexBtn5").on("click","a", function(e){
+            e.preventDefault();
+            var attrText = $(this).text();
+            $(".flex5 > div").eq(3).attr("style",attrText);
+
+            $(".flexBtn5 a").removeClass();
+            $(this).addClass("active");
+        });
+
+        $(".flexBtn6").on("click","a", function(e){
+            e.preventDefault();
+            var attrText = $(this).text();
+            $(".flex6 > div").eq(3).attr("style",attrText);
+
+            $(".flexBtn6 a").removeClass();
+            $(this).addClass("active");
+        });
+
+        $(".flexBtn7").on("click","a", function(e){
+            e.preventDefault();
+            var attrText = $(this).text();
+            $(".flex7").attr("style",attrText);
+
+            $(".flexBtn7 a").removeClass();
+            $(this).addClass("active");
+        });
+
+        $(".plus7").click(function(e){
+            e.preventDefault();
+            $(".flex7").append("<div class='itemBox item7'></div>");
+        });
+        $(".minus7").click(function(){
+            $(".flex7 > div:last-child").remove();
+        });
+
+        $(".flexBtn8").on("click","a", function(e){
+            e.preventDefault();
+            var attrText = $(this).text();
+            $(".flex8 > div").attr("style",attrText);
+
+            $(".flexBtn8 a").removeClass();
+            $(this).addClass("active");
+        });
+
+        $(".plus8").click(function(e){
+            e.preventDefault();
+            $(".flex8").append("<div class='itemBox item8'></div>");
+        });
+        $(".minus8").click(function(){
+            $(".flex8 > div:last-child").remove();
+        });
+
+        //
+        // $(".flexBtn9").on("click","a", function(){
+        //     var attrText = $(this).text();
+        //     $(".flex9 > div").eq(1).attr("style",attrText);
+        // });
+    </script>
+</body>
+</html>
