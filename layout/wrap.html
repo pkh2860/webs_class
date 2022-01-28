@@ -137,9 +137,29 @@
            font-size: 18px;
            font-weight: 200;
        }
+       #skip {
+        position: relative;
+        z-index: 10000;
+    }
+    #skip a{
+        background: #000;
+        color: #fff;
+        position: absolute;
+        left: -400px; top: 5px;
+        padding: 20px 40px;
+        display: inline-block;
+        transition: left 0.3s ease-in;
+    }
+    #skip a:active,
+    #skip a:focus {
+        left: 5px;
+    }
     </style>
 </head>
 <body>
+    <div id="skip">
+        <a href="#contents">컨텐츠 바로가기</a>
+    </div> 
     <div id="wrap">
         <header id="header">
             <h2 class="ir_so">헤더영역</h2>
