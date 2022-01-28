@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: NexonLv1Gothic;
+        }
+        .ir_so {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            
+            text-indent: -9999px;
+        }
+        #wrap {
+            margin: 0 auto;
+            width: 1920px;
+        }
+        #header {
+            width: 100%;
+            height: 109px;
+            background-color: #C2F6C1;
+        }
+        #header .header_1 {
+            width: 1200px;
+            height: 109px;
+            background-color: #6ECC6C;
+            margin: 0 auto;
+            
+        }
+        #banner {
+            width: 100%;
+            height: 893px;
+            background-color: #F89292;
+        }
+        #banner .banner_1 {
+            width: 1200px;
+            height: 893px;
+            background-color: #AD7B7B;
+            margin: 0 auto;
+        }
+        #contents1 {
+            width: 100%;
+            height: 640px;
+            background-color: #B99E9E;
+        }
+        #contents1 .cont1 {
+            width: 1200px;
+            height: 640px;
+            background-color: #9EA9B9;
+            margin: 0 auto;  
+        }
+        #contents2 {
+            width: 100%;
+            height: 3250px;
+            background-color: #9D7777;
+        }
+        #contents2 .cont2 {
+            width: 1200px;
+            height: 3250px;
+            background-color: #6a3434;
+            margin: 0 auto;  
+        }
+        #contents3 {
+            width: 100%;
+            height: 1076px;
+        }
+        #contents3 .cont3 {
+            width: 1200px;
+            height: 1076px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        #footer {
+            width: 100%;
+            height: 399px;
+            background-color: #A56666;
+        }
+        .cont3 .cont3_text {
+            font-size: 50px;
+            padding-top: 110px;
+            padding-bottom: 110px;
+        }
+
+       .cont3 .left{
+           width: 31%;
+           height: 470px;
+           float: left;
+           background: url(/layout/img/1.jpg) no-repeat center;
+           margin-right: 3.5%;
+       }
+       .cont3 .right{
+           width: 31%;
+           height: 470px;
+           float: left;
+           background: url(/layout/img/2.jpg) no-repeat center
+       }
+       .cont3 .center{
+           width: 31%;
+           height: 470px;
+           float: left;
+           background: url(/layout/img/3.jpg) no-repeat center;
+           margin-right: 3.5%;
+        
+       }
+
+       .left .left_text1 {
+           margin-top: 480px;
+           margin-bottom: 10px;
+           font-size: 30px;
+           font-weight: 600;
+       }
+       .left .left_text2 {
+           font-size: 18px;
+           font-weight: 200;
+       }
+
+       .center .center_text1{
+           margin-top: 480px;
+           margin-bottom: 10px;
+           font-size: 30px;
+           font-weight: 600;
+       }
+       .center .center_text2{
+           font-size: 18px;
+           font-weight: 200;
+       }
+
+
+       .right .right_text1{
+           margin-top: 480px;
+           margin-bottom: 10px;
+           font-size: 30px;
+           font-weight: 600;
+       }
+       .right .right_text2{
+           font-size: 18px;
+           font-weight: 200;
+       }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h2 class="ir_so">헤더영역</h2>
+            <div class="header_1"></div>
+        </header>
+        <section id=banner>
+            <h2 class="ir_so">배너영역</h2>
+            <div class="banner_1"></div>
+        </section>
+        <section id="contents1">
+            <h2 class="ir_so">cont1 영역</h2>
+            <div class="cont1"></div>
+        </section>
+        <section id="contents2">
+            <h2 class="ir_so">cont2 영역</h2>
+            <div class="cont2"></div>
+        </section>
+        <section id="contents3">
+            <h2 class="ir_so">cont3 영역</h2>
+            <div class="cont3">
+                <h3 class="cont3_text">FIND opportunities</h3>
+                
+                <div class="left">
+                    <h3 class="left_text1">Fintech</h3>
+                    <p class="left_text2">Payment</p>
+                </div>
+                <div class="center">
+                    <h3 class="center_text1">Digital Marketing</h3>
+                    <p class="center_text2">IMS</p>
+                </div>
+                <div class="right">
+                    <h3 class="right_text1">Platform</h3>
+                    <p class="right_text2">Commerce, Magazine</p>
+                </div>
+            </div>
+        </section>
+        <footer id="footer"></footer>
+            <h2 class="ir_so">푸터 영역</h2>
+
+    </div>
+</body>
+</html>
