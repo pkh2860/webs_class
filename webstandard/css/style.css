@@ -37,15 +37,10 @@
     background-color: #eaf7fd;
 }
 #cont_ban {
-    width: 100%;
-    height: 200px;
-    background: #555;
+    background-color: #dceff7;
 }
 #cont_cont {
-    width: 100%;
-    height: 200px;
-    background: #666;
-
+    background-color: #f6fdff;
 }
 /* 컨테이너 */
 .container {
@@ -187,4 +182,148 @@
     height: 60px;
     background: url(../img/icon.png)
     no-repeat 0 -600px;
+}
+
+/* 배너 */
+.ban {
+    position: relative;
+    padding: 24px 0 20px;
+}
+.ban a.prev {
+    position: absolute;
+    left: -60px;
+    top: 60px;
+    width: 43px;
+    height: 43px;
+    background: #ccc;
+    background: url(../img/icon.png) no-repeat -150px 0;
+}
+.ban a.next {
+    position: absolute;
+    right: -60px;
+    top: 60px;
+    width: 43px;
+    height: 43px;
+    background: #ccc;
+    background: url(../img/icon.png);
+    background: url(../img/icon.png) no-repeat -150px -43px;
+}
+.ban ul {
+    overflow: hidden;
+}
+.ban ul li {
+    float: left;
+    width: 330px;
+}
+.ban ul li:last-child { /*le9부터 적용*/
+    text-align: right;
+}
+.ban ul li:nth-child(2) { /*le9부터 적용*/
+    text-align: center;
+}
+.ban ul li.ban_img1 {
+    text-align-last: left;
+}
+.ban ul li.ban_img2 {
+    text-align: center;
+}
+.ban ul li.ban_img3 {
+    text-align: right;
+}
+.ban ul li img {
+    border: 4px solid #dcdcdc;
+}
+.ban ul li img:hover {
+    border-color: #98bcdc;
+}
+
+/* 컨텐츠  */
+.cont {
+    overflow: hidden;
+    padding-top: 30px;
+}
+.cont .column {
+    position: relative;
+    float: left;
+    width: 289px;
+    height: 363px;
+    margin: 0 30px 30px 0;
+    padding-right: 30px;
+}
+.cont .col1 {
+    border-right: 1px solid #c8c8c8;
+}
+.cont .col2 {
+    border-right: 1px solid #c8c8c8;
+}
+.cont .col3 {
+    margin-right: 0;
+    padding-right: 0;
+}
+.cont .col4 {
+    border-right: 1px solid #c8c8c8;
+}
+.cont .col5 {
+    border-right: 1px solid #c8c8c8;
+}
+.cont .col6 {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.cont .column .ico_img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url(../img/icon.png) no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.cont .column .ico_tit {
+    padding-left: 70px;
+    font-size: 16px;
+    color:#2c94c4;
+}
+.cont .column .ico_desc {
+    padding-left: 70px;
+    border-bottom: 1px colid #d0d0d0;
+    padding-bottom: 15px;
+}
+.cont .col1 .ico_img {
+    background-position: 0px -240px
+}
+.cont .col2 .ico_img {
+    background-position: 0px -300px
+}
+.cont .col3 .ico_img {
+    background-position: 0px -360px
+}
+.cont .col4 .ico_img {
+    background-position: 0px -420px
+}
+.cont .col5 .ico_img {
+    background-position: 0px -480px
+}
+.cont .col6 .ico_img {
+    background-position: 0px -540px
+}
+
+.cont .col1 .ico_img:hover {
+    background-position: -60px -240px
+}
+.cont .col2 .ico_img:hover {
+    background-position: -60px -300px
+}
+.cont .col3 .ico_img:hover {
+    background-position: -60px -360px
+}
+.cont .col4 .ico_img:hover {
+    background-position: -60px -420px
+}
+.cont .col5 .ico_img:hover {
+    background-position: -60px -480px
+}
+.cont .col6 .ico_img:hover {
+    background-position: -60px -540px
 }
