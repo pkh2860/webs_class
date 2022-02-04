@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        #wrap {
+            width: 100%;
+            height: 2669px;
+        }
+
+        #header {
+            width: 100%;
+            height: 110px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #header .logo {
+            text-decoration: none;
+            font-size: 30px;
+            margin-left: 83px;
+            padding: 42px;
+        }
+
+        #header .logo a {
+            color: #000;
+            font-weight: 800;
+        }
+
+        #header .menu {
+            text-align: right;
+        }
+
+        #header .menu li {
+            display: inline;
+        }
+
+        #header .menu li a {
+            display: inline-block;
+            padding: 45px 37px;
+            color:#000;
+            font-weight: 600;
+        }
+
+        #contents1 {
+            width: 100%;
+            height: 1245px;
+        }
+        
+        #contents1 .cont1_1 {
+            font-size: 40px;
+            margin: 240px 0 220px 0;
+        }
+
+        #contents1 .cont1_2 .left {
+            float: left;
+            height: 565px;
+            width: 50%;
+            background: url(/layout/img/img1.jpg) no-repeat center center;
+        }
+        #contents1 .cont1_2 .right {
+            float: left;
+            height: 565px;
+            width: 50%;
+            background: url(/layout/img/img2.jpg) no-repeat center center;
+            margin-top: 50px;
+        }
+        .container .cont1_2 .left .left_text {
+            position: relative;
+            top:-80px;
+            font-weight: 800;
+            font-size: 28px;
+            border-top: 1px solid #000;
+            padding-top: 30px;
+
+        }
+        .container .cont1_2 .right .right_text {
+            position: relative;
+            top:-85px;
+            font-weight: 800;
+            font-size: 28px;
+            border-top: 1px solid #000;
+            padding-top: 30px;
+        }
+        #contents2 {
+            width: 100%;
+            height: 1245px;
+        }
+       
+        
+        #footer {
+            width: 100%;
+            height: 370px;
+            background-color: #666;
+        }
+
+        #contents1 .container {
+            width: 1120px;
+            margin: 0 auto;
+        }
+
+
+        #contents2 .container{
+            width: 1120px;
+            margin: 0 auto;
+        }
+
+        #contents2 .cont2_1 .left {
+            float: left;
+            height: 565px;
+            width: 50%;
+            background: url(/layout/img/img3.jpg) no-repeat center center;
+        }
+        #contents2 .cont2_2 .right {
+            float: left;
+            height: 565px;
+            width: 50%;
+            background: url(/layout/img/img4.jpg) no-repeat center center;
+            margin-top: 50px;
+        }
+
+
+        .cont2_1 .left .left_text_1{
+            position: relative;
+            top:-80px;
+            font-weight: 800;
+            font-size: 28px;
+            border-top: 1px solid #000;
+            padding-top: 30px;
+        }
+        .cont2_2 .right .right_text_1{
+            position: relative;
+            top:-85px;
+            font-weight: 800;
+            font-size: 28px;
+            border-top: 1px solid #000;
+            padding-top: 30px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo">
+                <a href="#">IMFORM</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">WORK</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </header>
+        <section id="contents1">
+            <div class="container">
+                
+                <h1 class="cont1_1">We research new opportunities<br> that inspire succcess.</h1>
+                
+                <div class="cont1_2">
+                    <div class="left">
+                        <h3 class="left_text">스마트한 카라이프 <br>한국타이어</h3>
+                    </div>
+                    
+                    <div class="right">
+                        <h3 class="right_text">한섬 프리미엄 스타일 <br>모바일 룩북</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contents2">
+            <div class="container">
+                
+                <div class="cont2_1">
+                    <div class="left">
+                        <h3 class="left_text_1">나는 대만족 입니다 <br> 대만관과청 홈페이지 리뉴얼</h3>
+                    </div>
+                </div>
+
+                <div class="cont2_2">
+                    <div class="right">
+                        <h3 class="right_text_1">세련된 감각의 까마시아 <br> 라이프스타일 매거진</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>
