@@ -1037,6 +1037,7 @@
 
 
 
+    //100, 300, 500, 700
 
 
 
@@ -1105,23 +1106,12 @@
                                 <td class="sample15_M4"></td>
                                 <td class="sample15_R4"></td>
                             </tr>
-                            <tr>
-                                <td class="sample15_N5"></td>
-                                <td class="sample15_Q5"></td>
-                                <td class="sample15_M5"></td>
-                                <td class="sample15_R5"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample15_N6"></td>
-                                <td class="sample15_Q6"></td>
-                                <td class="sample15_M6"></td>
-                                <td class="sample15_R6"></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    //j
     const arrBox1 = ["j", "b", "c", "d", "e"]
     const result1 = arrBox1.splice(0, 1)
 
@@ -1133,19 +1123,87 @@
     document.querySelector(".sample15_R2").innerHTML = result2;
 
 
+    //j c
 
 
 
-    //jbcd
-    const arrBox5 =  ["j", "b", "c", "d", "e"];
-    const result5 = arrBox5.slice(0, 4);
-
-    document.querySelector(".sample15_R5").innerHTML = result5;
 
 }</code></pre>
                 </div>
             </div>
             <!-- //sample15 -->
+
+              <!-- sample16 -->
+              <div id="sample16" class="sample">
+                <h3>숙제3</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 4%">
+                            <col style="width: 28%">
+                            <col style="width: 24%">
+                            <col style="width: 22%">
+                            <col style="width: 22%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                                <th>결괏값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample16_N1"></td>
+                                <td class="sample16_Q1"></td>
+                                <td class="sample16_M1"></td>
+                                <td class="sample16_P1"></td>
+                                <td class="sample16_R1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample16_N2"></td>
+                                <td class="sample16_Q2"></td>
+                                <td class="sample16_M2"></td>
+                                <td class="sample16_P2"></td>
+                                <td class="sample16_R2"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample16_N3"></td>
+                                <td class="sample16_Q3"></td>
+                                <td class="sample16_M3"></td>
+                                <td class="sample16_P3"></td>
+                                <td class="sample16_R3"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample16_N4"></td>
+                                <td class="sample16_Q4"></td>
+                                <td class="sample16_M4"></td>
+                                <td class="sample16_P4"></td>
+                                <td class="sample16_R4"></td>
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const arrBox5 =  ["j", "b", "c", "d", "e"];
+    const result5 = arrBox5.slice(0, 4);
+
+    document.querySelector(".sample16_R1").innerHTML = result5;
+
+
+    const arrBox6 =  ["j", "b", "c", "d", "e"];
+    const result6 = arrBox6.pop()
+
+    document.querySelector(".sample16_R2").innerHTML = arrBox6;
+
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample16 -->
 
         </div>
         <!-- //script -->
@@ -1692,8 +1750,6 @@
             
 
 
-
-
              //700
             const arrBox5 = [100, 200, 300, 400, 500, 600, 700];
             const result5 = arrBox5.find(el => el ===700);
@@ -1733,25 +1789,27 @@
 
 
             //j c
-            
 
 
             //jbcd
             const arrBox5 =  ["j", "b", "c", "d", "e"];
             const result5 = arrBox5.slice(0, 4);
 
-            document.querySelector(".sample15_N5").innerHTML = 5;
-            document.querySelector(".sample15_Q5").innerHTML = "['j', 'b', 'c', 'd', 'e']";
-            document.querySelector(".sample15_M5").innerHTML = "slice(0, 4)"
-            document.querySelector(".sample15_R5").innerHTML = result5;
+            document.querySelector(".sample16_N1").innerHTML = 5;
+            document.querySelector(".sample16_Q1").innerHTML = "['j', 'b', 'c', 'd', 'e']";
+            document.querySelector(".sample16_M1").innerHTML = "slice(0, 4)"
+            document.querySelector(".sample16_P1").innerHTML = result5;
+            document.querySelector(".sample16_R1").innerHTML = arrBox5;
 
-            // const arrBox6 =  ["j", "b", "c", "d", "e"];
-            // const result6 = arrBox6.
 
-            // document.querySelector(".sample15_N6").innerHTML = 6;
-            // document.querySelector(".sample15_Q6").innerHTML = "['j', 'b', 'c', 'd', 'e']";
-            // document.querySelector(".sample15_M6").innerHTML = ""
-            // document.querySelector(".sample15_R6").innerHTML = result6;
+            const arrBox6 =  ["j", "b", "c", "d", "e"];
+            const result6 = arrBox6.pop()
+
+            document.querySelector(".sample16_N2").innerHTML = 6;
+            document.querySelector(".sample16_Q2").innerHTML = "['j', 'b', 'c', 'd', 'e']";
+            document.querySelector(".sample16_M2").innerHTML = "pop()"
+            document.querySelector(".sample16_P2").innerHTML = result6;
+            document.querySelector(".sample16_R2").innerHTML = arrBox6;
 
            
 
