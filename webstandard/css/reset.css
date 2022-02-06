@@ -1,16 +1,4 @@
 @charset "utf-8";
-/* 폰트 초기화 */
-body,
-input,
-textarea,
-select,
-button,
-table {
-    font-family: AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; 
-    color: #222; 
-    font-size: 13px; 
-    line-height: 1.5;
-}
 /* 여백 초기화 */
 body,
 div,
@@ -61,6 +49,10 @@ table {
     color: #222;
     font-size: 13px;
     line-height: 1.5;
+}
+/* 폰트 스타일 초기화 */
+em {
+    font-style: normal;
 }
 /* 블릿기호 초기화 */
 .dl,
