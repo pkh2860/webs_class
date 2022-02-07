@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Effect</title>
+    <style>
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'NexonLv1Gothic';
+            font-size: 16px;
+            line-height: 1.6;
+            word-break: break-all;
+            color:#223547;
+        }
+        a {
+            text-decoration: none;
+            color:#223547;
+        }
+        .number {
+            margin: 10px;
+        }
+        .number li {
+            list-style: none;
+            display: inline;
+        }
+        .number li a {
+            border: 1px solid #223547;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            transition: all 0.3s;
+        }
+        .number li.active a {
+            background: #223547;
+            color:#fff;
+        }
+        .board {
+            margin: 5vw 10vw 10vw 10vw;
+            width: 80vw;
+            background: #f1f3f6;
+            border:2px solid #223547;
+            padding: 3vw;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .board .sub{
+            font-size: 20px;
+        }
+        .board .sub a {
+            font-size: 20px;
+            border-bottom: 1px solid #223547;
+        }
+        .board h1 a {
+            font-family: 'TmonMonsori';
+            font-size: 80px;
+            margin-bottom: 1vw;
+        }
+        .board .search {
+            margin-bottom: 3vw;
+        }
+        .board .search label {
+            display: none;
+        }
+        .board .search input {
+            font-size: 24px;
+            border: 2px solid #223547;
+            padding: 10px 40px;
+            border-radius: 40px;
+            width: 50%;
+        }
+        .board .list {
+            text-align:left;
+        }
+        .board .list li {
+            background-color: #bdd6e6;
+            margin: 5px 0;
+            padding: 7px 10px;
+            border-radius: 4px;
+            list-style: none;
+            transition: all 0.3s;
+        }
+        .board .list li:hover {
+            background-color: #a5c3d5;
+            cursor: grabbing;
+        }
+        .board .list li.hide {
+                display: none;
+        }
+        @media (max-width: 800px) {
+            .board {
+                margin: 2vw 2vw 2vw 2vw;
+                width: 96vw;
+                padding: 4vw 2vw;
+            }
+            .board .sub {
+                font-size: 14px;
+            }
+            .board .sub a {
+                font-size: 14px;
+            }
+            .board h1 a {
+                font-size: 40px;
+            }
+            .board .search input {
+                font-size: 16px;
+                padding: 5px 20px;
+                width: 100%;
+            }
+            .board .list li {
+                font-size: 14px;
+            }
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="number">
+            <ul>
+                <li class="active"><a href="searchEffect01.html">1</a></li>
+                <li><a href="searchEffect02.html">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </div>
+        <div class="board">
+            <span class="sub"><a href="../javascript06.html#sample10">indexOf()</a>를 이용하여 CSS 속성 검색하기</span>
+            <h1><a href="searchEffect.html">CSS 속성 검색하기<a></a></h1>
+
+            <div class="search">
+                <label for="search-box">검색하기</label>
+                <input type="text" id="search-box" placeholder="CSS 속성을 입력해주세요">
+            </div>
+
+            <div class="list">
+                <ul>
+                    <li data-name="all"><strong>all</strong> : all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다.</li>
+                    <li data-name="animation"><strong>animation</strong> : animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다.</li>
+                    <li data-name="animation-delay"><strong>animation-delay</strong> : animation-delay 속성은 애니메이션 시작되는 시간을 설정합니다.</li>
+                    <li data-name="animation-direction"><strong>animation-direction</strong> : animation-direction animation-direction 속성은 움직이는 방향을 설정합니다.</li>
+                    <li data-name="animation-duration"><strong>animation-duration</strong> : animation-duration animation-duration 속성은 움직이는 시간을 설정합니다.</li>
+                    <li data-name="animation-fill-mode"><strong>animation-fill-mode</strong> : animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.</li>
+                    <li data-name="animation-iteration-count"><strong>animation-iteration-count</strong> : animation-iteration-count 속성은 애니메이션이 반복 횟수를 설정합니다.</li>
+                    <li data-name="animation-name"><strong>animation-name</strong> : animation-name 속성은 애니메이션 키프레임 이름을 설정합니다.</li>
+                    <li data-name="animation-play-state"><strong>animation-play-state</strong> : animation-play-state 속성은 애니메이션의 진행상태를 설정합니다.</li>
+                    <li data-name="animation-timing-function"><strong>animation-timing-function</strong>animation-timing-function : 속성은 애니메이션 객체의 시간 경과에 따른 속도를 정의하는 타이밍 함수를 설정합니다.</li>
+                    <li data-name="appearance"><strong>appearance</strong>appearance : 속성은 기본 양식 컨트롤이 렌더링되는 방식을 제어합니다.</li>
+                    <!-- //a -->
+                    <li data-name="backdrop-filter"><strong>backdrop-filter</strong> : backdrop-filter 속성은 요소 뒤에 필터 효과를 설정합니다.</li>
+                    <li data-name="backdrop-visibility"><strong>backdrop-visibility</strong> : backdrop-visibility 속성은 요소 뒷면 출력 여부 설정합니다.</li>
+                    <li data-name="background"><strong>background</strong>: background 속성은 배경 속성을 스타일 시트의 같은 위치에 설정하기 위한 약식 속성입니다.</li>
+                    <li data-name="background-attachment"><strong>background-attachment</strong> : background-attachment 속성은 요소 또는 해당 콘텐츠와 함께 스크롤이되는지 여부를 설정합니다.</li>
+                    <li data-name="background-blend-mode"><strong>background-blend-mode</strong>: background-blend-mode 속성은 요소의 각 배경 레이어에 대한 혼합 모드를 설정합니다.</li>
+                    <li data-name="background-clip"><strong>background-clip</strong> : background-clip 속성은 배경이 칠해지는 영역을 지정합니다.</li>
+                    <li data-name="background-color"><strong>background-color</strong> : background-color 속성은 요소의 배경색을 설정합니다.</li>
+                    <li data-name="background-image"><strong>background-image</strong>: background-image 속성은 요소의 배경 이미지를 설정합니다.</li>
+                    <li data-name="background-origin"><strong>background-origin</strong> : background-origin 속성은 배경이 칠해질때 배경 이미지의 원점이 어디인지 설정합니다.</li>
+                    <li data-name="background-position"><strong>background-position</strong> : background-position 속성은 해당 배경 위치 지정 영역 내에서 크기 조정 후의 초기 위치를 정의합니다.</li>
+                    <li data-name="background-repeat"><strong>background-repeat</strong> : background-repeat 속성은 이미지를 반복할지 여부와 방법을 설정합니다.</li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+                    <li data-name=""><strong></strong></li>
+
+
+                  
+                    <li data-name="caption-side"><strong>caption-side</strong> : caption-side 속성은 테이블 caption의 위치를 설정합니다.</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script>
+        const searchBox = document.querySelector("#search-box");
+        const cssList = document.querySelectorAll(".list ul li");
+
+        searchBox.addEventListener("keyup", () => {
+            const searchWord = searchBox.value; //사용자가 입력한 데이터 저장소
+            // console.log(searchWord);
+
+            cssList.forEach(el => {   //el = li들어감 
+                console.log(el.dataset.name)
+                
+                const cssName = el.dataset.name; //css 속성 값이 들어감
+
+                if( cssName.indexOf(searchWord)){   //사용자가 쓴게 있나 없나 확인
+                    el.classList.add("hide")        //hide로 검색 안한건 숨김
+                } else {
+                    el.classList.remove("hide")
+                }
+            })
+        })
+
+        // let numArr = [1,2,3,4,5,6,7,8,9];
+
+        // for
+        // for(let i=0; i<numArr.length; i++){
+        //     console.log(numArr[i])
+        // }
+
+        // forEach
+        // numArr.forEach(function(el){
+        //     console.log(el)
+        // })
+        // numArr.forEach(el => {
+        //     console.log[numArr]
+        // })
+
+        // // for of 
+        // for (let i of numArr){
+        //     console.log(i)
+        // }
+        // // for in
+        // for(let i in numArr){
+        //     console.log(numArr[i])
+        // }
+
+    </script>
+</body>
+</html>

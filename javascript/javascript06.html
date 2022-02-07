@@ -35,12 +35,12 @@
                 <li><a href="practice.html">데이터 연습하기</a></li>
             </ul>
             <ul>
-                <li><a href="sample.html">필수 예제</a></li>
-                <li><a href="plugin.htme">플러그인</a></li>
-                <li><a href="effect/mouseEffect.html">마우스 이펙트</a></li>
-                <li><a href="effect/parallaxEffect.html">패랠랙스 이펙트</a></li>
-                <li><a href="effect/slideEffect.html">슬라이드 이펙트</a></li>
-                <li><a href="effect/gameEffect.html">게임 이펙트</a></li>
+                <li><a href="sample_menu.html">메뉴 이펙트</a></li>
+                <li><a href="sample_search.html">검색 이펙트</a></li>
+                <li><a href="sample_mouse.html">마우스 이펙트</a></li>
+                <li><a href="sample_parallax.html">패랠랙스 이펙트</a></li>
+                <li><a href="sample_slide.html">슬라이드 이펙트</a></li>
+                <li><a href="sample_game.html">게임 이펙트</a></li>
             </ul>
         </nav>
     </header>
@@ -1038,7 +1038,10 @@
 
 
     //100, 300, 500, 700
+    const arrBox3 = [100, 200, 300, 400, 500, 600, 700];
+    const result3 = arrBox3.filter((el, idx) => idx %2==0);
 
+    document.querySelector(".sample14_R3").innerHTML = result3;
 
 
 
@@ -1747,8 +1750,13 @@
             
              
              //100, 300, 500, 700
-            
+            const arrBox3 = [100, 200, 300, 400, 500, 600, 700];
+            const result3 = arrBox3.filter((el, idx) => idx %2==0);
 
+            document.querySelector(".sample14_N3").innerHTML = 3;
+            document.querySelector(".sample14_Q3").innerHTML = "[100, 200, 300, 400, 500, 600, 700]";
+            document.querySelector(".sample14_M3").innerHTML = "find((el,idx) => idx %2==0);"
+            document.querySelector(".sample14_R3").innerHTML = result3;
 
              //700
             const arrBox5 = [100, 200, 300, 400, 500, 600, 700];
