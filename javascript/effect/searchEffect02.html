@@ -196,34 +196,29 @@
 
     <!-- script -->
     <script>
-        const searchBox = document.querySelector("#search-box");
-        const cssList = document.querySelectorAll(".list ul li");
-        const cssCount = document.querySelector(".count em");
+        const searchBox = document.querySelector("#search-box");    //search Box 변수에 저장
+        const cssList = document.querySelectorAll(".list ul li");   //다수의 li를 변수에 저장
+        const cssCount = document.querySelector(".count em");       //em을 변수에 저장
 
-        cssList.forEach((element, index) => {
-            element.classList.add("show");
+        cssList.forEach((element, index) => {       //cssList에 있는 모든 li태그에 show 클래스 추가
+            element.classList.add("show");          
             console.log(index);
-            cssCount.innerHTML = index + 1;
+            cssCount.innerHTML = index + 1;     //cssCount의 em태그에 index +1 넣음
         })
 
-      searchBox.addEventListener("keyup", ()=>{
+      searchBox.addEventListener("keyup", ()=>{ 
           const searchWord = searchBox.value; //사용자가 입력한 값
-
-        //   console.log(searchWord)
 
         cssList.forEach(el => {
             const cssName = el.dataset.name;  //CSS 속성 모든 값
-            // console.log(cssName);
 
-            if(cssName.includes(searchWord)){
+            if(cssName.includes(searchWord)){   //사용자가 입력한 값이 있을때 show 추가
                 el.classList.add("show");
             }else {
-                el.classList.remove("show");
+                el.classList.remove("show");    //사용자가 입력한 값이 없을때 show 삭제
             }
         })
-
-
-      })
+      });
 
     </script>
 </body>
