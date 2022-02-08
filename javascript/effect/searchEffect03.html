@@ -267,7 +267,6 @@
             cssCount.innerText = index;
         })
         //알파벳을 클릭하면 클릭한 데이터 값을 가져와야 한다.
-        //searchBox.addEventListener is not a function
         searchBox.forEach(el => {
             el.addEventListener("click", () => {
                 const searchWord = el.innerText;            //알파벳 첫글자
@@ -276,11 +275,12 @@
                     const cssName = el.dataset.name;       //CSS 속성 값
                     const cssType = el.dataset.type;       //CSS 유형 값
                     //console.log(cssName)
+
                     //알파벳 첫글자(a) == CSS 속성의 첫글자(a)
-                    if(searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssType.charAt(0)){
-                        el.classList.add("show");
+                    if(searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssType.charAt(0)){   //사용자가 입력한 알파벳 첫 글자와 css유형값이 
+                        el.classList.add("show");   //같으면 출력                                                                    
                     } else {
-                        el.classList.remove("show");
+                        el.classList.remove("show"); //같지 않으면 출력
                     }
                 })
             })

@@ -222,43 +222,41 @@
             {name: "appearance", desc:"appearance 속성은 기본 양식 컨트롤이 렌더링되는 방식을 제어합니다."},
         ];
 
-        const searcBox = document.querySelector("#search-box");
-        const cssCount = document.querySelector(".count");
-        const cssDesc = document.querySelector(".desc");
-        const cssList = document.querySelector(".list");
+        const searcBox = document.querySelector("#search-box");  //검색하기
+        const cssCount = document.querySelector(".count");      //전체 목록 갯수
+        const cssDesc = document.querySelector(".desc");        //설명
+        const cssList = document.querySelector(".list");        //리스트
         
 
         // CSS 속성 값/전체 갯수 출력하기
         cssProperty.map((element, index) => {
-            cssCount.innerText = "전체 목록 갯수 : "+ (index+1) +"개";
-            cssList.innerHTML += "<span>" + element.name + "</span>";
+            cssCount.innerText = "전체 목록 갯수 : "+ (index+1) +"개"; //cssCount에 "전체 목록 갯수" + index(name) + "개" 를 더해서 화면에 보이도록 출력
+            cssList.innerHTML += "<span>" + element.name + "</span>";  //cssList에 span태그와 el(name의 목록) 을 더해서 화면에 보이도록 출력 
         })
 
-        //사용자가 입력한 값 searchWord 에 저장
-        searcBox.addEventListener("keyup", ()=>{
+        searcBox.addEventListener("keyup", ()=>{    //사용자가 입력한 값을 searchWord에 저장
             const searchWord = searcBox.value;         
             // console.log(searchWord)
 
-            findProp(searchWord);   //함수에 전달
+            findProp(searchWord);   //저장한 searchWord를 함수에 전달
         });
 
         document.querySelectorAll(".list span").forEach(span => {   //list의 span들을 클릭하면
             span.addEventListener("click", () => {                 
-                //클릭한 데이터 값을 가져오기
                 const listProp = span.innerText ;   
-                findProp(listProp);           
+                findProp(listProp);                                //클릭한 데이터 값을 가져와서 출력
+                         
             })
         })
 
         function findProp(searchProp){        //cssProperty에 속성값이 들어감
-            const targetData = cssProperty.find((data) => data.name === searchProp)//전달된 값이랑 사용자가 입력한 값이 같으면
+            const targetData = cssProperty.find((data) => data.name === searchProp)//전달된 값이랑 사용자가 입력한 값이 같으면 출력
 
-            //찾는 데이터가 없을 때 
             if(targetData == null){
-                cssDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해주세요"; 
+                cssDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해주세요"; //찾는 데이터가 없으면  출력
                 return;
             }
-            cssDesc.innerHTML= targetData.desc; //찾는 데이터가 없을때 출력
+            cssDesc.innerHTML= targetData.desc;
         }
 
 
