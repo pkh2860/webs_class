@@ -258,13 +258,14 @@
     <!-- script -->
     <!-- script -->
     <script>
-        const searchBox = document.querySelectorAll(".search span");    //알파벳 버튼들
-        const cssList = document.querySelectorAll(".list ul li");       //속성 리스트
-        const cssCount = document.querySelector(".count em");           //속성 갯수
+        const searchBox = document.querySelectorAll(".search span");    //알파벳 버튼들 변수에 저장
+        const cssList = document.querySelectorAll(".list ul li");       //속성 리스트 변수에 저장
+        const cssCount = document.querySelector(".count em");           //속성 갯수 변수에 저장
+
         //모든 데이터 보이기
-        cssList.forEach((li, index) => {
-            li.classList.add("show");
-            cssCount.innerText = index;
+        cssList.forEach((li, index) => {    
+            li.classList.add("show");   //cssList에 show 추가
+            cssCount.innerText = index; //갯수 카운트
         })
         //알파벳을 클릭하면 클릭한 데이터 값을 가져와야 한다.
         searchBox.forEach(el => {
@@ -277,10 +278,10 @@
                     //console.log(cssName)
 
                     //알파벳 첫글자(a) == CSS 속성의 첫글자(a)
-                    if(searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssType.charAt(0)){   //사용자가 입력한 알파벳 첫 글자와 css유형값이 
-                        el.classList.add("show");   //같으면 출력                                                                    
+                    if(searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssType.charAt(0)){   //사용자가 입력한 알파벳 첫 글자와 css유형값이 같은 경우 
+                        el.classList.add("show");   //같으면 show 추가                                                                    
                     } else {
-                        el.classList.remove("show"); //같지 않으면 출력
+                        el.classList.remove("show"); //같지 않으면 show 삭제
                     }
                 })
             })

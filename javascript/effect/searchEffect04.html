@@ -230,8 +230,8 @@
 
         // CSS 속성 값/전체 갯수 출력하기
         cssProperty.map((element, index) => {
-            cssCount.innerText = "전체 목록 갯수 : "+ (index+1) +"개"; //cssCount에 "전체 목록 갯수" + index(name) + "개" 를 더해서 화면에 보이도록 출력
-            cssList.innerHTML += "<span>" + element.name + "</span>";  //cssList에 span태그와 el(name의 목록) 을 더해서 화면에 보이도록 출력 
+            cssCount.innerText = "전체 목록 갯수 : "+ (index+1) +"개";  //el, index값을 불러옴
+            cssList.innerHTML += "<span>" + element.name + "</span>"; 
         })
 
         searcBox.addEventListener("keyup", ()=>{    //사용자가 입력한 값을 searchWord에 저장
@@ -249,11 +249,12 @@
             })
         })
 
-        function findProp(searchProp){        //cssProperty에 속성값이 들어감
+        function findProp(searchProp){     
             const targetData = cssProperty.find((data) => data.name === searchProp)//전달된 값이랑 사용자가 입력한 값이 같으면 출력
 
+            //찾는 데이터가 없을 때
             if(targetData == null){
-                cssDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해주세요"; //찾는 데이터가 없으면  출력
+                cssDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해주세요"; 
                 return;
             }
             cssDesc.innerHTML= targetData.desc;
