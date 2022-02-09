@@ -461,7 +461,6 @@
 /* 이미지 유형02 (img_type02) */
 .img_type02 {
     padding: 150px 0;
-    background: #f5f5f5;
 }
 .img_type02 h3 {
     font-size: 50px;
@@ -549,3 +548,158 @@
 .img_type02 .img-wrap li:nth-child(3) {
     background-image: url(../img/img_bg3.jpg);
 }
+
+
+/* banner_type01 */
+
+/* .banner_type01 {
+    width: 1920px;
+    height: 500px;
+    background-image:  url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    position :relative;
+}
+.banner_type01 .container {
+    position: absolute;
+    z-index: 100;
+    text-align: center;
+    display: block;
+    background-size: cover;
+}
+.banner_type01 .container h3 {
+    font-size: 50px;
+    font-weight: 500;
+    color: #fff;
+}
+.banner_type01 .container p {
+    font-size: 24px;
+    color:#fff;
+    font-weight: 300;
+} */
+
+.banner_type01 {
+    background: url(../img/banner.jpg) center center no-repeat;
+    padding: 150px 0;
+    text-align: center;
+    color:#fff;
+    background-size: cover;
+}
+.banner_type01 h3 {
+    font-family: 'GmarketSans';
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 65px;
+}
+.banner_type01 p {
+    margin-bottom: 65px;
+    font-size: 24px;
+    font-weight: 300;
+}
+.banner_type01 a {
+    color:#fff;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+
+
+/* footer_type01 */
+
+/* #footer {
+    padding: 150px 0;
+    width: 1920px;
+    height: 680px;
+    background:#f5f5f5;
+}
+#footer .foot-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+#footer .foot-wrap h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+#footer .foot-wrap h3 li {
+    font-size: 18px;
+    font-weight: 300;
+} */
+.footer_type01 {
+    padding: 150px 0;
+    background: #f5f5f5;
+    font-family: 'GmarketSans';
+}
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgb(205, 205, 205);
+    margin-bottom: 50px;
+}
+.footer-menu > div {
+    width: 16%;
+}
+.footer-menu > div h3 {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+.footer-menu > div li a {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.8;
+    position: relative;
+    color: rgb(96,96,96);
+}
+.footer-menu > div li a:hover {
+    color:rgb(0,0,0);
+}
+.footer-menu > div li a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background: #000;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+.footer-menu > div li a:hover::before {
+    transform: scaleX(1);
+    color: #000;
+}
+
+.footer-rights{
+    text-align: center;
+}
+
+.footer-sns {
+    margin-top: 10px;
+}
+.footer-sns ul {
+    display: flex;
+    justify-content: center;
+}
+.footer-sns li a {
+    width: 32px; 
+    height: 30px;
+    margin: 4px 6px;
+    display: inline-block;
+    background: url(../img/bg.svg);
+}
+.footer-sns li:nth-child(1) a {
+
+}
+.footer-sns li:nth-child(2) a {
+    background-position: -50px 0;
+}
+.footer-sns li:nth-child(3) a {
+    background-position: -100px 0;
+}
+.footer-sns li:nth-child(4) a {
+    background-position: -150px 0;
+}
+
+
+

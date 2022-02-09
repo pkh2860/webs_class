@@ -81,11 +81,12 @@ a {
 }
 /* 목록 초기화 */
 ol,
-ul {
+ul,
+li {
     list-style: none;
 }
 /* 스타일 초기화 */
-em {
+em , address{
     font-style: normal;
 }
 /* 스킵 메뉴 */

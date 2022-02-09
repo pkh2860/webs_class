@@ -142,12 +142,32 @@
            
         }
 
-        /**/
-        .board .list li {
-            display: none;
+        /* option */
+        .board .desc{
+            background: #a5c3d5;
+            font-size: 18px;
+            margin: 5px 0;
+            border-radius: 4px;
+            padding: 15px 10px;
         }
-        .board .list li.show {
-            display: block;
+        .board .list {
+            background: #a5c3d5;
+            border-radius: 4px;
+            padding: 15px 10px;
+
+        }
+        .board .list span {
+            border:1px solid #223547;
+            border-radius: 20px;
+            padding: 5px 20px;
+            margin: 3px;
+            display: inline-block;
+            transition: all 0.3s;
+            cursor:pointer;
+        }
+        .board .list span:hover {
+            background: #223547;
+            color:#fff;
         }
     </style>
 </head>
@@ -156,74 +176,43 @@
         <div class="number">
             <ul>
                 <li><a href="searchEffect01.html">1</a></li>
-                <li class="active"><a href="searchEffect02.html">2</a></li>
+                <li><a href="searchEffect02.html">2</a></li>
                 <li><a href="searchEffect03.html">3</a></li>
                 <li><a href="searchEffect04.html">4</a></li>
                 <li><a href="searchEffect05.html">5</a></li>
                 <li><a href="searchEffect06.html">6</a></li>
-                <li><a href="searchEffect07.html">7</a></li>
+                <li class="active"><a href="searchEffect07.html">7</a></li>
                 <li><a href="searchEffect08.html">8</a></li>
+
             </ul>
         </div>
         <div class="board">
-            <span class="sub"><a href="../javascript06.html#sample10">includes()</a>를 이용하여 CSS 속성 검색하기</span>
+            <span class="sub"><a href="../javascript06.html#sample11">find()</a>를 이용하여 속성을 검색하면 설명 보여주기</span>
             <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
 
+            <!-- 검색영역 -->
             <div class="search">
                 <label for="search-box">검색하기</label>
                 <input type="text" id="search-box" placeholder="CSS 속성을 입력해주세요">
             </div>
+            <!-- 전체 목록 갯수 -->
+            <div class="count">전체 목록 갯수 : 0개</div>
 
-            <div class="count">
-                전체 속성 갯수 : <em>0</em>개
-            </div>
+            <!-- css 설명 영역 -->
+            <div class="desc">아래의 속성을 검색하면 설명이 나옵니다.</div>
+
+            <!-- css 속성 리스트 -->
+
             <div class="list">
-                <ul>
-                    <li data-name="all"><strong>all</strong> : all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다.</li>
-                    <li data-name="animation"><strong>animation</strong> : animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다.</li>
-                    <li data-name="animation-delay"><strong>animation-delay</strong> : animation-delay 속성은 애니메이션 시작되는 시간을 설정합니다.</li>
-                    <li data-name="animation-direction"><strong>animation-direction</strong> : animation-direction animation-direction 속성은 움직이는 방향을 설정합니다.</li>
-                    <li data-name="animation-duration"><strong>animation-duration</strong> : animation-duration animation-duration 속성은 움직이는 시간을 설정합니다.</li>
-                    <li data-name="animation-fill-mode"><strong>animation-fill-mode</strong> : animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.</li>
-                    <li data-name="animation-iteration-count"><strong>animation-iteration-count</strong> : animation-iteration-count 속성은 애니메이션이 반복 횟수를 설정합니다.</li>
-                    <li data-name="animation-name"><strong>animation-name</strong> : animation-name 속성은 애니메이션 키프레임 이름을 설정합니다.</li>
-                    <li data-name="animation-play-state"><strong>animation-play-state</strong> : animation-play-state 속성은 애니메이션의 진행상태를 설정합니다.</li>
-
-                    <li data-name="backdrop-filter"><strong>backdrop-filter</strong> : backdrop-filter 속성은 요소 뒤에 필터 효과를 설정합니다.</li>
-                    <li data-name="backdrop-visibility"><strong>backdrop-visibility</strong> : backdrop-visibility 속성은 요소 뒷면 출력 여부 설정합니다.</li>
-
-                    <li data-name="caption-side"><strong>caption-side</strong> : caption-side 속성은 테이블 caption의 위치를 설정합니다.</li>
-
-                </ul>
+               
             </div>
-        </div>
+
+          
     </div>
 
     <!-- script -->
     <script>
-        const searchBox = document.querySelector("#search-box");    //search Box 변수에 저장
-        const cssList = document.querySelectorAll(".list ul li");   //다수의 li를 변수에 저장
-        const cssCount = document.querySelector(".count em");       //em을 변수에 저장
 
-        cssList.forEach((element, index) => {       //cssList에 있는 모든 li태그에 show 클래스 추가
-            element.classList.add("show");          
-            console.log(index);
-            cssCount.innerHTML = index + 1;     //cssCount의 em태그에 index +1 넣음
-        })
-
-      searchBox.addEventListener("keyup", ()=>{ 
-          const searchWord = searchBox.value; //사용자가 입력한 값
-
-        cssList.forEach(el => {
-            const cssName = el.dataset.name;  //CSS 속성 모든 값
-
-            if(cssName.includes(searchWord)){   //사용자가 입력한 값이 있을때 show 추가
-                el.classList.add("show");
-            }else {
-                el.classList.remove("show");    //사용자가 입력한 값이 없을때 show 삭제
-            }
-        })
-      });
 
     </script>
 </body>
