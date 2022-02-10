@@ -1213,6 +1213,17 @@
     </main>
     <!-- script -->
     <script>
+           //#id 이동하기
+           document.querySelectorAll("a[href^='#']").forEach(el => {
+            el.addEventListener("click", (event) => {
+                event.preventDefault();
+                document.querySelector(el.getAttribute("href")).scrollIntoView({
+                    behavior:"smooth"
+                })
+            })
+        })
+
+
         //01. 배열 속성 : length : 배열 길이 구하기 : 반환(숫자)
         {
             const arrNum = [100, 200, 300, 400, 500];

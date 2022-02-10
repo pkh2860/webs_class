@@ -142,9 +142,9 @@
            
         }
 
-        /* option */
-        .board .search span {
-            border:1px solid #223547;
+      /* option */
+      .board .search span {
+            border: 1px solid #223547;
             border-radius: 30px;
             padding: 5px 30px;
             display: inline-block;
@@ -153,8 +153,22 @@
         }
         .board .search span:hover {
             background: #223547;
-            color:#fff;
-            cursor:pointer;
+            color: #fff;
+            cursor: pointer;
+        }
+        .board .list li {
+            padding-right: 100px;
+            position: relative;
+        }
+        .board .list li span {
+            position: absolute;
+            right: 10px; top: 50%;
+            font-size: 14px;
+            transform: translateY(-50%);
+        }
+        .board .list li span::before {
+            content: 'view : ';
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -179,10 +193,10 @@
 
             <!-- 검색영역 -->
             <div class="search">
-                <span>조회수 10개 이상</span>
-                <span>조회수 20개 이상</span>
-                <span>조회수 30개 이상</span>
-                <span>조회수 40개 이상</span>
+                <span data-view="10">조회수 10개 이상</span>
+                <span data-view="20">조회수 20개 이상</span>
+                <span data-view="30">조회수 30개 이상</span>
+                <span data-view="40">조회수 40개 이상</span>
             </div>
             <!-- 전체 목록 갯수 -->
             <div class="count">전체 목록 갯수 : 0개</div>
@@ -199,21 +213,21 @@
     <script>
          const cssProperty = [
                     {view:"10" ,name: "all",desc: "all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다 ."},
-                    {view:"10" ,name: "animation",desc: "animation 속성은 애니메이션 속성을 설정하는데 사용할 수 있는 약식 속성입니다 ."},
-                    {view:"10" ,name: "animation-delay", desc: "animation-delay 속성은 애니메이션이 시작되는 시간을 설정하는 속성입니다 ."},
-                    {view:"10" ,name: "animation-direction", desc: "animation-direction 속성은 애니메이션이 시작되는 방향을 설정하는 속성입니다 ."},
-                    {view:"10" ,name: "animation-duration", desc: "animation-duration 속성은 애니메이션이 움직이는 시간을 설정하는 속성입니다 ."}, 
-                    {view:"10" ,name: "animation-fill-mode", desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정하는 속성입니다 ."},  
-                    {view:"10" ,name: "animation-iteration-count", desc: "animation-iteration-count 속성은 애니메이션의 반복 횟수를 설정하는 속성입니다 ."},   
-                    {view:"10" ,name: "animation-name", desc: "animation-name 속성은 애니메이션의 키프레임 이름을 설정하는 속성입니다 ."},   
-                    {view:"10" ,name: "animation-play-state", desc: "animation-play-state 속성은 애니메이션의 진행상태를 설정하는 속성입니다 ."},   
-                    {view:"10" ,name: "appearance", desc: "appearance 속성은 기본 양식 컨트롤이 렌더링되는 방식을 제어합니다 ."},   
-                    {view:"10" ,name: "backdrop-filter", desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다 ."},   
-                    {view:"10" ,name: "backdrop-visibility", desc: "backdrop-visibility 속성은 요소 뒷면 표시 여부를 설정합니다 ."},   
-                    {view:"10" ,name: "background", desc: "background 속성은 백그라운드 속성을 일괄적으로 설정합니다 ."},   
-                    {view:"10" ,name: "background-attachment", desc: "background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다"},   
-                    {view:"10" ,name: "background-blend-mode", desc: "background-blend-mode 속성은 배경을 혼합했을 떄의 상태를 설정합니다 ."},   
-                    {view:"10" ,name: "background-clip", desc: "background-clip 속성은 백그라운 이미지의 위치 기준점을 설정합니다 ."},   
+                    {view:"20" ,name: "animation",desc: "animation 속성은 애니메이션 속성을 설정하는데 사용할 수 있는 약식 속성입니다 ."},
+                    {view:"20" ,name: "animation-delay", desc: "animation-delay 속성은 애니메이션이 시작되는 시간을 설정하는 속성입니다 ."},
+                    {view:"20" ,name: "animation-direction", desc: "animation-direction 속성은 애니메이션이 시작되는 방향을 설정하는 속성입니다 ."},
+                    {view:"20" ,name: "animation-duration", desc: "animation-duration 속성은 애니메이션이 움직이는 시간을 설정하는 속성입니다 ."}, 
+                    {view:"20" ,name: "animation-fill-mode", desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정하는 속성입니다 ."},  
+                    {view:"20" ,name: "animation-iteration-count", desc: "animation-iteration-count 속성은 애니메이션의 반복 횟수를 설정하는 속성입니다 ."},   
+                    {view:"20" ,name: "animation-name", desc: "animation-name 속성은 애니메이션의 키프레임 이름을 설정하는 속성입니다 ."},   
+                    {view:"20" ,name: "animation-play-state", desc: "animation-play-state 속성은 애니메이션의 진행상태를 설정하는 속성입니다 ."},   
+                    {view:"20" ,name: "appearance", desc: "appearance 속성은 기본 양식 컨트롤이 렌더링되는 방식을 제어합니다 ."},   
+                    {view:"20" ,name: "backdrop-filter", desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다 ."},   
+                    {view:"20" ,name: "backdrop-visibility", desc: "backdrop-visibility 속성은 요소 뒷면 표시 여부를 설정합니다 ."},   
+                    {view:"20" ,name: "background", desc: "background 속성은 백그라운드 속성을 일괄적으로 설정합니다 ."},   
+                    {view:"20" ,name: "background-attachment", desc: "background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다"},   
+                    {view:"20" ,name: "background-blend-mode", desc: "background-blend-mode 속성은 배경을 혼합했을 떄의 상태를 설정합니다 ."},   
+                    {view:"20" ,name: "background-clip", desc: "background-clip 속성은 백그라운 이미지의 위치 기준점을 설정합니다 ."},   
                     {view:"20" ,name: "background-color", desc: "background-color 속성은 태그의 백그라운드 색을 지정하는 설정합니다 ."},   
                     {view:"20" ,name: "background-imag", desc: "background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다 ."},   
                     {view:"20" ,name: "background-origin", desc: "background-origin 속성은 백그라운드 이미지의 위치 기준점을 설정합니다 ."},   
@@ -401,69 +415,50 @@
         const searchBox = document.querySelectorAll(".search span");    //알파벳 버튼들 변수에 저장
         const cssList = document.querySelector(".list ul");       //속성 리스트 변수에 저장
         const cssCount = document.querySelector(".count em");           //속성 갯수 변수에 저장
-
-        // //각각의 버튼을 클릭하면 경고창 띄우기
-        // searchBox.forEach(span =>{
-        //     span.addEventListener("click", ()=> {
-        //         onClickButton()
-        //     })
-        // })
-
-        //  function onClickButton(){
-
-        // }
+        let listHTML = "";
 
 
-        //변수(데이터 저장)
-        //배열(순차적으로 여러개 데이터 저장),
-        //객체(데이터 저장(키,값)
-        //함수 (실행문 집합체, 재활용)
-       
 
-        //css 리스트 출력하기
+        //css 목록 보여주기
+        function updataList(list) {     //함수로 묶어줌
+            listHTML = "";              //+눌렀을때 리스트추가 안되게 작업
 
-        // for
-        function upDataList(){
-            let list = "";
-            
-            for ( let data of cssProperty) {
-                //list += "<li>" + data.view + "</li>";
-                list += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`;
-            }
-
-            cssList.innerHTML = list;
+            for(const data of list){      //cssProperty를 for문을 이용해 계속 반복
+                listHTML  += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`;     //listHtml로 화면에 cssProperty를 보이게 함
         }
-        upDataList();
+        cssList.innerHTML = listHTML;       
+    }
+    updataList(cssProperty)     //함수 호출
+
+    //버튼 클릭하기
+    searchBox.forEach(span => {             //searchBox 버튼을 클릭했을때
+        span.addEventListener("click", ()=>{
+            const target = span.dataset.view;                       //dataet의 view값을 가져온걸 target(타겟)에 저장
+            const filterList = cssProperty.filter(data => data.view >=target )    //filterList에 cssProperty에있는 taret보다 큰 view를 저장
+            
+            updataList(filterList);
+        })
+    })
+
 
         
+    //css 목록 보여주기
 
-        
-        // //for문
-        // for(let i = 0; i < cssProperty.length; i++){
-        //     console.log(cssProperty[i].view);
-        // }
-        // //forEach문
-        // cssProperty.forEach(ele => {
-        //     console.log(ele.name);
-        // });
-        // //map()
-        // cssProperty.map(ele => {
-        //     console.log(ele.desc);
-        // });
-        // //for of
-        // for(let data of cssProperty){
-        //     console.log(data.view);
-        // }
-        // for( let i=0; i<cssProperty.length; i++ ){
-        //     list += "<li>"+ cssProperty[i].view +"</li>";
-        // }
-        // cssProperty.forEach(li => {
-        //     list += "<li>"+ li.view +"</li>";
-        // });
-        // for(let li of cssProperty){
-        //     list += "<li>"+ li.view +"</li>";
-        // }
+    function undataList(list) {
+        listHTML ="";
 
+        for(const data of list){
+            listHTML += `<li>${data.name} : ${data.dasc} <span> ${data.view}<span></li>`  //name, desc, view의 값을 화면에 보이게 함
+        }
+        cssList.innerHTML = listHTML
+    }
+    undataList(cssProperty)
+
+    //버튼 클릭
+    searchBox.forEach(span =>{
+        span.addEventListener("click", () => {
+        })
+    })
 
 
         // const num = [1....100]
@@ -489,37 +484,11 @@
         // 	})
         // })
 
-
-        const num=[1,2,3,4,5,6,7]
-        //     for(let i=0; i<num.length; i++){
-        //         console.log(num[i])
-        //     }
-
-        // num.forEach(function(el){
-        //     console.log(el)
-        // })
-
-        // for(let i of num){
-        //     console.log(i)
-        // }
-
-        // num.map(function(el){
-        //     console.log(el)
-        // })
-
-        // num.forEach(el =>{
-        //     console.log(el)
-        // })
-
-        // num.forEach(el =>{
-        //     el.addEventLisner("click", ()=>{
-        //         alert("aaa")
-        //     })
-        // })
         
-
-
-
+        //변수(데이터 저장)
+        //배열(순차적으로 여러개 데이터 저장),
+        //객체(데이터 저장(키,값)
+        //함수 (실행문 집합체, 재활용)
     </script>
 </body>
 </html>
