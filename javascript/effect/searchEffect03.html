@@ -192,16 +192,6 @@
               <span>f</span>
               <span>g</span>
               <span>h</span>
-              <br>
-              <span>애니메이션</span>
-              <span>효과</span>
-              <span>테이블</span>
-              <span>플렉스</span>
-              <span>그리드</span>
-              <span>글씨</span>
-              <span>위치</span>
-              <span>박스</span>
-              <span>기타</span>
             </div>
 
             <div class="count">
@@ -468,11 +458,10 @@
                 //console.log(searcWord)
                 cssList.forEach(el => {
                     const cssName = el.dataset.name;       //CSS 속성 값
-                    const csstype = el.dataset.type;       //CSS 유형 값
                     //console.log(cssName)
 
                     //알파벳 첫글자(a) == CSS 속성의 첫글자(a)
-                    if(searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === csstype.charAt(0)){   //사용자가 입력한 알파벳 첫 글자와 css유형값이 같은 경우 
+                    if(searchWord.charAt(0) === cssName.charAt(0)){   //사용자가 입력한 알파벳 첫 글자와 css유형값이 같은 경우 
                         el.classList.add("show");   //같으면 show 추가                                                                    
                     } else {
                         el.classList.remove("show"); //같지 않으면 show 삭제
