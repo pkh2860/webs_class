@@ -179,29 +179,34 @@
             background-position: 0 -230px ;
             
         }
-
-
         #contents_layout2 {
+            display: flex;
+            width:100%;
             height: 388px;
-        }
-        #contents_layout2 .left {
-            float: left;
-            width: 50%;
-            height: 388px;
-            background-color: #fcefe9;
-            background-image: url(../layout/img/Image2.jpg);
-            background-repeat: no-repeat;
-        }
-        #contents_layout2 .right {
-            display: inline-block;
-            width: 50%;
-            height: 388px;
-            background-color: #fae2c8;
-            background-image: url(../layout/img/Image1.jpg) ;
-            background-repeat: no-repeat;
             
         }
-
+        #contents_layout2 .container{
+            width: 1440px;
+            height: 388px;
+            background: #fff;
+            margin: 0 auto;
+        }
+        .container .left {
+            width: 720px;
+            height: 388px;
+            display: inline-block;
+            background-color: #fcefe9;
+            display: inline-block;
+        }
+        .container .right {
+            float: right;
+            width: 720px;
+            height: 388px;
+            background-color: #fae2c8;
+        }
+        #contents_layout2 .left .img1 {
+            background-image: url(../layout/img/img_1.jpg);
+        }
         #contents_layout3 {
             width: 100%;
             height: 1330px;
@@ -285,15 +290,22 @@
                         Furniture
                     </h3>
                     <p>Browse Collection</p>
+                    <div class="img1"></div>
+
                 </div>
                 <div class="right">
                     <h3>Hospitality <br>
                         Furniture
                     </h3>
                     <p>Browse Collection</p>
+                    <div class="img2"></div>
                 </div>
             </div>
         </section>
+
+
+
+
         <section id="contents_layout3"></section>
         <section id="contents_layout4"></section>
         <section id="contents_layout5"></section>
