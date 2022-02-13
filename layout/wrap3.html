@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,500&display=swap"
+        rel="stylesheet">
     <style>
-         .ir_pm {
+        .ir_pm {
             display: block;
             overflow: hidden;
             font-size: 0;
             line-height: 0;
             text-indent: -9999px;
         }
-        *{
+
+        * {
             margin: 0;
             padding: 0;
             list-style: none;
             text-decoration: none;
             font-family: 'Poppins', sans-serif;
         }
+
         #wrap #header {
             height: 120px;
             display: flex;
             white-space: nowrap;
             justify-content: space-between;
         }
+
         #header {
             height: 120px;
             display: flex;
             white-space: nowrap;
             justify-content: space-between;
         }
+
         #header .logo {
             display: flex;
             margin-left: 101px;
@@ -40,8 +46,9 @@
             width: 35px;
             height: 35px;
             background-image: url(../layout/img/bg-svg.svg);
-            background-position: 0 -50px ;
+            background-position: 0 -50px;
         }
+
         #header .logo a {
             margin-left: 45px;
             font-size: 30px;
@@ -49,33 +56,38 @@
             display: inline-block;
             color: #000;
         }
+
         #header .menu {
             margin-right: 100px;
             margin-top: 70px;
             font-size: 17px;
-            font-weight: normal;    
+            font-weight: normal;
         }
+
         #header .menu li {
             display: inline-block;
             padding-left: 42px;
         }
+
         .menu li a {
-            color:#000;
+            color: #000;
             font-size: 17px;
             font-weight: normal;
         }
+
         .menu li a:hover {
             border-bottom: 1px solid #000;
             padding-bottom: 15px;
-            
+
         }
 
-        .member  {
+        .member {
             display: flex;
             margin-top: 60px;
             margin-right: 100px;
         }
-        .member  a {
+
+        .member a {
             width: 30px;
             height: 30px;
             margin: 4px 6px;
@@ -85,11 +97,12 @@
         .member a:nth-child(2) {
             background-position: -46px 0;
         }
+
         .member a:nth-child(3) {
             background-position: -95px 0;
         }
 
-        
+
 
         #contents {
             width: 100%;
@@ -98,22 +111,26 @@
             background-repeat: no-repeat;
             background-position: right;
         }
+
         .container h2 {
             font-size: 80px;
             font-weight: 900;
             margin-top: 138px;
             margin-left: 110px;
         }
+
         .container .text1 {
             font-size: 18px;
             font-weight: 500;
-            margin: 55px  107px;
+            margin: 55px 107px;
         }
+
         .container .text2 {
             font-size: 18px;
             font-weight: 500;
             margin: 55px 0 56px 107px;
         }
+
         .container .Req {
             font-size: 16px;
             font-weight: 500;
@@ -122,31 +139,35 @@
             border: 1px solid #c4a586;
             background-color: #c4a586;
             color: #fff;
-            
+
         }
+
         .container .Wat {
             font-size: 16px;
             font-weight: 500;
             padding: 21px 53px 21px 55px;
             border: 1px solid #c4a586;
             background-color: #fff;
-            color:#c4a586;
+            color: #c4a586;
         }
 
         #contents_layout1 {
             width: 100%;
             height: 300px;
         }
+
         #contents_layout1 .text {
             font-size: 16px;
             font-weight: bold;
             text-align: center;
-        
+
         }
+
         #contents_layout1 .logo2 {
             display: flex;
             justify-content: space-around;
         }
+
         #contents_layout1 .logo2 a {
             display: inline-block;
             margin-top: 72px;
@@ -154,82 +175,333 @@
             height: 47px;
             background-image: url(../layout/img/bg.svg2.svg)
         }
+
         .logo2 a:nth-child(2) {
             width: 96px;
             height: 48px;
-            background-position: -2px -50px ;
+            background-position: -2px -50px;
         }
+
         .logo2 a:nth-child(3) {
             width: 103px !important;
             height: 48px;
-            background-position: 0 -90px ;
+            background-position: 0 -90px;
         }
+
         .logo2 a:nth-child(4) {
             width: 110px !important;
             height: 48px;
-            background-position: 0 -140px ;
+            background-position: 0 -140px;
         }
+
         .logo2 a:nth-child(5) {
             width: 110px !important;
             height: 48px;
-            background-position: 0 -190px ;
+            background-position: 0 -190px;
         }
+
         .logo2 a:nth-child(6) {
             width: 115px !important;
-            background-position: 0 -230px ;
-            
+            background-position: 0 -230px;
+
         }
+
         #contents_layout2 {
-            display: flex;
-            width:100%;
+            width: 100%;
             height: 388px;
-            
         }
-        #contents_layout2 .container{
+
+        #contents_layout2 .container {
             width: 1440px;
             height: 388px;
             background: #fff;
             margin: 0 auto;
+            display: flex;
         }
+
         .container .left {
             width: 720px;
             height: 388px;
             display: inline-block;
             background-color: #fcefe9;
-            display: inline-block;
+            position: relative;
         }
+
         .container .right {
-            float: right;
             width: 720px;
             height: 388px;
             background-color: #fae2c8;
+            position: relative;
+
         }
-        #contents_layout2 .left .img1 {
+
+        .container .left .img1 {
+            width: 409px;
+            height: 350px;
             background-image: url(../layout/img/img_1.jpg);
+            background-repeat: no-repeat;
+            margin-left: 267px;
+            margin-right: 44px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
         }
+
+        .container .right .img2 {
+            width: 350px;
+            height: 261px;
+            background-image: url(../layout/img/img_2.jpg);
+            background-repeat: no-repeat;
+            position: absolute;
+            margin-right: 53px;
+            right: 0;
+            bottom: 0;
+        }
+
+        .left h3 {
+            font-size: 34px;
+            font-weight: bold;
+            margin-top: 110px;
+            margin-left: 101px;
+        }
+
+        .left p {
+            font-size: 20px;
+            font-weight: normal;
+            margin-left: 101px;
+            margin-top: 91px;
+        }
+
+        .right h3 {
+            margin-top: 110px;
+            margin-left: 67px;
+            font-size: 34px;
+            font-weight: bold;
+        }
+
+        .right p {
+            margin-top: 91px;
+            margin-left: 67px;
+        }
+
         #contents_layout3 {
             width: 100%;
             height: 1330px;
-            background-color: #555;
         }
+
+        #contents_layout3 .container {
+            width: 1440px;
+            height: 50px;
+            margin: 0 auto;
+            display: flex;
+            white-space: nowrap;
+            justify-content: space-between;
+        }
+
+        .container .header {
+            display: flex;
+        }
+
+        .container .header h3 {
+            margin-top: 173px;
+            font-size: 50px;
+            margin-left: 191px;
+        }
+
+        .header .memu {
+            margin-top: 194px;
+            margin-left: 95px;
+        }
+
+        .header .memu ul {
+            display: flex;
+        }
+
+        .header .memu li {
+            display: inline-block;
+        }
+
+        .header .memu li a {
+            margin-right: 95px;
+            font-size: 23px;
+            color: #a9a7a6;
+            font-weight: 500;
+        }
+
+        .header .see {
+            margin-top: 200px;
+            margin-left: 228px;
+            font-weight: 17;
+            color: #3d3d3f;
+        }
+
+        .memu2 .cont1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .memu2 .cont1 ul {
+            margin-top: 328px;
+        }
+
+        .memu2 .cont1 li {
+            display: inline-block;
+            margin-right: 60px;
+        }
+        .memu2 .cont1 li a {
+            color: #a9a7a6;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        .memu2 .cont1 li a:hover {
+            font-size: 18px;
+            font-weight: normal;
+            color:#3d3d3f;
+        }
+
+        .container2 {
+            width: 1440px;
+            height: 990px;
+            margin: 0 auto;
+        }
+
+        .container2 .top .name {
+            font-size: 26px;
+            font-weight: bold;
+            margin-left: 51px;
+            margin-top: 43px;
+            color:#3d3d3f
+        }
+        .top .dollar {
+            display: flex;
+        }
+        .top .dollar .left {
+            font-size: 19px;
+            font-weight: 500;
+            color:#3d3d3f;
+            margin-left: 51px;
+            margin-top: 32px;
+        }
+        .top .dollar .right {
+            font-size: 15px;
+            font-weight: 500;
+            color:#a9a7a6;
+            margin-top: 36px;
+            margin-left: 38px;
+        }
+        .container2 .top .top1 {
+            display: inline-block;
+            width: 312px;
+            height: 305px;
+            background-color: #fff4e8;
+            margin-left: 192px;
+            margin-right: 58px;
+            margin-top: 150px;
+        }
+        .container2 .top .top2 {
+            display: inline-block;
+            width: 312px;
+            height: 305px;
+            background-color: #fff4e8;
+            margin-right: 58px;
+            margin-top: 150px;
+        }
+        .container2 .top .top3 {
+            display: inline-block;
+            width: 312px;
+            height: 305px;
+            background-color: #fff4e8;
+            margin-top: 150px;
+        }
+        .container2 .bottom {
+            display: flex;
+        }
+        .container2 .bottom .bottom1 {
+            display: inline-block;
+            width: 312px;
+            height: 305px;
+            background-color: #fff4e8;
+            margin-left: 192px;
+            margin-right: 58px;
+            margin-top: 191px;
+        }
+        .container2 .bottom .bottom2 {
+            display: inline-block;
+            width: 312px;
+            height: 305px;
+            background-color: #fff4e8;
+            margin-right: 58px;
+            margin-top: 191px;
+        }
+        .container2 .bottom .bottom3 {
+            display: inline-block;
+            width: 312px;
+            height: 305px;
+            background-color: #fff4e8;
+            margin-top: 191px;
+        }
+        .container2 .bottom .name {
+            font-size: 26px;
+            font-weight: bold;
+            margin-left: 51px;
+            margin-top: 43px;
+            color:#3d3d3f
+        }
+        .top .dollar {
+            display: flex;
+        }
+        .top .dollar .left {
+            font-size: 19px;
+            font-weight: 500;
+            color:#3d3d3f;
+            margin-left: 51px;
+            margin-top: 32px;
+        }
+        .top .dollar .right {
+            font-size: 15px;
+            font-weight: 500;
+            color:#a9a7a6;
+            margin-top: 36px;
+            margin-left: 38px;
+        }
+        .bottom .dollar {
+            display: flex;
+        }
+        .bottom .dollar .left {
+            font-size: 19px;
+            font-weight: 500;
+            color:#3d3d3f;
+            margin-left: 51px;
+            margin-top: 32px;
+        }
+        .bottom .dollar .right {
+            font-size: 15px;
+            font-weight: 500;
+            color:#a9a7a6;
+            margin-top: 36px;
+            margin-left: 38px;
+        }
+
         #contents_layout4 {
             width: 100%;
             height: 970px;
             background-color: #666;
         }
+
         #contents_layout5 {
             width: 100%;
             height: 500px;
             background-color: #777;
         }
+
         #footer {
             width: 100%;
             height: 230px;
             background-color: #888;
         }
-      
     </style>
 </head>
+
 <body>
     <div id="wrap">
         <header id="header">
@@ -244,55 +516,57 @@
                 </ul>
             </nev>
             <div class="member">
-                   <a href="#"class="ir_pm">검색</a>
-                   <a href="#"class="ir_pm">장바구니</a>
-                   <a href="#"class="ir_pm">로그인</a>
+                <a href="#" class="ir_pm">검색</a>
+                <a href="#" class="ir_pm">장바구니</a>
+                <a href="#" class="ir_pm">로그인</a>
             </div>
         </header>
         <section id="contents">
             <div class="container">
-            <h2>Modern Furniture For  <br>Modern Living Style</h2>
-            
-            <p class="text1">
-                In unfeeling existence objection immediate repulsive<br>
-                on he in. Imprudence comparison uncommonly me<br>
-                he difficulty diminution resolution. Likewise proposal<br> 
-                differed scarcely dwelling as on raillery. <br>
-            </p>
-            <p class="text2">
-                September few dependent extremity own continued<br>
-                and ten prevailed attending. Early to weeks we could.<br>
-                Do commanded an shameless we disposing do.<br>
-                Indulgence ten remarkably nor are impression out. <br>
-                Power is lived means oh every in we quiet.<br>
-            </p>
-            <a href="#" class="Req">Request a Quote</a>
-            <a href="#" class="Wat">Watch Video</a>
-        </div>
+                <h2>Modern Furniture For <br>Modern Living Style</h2>
+
+                <p class="text1">
+                    In unfeeling existence objection immediate repulsive<br>
+                    on he in. Imprudence comparison uncommonly me<br>
+                    he difficulty diminution resolution. Likewise proposal<br>
+                    differed scarcely dwelling as on raillery. <br>
+                </p>
+                <p class="text2">
+                    September few dependent extremity own continued<br>
+                    and ten prevailed attending. Early to weeks we could.<br>
+                    Do commanded an shameless we disposing do.<br>
+                    Indulgence ten remarkably nor are impression out. <br>
+                    Power is lived means oh every in we quiet.<br>
+                </p>
+                <a href="#" class="Req">Request a Quote</a>
+                <a href="#" class="Wat">Watch Video</a>
+            </div>
         </section>
         <section id="contents_layout1">
             <div class="container">
-            <h2 class="text">SOME OF OUR TRUSTED CLIENTS</h2>
-            <div class="logo2">
-            <a href="#" class="ir_pm">stripe</a>
-            <a href="#" class="ir_pm">Google</a>
-            <a href="#" class="ir_pm">Deloitte</a>
-            <a href="#" class="ir_pm">accenture</a>
-            <a href="#" class="ir_pm">ibm</a>
-            <a href="#" class="ir_pm">samsung</a>
+                <h2 class="text">SOME OF OUR TRUSTED CLIENTS</h2>
+                <div class="logo2">
+                    <a href="#" class="ir_pm">stripe</a>
+                    <a href="#" class="ir_pm">Google</a>
+                    <a href="#" class="ir_pm">Deloitte</a>
+                    <a href="#" class="ir_pm">accenture</a>
+                    <a href="#" class="ir_pm">ibm</a>
+                    <a href="#" class="ir_pm">samsung</a>
+                </div>
             </div>
-        </div>
         </section>
+
         <section id="contents_layout2">
             <div class="container">
+
                 <div class="left">
-                    <h3>Residential <br>
+                    <h3>Residential<br>
                         Furniture
                     </h3>
                     <p>Browse Collection</p>
                     <div class="img1"></div>
-
                 </div>
+
                 <div class="right">
                     <h3>Hospitality <br>
                         Furniture
@@ -302,11 +576,94 @@
                 </div>
             </div>
         </section>
+        <section id="contents_layout3">
+            <div class="container">
+                <div class="header">
+                    <h3>PRODUCTS</h3>
+                    <nev class="memu">
+                        <ul>
+                            <li><a href="#">Best Selling</a></li>
+                            <li><a href="#">Most Popular</a></li>
+                        </ul>
+                    </nev>
+                    <div class="see">See All</div>
+                </div>
+            </div>
+
+            <div class="memu2">
+                <div class="cont1">
+                    <ul>
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">Bed</a></li>
+                        <li><a href="#">Sofa</a></li>
+                        <li><a href="#">Chair</a></li>
+                        <li><a href="#">Light</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="container2">
+                <div class="top">
+                    <div class="top1">
+                        <h3 class="name">Ramen Stool</h3>
+                        <div class="dollar">
+                            <div class="left">$65.00</div>
+                            <div class="right">$95.00</div>
+                        </div>
+                    </div>
+
+                    <div class="top2">
+                        <h3 class="name">Flexform</h3>
+                        <div class="dollar">
+                            <div class="left">$35.00</div>
+                            <div class="right">$55.00</div>
+                        </div>
+                    </div>
+
+                    <div class="top3">
+                        <h3 class="name">Porada</h3>
+                        <div class="dollar">
+                            <div class="left">$87.00</div>
+                            <div class="right">$97.00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom">
+                    <div class="bottom1">
+                        <h3 class="name">Taknion</h3>
+                        <div class="dollar">
+                            <div class="left">$45.00</div>
+                            <div class="right">$55.00</div>
+                        </div>
+                    </div>
+
+                    <div class="bottom2">
+                        <h3 class="name">Amora</h3>
+                        <div class="dollar">
+                            <div class="left">$65.00</div>
+                            <div class="right">$95.00</div>
+                        </div>
+                    </div>
+
+                    <div class="bottom3">
+                        <h3 class="name">Liquid Contract</h3>
+                        <div class="dollar">
+                            <div class="left">$35.00</div>
+                            <div class="right">$5.00</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
 
 
 
-        <section id="contents_layout3"></section>
+
+
         <section id="contents_layout4"></section>
         <section id="contents_layout5"></section>
         <section id="contents_layout6"></section>
@@ -314,4 +671,5 @@
 
     </div>
 </body>
+
 </html>
