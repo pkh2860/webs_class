@@ -397,6 +397,7 @@
             margin-left: 192px;
             margin-right: 58px;
             margin-top: 150px;
+            
         }
         .top1 {
             position: relative;
@@ -404,12 +405,19 @@
         .top1 .wrapper {
             width: 137px;
             height: 40px;
-            border: 1px solid #d9ab82;
-            background: #d9ab82;
-            border-radius: 30px;
-            text-align: center;
+            border-radius: 40px;
             color:#fff;
+            top: -20px;
+            left: 91px;
+            background: #d9ab82;
             position: absolute;
+        
+        }
+        .wrapper .text1 {
+            position: absolute;
+            margin-left: 16px;
+            margin-top: 10px;
+            font-size: 14px;
         }
         .top1 .img1 {
             width: 440px;
@@ -418,6 +426,26 @@
             position: absolute;
             margin-top: 30px;
             margin-left: -55px;
+        }
+        .top1 .text-img {
+            width: 26px;
+            height: 60px;
+            margin-left: 205px;
+            top: -14px;
+            left: -10px;
+            background-image: url(../layout/img/bg.svg2.svg ); 
+            background-position: -1px -300px;
+            position: absolute;
+        }
+        .top2 .text-img {
+            width: 26px;
+            height: 60px;
+            margin-left: 205px;
+            top: -14px;
+            left: -10px;
+            background-image: url(../layout/img/bg.svg2.svg ); 
+            background-position: -1px -300px;
+            position: absolute;
         }
         .top2 .img2 {
             width: 440px;
@@ -665,8 +693,9 @@
                 <div class="top">
                     <div class="top1">
                     <div class="wrapper">
-                        <p class="text1">Add To Cart</p>
+                        <span class="text1">Add To Cart</span>
                     </div>
+                        <div class="text-img"></div>
                         <h3 class="name">Ramen Stool</h3>
                         <div class="img1"></div>
                         <div class="dollar">
@@ -677,6 +706,7 @@
 
                     <div class="top2">
                         <h3 class="name">Flexform</h3>
+                        <div class="text-img"></div>
                         <div class="img2"></div>
                         <div class="dollar">
                             <div class="left">$35.00</div>
@@ -686,6 +716,7 @@
 
                     <div class="top3">
                         <h3 class="name">Porada</h3>
+                        <div class="text-img"></div>
                         <div class="img3"></div>
                         <div class="dollar">
                             <div class="left">$87.00</div>

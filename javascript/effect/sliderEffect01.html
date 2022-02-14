@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 이펙트</title>
+    <link rel="stylesheet"href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/default.min.css">
+
+    <style>
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'NexonLv1Gothic';
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.2s;
+        }
+        li {
+            list-style: none;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: url(img/img1.jpg);
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+            color: #fff;
+        }
+        body::before {
+            content: ' ';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(22 20 20 / 80%);
+            z-index: -1;
+        }
+        /* info */
+        .title {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+        .title h1 {
+            font-size: 34px;
+            border-bottom:1px dashed #fff;;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            font-weight: 500;
+        }
+        .title p {
+            font-size: 18px;
+        }
+        .number {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        .number li {
+            display: inline;
+        }
+        .number li a {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border:1px dashed #fff;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+        }
+        .number li a:hover,
+        .number li.active a {
+            background: #fff;
+            color: #000;
+        }
+        .source {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+        }
+        .source button {
+            border: 1px solid #fff;;
+            background: transparent;
+            font-family: 'NexonLv1Gothic';
+            color: #fff;
+            font-size: 16px;
+            padding: 10px 30px;
+            border-radius: 50px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .source button:hover {
+            background: #fff;
+            color:#000;
+        }
+        /* modal */
+        #modal {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1000;
+            transform: scale(0);
+        }
+        #modal.show {
+            animation: foldOut 1s ease forwards;
+        }
+        @keyframes foldOut {
+            0%  {transform:scaleX(0) scaleY(0.005)}
+            50% {transform:scaleX(1) scaleY(0.005)}
+            100% {transform:scaleX(1) scaleY(1)}
+        }
+        .modal-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .modal-close {
+            margin-top: 10px;
+        }
+        .modal-cont {
+            opacity: 1;
+        }
+        .code-view {
+            width: 60vw;
+            height: 70vh;
+            background: #fff;
+            border:1px solid #f2f2f2;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .view-header {
+            padding: 7px 0 7px 10px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .view-header > span {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        .view-header > span:nth-child(1){
+            background-color: #f56565;
+        }
+        .view-header > span:nth-child(2){
+            background-color: #f6e05e;
+        }
+        .view-header > span:nth-child(3){
+            background-color: #4ebb7b;
+        }
+        .view-title {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 9px 10px 7px 10px;
+            height: 37px;
+        }
+        .view-title li {
+            display: inline;
+        }
+        .view-title li a {
+            color:rgb(150, 150, 150);
+            font-size: 14px;
+            text-transform: uppercase;
+            padding:12px 15px 8px 15px;
+            margin: 2px 5px 0 5px;
+        }
+        .view-title li.active a {
+            color:#000;
+            border-bottom: 2px solid #f56565;
+        }
+        .view-cont {
+            background-color: #e8e8e8;
+            height: 100%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+        
+
+
+
+
+
+    <!-- inro -->
+    <div class="title">
+        <h1><a href="sliderEffect.html">JavaScript Slider Effect01</a></h1>
+        <p>이미지 슬라이드 - 페이드 효과</p>
+    </div>
+
+    <div class="number">
+        <ul>
+            <li class="active"><a href="sliderEffect01.html">1</a></li>
+            <li><a href="sliderEffect01.html">2</a></li>
+            <li><a href="sliderEffect01.html">3</a></li>
+            <li><a href="sliderEffect01.html">4</a></li>
+            <li><a href="sliderEffect01.html">5</a></li>
+            <li><a href="sliderEffect01.html">6</a></li>
+            <li><a href="sliderEffect01.html">7</a></li>
+            <li><a href="sliderEffect01.html">8</a></li>
+        </ul>
+    </div>
+
+    <div class="source">
+        <button class="source-btn">소스보기</button>
+        <div id="modal" class="show">
+            <div class="modal-wrap">
+                <div class="modal-cont">
+                    <div class="code-view">
+                        <div class="view-header" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="view-title">
+                            <ul>
+                                <li class="active"><a href="#">HTML</a></li>
+                                <li><a href="#">CSS</a></li>
+                                <li><a href="#">Javascript</a></li>
+                                <li><a href="#">jQuery</a></li>
+                            </ul>
+                        </div>
+                        <div class="view-cont">
+                            <div>
+<pre><code class="language-javascript">
+    const modal = function(){
+        //버튼을 클릭하면 modal 창을 보이게 해주세요(show 추가)
+        document.querySelector(".source-btn").addEventListener("click", ()=> {
+            document.querySelector("#modal").classList.add("show");
+        });
+        document.querySelector(".modal-close").addEventListener("click", ()=>{
+            document.querySelector("#modal").classList.remove('show');
+        })
+    }
+    modal();
+</code></pre>
+                            </div>
+                            <div>CSS</div>
+                            <div>Javascript</div>
+                            <div>jQuery</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="modal-close">닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //info -->
+
+    <!-- script -->
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"></script>
+
+    <script>
+        // highlight
+       hljs.highlightAll();
+
+        //modal
+        const modal = function(){
+            //버튼을 클릭하면 modal 창을 보이게 해주세요(show 추가)
+            document.querySelector(".source-btn").addEventListener("click", ()=> {
+                document.querySelector("#modal").classList.add("show");
+            });
+            document.querySelector(".modal-close").addEventListener("click", ()=>{
+                document.querySelector("#modal").classList.remove('show');
+            })
+        }
+        modal();
+
+        //tabmenu
+        const tabMenu = function(){
+            const tabBtn = document.querySelectorAll(".view-title > ul > li");
+            const tabCont = document.querySelectorAll(".view-cont > div");
+
+            //각각의 버튼을 클릭하면 경고창을 
+            tabBtn.forEach((btn) => {
+                btn.addEventListener("click", ()=> {
+
+                    //클릭하지 않은건 active 삭제
+                    for(let btn of tabBtn){
+                        btn.classList.remove("active");
+                    }
+                    // btn.classList.remove("active");
+                    // btn.classList.remove("active");
+                    // btn.classList.remove("active");
+                    // btn.classList.remove("active");
+
+
+                    //내가 클릭한건 active 추가
+                    btn.classList.add("active");
+                })
+            })
+        }
+        tabMenu();
+
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    // <!-- <script>
+    //      const modal = function(){
+    //         $(".source-btn").click(()=>{
+    //             $("#modal").addClass("show");
+    //         });
+    //         $(".modal-close").click(()=>{
+    //             $("#modal").removeClass("show");
+    //         })
+    //     }
+    //     modal();
+    // </script> -->
+</body>
+</html>
