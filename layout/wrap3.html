@@ -389,18 +389,17 @@
             margin-top: 36px;
             margin-left: 38px;
         }
-        .container2 .top .top1 {
+        .container2 .top {
+            display: flex;
+            justify-content: space-evenly
+        }
+        .top .top1 {
             display: inline-block;
             width: 312px;
             height: 305px;
             background-color: #fff4e8;
-            margin-left: 192px;
-            margin-right: 58px;
             margin-top: 150px;
-            
-        }
-        .top1 {
-            position: relative;
+            position: relative;   
         }
         .top1 .wrapper {
             width: 137px;
@@ -411,9 +410,8 @@
             left: 91px;
             background: #d9ab82;
             position: absolute;
-        
         }
-        .wrapper .text1 {
+        .wrapper .text {
             position: absolute;
             margin-left: 16px;
             margin-top: 10px;
@@ -437,6 +435,40 @@
             background-position: -1px -300px;
             position: absolute;
         }
+        /* //top1 */
+        .top .top2 {
+            display: inline-block;
+            width: 312px;
+            height: 305px;
+            background-color: #fff4e8;
+
+            margin-top: 150px;
+            position: relative;   
+        }
+        .top2 .wrapper {
+            width: 137px;
+            height: 40px;
+            border-radius: 40px;
+            color:#fff;
+            top: -20px;
+            left: 91px;
+            background: #d9ab82;
+            position: absolute;
+        }
+        .wrapper .text {
+            position: absolute;
+            margin-left: 16px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .top2 .img2 {
+            width: 440px;
+            height: 380px;
+            background-image: url(../layout/img/imag2.png);
+            position: absolute;
+            margin-top: 30px;
+            margin-left: -55px;
+        }
         .top2 .text-img {
             width: 26px;
             height: 60px;
@@ -447,13 +479,77 @@
             background-position: -1px -300px;
             position: absolute;
         }
+        /* //top2 */
+        .top .top3 {
+            display: inline-block;
+            width: 312px;
+            height: 305px;
+            background-color: #fff4e8;
+
+            margin-top: 150px;
+            position: relative;   
+        }
+        .top3 .wrapper {
+            width: 137px;
+            height: 40px;
+            border-radius: 40px;
+            color:#fff;
+            top: -20px;
+            left: 91px;
+            background: #d9ab82;
+            position: absolute;
+        }
+        .wrapper .text {
+            position: absolute;
+            margin-left: 16px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .top3 .img3 {
+            width: 440px;
+            height: 380px;
+            background-image: url(../layout/img/imag3.png);
+            position: absolute;
+            margin-top: 30px;
+            margin-left: -55px;
+        }
+        .top3 .text-img {
+            width: 26px;
+            height: 60px;
+            margin-left: 205px;
+            top: -14px;
+            left: -10px;
+            background-image: url(../layout/img/bg.svg2.svg ); 
+            background-position: -1px -300px;
+            position: absolute;
+        }
+
+        /* //top3 */
+/*        
         .top2 .img2 {
             width: 440px;
             height: 380px;
             background-image: url(../layout/img/imag2.png);
             position: absolute;
             margin-top: 30px;
-            margin-left: -30px;
+            margin-left: -33px;
+        }
+        .top .top2 {
+            display: inline-block;
+            width: 312px;
+            height: 305px;
+            background-color: #fff4e8;
+            margin-right: 58px;
+            margin-top: 150px;
+        } */
+
+        /* //top2 */
+        /* .top .top3 {
+            display: inline-block;
+            width: 312px;
+            height: 305px;
+            background-color: #fff4e8;
+            margin-top: 150px;
         }
         .top3 .img3 {
             width: 440px;
@@ -462,22 +558,8 @@
             position: absolute;
             margin-top: 30px;
             margin-left: -50px;
-        }
-        .container2 .top .top2 {
-            display: inline-block;
-            width: 312px;
-            height: 305px;
-            background-color: #fff4e8;
-            margin-right: 58px;
-            margin-top: 150px;
-        }
-        .container2 .top .top3 {
-            display: inline-block;
-            width: 312px;
-            height: 305px;
-            background-color: #fff4e8;
-            margin-top: 150px;
-        }
+        } */
+        /* //top3 */
         .container2 .bottom {
             display: flex;
         }
@@ -693,7 +775,7 @@
                 <div class="top">
                     <div class="top1">
                     <div class="wrapper">
-                        <span class="text1">Add To Cart</span>
+                        <span class="text">Add To Cart</span>
                     </div>
                         <div class="text-img"></div>
                         <h3 class="name">Ramen Stool</h3>
@@ -705,8 +787,11 @@
                     </div>
 
                     <div class="top2">
-                        <h3 class="name">Flexform</h3>
+                        <div class="wrapper">
+                            <span class="text">Add To Cart</span>
+                        </div>
                         <div class="text-img"></div>
+                        <div class="name">Flexform</div>
                         <div class="img2"></div>
                         <div class="dollar">
                             <div class="left">$35.00</div>
@@ -715,8 +800,11 @@
                     </div>
 
                     <div class="top3">
-                        <h3 class="name">Porada</h3>
+                        <div class="wrapper">
+                            <span class="text">Add To Cart</span>
+                        </div>
                         <div class="text-img"></div>
+                        <h3 class="name">Porada</h3>
                         <div class="img3"></div>
                         <div class="dollar">
                             <div class="left">$87.00</div>
