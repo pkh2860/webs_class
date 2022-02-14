@@ -300,6 +300,7 @@
 
         .container .header {
             display: flex;
+            position: relative;
         }
 
         .container .header h3 {
@@ -329,12 +330,22 @@
         }
 
         .header .see {
+            font-size: 17px;
             margin-top: 200px;
             margin-left: 228px;
             font-weight: 17;
             color: #3d3d3f;
         }
 
+        .header .seeall {
+            width: 45px;
+            height: 20px;
+            background: url(../layout/img/bg-svg1.svg);
+            background-position: 0 -100px;
+            position: absolute;
+            margin-left: 28px;
+            margin-top: 4px;
+        }
         .memu2 .cont1 {
             display: flex;
             justify-content: center;
@@ -360,11 +371,10 @@
         }
 
         .container2 {
-            width: 1440px;
+            width: 1152px;
             height: 990px;
             margin: 0 auto;
         }
-
         .container2 .top .name {
             font-size: 26px;
             font-weight: bold;
@@ -375,6 +385,7 @@
         .top .dollar {
             display: flex;
         }
+
         .top .dollar .left {
             font-size: 19px;
             font-weight: 500;
@@ -388,6 +399,8 @@
             color:#a9a7a6;
             margin-top: 36px;
             margin-left: 38px;
+            text-decoration: line-through;
+
         }
         .container2 .top {
             display: flex;
@@ -433,7 +446,7 @@
             margin-left: 205px;
             top: -14px;
             left: -10px;
-            background-image: url(../layout/img/bg.svg2.svg ); 
+            background-image: url(../layout/img/bg.svg2.svg );
             background-position: -1px -300px;
             position: absolute;
         }
@@ -459,7 +472,7 @@
             background-image: url(../layout/img/imag2.png);
             position: absolute;
             margin-top: 30px;
-            margin-left: -55px;
+            margin-left: -30px;
         }
         .top2 .text-img {
             width: 26px;
@@ -533,6 +546,7 @@
             color:#a9a7a6;
             margin-top: 36px;
             margin-left: 38px;
+            text-decoration: line-through;
         }
         .container2 .bottom {
             display: flex;
@@ -874,7 +888,9 @@
                             <li><a href="#">Most Popular</a></li>
                         </ul>
                     </nev>
-                    <div class="see">See All</div>
+                    <div class="see">See All
+                    <a href="" class="seeall"></a>
+                </div>
                 </div>
             </div>
 
