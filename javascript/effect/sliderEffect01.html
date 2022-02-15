@@ -243,20 +243,18 @@
         let currentIndex = 0; //현재 보이는 이미지
         let sliderCount = slider.length; //이미지 갯수
 
-        setInterval(() => { //함수를 반복적으로 실행시키고싶을때 씀
-            let nextIndex = (currentIndex + 1) % 5; //1 2 3 4 0 1 2 3 4 0 되도록  1%(나머지) 5를 써서
+        setInterval(() => {                                    //함수를 반복적으로 실행시키고싶을때 씀
+            let nextIndex = (currentIndex + 1) % 5;   //1 2 3 4 0 1 2 3 4 0 되도록  1%(나머지) 5를 써서
 
             slider[currentIndex].style.opacity = "0" //첫 번째 이미지를 안보이게 작업
             slider[nextIndex].style.opacity = "1" //두 번째 이미지를 보이게
 
 
-            // console.log("currentIndex : " + currentIndex)
-            // console.log("nextIndex : " + nextIndex)
             slider.forEach(slider => {
                 slider.style.transition = "all 0.3s"
             });
 
-            currentIndex = nextIndex //오른쪽에 있는 값을 왼쪽에 대입
+            currentIndex = nextIndex     //오른쪽에 있는 값을 왼쪽에 대입
         }, 2000);
         //2초가 지나면 
         //첫 번째 이미지는 -->opacity : 0
