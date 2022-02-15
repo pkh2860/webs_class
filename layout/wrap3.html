@@ -102,16 +102,16 @@
             background-position: -95px 0;
         }
 
-
-
         #contents {
             width: 100%;
-            height: 800px;
             background-image: url(../layout/img/Image.jpg);
             background-repeat: no-repeat;
             background-position: right;
         }
-
+        #contents .container {
+            width: 1440px;
+            height: 800px;
+        }
         .container h2 {
             font-size: 80px;
             font-weight: 900;
@@ -155,19 +155,22 @@
             width: 100%;
             height: 300px;
         }
-
+        #contents_layout1 .container {
+            width: 1440px;
+            margin: 0 auto;
+        }
         #contents_layout1 .text {
             font-size: 16px;
             font-weight: bold;
             text-align: center;
-
         }
-
         #contents_layout1 .logo2 {
             display: flex;
             justify-content: space-around;
         }
-
+        .container .logo2 {
+            display: flex;
+        }
         #contents_layout1 .logo2 a {
             display: inline-block;
             margin-top: 72px;
@@ -175,31 +178,26 @@
             height: 47px;
             background-image: url(../layout/img/bg.svg2.svg)
         }
-
         .logo2 a:nth-child(2) {
             width: 96px;
             height: 48px;
             background-position: -2px -50px;
         }
-
         .logo2 a:nth-child(3) {
             width: 103px !important;
             height: 48px;
             background-position: 0 -90px;
         }
-
         .logo2 a:nth-child(4) {
             width: 110px !important;
             height: 48px;
             background-position: 0 -140px;
         }
-
         .logo2 a:nth-child(5) {
             width: 110px !important;
             height: 48px;
             background-position: 0 -190px;
         }
-
         .logo2 a:nth-child(6) {
             width: 115px !important;
             background-position: 0 -230px;
@@ -210,7 +208,6 @@
             width: 100%;
             height: 388px;
         }
-
         #contents_layout2 .container {
             width: 1440px;
             height: 388px;
@@ -218,7 +215,6 @@
             margin: 0 auto;
             display: flex;
         }
-
         .container .left {
             width: 720px;
             height: 388px;
@@ -226,7 +222,6 @@
             background-color: #fcefe9;
             position: relative;
         }
-
         .container .right {
             width: 720px;
             height: 388px;
@@ -234,7 +229,6 @@
             position: relative;
 
         }
-
         .container .left .img1 {
             width: 409px;
             height: 350px;
@@ -264,21 +258,18 @@
             margin-top: 110px;
             margin-left: 101px;
         }
-
         .left p {
             font-size: 20px;
             font-weight: normal;
             margin-left: 101px;
             margin-top: 91px;
         }
-
         .right h3 {
             margin-top: 110px;
             margin-left: 67px;
             font-size: 34px;
             font-weight: bold;
         }
-
         .right p {
             margin-top: 91px;
             margin-left: 67px;
@@ -288,7 +279,6 @@
             width: 100%;
             height: 1330px;
         }
-
         #contents_layout3 .container {
             width: 1440px;
             height: 50px;
@@ -297,12 +287,10 @@
             white-space: nowrap;
             justify-content: space-between;
         }
-
         .container .header {
             display: flex;
             position: relative;
         }
-
         .container .header h3 {
             margin-top: 173px;
             font-size: 50px;
@@ -313,22 +301,18 @@
             margin-top: 194px;
             margin-left: 95px;
         }
-
         .header .memu ul {
             display: flex;
         }
-
         .header .memu li {
             display: inline-block;
         }
-
         .header .memu li a {
             margin-right: 95px;
             font-size: 23px;
             color: #a9a7a6;
             font-weight: 500;
         }
-
         .header .see {
             font-size: 17px;
             margin-top: 200px;
@@ -336,7 +320,6 @@
             font-weight: 17;
             color: #3d3d3f;
         }
-
         .header .seeall {
             width: 45px;
             height: 20px;
@@ -346,15 +329,14 @@
             margin-left: 28px;
             margin-top: 4px;
         }
+        
         .memu2 .cont1 {
             display: flex;
             justify-content: center;
         }
-
         .memu2 .cont1 ul {
             margin-top: 328px;
         }
-
         .memu2 .cont1 li {
             display: inline-block;
             margin-right: 60px;
@@ -400,7 +382,6 @@
             margin-top: 36px;
             margin-left: 38px;
             text-decoration: line-through;
-
         }
         .container2 .top {
             display: flex;
@@ -669,121 +650,7 @@
             position: absolute;
         }
 
-        /* //bottom  */
-
-
-
-        /* .container2 .bottom {
-            display: flex;
-            justify-content:space-between;
-        }
-        .container2 .bottom .bottom1 {
-            display: inline-block;
-            width: 312px;
-            height: 305px;
-            background-color: #fff4e8;
-            margin-right: 58px;
-            margin-top: 191px;
-        }
-        .container2 .bottom .bottom2 {
-            display: inline-block;
-            width: 312px;
-            height: 305px;
-            background-color: #fff4e8;
-            margin-right: 58px;
-            margin-top: 191px;
-        }
-        .container2 .bottom .bottom3 {
-            display: inline-block;
-            width: 312px;
-            height: 305px;
-            background-color: #fff4e8;
-            margin-top: 191px;
-        }
-        .container2 .bottom .name {
-            font-size: 26px;
-            font-weight: bold;
-            margin-left: 51px;
-            margin-top: 43px;
-            color:#3d3d3f
-        }
-        .bottom .dollar {
-            display: flex;
-        }
-        .bottom .dollar .left {
-            font-size: 19px;
-            font-weight: 500;
-            color:#3d3d3f;
-            margin-left: 51px;
-            margin-top: 32px;
-        }
-        .bottom .dollar .right {
-            font-size: 15px;
-            font-weight: 500;
-            color:#a9a7a6;
-            margin-top: 36px;
-            margin-left: 38px;
-        }
-        .bottom .bottom1 {
-            display: inline-block;
-            width: 312px;
-            height: 305px;
-            background-color: #fff4e8;
-            margin-top: 150px;
-            position: relative;  
-        }
-        .bottom1 .wrapper,
-        .bottom1 .wrapper,
-        .bottom1 .wrapper {
-            width: 137px;
-            height: 40px;
-            border-radius: 40px;
-            color:#fff;
-            top: -20px;
-            left: 91px;
-            background: #d9ab82;
-            position: absolute;
-        }
-        .bottom1 .img4 {
-            width: 440px;
-            height: 380px;
-            background-image: url(../layout/img/imag4.png);
-            background-repeat: no-repeat;
-            margin-top: 30px;
-
-        }
-        .bottom1 .text-img {
-            width: 26px;
-            height: 60px;
-            margin-left: 205px;
-            top: -14px;
-            left: -10px;
-            background-image: url(../layout/img/bg.svg2.svg ); 
-            background-position: -1px -300px;
-            position: absolute;
-        } */
-        /* .bottom .img4 {
-            width: 308px;
-            height: 308px;
-            background-image: url(../layout/img/imag4.png);
-            position: absolute;
-            margin-top: 30px;
-        }
-        .bottom .img5 {
-            width: 440px;
-            height: 330px;
-            background-image: url(../layout/img/imag5.png);
-            position: absolute;
-            margin-top: 30px;
-            margin-left: -50px;
-        }
-        .bottom .img6 {
-            width: 252px;
-            height: 327px;
-            background-image: url(../layout/img/imag6.png);
-            position: absolute;
-            margin-top: 30px;
-        } */
+    
         #contents_layout4 {
             width: 100%;
             height: 970px;
@@ -825,6 +692,7 @@
         </header>
         <section id="contents">
             <div class="container">
+
                 <h2>Modern Furniture For <br>Modern Living Style</h2>
 
                 <p class="text1">
