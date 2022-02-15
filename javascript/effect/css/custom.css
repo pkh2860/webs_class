@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NexonLv1Gothic';
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.2s;
+}
+li {
+    list-style: none;
+}
+img {
+    width: 100%;
+    vertical-align: top; /*이미지 여백 제거*/
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    color: #fff;
+}
+body::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(22 20 20 / 80%);
+    z-index: -1;
+}
+/* info */
+.title {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.title h1 {
+    font-size: 34px;
+    border-bottom:1px dashed #fff;;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+.title p {
+    font-size: 18px;
+}
+.number {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.number li {
+    display: inline;
+}
+.number li a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border:1px dashed #fff;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+}
+.number li a:hover,
+.number li.active a {
+    background: #fff;
+    color: #000;
+}
+.source {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.source button {
+    border: 1px solid #fff;;
+    background: transparent;
+    font-family: 'NexonLv1Gothic';
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.source button:hover {
+    background: #fff;
+    color:#000;
+}
+/* modal */
+#modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    transform: scale(0);
+}
+#modal.show {
+    animation: foldOut 1s ease forwards;
+}
+#modal.show.hide  {
+    animation: foldIn 1s 0.3s ease backwards;
+}
+@keyframes foldOut {
+    0%  {transform:scaleX(0) scaleY(0.005)}
+    50% {transform:scaleX(1) scaleY(0.005)}
+    100% {transform:scaleX(1) scaleY(1)}
+}
+@keyframes foldIn {
+    0%  {transform:scaleX(1) scaleY(1)}
+    50% {transform:scaleX(1) scaleY(0.005)}
+    100% {transform:scaleX(0) scaleY(0.005)}
+}
+.modal-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    transform: scale(0);
+}
+#modal.show .modal-wrap {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+#modal.show.hide .modal-wrap {
+    animation: zoomIn 0.5s 1s ease forwards;
+}
+@keyframes zoomOut {
+    0%  {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+@keyframes zoomIn {
+    0%  {transform: scale(1);}
+    100% {transform: scale(0);}
+}
+.modal-close {
+    margin-top: 10px;
+}
+.modal-cont {
+    opacity: 1;
+    position: relative;
+}
+.code-view {
+    width: 60vw;
+    height: 60vh;
+    background: #fff;
+    border:1px solid #f2f2f2;
+    border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+/* 스크롤바 색상 */
+.code-view::-webkit-scrollbar {
+    width: 7px; /*스크롤바의 너비*/
+}
+.code-view::-webkit-scrollbar-thumb {
+    background-color: #e9e9d2; /*스크롤바의 색상*/
+    border-radius: 20px;
+}
+.code-view::-webkit-scrollbar-track {
+    background-color: #e9e9d2; /*스크롤바 트랙 색상*/
+}
+.code-view::-webkit-scrollbar-cornr {
+    background-color: #e9e9d2; /*하단의 코너 부분*/
+}
+/* //스크롤바 색상 */
+
+.view-header {
+    position: absolute;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 32px;
+    background: #fff;
+    padding: 7px 0 7px 10px;
+    border-bottom: 1px solid #e2e8f0;
+    border-radius: 5px 5px 0 0;
+}
+.view-header > span {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 10px;
+}
+.view-header > span:nth-child(1){
+    background-color: #f56565;
+}
+.view-header > span:nth-child(2){
+    background-color: #f6e05e;
+}
+.view-header > span:nth-child(3){
+    background-color: #4ebb7b; 
+}
+
+.view-title {
+    position: absolute;
+    left: 0;
+    top: 32px;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 9px 0 7px;
+    height: 37px;
+}
+.view-title li {
+    display: inline;
+}
+.view-title li a {
+    color:rgb(150, 150, 150);
+    font-size: 14px;
+    text-transform: uppercase;
+    padding:12px 20px 8px 20px;
+    margin: 2px 0 0 0;
+}
+.view-title li.active a {
+    color:#000;
+    border-bottom: 2px solid #f56565;
+    background: #f2777726;
+}
+.view-cont {
+    background-color: #fff;
+    height: 100%;
+    padding-top: 65px;
+}
+.view-cont > div {
+    display: none;
+}
+.view-cont > div:nth-child(1) {
+    display: block;
+}
+.view-cont pre code.hijs {
+    line-height: 1.6;
+}

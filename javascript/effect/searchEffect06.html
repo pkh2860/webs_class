@@ -180,8 +180,8 @@
                 <li><a href="searchEffect02.html">2</a></li>
                 <li><a href="searchEffect03.html">3</a></li>
                 <li><a href="searchEffect04.html">4</a></li>
-                <li class="active"><a href="searchEffect05.html">5</a></li>
-                <li><a href="searchEffect06.html">6</a></li>
+                <li ><a href="searchEffect05.html">5</a></li>
+                <li class="active"><a href="searchEffect06.html">6</a></li>
                 <li><a href="searchEffect07.html">7</a></li>
                 <li><a href="searchEffect08.html">8</a></li>
 
@@ -436,8 +436,6 @@
         updataList();
         }
 
-
-
         //오른차순 정렬
         function sortAscending(){
             cssProperty.sort((a,b) => {
@@ -445,7 +443,6 @@
             })
         updataList();
         }
-
         //내림차순 정렬
         function sortDescending(){
             cssProperty.sort((a,b) => {
@@ -453,7 +450,6 @@
             })
         updataList();
         }
-
         //알파벳 정렬 (a~z)
         function sortAlphabet(){
             cssProperty.sort((a,b)=>{
@@ -462,8 +458,7 @@
                 return x.localeCompare(y);
             })
         updataList();
- }
-
+        }
         //알파벳 정렬 (z~a)
         function sortAlphabetZ(){
             cssProperty.sort((a,b)=>{
@@ -472,8 +467,7 @@
                 return y.localeCompare(x);
         })
         updataList();
-
- }
+     }
 
         //반대로
         document.querySelector(".btn1").addEventListener("click", ()=> {
