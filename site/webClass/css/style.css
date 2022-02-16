@@ -865,7 +865,6 @@
 }
 .member-form {
     max-width: 665px;
-    height: 800px;
     border: 1px solid #dedede;
     background: #fff;
     margin: 0 auto;
@@ -893,38 +892,38 @@
     top: 8px;
 }
 .member-form h4 {
-    font-size: 16px;
-    line-height: 150%;
-    font-weight: normal;
-    margin-top: 28px;
-    border-bottom: 1px solid #000;
-    width: 238px;
-}
-
-.member-form .list2 {
-    width: 560px;
-    height: 170px;
-    background: #f5f5f5;
-    margin-top: 13px;
-    padding-top: 20px;
-    
-}
-.member-form .list2 li {
-    font-size: 14px;
-    line-height:1.6;
     font-weight: 500;
-    padding-left: 31px;
-    position: relative;
+    font-size: 16px;
+    text-decoration: underline;
+}
+.member-form .blue {
+    background-color: #f5f5f5;
+    padding: 20px;
 }
 
-.member-form .list2 li::before {
-    content: '';
-    width: 3px;
-    height: 3px;
-    background: #000;
-    border-radius: 50%;
-    position: absolute;
-    left: 20px;
-    top: 7px;
+.join-box label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.join-box input {
+    border: 1px solid #dfdfdf;
+    width: 100%;
+    padding: 15px;
+    height: 50px;
+    margin-bottom: 30px;
 }
 
+.join-submint {
+    font-size: 16px;
+    background: #eee;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.join-submint:hover {
+    box-shadow: inset 0 0 0 2px #222;
+    background: #fff;
+}

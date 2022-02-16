@@ -1,12 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>웹 표준 사이트 만들기 : 회원가입</title>
+    <!-- SEO (검색엔진최적화) -->
+    <meta name="acthor" content="박근혁">
+    <meta name="description" content="웹 표준을 준사한 사이트입니다.">
+    <meta name="keywords" content="웹표준, 웹접근성, 웹호환성, 사이트제작, 사이트만들기, 포트폴리오">
+    <meta name="robots" content="all">
+
+    <!-- 메타 정보 -->
+    <meta property="og:title" content="웹표준 사이트 제작">
+    <meta property="og:url" content="https://pkh2860.github.io/webs_class/site/webClass/index.html">
+    <meta property="og:image" content="https://pkh2860.github.io/webs_class/site/webClass/img/icon.png">
+    <meta property="og:description" content="웹 표준을 준수한 사이트 튜토리얼입니다." />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="웹표준 사이트 제작">
+    <meta name="twitter:url" content="https://pkh2860.github.io/webs_class/site/webClass/index.html">
+    <meta name="twitter:image" content="https://pkh2860.github.io/webs_class/site/webClass/img/icon.png">
+    <meta name="twitter:description" content="웹 표준을 준수한 사이트 튜토리얼입니다." />
+
+    <!-- 아이콘&파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" href="img/icon114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/icon114.png">
+    <link rel="apple-touch-icon-precomposed" href="img/icon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="167x167" href="img/icon167.png" />
+
+    <!-- CSS style -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <noscript>"페이지를 보려면 자바스크립트 옵션이 활성화 되어 있어야 합니다."</noscript>
+    <div id="skip">
+        <a href="#contents">컨텐츠 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo">
+                <a href="index.html">WEB <em>class</em></a>
+            </h1>
+            <nav class="menu">
+                <h2 class="ir_so">메인 메뉴</h2>
+                <ul>
+                    <li><a href="#">레이아웃</a></li>
+                    <li><a href="#">메뉴 영역</a></li>
+                    <li><a href="#">헤더 영역</a></li>
+                    <li><a href="#">컨텐츠 영역</a></li>
+                    <li><a href="#">푸터 영역</a></li>
+                </ul>
+            </nav>
+            <div class="member">
+                <a
+                    href="join.html">회원가입</a>
+                <a href="login.html">로그인</a>
+            </div>
+        </header>
+
+        <main id="contents">
+            <h2 class="ir_so">컨텐츠 영역</h2>
+            <section class="join-type gray">
+                <div class="member-form">
+                    <h3 class="mb50">로그인</h3>
+                    <form action="#" name="join" method="post">
+                        <fieldset>
+                            <legend class="ir_so">회원가입 입력폼</legend>
+                            <div class="join-box">
+                                <div>
+                                    <label for="youEmail">이메일</label>
+                                    <input type="email" id="youEmail" name="youEmail" placeholder="Sample@naver.com" autocomplete="off" autofocus required> 
+                                </div>
+                                <div>
+                                    <label for="youPass">비밀번호</label>
+                                    <input type="password" id="youPass" name="youPass" maxlength="20" placeholder="비밀번호를 입력해주세요" autocomplete="off" required> 
+                                </div>
+                               
+                            </div>
+                            <button id="joinBtn" class="join-submint" type="submit">로그인</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <!-- //contents -->
+
+        <footer id="footer" class="footer_type01 white">
+            <div class="container">
+                <h2 class="ir_so">푸터 바로가기 메뉴</h2>
+                <div class="footer-menu">
+                    <div>
+                        <h3>레이아웃 영역</h3>
+                        <ul>
+                            <li><a fhef="#">레이아웃 유형01</a></li>
+                            <li><a fhef="#">레이아웃 유형02</a></li>
+                            <li><a fhef="#">레이아웃 유형03</a></li>
+                            <li><a fhef="#">레이아웃 유형04</a></li>
+                            <li><a fhef="#">레이아웃 유형05</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>메뉴 영역</h3>
+                        <ul>
+                            <li><a fhef="#">메뉴 유형01</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>메인 영역</h3>
+                        <ul>
+                            <li><a fhef="#">이미지 유형01</a></li>
+                            <li><a fhef="#">동영상 유형02</a></li>
+                            <li><a fhef="#">슬라이드 유형03</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>컨텐츠 영역</h3>
+                        <ul>
+                            <li><a fhef="#">텍스트 유형01</a></li>
+                            <li><a fhef="#">이미지 유형02</a></li>
+                            <li><a fhef="#">이미지/텍스트03</a></li>
+                            <li><a fhef="#">카드 유형04</a></li>
+                            <li><a fhef="#">배너 유형05</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>푸터 영역</h3>
+                        <ul>
+                            <li><a fhef="#">컨택트 유형01</a></li>
+                            <li><a fhef="#">푸터 유형01</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>사이트</h3>
+                        <ul>
+                            <li><a fhef="#">웹표준 사이트</a></li>
+                            <li><a fhef="#">반응형 사이트</a></li>
+                            <li><a fhef="#">패럴랙스 사이트</a></li>
+                            <li><a fhef="#">포트폴리오 사이트</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <address class="footer-rights">
+                    &copy; 2022 q_2860 .All rights reserved.
+                    <div class="footer-sns">
+                        <ul>
+                            <li><a href="#" class="ir_pm">페이스북</a></li>
+                            <li><a href="#" class="ir_pm">인스타그램</a></li>
+                            <li><a href="#" class="ir_pm">깃허브</a></li>
+                            <li><a href="#" class="ir_pm">블로그</a></li>
+                        </ul>
+                    </div>
+                </address>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
 </body>
 </html>
