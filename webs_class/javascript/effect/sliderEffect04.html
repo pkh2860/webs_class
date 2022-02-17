@@ -76,7 +76,7 @@
     <div class="inro">
         <div class="title">
             <h1><a href="sliderEffect.html">JavaScript Slider Effect03</a></h1>
-            <p>이미지 슬라이드 - 위,아래로 움직이기</p>
+            <p>이미지 슬라이드 - 상,하로 움직이기</p>
         </div>
 
         <div class="number">
@@ -114,17 +114,87 @@
                             <div class="view-cont">
                                 <div>
 <pre><code class="language-javascript">
-
+    &lt;section id="slideType02"&gt;
+        &lt;div class="slider__wrap"&gt;
+            &lt;div class="slider__img"&gt;
+                &lt;div class="slider__inner"&gt;
+                    &lt;div class="slider"&gt;&lt;img src="img/img1.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                    &lt;div class="slider"&gt;&lt;img src="img/img2.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                    &lt;div class="slider"&gt;&lt;img src="img/img3.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                    &lt;div class="slider"&gt;&lt;img src="img/img4.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                    &lt;div class="slider"&gt;&lt;img src="img/img5.jpg" alt="이미지5"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
 </code></pre>
                                 </div>
                                 <div>
 <pre><code class="language-javascript">
+    .slider__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
 
+    .slider__img {          /*화면 보이는 구간*/
+        position: relative;
+        width: 800px;
+        height: 480px;
+        overflow: hidden;
+    }
+    .slider__inner {            /*이미지 움직이는 영역*/
+        display: flex;
+        width: 4800px;      /*이미지 총 길이*/
+        transform: translateX(0);
+    }
+    .slider {
+        width: 800px;
+        position: relative;
+    }
+
+    .slider::before {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        padding: 5px 10px 3px;
+    }
+    .slider:nth-child(1)::before {content: '이미지1';}
+    .slider:nth-child(2)::before {content: '이미지2';}
+    .slider:nth-child(3)::before {content: '이미지3';}
+    .slider:nth-child(4)::before {content: '이미지4';}
+    .slider:nth-child(5)::before {content: '이미지5';}
+    .slider:nth-child(6)::before {content: '이미지1';}
 </code></pre>
                                 </div>
                                 <div>
 <pre><code class="language-javascript">
+    let currentIndex = 0;
+    let sliderCount = slider.length;                   
+    let sliderWidth = sliderImg.offsetWidth;           
+    let sliderClone = sliderInner.firstElementChild.cloneNode(true);    
+    sliderInner.appendChild(sliderClone);     
+    
 
+    function sliderEffect(){
+        currentIndex++
+        sliderInner.style.transition = "all 0.3s";
+        sliderInner.style.transform = "translateX(-"+ sliderWidth *currentIndex +"px)"
+
+       
+        if(currentIndex == sliderCount){   
+            setTimeout(()=>{      
+            //이미지 초기화
+            sliderInner.style.transition = "0s";
+            sliderInner.style.transform = "translateX(0px)"
+            },300)
+            currentIndex = 0;
+        }
+    }
+    setInterval(sliderEffect, 2000);
 </code></pre>
                                 </div>
                             </div>
@@ -151,6 +221,40 @@
         const sliderImg = document.querySelector(".slider__img")        //이미지 보이는 영역
         const sliderInner = document.querySelector(".slider__inner")    //이미지 움직이는 영역
         const slider = document.querySelectorAll(".slider")
+
+        let currentIndex = 0;
+        let sliderCount = slider.length;                     //이미지 갯수
+        let sliderWidth = sliderImg.offsetWidth;            //이미지 가로값                  
+        let sliderClone = sliderInner.firstElementChild.cloneNode(true);     //첫번째 자식 선택자(firstElementChild)로 첫번째 이미지 복사
+        sliderInner.appendChild(sliderClone);      //첫 번째 이미지를 마지막에 넣어줌
+        
+
+        function sliderEffect(){        //sliderEffect 함수생성
+            currentIndex++
+            sliderInner.style.transition = "all 0.3s";  
+            sliderInner.style.transform = "translateX(-"+ sliderWidth *currentIndex +"px)"  //translatex - 이미지 가로값 * 현재 보이는 이미지 + px을  sliderInner.style.transformㅇ에 저장
+
+
+            //마지막 사진에 갔을 때
+            if(currentIndex == sliderCount){   
+                setTimeout(()=>{        //함수를 한번만 실행
+                //이미지 초기화
+                sliderInner.style.transition = "0s";
+                sliderInner.style.transform = "translateX(0px)"
+                },300)                   //5~6번 갈때 애니메이션이 끊겨서 5~6번 가는 2초사이에 이미지를 뒤로 옮김
+                currentIndex = 0;
+            }
+        }
+        setInterval(sliderEffect, 2000); //sliderEffect 함수 계속실행
+
+
+            // sliderInner.style.transform = "translateX(-800px)"
+            // sliderInner.style.transform = "translateX(-1600px)"
+            // sliderInner.style.transform = "translateX(-2400px)"
+            // sliderInner.style.transform = "translateX(-3200px)"
+            // sliderInner.style.transform = "translateX(-4000px)"
+            // sliderInner.style.transform = "translateX(-4800px)" <를 단축 시킨게 이미지 초기화
+        
 
     </script>
 
