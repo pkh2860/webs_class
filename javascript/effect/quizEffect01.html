@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Effect 01</title>
+
     <style>
+        @import url(../effect/css/Windows.css);
         @font-face {
             font-family: 'DungGeunMo';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
@@ -57,7 +59,6 @@
             align-items: center; 
             padding: 10px;
             justify-content: space-between;
-            
             z-index: 10; /*position : absolute 썻을때만 쓸 수 있음 형제여야함*/
         }
         #header::before {
@@ -89,18 +90,24 @@
             padding: 0 10px;
             transition: all 0.2s;
             border: 1px dashed #fff;
-            
         }
         #header nav li a:hover {
             opacity: 0.5;
         }
         #footer {
             margin-top: 200px;
+            width: 100%;
+            background: #fff;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            /* margin-top: 200px;
             margin-bottom: -10px;
             width: 100%;
             background: #fff;
             text-align: center;
-            padding: 20px;            
+            padding: 20px;             */
         }
         #footer a {
             color: #000;
@@ -552,6 +559,7 @@
             100% {visibility: visible;}
         }
 
+
         /* 소스보기 */
         .quiz_source {
             position: absolute;
@@ -569,9 +577,27 @@
             background: #000;
             color: #fff;
         }
+ /* modal screen open and close */
+
+        #modal {
+            align-self: center;
+            z-index: 5;
+            position:absolute;
+            left: 50%;
+            transform:translateX(-50%);
+        }
+        .hide {
+            display:none;
+        }
+
+        .show {
+            display: block;
+        }
+ 
     </style>
 </head>
 <body>
+
     <header id="header">
         <h1>Quiz</h1>
         <nav>
@@ -596,6 +622,42 @@
                     <span class="quiz__Ask"></span>
                 </h3>
                 <div class="quiz__view">
+                <div id="modal" class="hide">
+                    <div class="window">
+                        <div class="title-bar">
+                            <div class="minimize">
+                                <div class="symbol"></div>
+                            </div>
+                            <div class="maximize">
+                                <div class="symbol"></div>
+                            </div>
+                            <div class="close" id="modal-close">
+                                <div class="symbol"></div>
+                            </div>
+                        </div>
+                        <div class="menu-bar">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Javascript</span>
+                        </div>
+                        <div class="content-container">
+                            <div class="content">
+                                <div class="main"></div>
+                                <div class="scroll">
+                                    <div class="start"></div>
+                                    <div class="progress"></div>
+                                    <div class="end"></div>
+                                </div>
+                            </div>
+                            <div class="scroll -row">
+                                <div class="start"></div>
+                                <div class="progress"></div>
+                                <div class="end"></div>
+                            </div>
+                        </div>
+                        <div class="footer"></div>
+                    </div>
+                </div>
                     <div class="dog">
                         <div class="head">
                             <div class="ears"></div>
@@ -626,12 +688,13 @@
             <div class="quiz_source">
                 <button class="source_btn">소스보기</button>
             </div>
+        </div>
     </main>
 
     <footer id="footer">
         <a href="mailto:rmsgur2275@gmail.com">rmsgur2275@gmail.com</a>
     </footer>
-
+        
     <script>
         const quizType = document.querySelector(".quiz__type"); //퀴즈 종류
         const quizNumber = document.querySelector(".quiz__number");     //퀴즈 번호
@@ -639,6 +702,7 @@
         const quizConfirm = document.querySelector(".quiz__confirm")     //정답 확인 버튼
         const quizResult = document.querySelector(".quiz__result")      //정답 결과
         const quizDog = document.querySelector(".quiz__view .dog");
+        const quizsource = document.querySelector(".source_btn")
 
         //문제정보
         const answerType = "HTML"
@@ -663,7 +727,17 @@
             quizDog.classList.add("like")
         })
 
+        let windowWrapper = document.querySelector('#modal');
+        
+        document.querySelector(".source_btn").addEventListener("click",()=>{
+            windowWrapper.classList.add("show");
+            windowWrapper.classList.remove("hide");
+        })
 
+        document.querySelector("#modal-close").addEventListener("click",()=>{
+            windowWrapper.classList.remove("show");
+            windowWrapper.classList.add("hide");
+        })
     </script>
 </body>
 </html>
