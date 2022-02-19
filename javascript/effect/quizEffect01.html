@@ -594,6 +594,13 @@
             display: block;
         }
  
+
+        .content > div {
+            display: none;
+        }
+        .content > div:nth-child(1) {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -618,7 +625,7 @@
             <div class="quiz">
                 <h2 class="quiz__type"></h2>
                 <h3 class="quiz__question">
-                    <span class="quiz__number">01.</span>
+                    <span class="quiz__number">01.컨텐츠 구조를 정의하는 마크업 언어는 무엇일까요</span>
                     <span class="quiz__Ask"></span>
                 </h3>
                 <div class="quiz__view">
@@ -636,13 +643,21 @@
                             </div>
                         </div>
                         <div class="menu-bar">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>Javascript</span>
+                            <span class="active"><a href="#">HTML</a></span>
+                            <span><a href="#">CSS</a></span>
+                            <span><a href="#">Javascript</a></span>
                         </div>
                         <div class="content-container">
                             <div class="content">
-                                <div class="main"></div>
+                                <div class="main">
+                                    dd
+                                </div>
+                                <div class="main">
+                                    dd
+                                </div>
+                                <div class="main">
+                                   dd 
+                                </div>
                                 <div class="scroll">
                                     <div class="start"></div>
                                     <div class="progress"></div>
@@ -696,6 +711,7 @@
     </footer>
         
     <script>
+        
         const quizType = document.querySelector(".quiz__type"); //퀴즈 종류
         const quizNumber = document.querySelector(".quiz__number");     //퀴즈 번호
         const quizAsk = document.querySelector(".quiz__Ask")            //퀴즈 질문
@@ -703,6 +719,7 @@
         const quizResult = document.querySelector(".quiz__result")      //정답 결과
         const quizDog = document.querySelector(".quiz__view .dog");
         const quizsource = document.querySelector(".source_btn")
+        
 
         //문제정보
         const answerType = "HTML"
@@ -737,7 +754,8 @@
         document.querySelector("#modal-close").addEventListener("click",()=>{
             windowWrapper.classList.remove("show");
             windowWrapper.classList.add("hide");
-        })
+        });
+        
     </script>
 </body>
 </html>

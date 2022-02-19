@@ -617,7 +617,7 @@
             <div class="quiz">
                 <h2 class="quiz__type"></h2>
                 <h3 class="quiz__question">
-                    <span class="quiz__number">01.</span>
+                    <span class="quiz__number">01.객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?</span>
                     <span class="quiz__Ask"></span>
                 </h3>
                 <div class="quiz__view">
@@ -665,6 +665,11 @@
         const quizConfirm = document.querySelector(".quiz__confirm")     //정답 확인 버튼
         const quizResult = document.querySelector(".quiz__result")      //정답 결과
         const quizDog = document.querySelector(".quiz__view .dog");
+        const quiztrue = document.querySelector(".quiz__view .true")
+        const quizfalse = document.querySelector(".quiz__view .false")
+
+
+        const quizInput = document.querySelector(".quiz__input");
 
         //문제정보
         const answerType = "javascript"
@@ -680,9 +685,26 @@
 
         //정답 확인
         //정답 버튼을 클릭하면 정답을 보이게 설정/정답 확인은 안보이고 숨겨진 정답만 보이게
-        //정답을 확인하면 강아지 웃기
+        //정답이 맞으면 강아지 웃고 틀리면 강아지 울기
+        
+        quizConfirm.addEventListener("click", ()=>{
+            const quizTEXT = quizInput.value;
 
-
+            if(answerResult == quizTEXT){
+                quizConfirm.style.display = "none";
+                quizResult.style.display = "block";
+                quiztrue.style.opacity = "1"
+                quizfalse.style.opacity = "0"
+                quizDog.classList.add("like")
+                quizDog.classList.remove("dislike")
+            }else {
+                quiztrue.style.opacity = "0"
+                quizfalse.style.opacity = "1"
+                quizDog.classList.add("dislike")
+                quizDog.classList.remove("like")
+            }
+        })
+        
     </script>
 </body>
 </html>
