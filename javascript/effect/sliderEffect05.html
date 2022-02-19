@@ -278,35 +278,35 @@
         tabMenu();
 
         // slider03
-        const sliderWrap = document.querySelector(".slider__wrap")
+        const sliderWrap = document.querySelector(".slider__wrap")      //슬라이드 전체 영역
         const sliderImg = document.querySelector(".slider__img")        //이미지 보이는 영역
         const sliderInner = document.querySelector(".slider__inner")    //이미지 움직이는 영역
-        const slider = document.querySelectorAll(".slider")
-        const sliderBtn = document.querySelector(".slider__btn")
-        const sliderBtnPrev = sliderBtn.querySelector(".prev")
-        const sliderBtnNext = sliderBtn.querySelector(".next")
+        const slider = document.querySelectorAll(".slider")             
+        const sliderBtn = document.querySelector(".slider__btn")        //버튼
+        const sliderBtnPrev = sliderBtn.querySelector(".prev")          //뒤로
+        const sliderBtnNext = sliderBtn.querySelector(".next")          //다음
 
-        let currentIndex = 0;
-        let sliderCount = slider.length;
-        let sliderWidth = sliderImg.offsetWidth;
+        let currentIndex = 0;       //현재 보이는 이미지 영역
+        let sliderCount = slider.length;        //이미지 총 갯수
+        let sliderWidth = sliderImg.offsetWidth;        //이미지 가로값
         
 
         function gotoSlider(num){  
-            sliderInner.style.transition = "all 400ms"
-            sliderInner.style.transform = "translateX("+ -sliderWidth * num + "px)";
+            sliderInner.style.transition = "all 400ms"      //slider__inner에게 style transition 추가
+            sliderInner.style.transform = "translateX("+ -sliderWidth * num + "px)"; //slider__inner에 transitionX + 이미지 가로값 + PX 추가
             currentIndex = num;         //currentIndex-- currentIndex++ 
         }
         
         sliderBtnPrev.addEventListener("click", ()=>{
-            let prevIndex = (currentIndex + (sliderCount - 1)) % sliderCount;
+            let prevIndex = (currentIndex + (sliderCount - 1)) % sliderCount;   //prev버튼 클릭하면 현재 보이는 이미지의 translatex값을 을 이전 이미지의 가로 값 만큼변경
             //첫번째 이미지가 있을 때 0 -> 4
             // if(currentIndex == 0){
             //     prevIndex = sliderCount -1; 
             // }
-            gotoSlider(prevIndex);
+            gotoSlider(prevIndex); //함수 실행
         })
-        sliderBtnNext.addEventListener("click", ()=>{
-            let nextIndex = (currentIndex + 1) % sliderCount;   //이미지 총 갯수 이상 넘어가지 않게 01234 01234 01234
+        sliderBtnNext.addEventListener("click", ()=>{       //next 버튼을 클릭했을때
+            let nextIndex = (currentIndex + 1) % sliderCount;   //현재 보이는 이미지의 translateX 값을 다음 이미지의 가로 값 만큼 증가
 
             gotoSlider(nextIndex);
         })

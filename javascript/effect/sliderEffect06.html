@@ -358,22 +358,21 @@
         const sliderWrap = document.querySelector(".slider__wrap")
         const sliderImg = document.querySelector(".slider__img")        //이미지 보이는 영역
         const sliderInner = document.querySelector(".slider__inner")    //이미지 움직이는 영역
-        const slider = document.querySelectorAll(".slider")
-        const sliderBtn = document.querySelector(".slider__btn")
-        const sliderDot = document.querySelector(".slider__dot")
+        const slider = document.querySelectorAll(".slider")     
+        const sliderBtn = document.querySelector(".slider__btn")    //버튼
+        const sliderDot = document.querySelector(".slider__dot")    //dot 버튼
         
 
-        let currentIndex = 0;
-        let sliderCount = slider.length;
-        let sliderWidth = sliderImg.offsetWidth;
-        let dotIndex = "";
-        let dotActive;
+        let currentIndex = 0;     //현재 보이는 이미지
+        let sliderCount = slider.length; //이미지의 총 갯수
+        let sliderWidth = sliderImg.offsetWidth; //이미지 가로 값
+        let dotIndex = "";              
+        let dotActive;              
         
         
         function init(){
-            //이미지 갯수만큼  <a href="#" class="dot"></a>
             slider.forEach((sliderDot)=> {
-                dotIndex += "<a href='#' class='dot'></a>"
+                dotIndex += "<a href='#' class='dot'></a>"      //이미지 갯수만큼  <a href="#" class="dot"></a> 생성
             });
             sliderDot.innerHTML = dotIndex;
             sliderDot.firstElementChild.classList.add("active") //첫번째 닷한테 active 추가
@@ -381,16 +380,15 @@
         init();
 
         function gotoSlider(num){  
-            sliderInner.style.transition = "all 400ms"
-            sliderInner.style.transform = "translateX("+ -sliderWidth * num + "px)";
+            sliderInner.style.transition = "all 400ms"        //slider__inner에게 style transition 추가
+            sliderInner.style.transform = "translateX("+ -sliderWidth * num + "px)"; //slider__inner에 transitionX + 이미지 가로값 + PX 추가
             currentIndex = num;         //currentIndex-- currentIndex++ 
 
             dotActive = document.querySelectorAll(".slider__dot .dot");
-            //num = [1,2,3,4,5]
             dotActive.forEach(el => {
-                el.classList.remove("active");
+                el.classList.remove("active");      //dot에 active 제거 
             })
-            dotActive[num].classList.add("active");
+            dotActive[num].classList.add("active"); //현재 보이는 이미지의 dot에 active 추가
         }
         
         document.querySelectorAll(".slider__btn a").forEach((btn, index)=> {
