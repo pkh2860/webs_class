@@ -81,6 +81,10 @@ img,
 fieldset {
     border: 0 none;
 }
+/* 버튼 초기화 */
+button {
+    border: 0;
+}
 /* IR 효과 */
 /* 의미있는 이미지의 대체 텍스트를 제공하는 경우 */
 .ir_pm {
