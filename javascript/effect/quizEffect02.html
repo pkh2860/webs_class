@@ -676,12 +676,22 @@
             50% {transform:scaleX(1) scaleY(0.005)}
             100% {transform:scaleX(0) scaleY(0.005)}
         }
-        /* #modal.show {
-            animation: zoomOut 0.5s ease forwards;
+
+
+        .modal-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            transform: scale(0);
         }
-        #modal.show.hide {
+        #modal.show .modal-wrap {
+            animation: zoomOut 0.5s 1s ease forwards;
+        }
+        #modal.show.hide .modal-wrap {
             animation: zoomIn 0.5s 1s ease forwards;
-        } */
+        }
         @keyframes zoomOut {
             0%  {transform: scale(0);}
             100% {transform: scale(1);}
@@ -690,6 +700,10 @@
             0%  {transform: scale(1);}
             100% {transform: scale(0);}
         }
+
+
+
+
     </style>
 </head>
 <body>
@@ -720,6 +734,7 @@
                     <div class="true">정답입니다</div>
                     <div class="false">틀렸습니다</div>
                     <div id="modal">
+                        <div class="model-wrap">
                         <div class="window">
                             <div class="title-bar">
                                 <div class="minimize">
@@ -764,6 +779,7 @@
                             </div>
                             <div class="footer"></div>
                         </div>
+                    </div>
                   </div>
                     <div class="dog">
                         <div class="head">
@@ -871,18 +887,25 @@
             }
         })
 
-        let windowWrapper = document.querySelector('#modal');
+        // let windowWrapper = document.querySelector('#modal');
         
-        document.querySelector(".source_btn").addEventListener("click",()=>{
-            windowWrapper.classList.add("show");
-            windowWrapper.classList.remove("hide");
-        })
+        // document.querySelector(".source_btn").addEventListener("click",()=>{
+        //     windowWrapper.classList.add("show");
+        //     windowWrapper.classList.remove("hide");
+        // })
 
-        document.querySelector("#modal-close").addEventListener("click",()=>{
-            windowWrapper.classList.remove("show");
-            windowWrapper.classList.add("hide");
-        });
-
+        // document.querySelector("#modal-close").addEventListener("click",()=>{
+        //     windowWrapper.classList.remove("show");
+        //     windowWrapper.classList.add("hide");
+        // });
+        let windowWrapper = document.querySelector('#modal');  
+            document.querySelector(".source_btn").addEventListener("click",()=>{
+                document.querySelector("#modal").classList.add("show")
+                document.querySelector("#modal").classList.remove("hide")
+            })
+            document.querySelector("#modal-close").addEventListener("click", ()=>{
+                document.querySelector("#modal").classList.add('hide');
+            })
 
 
         var tabBtn = document.querySelectorAll(".menu-bar > ul > li");

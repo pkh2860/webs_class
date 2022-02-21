@@ -136,6 +136,8 @@ body::before {
     50% {transform:scaleX(1) scaleY(0.005)}
     100% {transform:scaleX(0) scaleY(0.005)}
 }
+
+
 .modal-wrap {
     display: flex;
     align-items: center;
