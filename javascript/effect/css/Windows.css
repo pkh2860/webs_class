@@ -1,21 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata");
-
-.window_main {
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  transform : translate(-50%, -50%);
-  z-index: 10;
-}
 .window {
-  min-width: 360px;
-  min-height: 220px;
+  min-width: 1000px;
+  /* min-height: 500px; */
   background-color: #c7c7c7;
   padding: 4px;
   border-left: 2px solid #FCFCFC;
   border-top: 2px solid #FCFCFC;
   border-right: 2px solid #2A2A2A;
   border-bottom: 2px solid #2A2A2A;
+  position: absolute;
+  left: 50%;
+  top: 230px;
+  transform: translateX(-50%);
 }
 .title-bar {
     background-color: #000080;
@@ -97,13 +93,13 @@
 }
 .content-container > .content {
     display: flex;
-    height: 260px;
 }
 .content-container > .content > .main, .content-container > .content > .scroll-left {
     height: 100%;
 }
 .content-container > .content > .main {
      width: calc(100% - 26px);
+     height: 500px;
 }
 .content-container > .content > .scroll {
     width: 26px;
