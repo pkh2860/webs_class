@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata");
+
+.content {
+  background-color: #fff;
+  height: 100%;
+  padding-top: 65px;
+}
+.content > div {
+  display: none;
+}
+.content > div:nth-child(1) {
+  display: block;
+}
+.content pre code.hijs {
+  line-height: 1.6;
+}
 .window {
   min-width: 1000px;
   /* min-height: 500px; */
@@ -73,15 +88,15 @@
     transform: rotate(90deg);
 }
 
-.menu-bar > span {
+.menu-bar > ul > li {
     padding: 8px;
     display: inline-block;
     cursor: pointer;
 }
-.menu-bar > span::first-letter {
+.menu-bar > ul > li::first-letter {
      text-decoration: underline;
 }
-.menu-bar > span:hover {
+.menu-bar > ul > li:hover {
      background-color: #bababa;
 }
 
