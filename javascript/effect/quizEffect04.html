@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Effect.04</title>
+    <link rel="stylesheet" href="css/dracula.min.css">
+
     <style>
+        @import url(../effect/css/Windows.css);
+
         @font-face {
             font-family: 'DungGeunMo';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
@@ -667,6 +671,94 @@
         @keyframes cry {
             100% {visibility: visible;}
         }
+
+           /* 소스보기 */
+           .quiz_source {
+            position: absolute;
+            right: 20px;
+            bottom: 60px;
+        }
+        .quiz_source .source_btn {
+            border: 1px solid #000;
+            padding: 20px  40px;
+            border-radius: 50px;
+            background: transparent;
+            color: #000;
+        }
+        .source_btn:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        /* modal screen open and close */
+
+        #modal {
+            /* align-self: center;
+            z-index: 5;
+            position:absolute;
+            left: 50%;
+            transform:translateX(-50%); */
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1000;
+            transform: scale(0);
+        }
+        .hide {
+            display:none;
+        }
+        .show {
+            display: block;
+        }
+        .content > div {
+            display: none;
+        }
+        .content > div:nth-child(1) {
+            display: block;
+        }
+        #modal.show {
+            animation: foldOut 1s ease forwards;
+        }
+        #modal.show.hide  {
+            animation: foldIn 1s 0.3s ease backwards;
+        }
+        @keyframes foldOut {
+            0%  {transform:scaleX(0) scaleY(0.005)}
+            50% {transform:scaleX(1) scaleY(0.005)}
+            100% {transform:scaleX(1) scaleY(1)}
+        }
+        @keyframes foldIn {
+            0%  {transform:scaleX(1) scaleY(1)}
+            50% {transform:scaleX(1) scaleY(0.005)}
+            100% {transform:scaleX(0) scaleY(0.005)}
+        }
+
+
+        .modal-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            transform: scale(0);
+        }
+        #modal.show .modal-wrap {
+            animation: zoomOut 0.5s 1s ease forwards;
+        }
+        #modal.show.hide .modal-wrap {
+            animation: zoomIn 0.5s 1s ease forwards;
+        }
+        @keyframes zoomOut {
+            0%  {transform: scale(0);}
+            100% {transform: scale(1);}
+        }
+        @keyframes zoomIn {
+            0%  {transform: scale(1);}
+            100% {transform: scale(0);}
+        }
     </style>
 </head>
 
@@ -697,6 +789,700 @@
                 <div class="quiz__view">
                     <div class="true">정답입니다</div>
                     <div class="false">틀렸습니다</div>
+                    <div id="modal">
+                        <div class="model-wrap">
+                        <div class="window">
+                            <div class="title-bar">
+                                <div class="minimize">
+                                    <div class="symbol"></div>
+                                </div>
+                                <div class="maximize">
+                                    <div class="symbol"></div>
+                                </div>
+                                <div class="close" id="modal-close">
+                                    <div class="symbol"></div>
+                                </div>
+                            </div>
+                            <div class="menu-bar">
+                                <ul>
+                                    <li class="active"><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">Javascript</a></li>
+                                </ul>
+                            </div>
+                            <div class="content-container">
+                                <div class="content">
+                                    <div class="main">
+<pre><code class="language-javascript">
+    &lt;div class="quiz">
+        &lt;h2 class="quiz__type">&lt;/h2>
+        &lt;h3 class="quiz__question">
+            &lt;span class="quiz__number">&lt;/span>
+            &lt;span class="quiz__Ask">&lt;/span>
+        &lt;/h3>
+        &lt;div class="quiz__view">
+            &lt;div class="true">정답입니다&lt;/div>
+            &lt;div class="false">틀렸습니다&lt;/div>
+          &lt;/div>
+            &lt;div class="dog">
+                &lt;div class="head">
+                    &lt;div class="ears">&lt;/div>
+                    &lt;div class="face">&lt;/div>
+                    &lt;div class="eyes">
+                        &lt;div class="teardrop">&lt;/div>
+                    &lt;/div>
+                    &lt;div class="nose">&lt;/div>
+                    &lt;div class="mouth">
+                        &lt;div class="tongue">&lt;/div>
+                    &lt;/div>
+                    &lt;div class="chin">&lt;/div>
+                &lt;/div>
+                &lt;div class="body">
+                    &lt;div class="tail">&lt;/div>
+                    &lt;div class="legs">&lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="quiz__answer">
+            &lt;div class="quiz__selects">
+                &lt;label for="select1">
+                    &lt;input  class="select" type="radio" id="select1" name="select" value="1">
+                    &lt;span class="choice">&lt;/span>
+                &lt;/label>
+                &lt;label for="select2">
+                    &lt;input  class="select" type="radio" id="select2" name="select" value="2">
+                    &lt;span class="choice">&lt;/span>
+                &lt;/label>
+                &lt;label for="select3">
+                    &lt;input  class="select" type="radio" id="select3" name="select" value="3">
+                    &lt;span class="choice">&lt;/span>
+                &lt;/label>
+                &lt;label for="select4">
+                    &lt;input  class="select" type="radio" id="select4" name="select" value="4">
+                    &lt;span class="choice">&lt;/span>
+                &lt;/label>
+            &lt;/div>
+            &lt;button class="quiz__confirm">정답 확인하기&lt;/button>
+            &lt;div class="quiz__result">&lt;/div>
+            &lt;div class="quiz__ex">&lt;/div>
+        &lt;/div>
+</code></pre>                                        
+                                    </div>
+                                    <div class="main">
+<pre><code class="language-javascript">
+    .quiz__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 150px;
+        height: 100vh;
+    }
+    .quiz {
+        max-width: 500px;
+        width: 100%;
+        background: #fff;
+        border: 8px ridge #cacaca;
+        margin: 10px;
+    }
+    .quiz__type {
+        background: #cacaca;
+        text-align: center;
+        font-size: 14px;
+        color: #3b3b3b;
+        border: 3px ridge #cacaca;
+        padding: 3px 0;
+        position: relative;
+    }
+    .quiz__type::before {
+        content: '';
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        width: 5px;
+        height: 5px;
+        border: 6px ridge #cacaca;
+    }
+    .quiz__type::after {
+        content: '';
+        content: '';
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        width: 5px;
+        height: 5px;
+        border: 6px ridge #cacaca;
+    }
+    .quiz__question {
+        border-bottom: 6px ridge #cacaca;
+        border-top: 6px ridge #cacaca;
+        padding: 13px 30px;
+        font-size: 24px;
+        line-height: 1.4;
+    }
+    .quiz__number {
+        font-family: 'Cafe24Dangdanghae';
+        color: #64a30b;
+    }
+    .quiz__Ask {
+        font-family: 'Cafe24Dangdanghae';
+    }
+    .quiz__answer {
+        background-color: #f5f5f5;
+        padding: 10px;
+        border-top: 6px ridge #cacaca;
+    }
+    .quiz__view {
+        background-color: #f5f5f5;
+        position: relative;
+    }
+    .quiz__view.like .true {
+        opacity: 1;;
+        animation: wobble 0.6s;
+    }
+    .quiz__view.dislike .false {
+        opacity: 1;;
+        animation: wobble 0.6s;
+    }
+    .quiz__view .true {
+        position: absolute;
+        left: 70%;
+        top: 100px;
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        border-radius: 50%;
+        z-index: 100;
+        line-height: 100px;
+        text-align: center;
+        color: #fff;
+        background: #f5534f;
+        opacity: 0;
+
+    }
+    .quiz__view .false {
+        position: absolute;
+        right: 70%;
+        top: 100px;
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        border-radius: 50%;
+        z-index: 100;
+        line-height: 100px;
+        text-align: center;
+        color: #f5534f;
+        opacity: 0;
+    }
+    @keyframes wobble {
+        0% { transform: translateZ(0)}
+        15% {transform: translate3d(-25%, 0, 0) rotate(-5deg) }
+        30% {transform: translate3d(20%, 0, 0) rotate(3deg)}
+        45% {transform: translate3d(-15%, 0, 0) rotate(-3deg)}
+        60% {transform: translate3d(10%, 0, 0) rotate(2deg)}
+        75% {transform: translate3d(-5%, 0, 0) rotate(-1deg)}
+        100% {transform: translateZ(0) }
+    }
+    .quiz__answer {
+        background-color: #f5f5f5;
+        border-top: 6px ridge #cacaca;
+        padding: 10px;
+    }
+    .quiz__confirm {
+        border: 6px ridge #cacaca;
+        width: 100%;
+        font-size: 22px;
+        padding: 13px 20px;
+        background: #d6d6d6;
+        text-shadow: 1px 1px 1px #fff;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    .quiz__confirm:hover {
+        background: #b3b3b3;
+    }
+    .quiz__result {
+        font-family: 'Cafe24Dangdanghae';
+        text-align: center;
+        border: 6px ridge #cacaca;
+        width: 100%;
+        font-size: 22px;
+        padding: 13px 20px;
+        background: #fff;
+        text-shadow: 1px 1px 1px #fff;
+        line-height: 1.4;
+        /* display: none; */
+    }
+
+    .quiz__input {
+        font-family: 'Cafe24Dangdanghae';
+        border: 6px ridge #cacaca;
+        width: 100%;
+        font-size: 22px;
+        padding: 13px 20px;
+        background: #fff;
+        text-shadow: 1px 1px 1px #fff;
+        margin-bottom: 10px;
+    }
+
+    .quiz__selects {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .quiz__selects label {
+        display: flex;
+    }
+    .quiz__selects label input {
+        position: absolute;
+        left: -9999px;
+    }
+    .quiz__selects label span {
+        font-size: 20px;
+        line-height: 1.3;
+        padding: 10px 30px 10px 20px;
+        margin: 3px 0;
+        border-radius: 5px;
+        font-family: 'Cafe24Dangdanghae';
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.25s;
+    }
+    .quiz__selects label span::before {
+        content: '';
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 15px;
+        background: #fff;
+        display: flex;
+        flex-shrink: 0;
+        box-shadow: inset 0 0 0 4px #64a30b;
+        transition: all 0.25s;
+    }
+    .quiz__selects label input:checked + span {
+        background-color: #f5ffe7;
+    }
+    .quiz__selects label input:checked + span::before {
+        background-color: #e2f8c2;
+        box-shadow: inset 0 0 0 10px #64a30b;
+    }
+
+
+    /*dog*/
+    .dog 
+    .tail, 
+    .dog 
+    .chin, 
+    .dog .tongue::before,
+    .dog .tongue::after, 
+    .dog .mouth, 
+    .dog .nose, 
+    .dog .teardrop, 
+    .dog .eyes, 
+    .dog .face::before, 
+    .dog .face::after, 
+    .dog .ears::before,
+    .dog .ears::after{
+         transition: 0.2s ease-in;
+    }
+    .dog {
+        padding-top: 50px;
+    }
+    .dog .head,
+    .dog .body {
+        position: relative;
+        width: 115px;
+    }
+    .dog .head {
+        height: 115px;
+        border-radius: 50% 50% 0 0;
+        margin: 0 auto;
+    }
+    .dog .ears {
+        position: relative;
+        top: -14%;
+        width: 100%;
+    }
+    .dog .ears::before, .dog .ears::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 35px;
+        height: 70px;
+        background: #CB7A1D;
+        border-top: 11px solid #F7AA2B;
+        border-left: 7px solid #F7AA2B;
+        border-right: 7px solid #F7AA2B;
+    }
+    .dog .ears::before {
+        left: 0;
+        border-radius: 50% 45% 0 0;
+    }
+    .dog .ears::after {
+        right: 0;
+        border-radius: 45% 50% 0 0;
+    }
+    .dog .face {
+        position: absolute;
+        background: #F7AA2B;
+        width: 100%;
+        height: 100%;
+        border-radius: 50% 50% 0 0;
+    }
+    .dog .face::before, .dog .face::after {
+        content: "";
+        display: block;
+        margin: auto;
+        background: #FEFEFE;
+    }
+    .dog .face::before {
+        width: 15px;
+        height: 35px;
+        margin-top: 24px;
+        border-radius: 20px 20px 0 0;
+    }
+    .dog .face::after {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        width: 60px;
+        height: 65px;
+        border-radius: 45% 45% 0 0;
+    }
+    .dog .eyes {
+        position: relative;
+        top: 29%;
+        text-align: center;
+    }
+    .dog .eyes::before, .dog .eyes::after {
+    content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        background: #451d1c;
+        margin: 0 14.5%;
+    }
+    .dog .teardrop {
+        position: absolute;
+        top: 125%;
+        left: 19%;
+        width: 6px;
+        height: 6px;
+        border-radius: 0 50% 50% 50%;
+        transform: rotate(45deg);
+        background: #FEFEFE;
+        visibility: hidden;
+    }
+    .dog .nose {
+        position: relative;
+        top: 35%;
+        width: 16px;
+        height: 8px;
+        border-radius: 35px 35px 65px 65px;
+        background: #451d1c;
+        margin: auto;
+    }
+    .dog .mouth {
+        position: relative;
+        top: 34.5%;
+        width: 4px;
+        height: 6px;
+        margin: 0 auto;
+        text-align: center;
+        background: #451d1c;
+    }
+    .dog .mouth::before, .dog .mouth::after {
+        content: "";
+        position: absolute;
+        top: -4px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 4px solid #451d1c;
+        border-left-color: transparent;
+        border-top-color: transparent;
+        z-index: 2;
+    }
+    .dog .mouth::before {
+        transform: translateX(-89%) rotate(45deg);
+    }
+    .dog .mouth::after {
+     transform: translateX(-2px) rotate(45deg);
+    }
+    .dog .tongue {
+        position: relative;
+        z-index: 1;
+    }
+    .dog .tongue::before, .dog .tongue::after {
+        content: "";
+        position: absolute;
+    }
+    .dog .tongue::before {
+        top: 10px;
+        left: -7px;
+        width: 18px;
+        height: 0;
+        border-radius: 50%;
+        background: #451d1c;
+        z-index: -1;
+    }
+    .dog .tongue::after {
+        top: 14px;
+        left: -4px;
+        width: 12px;
+        height: 0;
+        border-radius: 20px;
+        background: #F5534F;
+        z-index: 5;
+    }
+    .dog .chin {
+        position: relative;
+        top: 47.5%;
+        margin: 0 auto;
+        width: 12px;
+        height: 12px;
+        border-top: 10px solid #e8e7ec;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-radius: 2px;
+        z-index: 0;
+    }
+    .dog .body {
+        position: relative;
+        height: 139px;
+        margin: auto;
+        z-index: 0;
+    }
+    .dog .body::before, .dog .body::after {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        margin: auto;
+        background: #F7AA2B;
+    }
+    .dog .body::after {
+        top: -2px;
+        bottom: -1px;
+        width: 60px;
+        background: #FEFEFE;
+    }
+    .dog .tail {
+        position: absolute;
+        left: -60%;
+        bottom: 1px;
+        background: #F7AA2B;
+        width: 93px;
+        height: 15px;
+        transform: rotate(45deg);
+        transform-origin: 100% 50%;
+        border-radius: 25px 0 0 25px;
+        z-index: -2;
+    }
+    .dog .legs {
+        position: absolute;
+        bottom: 0;
+        left: -10%;
+        width: 120%;
+        height: 15%;
+        background: #F7AA2B;
+        border-radius: 10px 10px 0 0;
+    }
+    .dog .legs::before, .dog .legs::after {
+        content: "";
+        position: absolute;
+        bottom: 1px;
+        background: #CB7A1D;
+        z-index: -1;
+    }
+    .dog .legs::before {
+        left: -7.5%;
+        width: 115%;
+        height: 55%;
+        border-radius: 5px 5px 0 0;
+    }
+    .dog .legs::after {
+        left: -3.5%;
+        width: 107%;
+        height: 250%;
+        border-radius: 20px 20px 35px 35px;
+    }
+
+
+    /* 개 */
+    .like .dog .face::before {
+        margin-top: 10px;
+    }
+    .like .dog .face::after {
+        height: 85px;
+    }
+    .like .dog .eyes {
+        top: 13%;
+    }
+    .like .dog .eyes::before,
+    .like .dog .eyes::after {
+        width: 18px;
+        height: 5px;
+        margin: 0px 12.5%;
+        transform: rotate(-37.5deg);
+        border-radius: 20px;
+    }
+    .like .dog .eyes::after {
+        transform: rotate(37.5deg);
+    }
+    .like .dog .nose {
+        top: 18%;
+    }
+    .like .dog  .mouth {
+        top: 16.5%;
+    }
+    .like .dog .tongue::before {
+        height: 15px;
+    }
+    .like .dog .tongue::after {
+        height: 25px;
+        animation: movetongue 0.1s linear 0.35s infinite alternate forwards;
+    }
+    .like .dog .chin {
+        top: 34%;
+    }
+    .like .dog .tail {
+        animation: movetail 0.1s linear infinite alternate forwards;
+    }
+    .dislike .dog .ears::before {
+        transform: rotate(-50deg) translate(-7px, 2px);
+    }
+    .dislike .dog .ears::after {
+        transform: rotate(50deg) translate(7px, 2px);
+    }
+    .dislike .dog .face::before {
+        margin-top: 28px;
+    }
+    .dislike .dog .face::after {
+        height: 55px;
+    }
+    .dislike .dog .eyes {
+        top: 38%;
+    }
+    .dislike .dog .eyes::before,
+    .dislike .dog .eyes::after {
+        width: 18px;
+        height: 5px;
+        margin: 0px 14.5%;
+        transform: rotate(-37.5deg);
+        border-radius: 20px;
+    }
+    .dislike .dog .eyes::after {
+        transform: rotate(37.5deg);
+    }
+    .dislike .dog .teardrop {
+        animation: cry 0.1s ease-in 0.25s forwards;
+    }
+    .dislik .dog .nose {
+        top: 44%;
+    }
+    .dislike .dog  .mouth {
+        top: 42%;
+    }
+    .dislike .dog .chin {
+        top: 52%;
+    }
+    .dislike .dog .tail {
+        transform: rotate(0);
+        animation: none;
+    }
+    
+</code></pre>
+                                                
+                                    </div>
+                                    <div class="main">
+<pre><code class="language-javascript">
+    const quizType = document.querySelector(".quiz__type")//문제
+    const quizNumber = document.querySelector(".quiz__number") //문제 번호
+    const quizAsk = document.querySelector(".quiz__Ask") //문제 질문
+    const quizConfirm = document.querySelector(".quiz__confirm") //문제 정답버튼
+    const quizResult = document.querySelector(".quiz__result"); //문제 정답
+    const quizView = document.querySelector(".quiz__view") //문제 화면
+    const quizSelects = document.querySelector(".quiz__selects") //객관식 보기
+    const quizChoice = quizSelects.querySelectorAll(".choice") //객관식 보기
+    const quizSelect = quizSelects.querySelectorAll(".select") //객관식 보기
+
+
+
+    //문제정보
+    const quizInfo = [
+        {
+            answerType: "javascript",
+            answerNum: 1,
+            answerAsk: "객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?",
+            answerChoice : ["javascript", "html", "css", "jquery"],
+            answerResult: "1",
+            answerEx : "객체 기반의 스크립트 프로그래밍 언어는 자바스크립트입니다."
+        }
+    ];
+
+        //문제출력
+        function updataQuiz() {
+            //  문제, 문제번호, 문제질문, 문제 정답을 updataQuiz 함수에 저장해서 출력
+            quizType.textContent = quizInfo[0].answerType;  
+            quizNumber.textContent = quizInfo[0].answerNum+ ". ";
+            quizAsk.textContent = quizInfo[0].answerAsk;
+            quizResult.textContent = quizInfo[0].answerEx;
+
+            for(let i=0; i&lt;4; i++){
+                quizChoice[i].textContent = quizInfo[0].answerChoice[i]
+            }
+                //설명 감추기
+                quizResult.style.display = "none";
+        }
+        updataQuiz();
+
+
+        function answerQuiz() {
+
+            for(let i=0; i<quizSelect.length; i++){
+                if(quizSelect[i].checked ==true){
+                    if(quizSelect[i].value == quizInfo[0].answerResult){
+                        //정답
+                        quizView.classList.add("like")         
+                        quizConfirm.style.display="none"
+                    }else {
+                        quizView.classList.add("dislike")
+                        quizConfirm.style.display="none"
+                        quizResult.style.display="block"
+
+                    }
+                }
+            }
+        }
+
+        quizConfirm.addEventListener("click", answerQuiz)
+</code></pre>
+                                                
+                                    </div>
+                                    <div class="scroll">
+                                        <div class="start"></div>
+                                        <div class="progress"></div>
+                                        <div class="end"></div>
+                                    </div>
+                                </div>
+                                <div class="scroll -row">
+                                    <div class="start"></div>
+                                    <div class="progress"></div>
+                                    <div class="end"></div>
+                                </div>
+                            </div>
+                            <div class="footer"></div>
+                        </div>
+                    </div>
+                  </div>
                     <div class="dog">
                         <div class="head">
                             <div class="ears"></div>
@@ -741,14 +1527,22 @@
                 </div>
             </div>
         </div>
-        <div class="quiz_source"></div>
+        <div class="quiz_source">
+            <button class="source_btn">소스보기</button>
+        </div>
     </main>
 
     <footer id="footer">
         <a href="mailto:rmsgur2275@gmail.com">rmsgur2275@gmail.com</a>
     </footer>
 
+    <script src="js/highligt.js"></script>
+    <script src="js/custom.js"></script>
     <script>
+        tabMenu2();
+        modal2();
+
+
         const quizType = document.querySelector(".quiz__type")//문제
         const quizNumber = document.querySelector(".quiz__number") //문제 번호
         const quizAsk = document.querySelector(".quiz__Ask") //문제 질문

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,43 +9,51 @@
 
     <style>
         @import url(../effect/css/Windows.css);
+
         @font-face {
             font-family: 'DungGeunMo';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
+
         @font-face {
             font-family: 'Cafe24Dangdanghae';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
-        *, *:before, *:after {
-            box-sizing:border-box;
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
         }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'DungGeunMo';
         }
-        a{
+
+        a {
             text-decoration: none;
         }
+
         body {
             background-color: #f6f6f6;
             background-image:
-                linear-gradient(90deg, #cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px,  transparent 100px),
-                linear-gradient(#cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px,  transparent 100px),
-                linear-gradient(#e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px,  transparent 100px),
-                linear-gradient(90deg, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px,  transparent 100px),
+                linear-gradient(90deg, #cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px, transparent 100px),
+                linear-gradient(#cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px, transparent 100px),
+                linear-gradient(#e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px, transparent 100px),
+                linear-gradient(90deg, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px, transparent 100px),
                 linear-gradient(transparent 0px, transparent 5px, #f6f6f6 5px, #f6f6f6 95px, transparent 95px, transparent 100px),
                 linear-gradient(90deg, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px, #e0e0e0 99px, #e0e0e0 100px),
                 linear-gradient(90deg, transparent 0px, transparent 5px, #f6f6f6 5px, #f6f6f6 95px, transparent 95px, transparent 100px),
                 linear-gradient(transparent 0px, transparent 1px, #f6f6f6 1px, #f6f6f6 99px, transparent 99px, transparent 100px),
                 linear-gradient(#cdcccc, #cdcccc);
-            background-size:100px 100%, 100% 100px, 100% 10px, 10px 100%, 100% 100px, 100px 100%, 100px 100%, 100px 100px, 100px 100px;
+            background-size: 100px 100%, 100% 100px, 100% 10px, 10px 100%, 100% 100px, 100px 100%, 100px 100%, 100px 100px, 100px 100px;
         }
 
 
@@ -56,34 +65,42 @@
             background: #262626;
             color: #fff;
             display: flex;
-            align-items: center; 
+            align-items: center;
             padding: 10px;
             justify-content: space-between;
-            z-index: 10; /*position : absolute 썻을때만 쓸 수 있음 형제여야함*/
+            z-index: 10;
+            /*position : absolute 썻을때만 쓸 수 있음 형제여야함*/
         }
+
         #header::before {
             content: '';
             border: 4px ridge #a3a3a3;
             position: absolute;
-            left: 5px; top: 5px;
+            left: 5px;
+            top: 5px;
             width: calc(100% - 10px);
             height: calc(100% - 10px);
             z-index: -1;
         }
+
         #header h1 {
             padding: 3px 0 6px 10px;
         }
+
         #header nav {
             padding-right: 10px;
         }
+
         #header nav li {
             list-style: none;
             display: inline;
         }
+
         #header nav li:active {
             background: #fff;
             color: #262626;
         }
+
         #header nav li a {
             color: #fff;
             display: inline-block;
@@ -91,9 +108,11 @@
             transition: all 0.2s;
             border: 1px dashed #fff;
         }
+
         #header nav li a:hover {
             opacity: 0.5;
         }
+
         #footer {
             margin-top: 200px;
             width: 100%;
@@ -109,10 +128,12 @@
             text-align: center;
             padding: 20px;             */
         }
+
         #footer a {
             color: #000;
             font-size: 16px;
         }
+
         /*quiz__wrap*/
         .quiz__wrap {
             display: flex;
@@ -121,6 +142,7 @@
             flex-wrap: wrap;
             margin-top: 150px;
         }
+
         .quiz {
             max-width: 500px;
             width: 100%;
@@ -128,6 +150,7 @@
             border: 8px ridge #cacaca;
             margin: 10px;
         }
+
         .quiz__type {
             background: #cacaca;
             text-align: center;
@@ -137,6 +160,7 @@
             padding: 3px 0;
             position: relative;
         }
+
         .quiz__type::before {
             content: '';
             position: absolute;
@@ -146,6 +170,7 @@
             height: 5px;
             border: 6px ridge #cacaca;
         }
+
         .quiz__type::after {
             content: '';
             content: '';
@@ -156,6 +181,7 @@
             height: 5px;
             border: 6px ridge #cacaca;
         }
+
         .quiz__question {
             border-bottom: 6px ridge #cacaca;
             border-top: 6px ridge #cacaca;
@@ -163,26 +189,32 @@
             font-size: 24px;
             line-height: 1.4;
         }
+
         .quiz__number {
             font-family: 'Cafe24Dangdanghae';
             color: #64a30b;
         }
+
         .quiz__Ask {
             font-family: 'Cafe24Dangdanghae';
         }
+
         .quiz__answer {
             background-color: #f5f5f5;
             padding: 10px;
             border-top: 6px ridge #cacaca;
         }
+
         .quiz__view {
             background-color: #f5f5f5;
         }
+
         .quiz__answer {
             background-color: #f5f5f5;
             border-top: 6px ridge #cacaca;
             padding: 10px;
         }
+
         .quiz__confirm {
             border: 6px ridge #cacaca;
             width: 100%;
@@ -193,9 +225,11 @@
             transition: all 0.3s;
             cursor: pointer;
         }
+
         .quiz__confirm:hover {
             background: #b3b3b3;
         }
+
         .quiz__result {
             font-family: 'Cafe24Dangdanghae';
             text-align: center;
@@ -209,41 +243,45 @@
         }
 
         /*dog*/
-        .dog 
-        .tail, 
-        .dog 
-        .chin, 
+        .dog .tail,
+        .dog .chin,
         .dog .tongue::before,
-        .dog .tongue::after, 
-        .dog .mouth, 
-        .dog .nose, 
-        .dog .teardrop, 
-        .dog .eyes, 
-        .dog .face::before, 
-        .dog .face::after, 
+        .dog .tongue::after,
+        .dog .mouth,
+        .dog .nose,
+        .dog .teardrop,
+        .dog .eyes,
+        .dog .face::before,
+        .dog .face::after,
         .dog .ears::before,
-        .dog .ears::after{
-             transition: 0.2s ease-in;
+        .dog .ears::after {
+            transition: 0.2s ease-in;
         }
+
         .dog {
             padding-top: 50px;
         }
+
         .dog .head,
         .dog .body {
             position: relative;
             width: 115px;
         }
+
         .dog .head {
             height: 115px;
             border-radius: 50% 50% 0 0;
             margin: 0 auto;
         }
+
         .dog .ears {
             position: relative;
             top: -14%;
             width: 100%;
         }
-        .dog .ears::before, .dog .ears::after {
+
+        .dog .ears::before,
+        .dog .ears::after {
             content: "";
             position: absolute;
             top: 0;
@@ -254,14 +292,17 @@
             border-left: 7px solid #F7AA2B;
             border-right: 7px solid #F7AA2B;
         }
+
         .dog .ears::before {
             left: 0;
             border-radius: 50% 45% 0 0;
         }
+
         .dog .ears::after {
             right: 0;
             border-radius: 45% 50% 0 0;
         }
+
         .dog .face {
             position: absolute;
             background: #F7AA2B;
@@ -269,18 +310,22 @@
             height: 100%;
             border-radius: 50% 50% 0 0;
         }
-        .dog .face::before, .dog .face::after {
+
+        .dog .face::before,
+        .dog .face::after {
             content: "";
             display: block;
             margin: auto;
             background: #FEFEFE;
         }
+
         .dog .face::before {
             width: 15px;
             height: 35px;
             margin-top: 24px;
             border-radius: 20px 20px 0 0;
         }
+
         .dog .face::after {
             position: absolute;
             bottom: -1px;
@@ -290,13 +335,16 @@
             height: 65px;
             border-radius: 45% 45% 0 0;
         }
+
         .dog .eyes {
             position: relative;
             top: 29%;
             text-align: center;
         }
-        .dog .eyes::before, .dog .eyes::after {
-        content: "";
+
+        .dog .eyes::before,
+        .dog .eyes::after {
+            content: "";
             display: inline-block;
             width: 12px;
             height: 12px;
@@ -304,6 +352,7 @@
             background: #451d1c;
             margin: 0 14.5%;
         }
+
         .dog .teardrop {
             position: absolute;
             top: 125%;
@@ -315,6 +364,7 @@
             background: #FEFEFE;
             visibility: hidden;
         }
+
         .dog .nose {
             position: relative;
             top: 35%;
@@ -324,6 +374,7 @@
             background: #451d1c;
             margin: auto;
         }
+
         .dog .mouth {
             position: relative;
             top: 34.5%;
@@ -333,7 +384,9 @@
             text-align: center;
             background: #451d1c;
         }
-        .dog .mouth::before, .dog .mouth::after {
+
+        .dog .mouth::before,
+        .dog .mouth::after {
             content: "";
             position: absolute;
             top: -4px;
@@ -345,20 +398,26 @@
             border-top-color: transparent;
             z-index: 2;
         }
+
         .dog .mouth::before {
             transform: translateX(-89%) rotate(45deg);
         }
+
         .dog .mouth::after {
-         transform: translateX(-2px) rotate(45deg);
+            transform: translateX(-2px) rotate(45deg);
         }
+
         .dog .tongue {
             position: relative;
             z-index: 1;
         }
-        .dog .tongue::before, .dog .tongue::after {
+
+        .dog .tongue::before,
+        .dog .tongue::after {
             content: "";
             position: absolute;
         }
+
         .dog .tongue::before {
             top: 10px;
             left: -7px;
@@ -368,6 +427,7 @@
             background: #451d1c;
             z-index: -1;
         }
+
         .dog .tongue::after {
             top: 14px;
             left: -4px;
@@ -377,6 +437,7 @@
             background: #F5534F;
             z-index: 5;
         }
+
         .dog .chin {
             position: relative;
             top: 47.5%;
@@ -389,13 +450,16 @@
             border-radius: 2px;
             z-index: 0;
         }
+
         .dog .body {
             position: relative;
             height: 139px;
             margin: auto;
             z-index: 0;
         }
-        .dog .body::before, .dog .body::after {
+
+        .dog .body::before,
+        .dog .body::after {
             content: "";
             position: absolute;
             top: -1px;
@@ -407,12 +471,14 @@
             margin: auto;
             background: #F7AA2B;
         }
+
         .dog .body::after {
             top: -2px;
             bottom: -1px;
             width: 60px;
             background: #FEFEFE;
         }
+
         .dog .tail {
             position: absolute;
             left: -60%;
@@ -425,6 +491,7 @@
             border-radius: 25px 0 0 25px;
             z-index: -2;
         }
+
         .dog .legs {
             position: absolute;
             bottom: 0;
@@ -434,19 +501,23 @@
             background: #F7AA2B;
             border-radius: 10px 10px 0 0;
         }
-        .dog .legs::before, .dog .legs::after {
+
+        .dog .legs::before,
+        .dog .legs::after {
             content: "";
             position: absolute;
             bottom: 1px;
             background: #CB7A1D;
             z-index: -1;
         }
+
         .dog .legs::before {
             left: -7.5%;
             width: 115%;
             height: 55%;
             border-radius: 5px 5px 0 0;
         }
+
         .dog .legs::after {
             left: -3.5%;
             width: 107%;
@@ -459,12 +530,15 @@
         .dog.like .face::before {
             margin-top: 10px;
         }
+
         .dog.like .face::after {
             height: 85px;
         }
+
         .dog.like .eyes {
             top: 13%;
         }
+
         .dog.like .eyes::before,
         .dog.like .eyes::after {
             width: 18px;
@@ -473,43 +547,56 @@
             transform: rotate(-37.5deg);
             border-radius: 20px;
         }
+
         .dog.like .eyes::after {
             transform: rotate(37.5deg);
         }
+
         .dog.like .nose {
             top: 18%;
         }
-        .dog.like  .mouth {
+
+        .dog.like .mouth {
             top: 16.5%;
         }
+
         .dog.like .tongue::before {
             height: 15px;
         }
+
         .dog.like .tongue::after {
             height: 25px;
             animation: movetongue 0.1s linear 0.35s infinite alternate forwards;
         }
+
         .dog.like .chin {
             top: 34%;
         }
+
         .dog.like .tail {
             animation: movetail 0.1s linear infinite alternate forwards;
         }
+
         .dog.dislike .ears::before {
             transform: rotate(-50deg) translate(-7px, 2px);
         }
+
         .dog.dislike .ears::after {
             transform: rotate(50deg) translate(7px, 2px);
         }
+
         .dog.dislike .face::before {
             margin-top: 28px;
         }
+
         .dog.dislike .face::after {
             height: 55px;
         }
+
         .dog.dislike .eyes {
             top: 38%;
         }
+
         .dog.dislike .eyes::before,
         .dog.dislike .eyes::after {
             width: 18px;
@@ -518,45 +605,74 @@
             transform: rotate(-37.5deg);
             border-radius: 20px;
         }
+
         .dog.dislike .eyes::after {
             transform: rotate(37.5deg);
         }
+
         .dog.dislike .teardrop {
             animation: cry 0.1s ease-in 0.25s forwards;
         }
+
         .dog.dislike .nose {
             top: 44%;
         }
-        .dog.dislike  .mouth {
+
+        .dog.dislike .mouth {
             top: 42%;
         }
+
         .dog.dislike .chin {
             top: 52%;
         }
+
         .dog.dislike .tail {
             transform: rotate(0);
             animation: none;
         }
 
         @-webkit-keyframes movetongue {
-            100% {height: 27px;}
+            100% {
+                height: 27px;
+            }
         }
+
         @keyframes movetongue {
-            100% {height: 27px;}
+            100% {
+                height: 27px;
+            }
         }
+
         @-webkit-keyframes movetail {
-            0% {transform: rotate(37deg);}
-            100% {transform: rotate(52deg);}
+            0% {
+                transform: rotate(37deg);
+            }
+
+            100% {
+                transform: rotate(52deg);
+            }
         }
+
         @keyframes movetail {
-            0% {transform: rotate(37deg);}
-            100% {transform: rotate(52deg); }
+            0% {
+                transform: rotate(37deg);
+            }
+
+            100% {
+                transform: rotate(52deg);
+            }
         }
+
         @-webkit-keyframes cry {
-            100% {visibility: visible;}
+            100% {
+                visibility: visible;
+            }
         }
+
         @keyframes cry {
-            100% {visibility: visible;}
+            100% {
+                visibility: visible;
+            }
         }
 
 
@@ -566,13 +682,15 @@
             right: 20px;
             bottom: 60px;
         }
+
         .quiz_source .source_btn {
             border: 1px solid #000;
-            padding: 20px  40px;
+            padding: 20px 40px;
             border-radius: 50px;
             background: transparent;
             color: #000;
         }
+
         .source_btn:hover {
             background: #000;
             color: #fff;
@@ -595,33 +713,57 @@
             z-index: 1000;
             transform: scale(0);
         }
+
         .hide {
-            display:none;
+            display: none;
         }
+
         .show {
             display: block;
         }
-        .content > div {
+
+        .content>div {
             display: none;
         }
-        .content > div:nth-child(1) {
+
+        .content>div:nth-child(1) {
             display: block;
         }
+
         #modal.show {
             animation: foldOut 1s ease forwards;
         }
-        #modal.show.hide  {
+
+        #modal.show.hide {
             animation: foldIn 1s 0.3s ease backwards;
         }
+
         @keyframes foldOut {
-            0%  {transform:scaleX(0) scaleY(0.005)}
-            50% {transform:scaleX(1) scaleY(0.005)}
-            100% {transform:scaleX(1) scaleY(1)}
+            0% {
+                transform: scaleX(0) scaleY(0.005)
+            }
+
+            50% {
+                transform: scaleX(1) scaleY(0.005)
+            }
+
+            100% {
+                transform: scaleX(1) scaleY(1)
+            }
         }
+
         @keyframes foldIn {
-            0%  {transform:scaleX(1) scaleY(1)}
-            50% {transform:scaleX(1) scaleY(0.005)}
-            100% {transform:scaleX(0) scaleY(0.005)}
+            0% {
+                transform: scaleX(1) scaleY(1)
+            }
+
+            50% {
+                transform: scaleX(1) scaleY(0.005)
+            }
+
+            100% {
+                transform: scaleX(0) scaleY(0.005)
+            }
         }
 
 
@@ -633,22 +775,37 @@
             height: 100vh;
             transform: scale(0);
         }
+
         #modal.show .modal-wrap {
             animation: zoomOut 0.5s 1s ease forwards;
         }
+
         #modal.show.hide .modal-wrap {
             animation: zoomIn 0.5s 1s ease forwards;
         }
+
         @keyframes zoomOut {
-            0%  {transform: scale(0);}
-            100% {transform: scale(1);}
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
+
         @keyframes zoomIn {
-            0%  {transform: scale(1);}
-            100% {transform: scale(0);}
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(0);
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header id="header">
@@ -675,50 +832,226 @@
                     <span class="quiz__Ask"></span>
                 </h3>
                 <div class="quiz__view">
-                <div id="modal" class="hide">
-                    <div class="window">
-                        <div class="title-bar">
-                            <div class="minimize">
-                                <div class="symbol"></div>
-                            </div>
-                            <div class="maximize">
-                                <div class="symbol"></div>
-                            </div>
-                            <div class="close" id="modal-close">
-                                <div class="symbol"></div>
-                            </div>
-                        </div>
-                        <div class="menu-bar">
-                            <span class="active"><a href="#">HTML</a></span>
-                            <span><a href="#">CSS</a></span>
-                            <span><a href="#">Javascript</a></span>
-                        </div>
-                        <div class="content-container">
-                            <div class="content">
-                                <div class="main">
-                                    dd
+                    <div id="modal" class="hide">
+                        <div class="window">
+                            <div class="title-bar">
+                                <div class="minimize">
+                                    <div class="symbol"></div>
                                 </div>
-                                <div class="main">
-                                    dd
+                                <div class="maximize">
+                                    <div class="symbol"></div>
                                 </div>
-                                <div class="main">
-                                   dd 
+                                <div class="close" id="modal-close">
+                                    <div class="symbol"></div>
                                 </div>
-                                <div class="scroll">
+                            </div>
+                            <div class="menu-bar">
+                                <ul>
+                                    <li class="active"><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">Javascript</a></li>
+                                </ul>
+                            </div>
+                            <div class="content-container">
+                                <div class="content">
+                                    <div class="main">
+<pre><code class="language-javascript">
+    &lt;div class="quiz">
+        &lt;h2 class="quiz__type">&lt;/h2>
+        &lt;h3 class="quiz__question">
+            &lt;span class="quiz__number">01.컨텐츠 구조를 정의하는 마크업 언어는 무엇일까요&lt;/span>
+            &lt;span class="quiz__Ask">&lt;/span>
+        &lt;/h3>
+        &lt;div class="quiz__view">
+            &lt;div id="modal" class="hide">&lt;/div>
+            &lt;div class="dog">
+                &lt;div class="head">
+                    &lt;div class="ears">&lt;/div>
+                    &lt;div class="face">&lt;/div>
+                    &lt;div class="eyes">
+                        &lt;div class="teardrop">&lt;/div>
+                    &lt;/div>
+                    &lt;div class="nose">&lt;/div>
+                    &lt;div class="mouth">
+                        &lt;div class="tongue">&lt;/div>
+                    &lt;/div>
+                    &lt;div class="chin">&lt;/div>
+                &lt;/div>
+                &lt;div class="body">
+                    &lt;div class="tail">&lt;/div>
+                    &lt;div class="legs">&lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="quiz__answer">
+            &lt;button class="quiz__confirm">정답 확인하기&lt;/button>
+            &lt;div class="quiz__result">&lt;/div>
+        &lt;/div>
+
+</code></pre>
+                                    </div>
+                                    <div class="main">
+<pre><code class="language-javascript">
+    .quiz__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 150px;
+    }
+
+    .quiz {
+        max-width: 500px;
+        width: 100%;
+        background: #fff;
+        border: 8px ridge #cacaca;
+        margin: 10px;
+    }
+
+    .quiz__type {
+        background: #cacaca;
+        text-align: center;
+        font-size: 14px;
+        color: #3b3b3b;
+        border: 3px ridge #cacaca;
+        padding: 3px 0;
+        position: relative;
+    }
+
+    .quiz__type::before {
+        content: '';
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        width: 5px;
+        height: 5px;
+        border: 6px ridge #cacaca;
+    }
+
+    .quiz__type::after {
+        content: '';
+        content: '';
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        width: 5px;
+        height: 5px;
+        border: 6px ridge #cacaca;
+    }
+
+    .quiz__question {
+        border-bottom: 6px ridge #cacaca;
+        border-top: 6px ridge #cacaca;
+        padding: 13px 30px;
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .quiz__number {
+        font-family: 'Cafe24Dangdanghae';
+        color: #64a30b;
+    }
+
+    .quiz__Ask {
+        font-family: 'Cafe24Dangdanghae';
+    }
+
+    .quiz__answer {
+        background-color: #f5f5f5;
+        padding: 10px;
+        border-top: 6px ridge #cacaca;
+    }
+
+    .quiz__view {
+        background-color: #f5f5f5;
+    }
+
+    .quiz__answer {
+        background-color: #f5f5f5;
+        border-top: 6px ridge #cacaca;
+        padding: 10px;
+    }
+
+    .quiz__confirm {
+        border: 6px ridge #cacaca;
+        width: 100%;
+        font-size: 22px;
+        padding: 13px 20px;
+        background: #d6d6d6;
+        text-shadow: 1px 1px 1px #fff;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .quiz__confirm:hover {
+        background: #b3b3b3;
+    }
+
+    .quiz__result {
+        font-family: 'Cafe24Dangdanghae';
+        text-align: center;
+        border: 6px ridge #cacaca;
+        width: 100%;
+        font-size: 22px;
+        padding: 13px 20px;
+        background: #fff;
+        text-shadow: 1px 1px 1px #fff;
+        display: none;
+    }
+    
+</code></pre>
+
+                                    </div>
+                                    <div class="main">
+<pre><code class="language-javascript">
+    const quizType = document.querySelector(".quiz__type"); //퀴즈 종류
+    const quizNumber = document.querySelector(".quiz__number"); //퀴즈 번호
+    const quizAsk = document.querySelector(".quiz__Ask") //퀴즈 질문
+    const quizConfirm = document.querySelector(".quiz__confirm") //정답 확인 버튼
+    const quizResult = document.querySelector(".quiz__result") //정답 결과
+    const quizDog = document.querySelector(".quiz__view .dog");
+    const quizsource = document.querySelector(".source_btn")
+
+
+    //문제정보
+    const answerType = "HTML"
+    const answerNum = 1; //정답 번호
+    const answerAsk = "컨텐츠 구조를 정의하는 마크업 언어는 무엇일까요?" //질문
+    const answerResult = "HTML" //정답 
+
+    //문제 출력
+    quizType.textContent = answerType;
+    quizNumber.textContent = answerNum + ". ";
+    quizAsk.textContent = answerAsk;
+    quizResult.textContent = answerResult;
+
+    //정답 확인
+    //정답 버튼을 클릭하면 정답을 보이게 설정/정답 확인은 안보이고 숨겨진 정답만 보이게
+    //정답을 확인하면 강아지 웃기
+    quizConfirm.addEventListener("click", () => { 
+        quizConfirm.style.display = "none";
+        quizResult.style.display = "block";
+        quizDog.classList.add("like") 
+    })
+
+</code></pre>
+
+                                    </div>
+                                    <div class="scroll">
+                                        <div class="start"></div>
+                                        <div class="progress"></div>
+                                        <div class="end"></div>
+                                    </div>
+                                </div>
+                                <div class="scroll -row">
                                     <div class="start"></div>
                                     <div class="progress"></div>
                                     <div class="end"></div>
                                 </div>
                             </div>
-                            <div class="scroll -row">
-                                <div class="start"></div>
-                                <div class="progress"></div>
-                                <div class="end"></div>
-                            </div>
+                            <div class="footer"></div>
                         </div>
-                        <div class="footer"></div>
                     </div>
-                </div>
                     <div class="dog">
                         <div class="head">
                             <div class="ears"></div>
@@ -737,44 +1070,48 @@
                             <div class="legs"></div>
                         </div>
                     </div>
-                    </div>
-                    <div class="quiz__answer">
-                        <button class="quiz__confirm">정답 확인하기</button>
-                        <div class="quiz__result"></div>
-                    </div>
                 </div>
-               
+                <div class="quiz__answer">
+                    <button class="quiz__confirm">정답 확인하기</button>
+                    <div class="quiz__result"></div>
+                </div>
             </div>
-        
-            <div class="quiz_source">
-                <button class="source_btn">소스보기</button>
-            </div>
+
+        </div>
+
+        <div class="quiz_source">
+            <button class="source_btn">소스보기</button>
+        </div>
         </div>
     </main>
 
     <footer id="footer">
         <a href="mailto:rmsgur2275@gmail.com">rmsgur2275@gmail.com</a>
     </footer>
-        
+    <script src="js/highligt.js"></script>
+    <script src="js/custom.js"></script>
     <script>
-        
+        tabMenu2();
+        modal2();
+
+
         const quizType = document.querySelector(".quiz__type"); //퀴즈 종류
-        const quizNumber = document.querySelector(".quiz__number");     //퀴즈 번호
-        const quizAsk = document.querySelector(".quiz__Ask")            //퀴즈 질문
-        const quizConfirm = document.querySelector(".quiz__confirm")     //정답 확인 버튼
-        const quizResult = document.querySelector(".quiz__result")      //정답 결과
+        const quizNumber = document.querySelector(".quiz__number"); //퀴즈 번호
+        const quizAsk = document.querySelector(".quiz__Ask") //퀴즈 질문
+        const quizConfirm = document.querySelector(".quiz__confirm") //정답 확인 버튼
+        const quizResult = document.querySelector(".quiz__result") //정답 결과
         const quizDog = document.querySelector(".quiz__view .dog");
         const quizsource = document.querySelector(".source_btn")
-        
+
 
         //문제정보
         const answerType = "HTML"
-        const answerNum = 1;                                            //정답 번호
-        const answerAsk = "컨텐츠 구조를 정의하는 마크업 언어는 무엇일까요?"    //질문
-        const answerResult = "HTML"                                         //정답 
+        const answerNum = 1; //정답 번호
+        const answerAsk = "컨텐츠 구조를 정의하는 마크업 언어는 무엇일까요?" //질문
+        const answerResult = "HTML" //정답 
 
         //문제 출력
-        quizType.textContent = answerType;          
+        quizType.textContent = answerType;
         quizNumber.textContent = answerNum + ". ";
         quizAsk.textContent = answerAsk;
         quizResult.textContent = answerResult;
@@ -784,42 +1121,12 @@
         //정답을 확인하면 강아지 웃기
 
 
-        quizConfirm.addEventListener("click",() =>{         //quizConfirm를 클릭하면 
-            quizConfirm.style.display = "none";             //quizConfirm의 display=none 시키고
-            quizResult.style.display = "block";             //quizResult의 display는 block
-            quizDog.classList.add("like")               //강아지는 웃게
-        })
-
-        let windowWrapper = document.querySelector('#modal');           //#modal을 windowWrapper에 저장
-            document.querySelector(".source_btn").addEventListener("click",()=>{    //source_btn을 클릭하면
-                document.querySelector("#modal").classList.add("show")              //modal에 show를 추가하고
-                document.querySelector("#modal").classList.remove("hide")           //hide를 삭제
-            })
-            document.querySelector("#modal-close").addEventListener("click", ()=>{  //modal-close를 클릭하면
-                document.querySelector("#modal").classList.add('hide');         //hide를 추가
-            })
-
-
-        var tabBtn = document.querySelectorAll(".menu-bar > ul > li");  
-        var tabCont = document.querySelectorAll(".content > div");      
-
-        tabBtn.forEach((btn, index)=>{
-            btn.addEventListener("click", ()=>{
-                 //모든 클래스 active 삭제
-            tabBtn.forEach((el)=>{
-                el.classList.remove("active");
-            })
-            //내가 클릭한건 active 추가
-            btn.classList.add("active");
-
-            //모든 컨텐츠 박스 안보이게
-            tabCont.forEach((el)=>{
-                el.style.display = "none";
-            })
-            //내가 클릭한 콘텐츠 박스를 보이게
-            tabCont[index].style.display ="block";
-            })
+        quizConfirm.addEventListener("click", () => { //quizConfirm를 클릭하면 
+            quizConfirm.style.display = "none"; //quizConfirm의 display=none 시키고
+            quizResult.style.display = "block"; //quizResult의 display는 block
+            quizDog.classList.add("like") //강아지는 웃게
         })
     </script>
 </body>
+
 </html>

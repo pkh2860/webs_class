@@ -4,6 +4,9 @@
   background-color: #fff;
   height: 100%;
   padding-top: 65px;
+
+  overflow:scroll; 
+  padding:10px;
 }
 .content > div {
   display: none;
@@ -16,7 +19,6 @@
 }
 .window {
   min-width: 1000px;
-  /* min-height: 500px; */
   background-color: #c7c7c7;
   padding: 4px;
   border-left: 2px solid #FCFCFC;

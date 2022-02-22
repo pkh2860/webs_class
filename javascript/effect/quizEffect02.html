@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Effect.02</title>
+    <link rel="stylesheet" href="css/dracula.min.css">
     <style>
-        @import url(css/dracula.min.css);
         @import url(../effect/css/Windows.css);
         @font-face {
             font-family: 'DungGeunMo';
@@ -756,13 +756,234 @@
                             <div class="content-container">
                                 <div class="content">
                                     <div class="main">
-1
+<pre><code class="language-javascript">
+    &lt;div class="quiz">
+        &lt;h2 class="quiz__type">&lt;/h2>
+        &lt;h3 class="quiz__question">
+            &lt;span class="quiz__number">01.객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?&lt;/span>
+            &lt;span class="quiz__Ask">&lt;/span>
+        &lt;/h3>
+        &lt;div class="quiz__view">
+            &lt;div class="true">정답입니다&lt;/div>
+            &lt;div class="false">틀렸습니다&lt;/div>
+
+    &lt;div class="quiz__answer">
+        &lt;input class="quiz__input" type="text" placeholder="정답을 적어주세요!">
+        &lt;button class="quiz__confirm">정답 확인하기&lt;/button>
+        &lt;div class="quiz__result">&lt;/div>
+    &lt;/div>
+    
+</code></pre>                                        
                                     </div>
                                     <div class="main">
-2
+<pre><code class="language-javascript">
+    /*quiz__wrap*/
+        .quiz__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 150px;
+        }
+        .quiz {
+            max-width: 500px;
+            width: 100%;
+            background: #fff;
+            border: 8px ridge #cacaca;
+            margin: 10px;
+        }
+        .quiz__type {
+            background: #cacaca;
+            text-align: center;
+            font-size: 14px;
+            color: #3b3b3b;
+            border: 3px ridge #cacaca;
+            padding: 3px 0;
+            position: relative;
+        }
+        .quiz__type::before {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            width: 5px;
+            height: 5px;
+            border: 6px ridge #cacaca;
+        }
+        .quiz__type::after {
+            content: '';
+            content: '';
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            width: 5px;
+            height: 5px;
+            border: 6px ridge #cacaca;
+        }
+        .quiz__question {
+            border-bottom: 6px ridge #cacaca;
+            border-top: 6px ridge #cacaca;
+            padding: 13px 30px;
+            font-size: 24px;
+            line-height: 1.4;
+        }
+        .quiz__number {
+            font-family: 'Cafe24Dangdanghae';
+            color: #64a30b;
+        }
+        .quiz__Ask {
+            font-family: 'Cafe24Dangdanghae';
+        }
+        .quiz__answer {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-top: 6px ridge #cacaca;
+        }
+        .quiz__view {
+            background-color: #f5f5f5;
+            position: relative;
+        }
+        .quiz__view.like .true {
+            opacity: 1;;
+            animation: wobble 0.6s;
+        }
+        .quiz__view.dislike .false {
+            opacity: 1;;
+            animation: wobble 0.6s;
+        }
+        .quiz__view .true {
+            position: absolute;
+            left: 70%;
+            top: 100px;
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 100;
+            line-height: 100px;
+            text-align: center;
+            color: #fff;
+            background: #f5534f;
+            opacity: 0;
+
+        }
+        .quiz__view .false {
+            position: absolute;
+            right: 70%;
+            top: 100px;
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 100;
+            line-height: 100px;
+            text-align: center;
+            color: #f5534f;
+            opacity: 0;
+        }
+        @keyframes wobble {
+            0% { transform: translateZ(0)}
+            15% {transform: translate3d(-25%, 0, 0) rotate(-5deg) }
+            30% {transform: translate3d(20%, 0, 0) rotate(3deg)}
+            45% {transform: translate3d(-15%, 0, 0) rotate(-3deg)}
+            60% {transform: translate3d(10%, 0, 0) rotate(2deg)}
+            75% {transform: translate3d(-5%, 0, 0) rotate(-1deg)}
+            100% {transform: translateZ(0) }
+        }
+        .quiz__answer {
+            background-color: #f5f5f5;
+            border-top: 6px ridge #cacaca;
+            padding: 10px;
+        }
+        .quiz__confirm {
+            border: 6px ridge #cacaca;
+            width: 100%;
+            font-size: 22px;
+            padding: 13px 20px;
+            background: #d6d6d6;
+            text-shadow: 1px 1px 1px #fff;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .quiz__confirm:hover {
+            background: #b3b3b3;
+        }
+        .quiz__result {
+            font-family: 'Cafe24Dangdanghae';
+            text-align: center;
+            border: 6px ridge #cacaca;
+            width: 100%;
+            font-size: 22px;
+            padding: 13px 20px;
+            background: #fff;
+            text-shadow: 1px 1px 1px #fff;
+            display: none;
+        }
+
+        .quiz__input {
+            font-family: 'Cafe24Dangdanghae';
+            border: 6px ridge #cacaca;
+            width: 100%;
+            font-size: 22px;
+            padding: 13px 20px;
+            background: #fff;
+            text-shadow: 1px 1px 1px #fff;
+            margin-bottom: 10px;
+        }
+    
+</code></pre>
+                                                
                                     </div>
                                     <div class="main">
-                                        33
+<pre><code class="language-javascript">
+    const quizType = document.querySelector(".quiz__type"); //퀴즈 종류
+    const quizNumber = document.querySelector(".quiz__number");     //퀴즈 번호
+    const quizAsk = document.querySelector(".quiz__Ask")            //퀴즈 질문
+    const quizConfirm = document.querySelector(".quiz__confirm")     //정답 확인 버튼
+    const quizResult = document.querySelector(".quiz__result")      //정답 결과
+    const quizView = document.querySelector(".quiz__view");        //강아지
+    const quizInput = document.querySelector(".quiz__input");       //사용자가 작성한 값
+
+
+    // const quiztrue = document.querySelector(".quiz__view .true")
+    // const quizfalse = document.querySelector(".quiz__view .false")
+
+
+
+  
+    const answerType = "javascript"
+    const answerNum = 1;                                            
+    const answerAsk = "객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?"  
+    const answerResult = "javascript"                                  
+
+   
+    quizType.textContent = answerType;
+    quizNumber.textContent = answerNum + ". ";
+    quizAsk.textContent = answerAsk;
+    quizResult.textContent = "정답은 : " + answerResult + " 입니다.";
+
+   
+    quizResult.style.display = "none";
+
+   
+    
+    quizConfirm.addEventListener("click",()=>{      
+        quizConfirm.style.display="none";       
+        quizResult.style.display = "block";        
+        const userWord = quizInput.value.toLowerCase().trim(); 
+
+       
+        if(userWord==answerResult){     
+            quizView.classList.add("like")     
+            quizResult.style.display="none";   
+        }else {
+            quizView.classList.add("dislike")      
+            quizInput.style.display = "none";      
+        }
+    })
+
+</code></pre>
+                                                
                                     </div>
                                     <div class="scroll">
                                         <div class="start"></div>
@@ -818,7 +1039,11 @@
     </footer>
 
     <script src="js/highligt.js"></script>
+    <script src="js/custom.js"></script>
     <script>
+        tabMenu2();
+        modal2();
+
         const quizType = document.querySelector(".quiz__type"); //퀴즈 종류
         const quizNumber = document.querySelector(".quiz__number");     //퀴즈 번호
         const quizAsk = document.querySelector(".quiz__Ask")            //퀴즈 질문
@@ -867,36 +1092,6 @@
             }
         })
 
-        let windowWrapper = document.querySelector('#modal');                   //#modal을 windowWrapper에 저장
-            document.querySelector(".source_btn").addEventListener("click",()=>{ //source_btn을 클릭하면
-                document.querySelector("#modal").classList.add("show")          //modal에 show를 추가하고
-                document.querySelector("#modal").classList.remove("hide")        //hide를 삭제
-            })
-            document.querySelector("#modal-close").addEventListener("click", ()=>{      //modal-close를 클릭하면
-                document.querySelector("#modal").classList.add('hide');          //hide를 추가
-            })
-
-
-        var tabBtn = document.querySelectorAll(".menu-bar > ul > li");
-        var tabCont = document.querySelectorAll(".content > div");
-
-        tabBtn.forEach((btn, index)=>{
-            btn.addEventListener("click", ()=>{
-                 //모든 클래스 active 삭제
-            tabBtn.forEach((el)=>{
-                el.classList.remove("active");
-            })
-            //내가 클릭한건 active 추가
-            btn.classList.add("active");
-
-            //모든 컨텐츠 박스 안보이게
-            tabCont.forEach((el)=>{
-                el.style.display = "none";
-            })
-            //내가 클릭한 콘텐츠 박스를 보이게
-            tabCont[index].style.display ="block";
-            })
-        })
         </script>
 </body>
 </html>
