@@ -759,7 +759,7 @@
         const quizView = document.querySelectorAll(".quiz__view") //문제 화면
         const quizInput = document.querySelectorAll(".quiz__input")//사용자 정답
 
-        //문제정보
+        //quizInfo에 문제정보를 저장
         const quizInfo = [{
                 answerType: "javascript",
                 answerNum: 1,
@@ -782,33 +782,33 @@
         ];
 
         //문제출력 
-        quizType[0].textContent = quizInfo[0].answerType
-        quizType[1].textContent = quizInfo[1].answerType
-        quizType[2].textContent = quizInfo[2].answerType
+        // quizType[0].textContent = quizInfo[0].answerType   
+        // quizType[1].textContent = quizInfo[1].answerType
+        // quizType[2].textContent = quizInfo[2].answerType
 
-        quizNumber[0].textContent = quizInfo[0].answerNum + ". ";
-        quizNumber[1].textContent = quizInfo[1].answerNum + ". ";
-        quizNumber[2].textContent = quizInfo[2].answerNum + ". ";
+        // quizNumber[0].textContent = quizInfo[0].answerNum + ". ";
+        // quizNumber[1].textContent = quizInfo[1].answerNum + ". ";
+        // quizNumber[2].textContent = quizInfo[2].answerNum + ". ";
 
-        quizAsk[0].textContent = quizInfo[0].answerAsk
-        quizAsk[1].textContent = quizInfo[1].answerAsk
-        quizAsk[2].textContent = quizInfo[2].answerAsk
+        // quizAsk[0].textContent = quizInfo[0].answerAsk
+        // quizAsk[1].textContent = quizInfo[1].answerAsk
+        // quizAsk[2].textContent = quizInfo[2].answerAsk
 
-        quizResult[0].textContent = quizInfo[0].answerResult
-        quizResult[1].textContent = quizInfo[1].answerResult
-        quizResult[2].textContent = quizInfo[2].answerResult
+        // quizResult[0].textContent = quizInfo[0].answerResult
+        // quizResult[1].textContent = quizInfo[1].answerResult
+        // quizResult[2].textContent = quizInfo[2].answerResult
 
         //for문으로 문제출력
-        for (let i = 0; i < quizInfo.length; i++) {
-            quizType[i].textContent = quizInfo[i].answerType
-            quizNumber[i].textContent = quizInfo[i].answerNum + ". ";
-            quizAsk[i].textContent = quizInfo[i].answerAsk
-            quizResult[i].textContent = quizInfo[i].answerResult
-        }
+        // for (let i = 0; i < quizInfo.length; i++) {
+        //     quizType[i].textContent = quizInfo[i].answerType
+        //     quizNumber[i].textContent = quizInfo[i].answerNum + ". ";
+        //     quizAsk[i].textContent = quizInfo[i].answerAsk
+        //     quizResult[i].textContent = quizInfo[i].answerResult
+        // }
 
         //forEach문으로 문제출력
-        quizInfo.forEach((e, i)=>{
-            quizType[i].textContent = quizInfo[i].answerType
+        quizInfo.forEach((e, i)=>{                  //문제,문제번호,문제질문,문제 정답을 forEach문으로 출력
+            quizType[i].textContent = quizInfo[i].answerType    
             quizNumber[i].textContent = quizInfo[i].answerNum + ". ";
             quizAsk[i].textContent = quizInfo[i].answerAsk
             quizResult[i].textContent = "정답은" + quizInfo[i].answerResult + " 입니다";

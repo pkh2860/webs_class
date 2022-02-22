@@ -819,8 +819,6 @@
 
     <script src="js/highligt.js"></script>
     <script>
-
-
         const quizType = document.querySelector(".quiz__type"); //퀴즈 종류
         const quizNumber = document.querySelector(".quiz__number");     //퀴즈 번호
         const quizAsk = document.querySelector(".quiz__Ask")            //퀴즈 질문
@@ -854,18 +852,18 @@
         //정답 버튼을 클릭하면 정답을 보이게 설정/정답 확인은 안보이고 숨겨진 정답만 보이게
         //정답이 맞으면 강아지 웃고 틀리면 강아지 울기
         
-        quizConfirm.addEventListener("click",()=>{
-            quizConfirm.style.display="none";
-            quizResult.style.display = "block";
+        quizConfirm.addEventListener("click",()=>{      //정답 확인 버튼을 클릭하면
+            quizConfirm.style.display="none";       //확인 버튼은 사라지고
+            quizResult.style.display = "block";         //정답 결과만 나오게 처리
             const userWord = quizInput.value.toLowerCase().trim();  //사용자 데이터 체인기능으로 연결해서 사용 
 
             //사용자 데이터 == 정답 
-            if(userWord==answerResult){
-                quizView.classList.add("like")
-                quizResult.style.display="none";
+            if(userWord==answerResult){     //사용자가 작성한 데이터와 정답이 같다면
+                quizView.classList.add("like")      //강아지한테 like를 추가
+                quizResult.style.display="none";    //정답 결과는 none
             }else {
-                quizView.classList.add("dislike")
-                quizInput.style.display = "none";
+                quizView.classList.add("dislike")       //틀렸다면 강아지는 dislike 추가
+                quizInput.style.display = "none";       //사용자가 작성한 값 none처리
             }
         })
 

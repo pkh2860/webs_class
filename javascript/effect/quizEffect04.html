@@ -775,8 +775,8 @@
 
             //문제출력
             function updataQuiz() {
-                //타입,문제,정답,보기
-                quizType.textContent = quizInfo[0].answerType;
+                //  문제, 문제번호, 문제질문, 문제 정답을 updataQuiz 함수에 저장해서 출력
+                quizType.textContent = quizInfo[0].answerType;  
                 quizNumber.textContent = quizInfo[0].answerNum+ ". ";
                 quizAsk.textContent = quizInfo[0].answerAsk;
                 quizResult.textContent = quizInfo[0].answerEx;
@@ -796,11 +796,9 @@
                     if(quizSelect[i].checked ==true){
                         if(quizSelect[i].value == quizInfo[0].answerResult){
                             //정답
-                            quizView.classList.add("like")
+                            quizView.classList.add("like")         
                             quizConfirm.style.display="none"
                         }else {
-                            //오답
-                            // alert("오답")
                             quizView.classList.add("dislike")
                             quizConfirm.style.display="none"
                             quizResult.style.display="block"
