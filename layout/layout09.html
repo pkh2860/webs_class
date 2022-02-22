@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 09</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        #wrap {
+            width: 100%;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #E3F1F1;
+            display: flex;
+            justify-content: center
+        }
+        #header_box {
+            width: 90%;
+            height: 100px;
+            background: #BBDEDB;
+        }
+        #nav {
+            width: 100%;
+            height: 300px;
+            background-color: #7DCCC4;
+            display: flex;
+            justify-content: center
+        }
+        #nav_box {
+            width: 90%;
+            height: 300px;
+            background-color: #6AB4AC;
+        }
+        #main {
+            width: 100%;
+            height: 580px;
+            background-color: #17A89A;
+            display: flex;
+            justify-content: center
+        }
+        #aside {
+            width: 45%;
+            height: 580px;
+            background-color: #429488;
+        }
+        #contents {
+            width:45%;
+            height: 580px;
+            background-color: #3B877B;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #008A7B;
+            display: flex;
+            justify-content: center
+        }
+        #footer_box {
+            width: 90%;
+            height: 100px;
+            background-color: #34776B;
+      
+        }
+
+        @media (max-width: 1220px){
+                #wrap {
+                 width: 100%;
+            }
+        }
+        @media (max-width: 768px){
+            #main {
+                flex-direction: column;
+            }
+            #header_box {
+                width: 100%;
+            }
+            #nav_box {
+                width: 100%;
+            }
+            #aside {
+                width: 100%;
+                height: 390px;
+            }
+            #contents {
+                width: 100%;
+                height: 390px;
+            }
+            #footer_box {
+                width: 100%;
+            }
+
+
+        }
+        @media (max-width: 600px){
+
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="header_box"></div>
+        </header>
+        <nav id="nav">
+            <div id="nav_box"></div>
+        </nav>
+        <main id="main">
+            <aside id="aside"></aside>
+            <section id="contents"></section>
+        </main>
+        <footer id="footer">
+            <div id="footer_box"></div>
+        </footer>
+    </div>
+</body>
+</html>
