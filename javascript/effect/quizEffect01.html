@@ -577,29 +577,75 @@
             background: #000;
             color: #fff;
         }
- /* modal screen open and close */
+
+        /* modal screen open and close */
 
         #modal {
-            align-self: center;
+            /* align-self: center;
             z-index: 5;
             position:absolute;
             left: 50%;
-            transform:translateX(-50%);
+            transform:translateX(-50%); */
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1000;
+            transform: scale(0);
         }
         .hide {
             display:none;
         }
-
         .show {
             display: block;
         }
- 
-
         .content > div {
             display: none;
         }
         .content > div:nth-child(1) {
             display: block;
+        }
+        #modal.show {
+            animation: foldOut 1s ease forwards;
+        }
+        #modal.show.hide  {
+            animation: foldIn 1s 0.3s ease backwards;
+        }
+        @keyframes foldOut {
+            0%  {transform:scaleX(0) scaleY(0.005)}
+            50% {transform:scaleX(1) scaleY(0.005)}
+            100% {transform:scaleX(1) scaleY(1)}
+        }
+        @keyframes foldIn {
+            0%  {transform:scaleX(1) scaleY(1)}
+            50% {transform:scaleX(1) scaleY(0.005)}
+            100% {transform:scaleX(0) scaleY(0.005)}
+        }
+
+
+        .modal-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            transform: scale(0);
+        }
+        #modal.show .modal-wrap {
+            animation: zoomOut 0.5s 1s ease forwards;
+        }
+        #modal.show.hide .modal-wrap {
+            animation: zoomIn 0.5s 1s ease forwards;
+        }
+        @keyframes zoomOut {
+            0%  {transform: scale(0);}
+            100% {transform: scale(1);}
+        }
+        @keyframes zoomIn {
+            0%  {transform: scale(1);}
+            100% {transform: scale(0);}
         }
     </style>
 </head>
@@ -728,7 +774,7 @@
         const answerResult = "HTML"                                         //정답 
 
         //문제 출력
-        quizType.textContent = answerType;
+        quizType.textContent = answerType;          
         quizNumber.textContent = answerNum + ". ";
         quizAsk.textContent = answerAsk;
         quizResult.textContent = answerResult;
@@ -738,24 +784,42 @@
         //정답을 확인하면 강아지 웃기
 
 
-        quizConfirm.addEventListener("click",() =>{
-            quizConfirm.style.display = "none";
-            quizResult.style.display = "block";
-            quizDog.classList.add("like")
+        quizConfirm.addEventListener("click",() =>{         //quizConfirm를 클릭하면 
+            quizConfirm.style.display = "none";             //quizConfirm의 display=none 시키고
+            quizResult.style.display = "block";             //quizResult의 display는 block
+            quizDog.classList.add("like")               //강아지는 웃게
         })
 
-        let windowWrapper = document.querySelector('#modal');
-        
-        document.querySelector(".source_btn").addEventListener("click",()=>{
-            windowWrapper.classList.add("show");
-            windowWrapper.classList.remove("hide");
-        })
+        let windowWrapper = document.querySelector('#modal');  
+            document.querySelector(".source_btn").addEventListener("click",()=>{
+                document.querySelector("#modal").classList.add("show")
+                document.querySelector("#modal").classList.remove("hide")
+            })
+            document.querySelector("#modal-close").addEventListener("click", ()=>{
+                document.querySelector("#modal").classList.add('hide');
+            })
 
-        document.querySelector("#modal-close").addEventListener("click",()=>{
-            windowWrapper.classList.remove("show");
-            windowWrapper.classList.add("hide");
-        });
-        
+
+        var tabBtn = document.querySelectorAll(".menu-bar > ul > li");
+        var tabCont = document.querySelectorAll(".content > div");
+
+        tabBtn.forEach((btn, index)=>{
+            btn.addEventListener("click", ()=>{
+                 //모든 클래스 active 삭제
+            tabBtn.forEach((el)=>{
+                el.classList.remove("active");
+            })
+            //내가 클릭한건 active 추가
+            btn.classList.add("active");
+
+            //모든 컨텐츠 박스 안보이게
+            tabCont.forEach((el)=>{
+                el.style.display = "none";
+            })
+            //내가 클릭한 콘텐츠 박스를 보이게
+            tabCont[index].style.display ="block";
+            })
+        })
     </script>
 </body>
 </html>
