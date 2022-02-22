@@ -26,19 +26,28 @@ body {
     color: #fff;
 }
 body.img01 {
-    background-image: url(../img/img2.jpg);
+    background-image: url(../img/img1.jpg);
 }
 body.img02 {
-    background-image: url(../img/img3.jpg);
+    background-image: url(../img/img2.jpg);
 }
 body.img03 {
-    background-image: url(../img/img4.jpg);
+    background-image: url(../img/img3.jpg);
 }
 body.img04 {
-    background-image: url(../img/img5.jpg);
+    background-image: url(../img/img4.jpg);
 }
 body.img05 {
+    background-image: url(../img/img5.jpg);
+}
+body.img06 {
     background-image: url(../img/img6.jpg);
+}
+body.img07 {
+    background-image: url(../img/img7.jpg);
+}
+body.img08 {
+    background-image: url(../img/img8.jpg);
 }
 body::before {
     content: ' ';
@@ -108,6 +117,13 @@ body::before {
 .source button:hover {
     background: #fff;
     color:#000;
+}
+.attr {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-size: 14px;
+    line-height: 1.6;
 }
 /* modal */
 #modal {

@@ -798,7 +798,7 @@
         quizResult[1].textContent = quizInfo[1].answerResult
         quizResult[2].textContent = quizInfo[2].answerResult
 
-        //for
+        //for문으로 문제출력
         for (let i = 0; i < quizInfo.length; i++) {
             quizType[i].textContent = quizInfo[i].answerType
             quizNumber[i].textContent = quizInfo[i].answerNum + ". ";
@@ -806,7 +806,7 @@
             quizResult[i].textContent = quizInfo[i].answerResult
         }
 
-        //forEach
+        //forEach문으로 문제출력
         quizInfo.forEach((e, i)=>{
             quizType[i].textContent = quizInfo[i].answerType
             quizNumber[i].textContent = quizInfo[i].answerNum + ". ";
@@ -814,8 +814,8 @@
             quizResult[i].textContent = "정답은" + quizInfo[i].answerResult + " 입니다";
         });
 
-        //정답 숨기기
-        quizResult.forEach((el)=>{
+        //display none을 써서 정답 숨기기
+        quizResult.forEach((el)=>{      
             el.style.display = "none";
         });
 
@@ -825,17 +825,17 @@
                 // btn.style.display = "none";
                 // quizResult[num].style.display = "block"
 
-                //사용자 정답 == quizInfo 
+                //사용자 정답 == quizInfo 같다면
                 const userWord = quizInput[num].value.toLowerCase().trim();
 
-                if(userWord==quizInfo[num].answerResult){
+                if(userWord==quizInfo[num].answerResult){           //같다면 quizView[num]에 like추가하고 display를 none
                     quizView[num].classList.add("like");
                     quizConfirm[num].style.display="none"
                 }else {
-                    quizView[num].classList.add("dislike");
-                    quizConfirm[num].style.display="none";
-                    quizResult[num].style.display="block";
-                    quizInput[num].style.display="none";
+                    quizView[num].classList.add("dislike");         //같지 않다면 dislike추가 
+                    quizConfirm[num].style.display="none";      // quizConfirm[num]는 display none
+                    quizResult[num].style.display="block";        // quizResult[num]는 display block
+                    quizInput[num].style.display="none";        //quizInput[num].는 display none
                 }
             })
         }); 

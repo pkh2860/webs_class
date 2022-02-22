@@ -790,18 +790,18 @@
             quizDog.classList.add("like")               //강아지는 웃게
         })
 
-        let windowWrapper = document.querySelector('#modal');  
-            document.querySelector(".source_btn").addEventListener("click",()=>{
-                document.querySelector("#modal").classList.add("show")
-                document.querySelector("#modal").classList.remove("hide")
+        let windowWrapper = document.querySelector('#modal');           //#modal을 windowWrapper에 저장
+            document.querySelector(".source_btn").addEventListener("click",()=>{    //source_btn을 클릭하면
+                document.querySelector("#modal").classList.add("show")              //modal에 show를 추가하고
+                document.querySelector("#modal").classList.remove("hide")           //hide를 삭제
             })
-            document.querySelector("#modal-close").addEventListener("click", ()=>{
-                document.querySelector("#modal").classList.add('hide');
+            document.querySelector("#modal-close").addEventListener("click", ()=>{  //modal-close를 클릭하면
+                document.querySelector("#modal").classList.add('hide');         //hide를 추가
             })
 
 
-        var tabBtn = document.querySelectorAll(".menu-bar > ul > li");
-        var tabCont = document.querySelectorAll(".content > div");
+        var tabBtn = document.querySelectorAll(".menu-bar > ul > li");  
+        var tabCont = document.querySelectorAll(".content > div");      
 
         tabBtn.forEach((btn, index)=>{
             btn.addEventListener("click", ()=>{
