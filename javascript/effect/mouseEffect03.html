@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이펙트3</title>
+
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/nexon.css">
+    <link rel="stylesheet" href="css/dracula.min.css">
+
+    <style>
+        body::before {
+            background-color: rgba(8, 31, 36, .8)
+        }
+        .mouse__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            /* cursor: none; */
+        }
+        .mouse__wrap p {
+            font-size: 2.5vw;
+            line-height: 2;
+            font-weight: 300;
+        }
+        .mouse__wrap p:last-child {
+            font-size: 3vw;
+            font-weight: 400;
+        }
+        .mouse__wrap p span {
+            border-bottom: 0.15vw dashed #fff;
+        }
+        .cursor {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 200px;
+            height: 200px;
+            z-index: -1;
+            border-radius: 50%;
+            background-image: url(img/img10.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            border: 5px solid #fff;
+        }
+
+    </style>
+</head>
+<body class="img10">
+    
+    <!-- main -->
+    <main>
+        <section id="mouseType01">
+            <div class="cursor"></div>
+
+            <div class="mouse__wrap">
+                <p><span>Happiness</span> depends upon <span>ourselves</span></p>
+                <p><span>행복은</span> <span>우리 자신</span>에게 달려있다.</p>
+            </div>
+        </section>
+    </main>
+    <!-- //main -->
+
+    <!-- info -->
+    <div class="info">
+        <div class="title">
+            <h1><a href="sliderEffect.html">JavaScript Mouse Effect03</a></h1>
+            <p>마우스 이펙트 -조명효과</p>
+        </div>
+
+        <div class="number">
+            <ul>
+                <li><a href="mouseEffect01.html">1</a></li>
+                <li><a href="mouseEffect02.html">2</a></li>
+                <li class="active"><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li><a href="mouseEffect05.html">5</a></li>
+                <li><a href="mouseEffect06.html">6</a></li>
+                <li><a href="mouseEffect07.html">7</a></li>
+                <li><a href="mouseEffect08.html">8</a></li>
+            </ul>
+        </div>
+
+        <div class="source">
+            <button class="source-btn">소스보기</button>
+            <div id="modal">
+                <div class="modal-wrap">
+                    <div class="modal-cont">
+                        <div class="code-view">
+                            <div class="view-header" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="view-title">
+                                <ul>
+                                    <li class="active"><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">Javascript</a></li>
+                                </ul>
+                            </div>
+                            <div class="view-cont">
+                                <div>
+<pre><code class="language-javascript">
+    &lt;main&gt;
+        &lt;section id="mouseType01"&gt;
+            &lt;div class="cursor"&gt;&lt;/div&gt;
+
+            &lt;div class="mouse__wrap"&gt;
+                &lt;p&gt;&lt;span&gt;Happiness&lt;/span&gt; depends upon &lt;span&gt;ourselves&lt;/span&gt;&lt;/p&gt;
+                &lt;p&gt;&lt;span&gt;행복은&lt;/span&gt; &lt;span&gt;우리 자신&lt;/span&gt;에게 달려있다.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+</code></pre>
+                                </div>
+                                <div>
+<pre><code class="language-javascript">
+    body::before {
+        background-color: rgba(8, 31, 36, .8)
+    }
+    .mouse__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        /* cursor: none; */
+    }
+    .mouse__wrap p {
+        font-size: 2.5vw;
+        line-height: 2;
+        font-weight: 300;
+    }
+    .mouse__wrap p:last-child {
+        font-size: 3vw;
+        font-weight: 400;
+    }
+    .mouse__wrap p span {
+        border-bottom: 0.15vw dashed #fff;
+    }
+    .cursor {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 200px;
+        height: 200px;
+        z-index: -1;
+        border-radius: 50%;
+        background-image: url(img/img10.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        border: 5px solid #fff;
+    }
+
+</code></pre>
+                                </div>
+                                <div>
+<pre><code class="language-javascript">
+    // const circle1 = document.querySelector(".cursor").clientWidth;      //190 : border 빠진 상태 알려줌
+        // const circle2 = document.querySelector(".cursor").offsetWidth      //200 : border 포함 상태 
+        const circle = document.querySelector(".cursor").getBoundingClientRect();   //bottom, height, left, right, top, width, x, y
+      
+
+        console.log(circle.width)
+        //gsap를 쓰면 css이름 그대로 쓸 수 있음 left에 x값 top에는 y값을 넣음
+        function follow(e){
+
+         
+
+            gsap.to(".cursor", {duration: .3, left: e.pageX - circle.width/2,  top:e.pageY - circle.height/2});
+
+            //출력용
+            document.querySelector(".pageX").innerText = e.pageX;
+            document.querySelector(".pageY").innerText = e.pageY;
+        }
+        window.addEventListener("mousemove", follow)    //마우스가 움직일때 함수가 실행 되도록 감싸줌
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="modal-close">닫기</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="attr">
+            <ul>
+                <li>pageX : <span class="pageX">0</span>px</li>
+                <li>pageY : <span class="pageY">0</span>px</li>
+            </ul>
+        </div>
+    </div>
+    
+      <!-- script -->
+      <script src="js/highligt.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="js/gsap.min.js"></script>
+      <script>
+          highlight();
+          modal();
+          tabMenu();
+
+        // const circle1 = document.querySelector(".cursor").clientWidth;      //190 : border 빠진 상태 알려줌
+        // const circle2 = document.querySelector(".cursor").offsetWidth      //200 : border 포함 상태 
+        const circle = document.querySelector(".cursor").getBoundingClientRect();   //bottom, height, left, right, top, width, x, y
+      
+
+        console.log(circle.width)
+        //gsap를 쓰면 css이름 그대로 쓸 수 있음 left에 x값 top에는 y값을 넣음
+        function follow(e){
+            
+            gsap.to(".cursor", {duration: .3, left: e.pageX - circle.width/2,  top:e.pageY - circle.height/2});
+
+            //출력용
+            document.querySelector(".pageX").innerText = e.pageX;
+            document.querySelector(".pageY").innerText = e.pageY;
+        }
+        window.addEventListener("mousemove", follow)    //마우스가 움직일때 함수가 실행 되도록 감싸줌
+
+    
+     
+        </script>
+</body>
+</html>

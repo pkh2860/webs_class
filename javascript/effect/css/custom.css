@@ -49,6 +49,9 @@ body.img07 {
 body.img08 {
     background-image: url(../img/img8.jpg);
 }
+body.img10 {
+    background-image: url(../img/img10.jpg);
+}
 body::before {
     content: ' ';
     position: absolute;
@@ -60,6 +63,9 @@ body::before {
     z-index: -1;
 }
 /* info */
+.info {
+
+}
 .title {
     position: absolute;
     left: 20px;

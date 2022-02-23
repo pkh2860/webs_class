@@ -14,8 +14,6 @@
         body::before {
             background-color: rgba(8, 31, 36, .8)
         }
-        #mouseType01 {}
-        .cursor {}
         .mouse__wrap {
             display: flex;
             align-items: center;
@@ -41,8 +39,8 @@
         }
         .cursor {
             position: absolute;
-            left: 0;
-            top: 0;
+            left: -100px;
+            top: -100px;
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -144,17 +142,128 @@
                             <div class="view-cont">
                                 <div>
 <pre><code class="language-javascript">
+    &lt;section id="mouseType01">
+        &lt;div class="cursor">&lt;/div>
 
+        &lt;div class="mouse__wrap">
+            &lt;p>&lt;span class="style1">Only&lt;/span> I can change &lt;span class="style2">my life&lt;/span> &lt;span class="style3">no one&lt;/span> can do it for me&lt;/p>
+            &lt;p>&lt;span class="style4">내 인생을&lt;/span> 바꾸는 사람은 &lt;span class="style5">자신이다&lt;/span> &lt;span class="style6">아무도&lt;/span> 대신해줄 수 없다. &lt;/p>
+        &lt;/div>
+    &lt;/section>
 </code></pre>
                                 </div>
                                 <div>
 <pre><code class="language-javascript">
-   
+    body::before {
+        background-color: rgba(8, 31, 36, .8)
+    }
+    .mouse__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        cursor: none;
+    }
+    .mouse__wrap p {
+        font-size: 2.5vw;
+        line-height: 2;
+        font-weight: 300;
+    }
+    .mouse__wrap p:last-child {
+        font-size: 3vw;
+        font-weight: 400;
+    }
+    .mouse__wrap p span {
+        border-bottom: 0.15vw dashed #fff;
+    }
+    .cursor {
+        position: absolute;
+        left: -100px;
+        top: -100px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 3px solid#fff;
+        background-color: rgba(255, 255, 255, 0.1);
+        user-select: none;
+        pointer-events: none;
+        transition: 
+            background-color 0.2s, 
+            border-color 0.2s,
+            border-radius 2s,
+            transform .6s;
+    }
+    .cursor.style1 {
+        background-color: rgba(255, 165, 0, 0.4);
+        border-color: orange;
+    }
+    .cursor.style2 {
+        background-color: rgba(140, 0, 255, 0.4);
+        border-color: rgb(140, 0, 255);
+        transform: rotate(720deg) scale(2);
+    }
+    .cursor.style3 {
+        background-color: rgb(0, 47, 255, 0.4);
+        border-color: rgb(0, 47, 255);
+        transform: scale(1.5) rotate(45deg);
+        border-radius: 10px;
+    }
+    .cursor.style4 {
+        background-color: rgb(121, 235, 197, 0.4);
+        border-color: rgb(121, 235, 197);
+        transform: scale(10) rotateY(360deg);
+    }
+    .cursor.style5 {
+        background-color: rgb(255, 0, 85, 0.4);
+        border-color: rgb(255, 0, 85);
+        transform: rotateY(720deg) scale(0.1);
+    }
+    .cursor.style6 {
+        background-color: rgb(0, 47, 255, 0.4);;
+        transform: scale(2) rotateX(360deg);
+    }
 </code></pre>
                                 </div>
                                 <div>
 <pre><code class="language-javascript">
+    window.addEventListener("mousemove", (event)=>{
+        document.querySelector(".clientX").innerText = event.clientX
+        document.querySelector(".clientY").innerText = event.clientY
+        document.querySelector(".offsetX").innerText = event.offsetX
+        document.querySelector(".offsetY").innerText = event.offsetY
+        document.querySelector(".pageX").innerText = event.pageX
+        document.querySelector(".pageY").innerText = event.pageY
+        document.querySelector(".screenX").innerText = event.screenX
+        document.querySelector(".screenY").innerText = event.screenY
+    })
 
+    //마우스 움직이기
+    window.addEventListener("mousemove", (e)=>{
+      //   document.querySelector(".cursor").style.left =e.clientX - 25 + "px";
+      //   document.querySelector(".cursor").style.top =e.clientY - 25 + "px";
+
+      let x = e.clientX - 25 + "px";
+    let y = e.clientY - 25 + "px";
+    document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
+    })
+
+
+  //getAttribute
+  //span 마우스 오버 했을 때 속성값을 alert()
+  document.querySelectorAll(".mouse__wrap span").forEach(span=>{
+      let attr = span.getAttribute("class");
+
+      span.addEventListener("mouseover", ()=>{
+          document.querySelector(".cursor").classList.add(attr);
+      });
+      span.addEventListener("mouseout", ()=>{
+          document.querySelector(".cursor").classList.remove(attr);
+      })
+  })
 </code></pre>
                                 </div>
                             </div>
@@ -187,25 +296,8 @@
           modal();
           tabMenu();
 
-          const mouseWrap = document.querySelectorAll(".mouse__wrap span")
-        for(let i=0; i<mouseWrap.length; i++){
-            mouseWrap[i].addEventListener("mouseover",()=>{
-            document.querySelector(".cursor").classList.add("style"+(i+1));
-            });
-            mouseWrap[i].addEventListener("mouseout",()=>{
-            document.querySelector(".cursor").classList.remove("style"+(i+1));
-            });
-        };
 
-        mouseWrap.forEach((e,i)=>{
-            e.addEventListener("mouseover",()=>{
-                document.querySelector(".cursor").classList.add("style${i+1}")
-            })
-            e.addEventListener("mouseout",()=>{
-                document.querySelector(".cursor").classList.remove("style${i+1}")
-            })
-        })
-
+        
 
           //출력용
           window.addEventListener("mousemove", (event)=>{
@@ -221,9 +313,16 @@
 
           //마우스 움직이기
           window.addEventListener("mousemove", (e)=>{
-              document.querySelector(".cursor").style.left =e.clientX - 25 + "px";
-              document.querySelector(".cursor").style.top =e.clientY - 25 + "px";
+            //   document.querySelector(".cursor").style.left =e.clientX - 25 + "px";
+            //   document.querySelector(".cursor").style.top =e.clientY - 25 + "px";
+
+            let x = e.clientX - 25 + "px";
+          let y = e.clientY - 25 + "px";
+          document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
           })
+
+         
+
 
         //   document.querySelector(".style1").addEventListener("mouseover", ()=> {    //마우스를 올리면 style1 추가
         //     document.querySelector(".cursor").classList.add("style1");
@@ -267,6 +366,39 @@
         //     document.querySelector(".cursor").classList.remove("style6");
         //   })
 
+
+    // for(let i=1; i<=6; i++){
+            //     document.querySelector(".style" +i).addEventListener("mouuseover", ()=>{
+            //         document.querySelector(".cursor").classList.add("style"+i)
+            //     })
+            //     document.querySelector(".style" + i).addEventListener("mouseout", ()=>{
+            //         document.querySelector(".cursor").classList.remove("style"+i);
+            //     })
+            // }
+
+
+
+        //     document.querySelectorAll(".mouse__wrap span").forEach((span,index)=>{
+        //     span.addEventListener("mouseover",()=>{
+        //         document.querySelector(".cursor").classList.add("style"+ (index+1));
+        //     })
+        //     span.addEventListener("mouseout", ()=>{
+        //         document.querySelector(".cursor").classList.remove("style" + (index+1));
+        //     })
+        // })
+
+        //getAttribute
+        //span 마우스 오버 했을 때 속성값을 alert()
+        document.querySelectorAll(".mouse__wrap span").forEach(span=>{
+            let attr = span.getAttribute("class");
+
+            span.addEventListener("mouseover", ()=>{
+                document.querySelector(".cursor").classList.add(attr);
+            });
+            span.addEventListener("mouseout", ()=>{
+                document.querySelector(".cursor").classList.remove(attr);
+            })
+        })
         </script>
 </body>
 </html>
