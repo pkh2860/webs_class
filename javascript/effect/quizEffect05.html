@@ -10,6 +10,7 @@
 
     <style>
         @import url(../effect/css/Windows.css);
+        @import url(css/dracula.min.css);
         @font-face {
             font-family: 'DungGeunMo';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
@@ -106,15 +107,13 @@
             opacity: 0.5;
         }
         #footer {
-            position: relative;
-            left: 0;
-            bottom: 0;
-            margin-bottom: -10px;
+            margin-top: 200px;
             width: 100%;
             background: #fff;
             text-align: center;
             padding: 20px;
-            
+            position: absolute;
+            bottom: 0;            
         }
         #footer a {
             color: #000;
@@ -125,9 +124,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
             margin-top: 150px;
-            height: 100vh;
             
         }
         .quiz {
@@ -1556,6 +1553,7 @@
     <script>
         tabMenu2();
         modal2();
+        highlight();
 
 
         const quizWrap = document.querySelector(".quiz__wrap")

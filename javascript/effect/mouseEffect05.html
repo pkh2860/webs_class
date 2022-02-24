@@ -139,17 +139,141 @@
                             <div class="view-cont">
                                 <div>
 <pre><code class="language-javascript">
- 
+    &lt;section id="mouseType01"&gt;
+        &lt;div class="cursor"&gt;&lt;/div&gt;
+
+        &lt;div class="mouse__wrap"&gt;
+            &lt;div class="mouse__img"&gt;
+                &lt;figure&gt;
+                    &lt;img src="img/img10.jpg" alt=""&gt;
+                &lt;/figure&gt;
+                &lt;figcaption&gt;
+                    &lt;p&gt;Whatever you do, make it pay.&lt;/p&gt;
+                    &lt;p&gt;네가 무엇을 하든 간에, 그것이 도움이 되도록 하라.&lt;/p&gt;
+                &lt;/figcaption&gt;
+            &lt;/div&gt;  
+        &lt;/div&gt;
+    &lt;/section&gt;
 </code></pre>
                                 </div>
                                 <div>
 <pre><code class="language-javascript">
-  
+    body::before {
+        background-color: rgba(8, 31, 36, .8)
+    }
+    .mouse__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        cursor: none;
+    }
+    .mouse__img {
+        position: relative;
+        text-align: center;
+        transform:rotateX(0deg) rotateY(0deg);      /*3D 효과*/
+        transform-style: preserve-3d;
+        will-change: transform;
+
+    }
+    .mouse__img figure {
+        width: 50vw;
+        position: relative;
+    }
+    .mouse__img figure::before {
+        content:'';
+        position: absolute;
+        left: 5%;
+        bottom: -40px;
+        width: 90%;
+        height: 40px;
+        background: url(img/img10.jpg) center center no-repeat;
+        background-size: 100% 40px;
+        filter: blur(8px);
+        opacity: 0.9;
+        z-index: -1;
+    }
+    .mouse__img figcaption {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        font-size: 1vw;
+        white-space: nowrap;
+        line-height: 1.6;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 1vw 2vw;
+        transform: translate3d(-50%, -50%, 150px)
+    }
+    .cursor {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        border-radius: 50%;
+        z-index: 1000;
+        user-select: none;
+        pointer-events: none;
+        mix-blend-mode: difference;
+    }
 </code></pre>
                                 </div>
                                 <div>
 <pre><code class="language-javascript">
- 
+    const circle = document.querySelector(".cursor").getBoundingClientRect();
+
+    function mouseMove(e) {
+
+       //마우스 좌표값
+       let mousePageX = e.pageX
+       let mousePageY = e.pageY
+
+       //마우스 좌표 기준점을 가운데로 변경
+       let centerPageX = window.innerWidth/2 - mousePageX;         //전체 width값에서 - 마우스 좌표값 
+       let centerPageY = window.innerHeight/2 - mousePageY;
+
+       //최소값-50  최대값-50 설정
+       let maxPageX = Math.max(-800, Math.min(800, centerPageX))     //-800이하 800이상은 안넘어감
+       let maxPageY =  Math.max(-300, Math.min(300, centerPageY))
+
+       //각도 줄이는 설정
+       let anlexpageX = maxPageX * 0.12;
+       let anlexpageY = maxPageY * 0.12;
+
+       //움직임이 부드럽게 설정 마우스 값이 10~30까지 한번에 가는게 아니라 10~30까지 1개씩 +해줌
+       let softPageX = 0, softPageY = 0;
+       softPageX += (anlexpageX - softPageX) * 0.3;
+       softPageY += (anlexpageY - softPageY) * 0.3;
+
+     
+
+       //이미지 움직이기
+       // transform:rotateX(0deg) rotateY(0deg);  
+       const imgMove = document.querySelector(".mouse__img");
+       imgMove.style.transform = "perspective(600px)  rotateX("+softPageY+"deg) rotateY("+-softPageX+"deg)"
+
+
+       //원크기
+       let circleWidth = mousePageX-circle.width/2;
+       let circleHeight = mousePageY-circle.height/2;
+       //커서 //원크기를 저장해서 커서에 적용
+       gsap.to(".cursor", {duration: .0, left: circleWidth, top: circleHeight})
+
+       //마우스 좌표값 화면에 출력  
+       document.querySelector(".mousePageX").textContent = mousePageX
+       document.querySelector(".mousePageY").textContent = mousePageY
+       document.querySelector(".centerPageX").textContent = centerPageX
+       document.querySelector(".centerPageY").textContent = centerPageY
+       document.querySelector(".maxPageX").textContent = maxPageX
+       document.querySelector(".maxPageY").textContent = maxPageY
+   }
+
+   document.addEventListener("mousemove", mouseMove);
 </code></pre>
                                 </div>
                             </div>
@@ -183,7 +307,7 @@
 
           const circle = document.querySelector(".cursor").getBoundingClientRect();
 
-        function mouseMove(e) {
+         function mouseMove(e) {
 
             //마우스 좌표값
             let mousePageX = e.pageX

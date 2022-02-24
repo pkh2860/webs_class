@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Effect.04</title>
     <link rel="stylesheet" href="css/dracula.min.css">
-
     <style>
         @import url(../effect/css/Windows.css);
+        @import url(css/dracula.min.css);
 
         @font-face {
             font-family: 'DungGeunMo';
@@ -107,15 +107,13 @@
             opacity: 0.5;
         }
         #footer {
-            position: relative;
-            left: 0;
-            bottom: 0;
-            margin-bottom: -10px;
+            margin-top: 200px;
             width: 100%;
             background: #fff;
             text-align: center;
             padding: 20px;
-            
+            position: absolute;
+            bottom: 0;            
         }
         #footer a {
             color: #000;
@@ -126,9 +124,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
             margin-top: 150px;
-            height: 100vh;
         }
         .quiz {
             max-width: 500px;
@@ -1447,7 +1443,7 @@
 
         function answerQuiz() {
 
-            for(let i=0; i<quizSelect.length; i++){
+            for(let i=0; i&lt;quizSelect.length; i++){
                 if(quizSelect[i].checked ==true){
                     if(quizSelect[i].value == quizInfo[0].answerResult){
                         //정답
@@ -1539,6 +1535,7 @@
     <script src="js/highligt.js"></script>
     <script src="js/custom.js"></script>
     <script>
+        highlight();
         tabMenu2();
         modal2();
 

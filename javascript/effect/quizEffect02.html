@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/dracula.min.css">
     <style>
         @import url(../effect/css/Windows.css);
+        @import url(css/dracula.min.css);
         @font-face {
             font-family: 'DungGeunMo';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
@@ -97,12 +98,12 @@
         }
         #footer {
             margin-top: 200px;
-            margin-bottom: -10px;
             width: 100%;
             background: #fff;
             text-align: center;
             padding: 20px;
-            
+            position: absolute;
+            bottom: 0;            
         }
         #footer a {
             color: #000;
@@ -1041,6 +1042,7 @@
     <script src="js/highligt.js"></script>
     <script src="js/custom.js"></script>
     <script>
+        highlight();
         tabMenu2();
         modal2();
 
