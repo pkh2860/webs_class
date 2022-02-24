@@ -226,8 +226,8 @@
             gsap.to(".cursor", {duration: .3, left: e.pageX - circle.width/2,  top:e.pageY - circle.height/2});
 
             //출력용
-            document.querySelector(".pageX").innerText = e.pageX;
-            document.querySelector(".pageY").innerText = e.pageY;
+            document.querySelector(".pageX").innerText = e.pageX;   //pageX값을 화면에 출력
+            document.querySelector(".pageY").innerText = e.pageY;   //pageY값을 화면에 출력
         }
         window.addEventListener("mousemove", follow)    //마우스가 움직일때 함수가 실행 되도록 감싸줌
 

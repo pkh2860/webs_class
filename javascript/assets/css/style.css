@@ -550,6 +550,16 @@ img {
     border-radius: 5PX;
 }
 
+button {
+    border: 1px solid #cdcdcd;
+    padding: 3px 10px;
+    border-right: 3px;
+    cursor: pointer;
+}
+button:active {
+    background: rgb(207, 207, 207);
+}
+
 
 /* 간격 설정 */
 .mt0 {margin-top: 0px;}

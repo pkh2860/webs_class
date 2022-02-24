@@ -299,7 +299,7 @@
 
         
 
-          //출력용
+          //출력용 화면에 X,Y값들을 마우스가 움직일때마다 나타나게 출력
           window.addEventListener("mousemove", (event)=>{
               document.querySelector(".clientX").innerText = event.clientX
               document.querySelector(".clientY").innerText = event.clientY
@@ -317,8 +317,8 @@
             //   document.querySelector(".cursor").style.top =e.clientY - 25 + "px";
 
             let x = e.clientX - 25 + "px";
-          let y = e.clientY - 25 + "px";
-          document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
+            let y = e.clientY - 25 + "px";
+            document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;   //cursor에 style.csstext로 left : x  top : y 설정
           })
 
          

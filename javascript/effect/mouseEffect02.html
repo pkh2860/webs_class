@@ -306,30 +306,30 @@
             //span 오버 했을 때 클래스 active 추가/ 나갔을 때 active 삭제
             //mouseover,mouseenter //mouseout, mouseleave / 이벤트 버블링 효과
 
-            document.querySelectorAll("span").forEach((span)=>{
-                span.addEventListener("mouseover", ()=>{
-                    cursor.classList.add("active");
-                    follower.classList.add("active");
+            document.querySelectorAll("span").forEach((span)=>{ //모든 span에게 mouseover을 했을때
+                span.addEventListener("mouseover", ()=>{            
+                    cursor.classList.add("active");             //cursor에 active 를 추가하고
+                    follower.classList.add("active");       //cursor-follower에 active를 추가한다
                 })
-                span.addEventListener("mouseleave", ()=>{
-                    cursor.classList.remove("active")
-                    follower.classList.remove("active")
+                span.addEventListener("mouseleave", ()=>{ //mouseleave햇을때
+                    cursor.classList.remove("active")       //cursor에 active를 삭제
+                    follower.classList.remove("active")     //cursor-follower에 active를 삭제
                 })
             })
 
-            document.querySelectorAll(".info").forEach((span)=>{
+            document.querySelectorAll(".info").forEach((span)=>{    //info에 mouseover했을때
                 span.addEventListener("mouseover", ()=>{
-                    cursor.classList.add("show");
-                    follower.classList.add("show");
+                    cursor.classList.add("show");               //cursor에 show추가
+                    follower.classList.add("show");             //cursor-follower에 show추가
                 })
-                span.addEventListener("mouseleave", ()=>{
-                    cursor.classList.remove("show")
-                    follower.classList.remove("show")
+                span.addEventListener("mouseleave", ()=>{   //mouseleave 했을땐
+                    cursor.classList.remove("show")         //cursor에 show삭제
+                    follower.classList.remove("show")          //cursor-follower에 show삭제
                 })
             })
              //출력
-            document.querySelector(".pageX").innerText = e.pageX;
-            document.querySelector(".pageY").innerText = e.pageY;
+            document.querySelector(".pageX").innerText = e.pageX;   //pageX값을 화면에 출력
+            document.querySelector(".pageY").innerText = e.pageY;   //pageY값을 화면에 출력
         })
 
 

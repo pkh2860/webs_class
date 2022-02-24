@@ -49,21 +49,22 @@
         <div class="list">
             <ul>
                 <li><a href="#sample01">01. 수학 메서드 : Math.round() : 반올림 : 반환(숫자)</a></li>
-                <li><a href="#sample01">01. 수학 메서드 : Math.floor() : 버림 : 반환(숫자)</li></a>
+                <li><a href="#sample01">02. 수학 메서드 : Math.floor() : 버림 : 반환(숫자)</li></a>
+                <li><a href="#sample01">03. 수학 메서드 : Math.ceil() : 올림 :  반환(숫자)</li></a>
+                <li><a href="#sample01">04. 수학 메서드 : Math.trunc() : 값의 정수 부분만 반환 :  반환(숫자)</li></a>
 
-                <li><a href="#sample01">01. 수학 메서드 : Math.ceil() : 올림 :  반환(숫자)</li></a>
-                <li><a href="#sample01">01. 수학 메서드 : Math.trunc() : 값의 정수 부분만 반환 :  반환(숫자)</li></a>
-                <li><a href="#sample01">01. 수학 메서드 : Math.random() : 0과 1사이의 난수 값을 반환 :  반환(숫자)</li></a>
-                <li><a href="#sample01">01. 수학 메서드 : Math.max() : 가장 큰 값을 반환 :  반환(숫자)</li></a>
-                <li><a href="#sample01">01. 수학 메서드 : Math.min() : 가장 작은 값을 반환 :  반환(숫자)</li></a>
-                <li><a href="#sample01">01. 수학 메서드 : Math.abs() : 절대값을 반환 :  반환(숫자)</li></a>
+                <li><a href="#sample02">05. 수학 메서드 : Math.random() : 0과 1사이의 난수 값을 반환 :  반환(숫자)</li></a>
+
+                <li><a href="#sample01">06. 수학 메서드 : Math.max() : 가장 큰 값을 반환 :  반환(숫자)</li></a>
+                <li><a href="#sample01">07. 수학 메서드 : Math.min() : 가장 작은 값을 반환 :  반환(숫자)</li></a>
+                <li><a href="#sample01">08. 수학 메서드 : Math.abs() : 절대값을 반환 :  반환(숫자)</li></a>
             </ul>
         </div>
         <!-- //list -->
         <div class="script">
             <!-- sample01 -->
             <div id="sample01" class="sample">
-                <h3></h3>
+                <h3>01. 수학 메서드 : Math.round() / Math.floor() /  Math.ceil() /  Math.trunc() </h3>
                 <div class="table">
                     <table>
                         <colgroup>
@@ -183,10 +184,184 @@
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
 
+    document.querySelector(".sample1_M1").innerHTML = "round(1.34)";
+    document.querySelector(".sample1_R1").innerHTML = Math.round(1.34);
+
+
+    document.querySelector(".sample1_M2").innerHTML = "round(1.64)";
+    document.querySelector(".sample1_R2").innerHTML = Math.round(1.64);
+
+    document.querySelector(".sample1_M3").innerHTML = "round(1.5)";
+    document.querySelector(".sample1_R3").innerHTML = Math.round(1.5);
+
+    document.querySelector(".sample1_M4").innerHTML = "round(1.34)";
+    document.querySelector(".sample1_R4").innerHTML = Math.floor(1.34);
+
+    document.querySelector(".sample1_M5").innerHTML = "round(-1.64)";
+    document.querySelector(".sample1_R5").innerHTML = Math.round(-1.64);
+
+    document.querySelector(".sample1_M6").innerHTML = "round(-1.5)";
+    document.querySelector(".sample1_R6").innerHTML = Math.round(-1.5);
+
+    document.querySelector(".sample1_M7").innerHTML = "floor(1.34)";
+    document.querySelector(".sample1_R7").innerHTML = Math.floor(1.34);
+
+    document.querySelector(".sample1_M8").innerHTML = "floor(1.64)";
+    document.querySelector(".sample1_R8").innerHTML = Math.floor(1.64);
+
+    document.querySelector(".sample1_M9").innerHTML = "floor(-1.34)";
+    document.querySelector(".sample1_R9").innerHTML = Math.floor(-1.34);
+
+    document.querySelector(".sample1_M10").innerHTML = "floor(-1.64)";
+    document.querySelector(".sample1_R10").innerHTML = Math.floor(-1.64);
+
+    document.querySelector(".sample1_M11").innerHTML = "ceil(1.34)";
+    document.querySelector(".sample1_R11").innerHTML = Math.ceil(1.34);
+
+    document.querySelector(".sample1_M12").innerHTML = "ceil(1.64)";
+    document.querySelector(".sample1_R12").innerHTML = Math.ceil(1.64);
+
+    document.querySelector(".sample1_M13").innerHTML = "ceil(-1.34)";
+    document.querySelector(".sample1_R13").innerHTML = Math.ceil(-1.34);
+
+    document.querySelector(".sample1_M14").innerHTML = "ceil(-1.64)";
+    document.querySelector(".sample1_R14").innerHTML = Math.ceil(-1.64);
+
+    document.querySelector(".sample1_M15").innerHTML = "trunc(1.64)";
+    document.querySelector(".sample1_R15").innerHTML = Math.trunc(1.64);
+
+    document.querySelector(".sample1_M16").innerHTML = "trunc(-1.64)";
+    document.querySelector(".sample1_R16").innerHTML = Math.trunc(-1.64);
 }</code></pre>
     </div>
 </div>
 <!-- //sample1 -->
+
+    <!-- sample02 -->
+    <div id="sample02" class="sample">
+        <h3>02. 수학 메서드 : Math.random() : 0과 1사이의 난수 값을 반환 : 반환(숫자)</h3>
+        <div class="table">
+            <table>
+                <colgroup>
+                    <col style="width: 4%">
+                    <col style="width: 22%">
+                    <col style="width: 30%">
+                    <col style="width: 37%">
+                    <col style="width: 5%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기본값</th>
+                        <th>메서드</th>
+                        <th>결괏값</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="sample2_N1"></td>
+                        <td class="sample2_Q1"></td>
+                        <td class="sample2_M1"></td>
+                        <td class="sample2_R1"></td>
+                        <td class="sample2_B1"><button>클릭</button></td>
+                    </tr>
+                    <tr>
+                        <td class="sample2_N2"></td>
+                        <td class="sample2_Q2"></td>
+                        <td class="sample2_M2"></td>
+                        <td class="sample2_R2"></td>
+                        <td class="sample2_B2"><button>클릭</button></td>
+                    </tr>
+                    <tr>
+                        <td class="sample2_N3"></td>
+                        <td class="sample2_Q3"></td>
+                        <td class="sample2_M3"></td>
+                        <td class="sample2_R3"></td>
+                        <td class="sample2_B3"><button>클릭</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".sample2_R1").innerHTML = Math.random();
+    document.querySelector(".sample2_R1").style.color = "#000";
+    document.querySelector(".sample2_B1").addEventListener("click", ()=>{
+        document.querySelector(".sample2_R1").innerHTML = Math.random();
+    })
+
+    document.querySelector(".sample2_R2").innerHTML = Math.floor(Math.random()*10);
+    document.querySelector(".sample2_R2").style.color = "#000";
+    document.querySelector(".sample2_B2").addEventListener("click", ()=>{
+        document.querySelector(".sample2_R2").innerHTML = Math.floor(Math.random()*10);
+    })
+
+    document.querySelector(".sample2_R3").innerHTML = Math.floor(Math.random()*10 + 10);
+    document.querySelector(".sample2_R3").style.color = "#000";
+    document.querySelector(".sample2_B3").addEventListener("click", ()=>{
+        document.querySelector(".sample2_R3").innerHTML = Math.floor(Math.random()*10 + 10);
+    })
+}</code></pre>
+</div>
+</div>
+<!-- //sample2 -->
+
+  <!-- sample03 -->
+  <div id="sample03" class="sample">
+    <h3>06. 수학 메서드 : Math.max() : 가장 큰 값을 반환 /  Math.min() : 가장 작은 값을 반환 : 반환(숫자)</h3>
+    <div class="table">
+        <table>
+            <colgroup>
+                <col style="width: 4%">
+                <col style="width: 32%">
+                <col style="width: 30%">
+                <col style="width: 34%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>기본값</th>
+                    <th>메서드</th>
+                    <th>결괏값</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="sample3_N1"></td>
+                    <td class="sample3_Q1"></td>
+                    <td class="sample3_M1"></td>
+                    <td class="sample3_R1"></td>
+                </tr>
+                <tr>
+                    <td class="sample3_N2"></td>
+                    <td class="sample3_Q2"></td>
+                    <td class="sample3_M2"></td>
+                    <td class="sample3_R2"></td>
+                </tr>
+                <tr>
+                    <td class="sample3_N3"></td>
+                    <td class="sample3_Q3"></td>
+                    <td class="sample3_M3"></td>
+                    <td class="sample3_R3"></td>
+                </tr>
+                <tr>
+                    <td class="sample3_N4"></td>
+                    <td class="sample3_Q4"></td>
+                    <td class="sample3_M4"></td>
+                    <td class="sample3_R4"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+
+}</code></pre>
+</div>
+</div>
+<!-- //sample2 -->
         </div>
         <!-- //script -->
     </main>
@@ -207,7 +382,7 @@
         //01. 수학 메서드 : Math.ceil() : 올림 : 반환(숫자)
         //01. 수학 메서드 : Math.trunc() : 값의 정수 부분만 반환 : 반환(숫자)
 
-
+        {
             document.querySelector(".sample1_N1").innerHTML = 1;
             document.querySelector(".sample1_Q1").innerHTML = 1.34;
             document.querySelector(".sample1_M1").innerHTML = "round(1.34)";
@@ -288,9 +463,62 @@
             document.querySelector(".sample1_M16").innerHTML = "trunc(-1.64)";
             document.querySelector(".sample1_R16").innerHTML = Math.trunc(-1.64);
 
+        }
+        //{2}
+        //02. 수학 메서드 : Math.random() : 0과 1사이의 난수 값을 반환 : 반환(숫자)
+        {
+            document.querySelector(".sample2_N1").innerHTML = "1";
+            document.querySelector(".sample2_Q1").innerHTML = "0 ~ 1";
+            document.querySelector(".sample2_M1").innerHTML = "Math.random()";
+            document.querySelector(".sample2_R1").innerHTML = Math.random();
+            document.querySelector(".sample2_R1").style.color = "#000";
+            document.querySelector(".sample2_B1").addEventListener("click", ()=>{
+                document.querySelector(".sample2_R1").innerHTML = Math.random();
+            })
 
+            document.querySelector(".sample2_N2").innerHTML = "2";
+            document.querySelector(".sample2_Q2").innerHTML = "0 ~ 9";
+            document.querySelector(".sample2_M2").innerHTML = "Math.random()";
+            document.querySelector(".sample2_R2").innerHTML = Math.floor(Math.random()*10);
+            document.querySelector(".sample2_R2").style.color = "#000";
+            document.querySelector(".sample2_B2").addEventListener("click", ()=>{
+                document.querySelector(".sample2_R2").innerHTML = Math.floor(Math.random()*10);
+            })
 
+            document.querySelector(".sample2_N3").innerHTML = "3";
+            document.querySelector(".sample2_Q3").innerHTML = "10 ~ 19";
+            document.querySelector(".sample2_M3").innerHTML = "Math.random()";
+            document.querySelector(".sample2_R3").innerHTML = Math.floor(Math.random()*10 + 10);
+            document.querySelector(".sample2_R3").style.color = "#000";
+            document.querySelector(".sample2_B3").addEventListener("click", ()=>{
+                document.querySelector(".sample2_R3").innerHTML = Math.floor(Math.random()*10 + 10);
+            })
+        }
 
+        //{3}
+        //06. 수학 메서드 : Math.max() : 가장 큰 값을 반환 : 반환(숫자)
+        //07. 수학 메서드 : Math.min() : 가장 작은 값을 반환 : 반환(숫자)
+        {
+            document.querySelector(".sample3_N1").innerHTML = "1";
+            document.querySelector(".sample3_Q1").innerHTML = "1, 3, 5";
+            document.querySelector(".sample3_M1").innerHTML = " Math.max()";
+            document.querySelector(".sample3_R1").innerHTML = Math.max(1, 3, 5);
+
+            document.querySelector(".sample3_N2").innerHTML = "2";
+            document.querySelector(".sample3_Q2").innerHTML = "-1, -3, *5";
+            document.querySelector(".sample3_M2").innerHTML = " Math.max()";
+            document.querySelector(".sample3_R2").innerHTML = Math.max(-1, -3, -5);
+
+            document.querySelector(".sample3_N3").innerHTML = "3";
+            document.querySelector(".sample3_Q3").innerHTML = "1, 3, 5";
+            document.querySelector(".sample3_M3").innerHTML = " Math.min()";
+            document.querySelector(".sample3_R3").innerHTML = Math.min(1, 3, 5);
+
+            document.querySelector(".sample3_N4").innerHTML = "4";
+            document.querySelector(".sample3_Q4").innerHTML = "-1, -3, -5";
+            document.querySelector(".sample3_M4").innerHTML = " Math.min()";
+            document.querySelector(".sample3_R4").innerHTML = Math.min(-1, -3, -5);
+        }
 
     </script>
 </body>
