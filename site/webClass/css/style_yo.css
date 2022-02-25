@@ -1,0 +1,327 @@
+
+.ir_pm {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+.ir_wa {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+}
+.ir_so {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+/* 전체 */
+* {
+    margin: 0;
+    margin: 0 auto;
+}
+body {
+    background-color: #e9e5bd;
+}
+#wrap {
+    width: 100%;
+    height: 10000px;
+}
+
+/* header */
+#header {
+    width: 100%;
+    height: 70px;
+}
+#header .menu {
+    text-align: center;
+}
+#header .menu li {
+    display: inline;
+}
+#header .menu li a {
+    padding: 20px 30px;
+    display: inline-block;
+    position: relative;
+    transition: background 0.4s;
+    text-decoration: none;
+    color: #000;
+}
+
+#header .menu li a:hover {
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+#header .menu li a:hover {
+    border-bottom: 1px solid #000;
+    text-decoration: underline;
+}
+/* //header */
+
+#main {
+}
+
+#banner {
+    width: 100%;
+    height: 1080px;
+    position: relative;
+}
+.banner__container {
+    width: 1920px;
+    height: 1080px;
+    margin: 0 auto;
+}
+.img1 {
+    width: 100%;
+    height: 210px;
+    background: url(../img/honey1.png)no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+}
+.banner__container .logo {
+    width: 556px;
+    height: 225px;
+    background: url(../img/logo.png)no-repeat center center;
+    position: absolute;
+    left: 42%;
+    top:10%; 
+}
+
+.banner__container .name {
+    font-size: 64px;
+    color: #a7937b;
+    text-align: center;
+    position: absolute;
+    right:46.5%;
+    top: 30%;
+}
+.banner__container .text {
+    text-align: center;
+    font-size: 96px;
+    color: #987c28;
+    position: absolute;
+    left:27%;
+    top: 39%;
+}
+.banner__container .text2 {
+    position: absolute;
+    text-align: center;
+    font-size: 96px;
+    color: #987c28;
+    left: 38%;
+    bottom: 39%;
+}
+.banner__container .img2 {
+    background: url(../img/꿀팁.png)no-repeat;
+    width: 220px;
+    height: 117px;
+    position: absolute;
+    top: 50%;
+    left: 47%;
+}
+.banner__container .text3 {
+    position: absolute;
+    text-align: center;
+    font-size: 96px;
+    color: #987c28;
+    right:  38%;
+    bottom: 39%;
+}
+.banner__container .img3 {
+    position: absolute;
+    width: 100%;
+    height: 340px;
+    background: url(../img/honey2.png)no-repeat center center;
+    background-size: cover;
+    bottom:0;
+}
+/* //banner */
+
+
+/* imgText_Type01 */
+#imgText_type01 {
+    width:  100%;
+}
+.imgText1__container {
+    width: 1920px;
+    height: 900px;
+    position: relative;
+}
+.imgText1__container .Text1__name {
+    font-size: 50px;
+    position: absolute;
+    left:530px;
+    top: 142px;
+}
+.imgText1__container .line {
+    position: absolute;
+    border-bottom: 1px solid #000;
+    width: 70.5%;
+    top: 210px;
+    left: -628px;
+    
+}
+.imgText1__container .Text1__text1 {
+    font-size: 27px;
+    color: #411700;
+    position: absolute;
+    left: 339px;
+    top: 31%;
+}
+.imgText1__container .Text1__text2 {
+    font-size: 25px;
+    color: #d65109;
+    position: absolute;
+    left: 339px;
+    bottom: 28%;
+}
+.imgText1__container .img {
+    background:url(../img/편의점.png)no-repeat center ;
+    width: 715px;
+    height: 480px;
+    margin-right: 231px;
+    padding-top: 375px;
+}
+/* //imgText_Type01  */
+
+/* imgText__type02 */
+#imgText__type02 {
+    width:  100%;
+    height: 900px;
+    position: relative;
+}
+.imgText2__container {
+    width: 1920px;
+    height: 900px;
+    margin: 0 auto;
+}
+
+.imgText2__container .Text2__name {
+    font-size: 50px;
+    position: absolute;
+    right:36%;
+    top: 142px;
+}
+.imgText2__container .line {
+    position: absolute;
+    border-bottom: 1px solid #000;
+    width: 44%;
+    top: 210px;
+    right: 5px;
+    
+}
+.imgText2__container .Text2__text1 {
+    font-size: 27px;
+    color: #411700;
+    position: absolute;
+    right: 27%;
+    top: 31%;
+}
+
+.imgText2__container .img {
+    background:url(../img/사용자조사.png)no-repeat center ;
+    width: 715px;
+    height: 480px;
+    margin-left: 231px;
+    padding-top: 504px;
+}
+
+
+
+
+
+
+#img_type01 {
+    width:  100%;
+    height: 900px;
+    background-color: #555;
+}
+
+#imgText__type03 {
+    width:  100%;
+    height: 900px;
+    background-color: #666;
+}
+
+/* imgText__type04 */
+#imgText__type04 {
+    width:  100%;
+    height: 900px;
+    position: relative;
+}
+/* #imgText__type04 .honey {
+    width: 800px;
+    height: 1000px;
+    position: absolute;
+    background: url(../img/honey3.png) no-repeat;
+} */
+.imgText4__container {
+    width: 1920px;
+    height: 900px;
+    background: #fff;
+    margin: 0 auto;
+}
+.imgText4__container .img_Text {
+    font-size: 50px;
+    position: absolute;
+    top: 167px;
+}
+
+.img__three {
+    display: flex;
+}
+.imgText4__container .imgText1 {
+    width: 400px;
+    height: 330px;
+    background: url(../img/img01.png) no-repeat;
+   
+
+}
+.imgText4__container .imgText2 {
+    width: 400px;
+    height: 330px;
+    background: url(../img/img02.png) no-repeat;
+}
+.imgText4__container .imgText3 {
+    width: 400px;
+    height: 330px;
+    background: url(../img/img03.png) no-repeat;
+
+}
+
+
+
+.imgText4__container .imgText1 {
+
+}
+
+
+
+
+
+
+
+
+#imgText__type05 {
+    width: 1920px;
+    height: 900px;
+    margin: 0 auto;
+}
+
+#imgText__type06 {}
+
+#img_type02 {}
+
+#imgText__type07 {}
+
+#imgText__type08 {}
