@@ -84,60 +84,52 @@ body {
     background: url(../img/honey1.png)no-repeat center center;
     background-size: cover;
     position: absolute;
-    left: 0;
-    top: 0;
-    
+
+}
+.banner_logo {
+    display: flex;
+    flex-direction: column;
+    padding-top: 110px;
 }
 .banner__container .logo {
     width: 556px;
     height: 225px;
     background: url(../img/logo.png)no-repeat center center;
-    position: absolute;
-    left: 42%;
-    top:10%; 
-}
 
+}
 .banner__container .name {
     font-size: 64px;
     color: #a7937b;
-    text-align: center;
-    position: absolute;
-    right:46.5%;
-    top: 30%;
 }
-.banner__container .text {
-    text-align: center;
+.banner__container .textMain {
     font-size: 96px;
     color: #987c28;
-    position: absolute;
-    left:27%;
-    top: 39%;
 }
-.banner__container .text2 {
-    position: absolute;
-    text-align: center;
+
+.banner_text {
+    display: flex;
+    justify-content:space-between
+
+}
+.banner_text .text2 {
     font-size: 96px;
     color: #987c28;
-    left: 38%;
-    bottom: 39%;
+    margin-right: 190px;
 }
-.banner__container .img2 {
-    background: url(../img/꿀팁.png)no-repeat;
+.honey_img {
     width: 220px;
     height: 117px;
+    background: url(../img/bg1.svg);
     position: absolute;
-    top: 50%;
-    left: 47%;
+    left: 46%;
+    bottom: 38%;
 }
-.banner__container .text3 {
-    position: absolute;
-    text-align: center;
+.banner_text .text3 {
     font-size: 96px;
     color: #987c28;
-    right:  38%;
-    bottom: 39%;
+    margin-left: 50px;
 }
-.banner__container .img3 {
+#banner .img3 {
     position: absolute;
     width: 100%;
     height: 340px;
@@ -215,7 +207,7 @@ body {
 .imgText2__container .line {
     position: absolute;
     border-bottom: 1px solid #000;
-    width: 44%;
+    width: 46%;
     top: 210px;
     right: 5px;
     
