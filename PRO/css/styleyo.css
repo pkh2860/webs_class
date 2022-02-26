@@ -28,7 +28,7 @@
     margin: 0 auto;
 }
 body {
-    background-color: #e9e5bd;
+    background-color: #e9e5bd !important;
 }
 #wrap {
     width: 100%;
@@ -119,7 +119,7 @@ body {
 .honey_img {
     width: 220px;
     height: 117px;
-    background: url(../img/bg1.svg);
+    background: url(../img/honey4.png);
     position: absolute;
     top: 52%;
     right: 40%;
@@ -199,7 +199,7 @@ body {
     font-weight: normal;
     display: inline-block;
     margin-top: 142px;
-    margin-left: 800px
+    margin-left: 800px;
 }
 .Text2__name::after {
     content: '';
@@ -235,7 +235,10 @@ body {
 #img_type01 {
     width:  100%;
     height: 900px;
-    background-color: #555;
+}
+#img_type01 .container {
+    width: 1200px;
+    height: 900px;
 }
 
 #imgText__type03 {
@@ -260,6 +263,7 @@ body {
     width: 1200px;
     height: 900px;
     margin: 0 auto;
+    background-color: #e9e5bd !important;
 }
 .imgText4__container .img_Text {
     font-size: 50px;
@@ -331,9 +335,10 @@ body {
     width:  100%;
 }
 .imgText5__container {
-    width: 1200px;
-    height: 900px;
+    width: 1200px ;
+    height: 900px ;
     position: relative;
+    background-color: #e9e5bd !important;
 }
 .imgText5__container .Text5__name {
     font-size: 50px;
@@ -513,7 +518,11 @@ body {
 .footer_img {
     width: 100%;
     height: 300px;
-    background: url(img/honey1.png) no-repeat;
+    background: url(../img/honey1.png) no-repeat;
     background-size: contain;
 }
+
+
+
+
 
