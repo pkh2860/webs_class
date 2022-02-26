@@ -22,7 +22,7 @@
     line-height: 0;
     text-indent: -9999px;
 }
-/* 전체 */
+
 * {
     margin: 0;
     margin: 0 auto;
@@ -35,7 +35,7 @@ body {
     height: 10000px;
 }
 
-/* header */
+
 #header {
     width: 100%;
     height: 70px;
@@ -63,7 +63,7 @@ body {
     border-bottom: 1px solid #000;
     text-decoration: underline;
 }
-/* //header */
+
 
 #banner {
     width: 100%;
@@ -137,10 +137,7 @@ body {
     background-size: cover;
     bottom:0;
 }
-/* //banner */
 
-
-/* imgText_Type01 */
 #imgText_type01 {
     width:  100%;
 }
@@ -183,9 +180,7 @@ body {
     left: 50%;
     top: 20%;
 }
-/* //imgText_Type01  */
 
-/* imgText__type02 */
 #imgText_type02 {
     width:  100%;
 }
@@ -231,7 +226,7 @@ body {
 
 
 
-/* img_type01 */
+
 #img_type01 {
     width:  100%;
     height: 900px;
@@ -241,24 +236,13 @@ body {
     height: 900px;
 }
 
-#imgText__type03 {
-    width:  100%;
-    height: 900px;
-    background-color: #666;
-}
 
-/* imgText__type04 */
+
 #imgText__type04 {
     width:  100%;
     height: 900px;
     position: relative;
 }
-/* #imgText__type04 .honey {
-    width: 800px;
-    height: 1000px;
-    position: absolute;
-    background: url(../img/honey3.png) no-repeat;
-} */
 .imgText4__container {
     width: 1200px;
     height: 900px;
@@ -330,7 +314,6 @@ body {
 }
 
 
-/* imgText__type05 */
 #imgText_type05 {
     width:  100%;
 }
@@ -382,7 +365,7 @@ body {
 }
 
 
-/* imgText__type06 */
+
 #imgText__type06 {
     width:  100%;
 }
@@ -420,10 +403,7 @@ body {
     margin-left: -35px;
 }
 
-/* //imgText6 */
 
-
-/*  */
 #img_type02 {
     width: 100%;
 }
