@@ -71,9 +71,10 @@ body {
     position: relative;
 }
 .banner__container {
-    width: 1920px;
+    width: 1200px;
     height: 1080px;
     margin: 0 auto;
+    position: relative;
 }
 .img1 {
     width: 100%;
@@ -101,6 +102,8 @@ body {
 .banner__container .textMain {
     font-size: 96px;
     color: #987c28;
+    white-space: nowrap;
+    margin-left: -80px;
 }
 
 .banner_text {
@@ -118,8 +121,8 @@ body {
     height: 117px;
     background: url(../img/bg1.svg);
     position: absolute;
-    left: 46%;
-    bottom: 38%;
+    top: 52%;
+    right: 40%;
 }
 .banner_text .text3 {
     font-size: 96px;
@@ -142,44 +145,43 @@ body {
     width:  100%;
 }
 .imgText1__container {
-    width: 1920px;
+    width: 1200px;
     height: 900px;
     position: relative;
 }
 .imgText1__container .Text1__name {
     font-size: 50px;
-    position: absolute;
-    left:530px;
-    top: 142px;
+    font-weight: normal;
+    display: inline-block;
+    margin-top: 142px;
+    margin-left: 200px
 }
-.imgText1__container .line {
+.Text1__name::after {
+    content: '';
     position: absolute;
-    border-bottom: 1px solid #000;
-    width: 70.5%;
-    top: 210px;
-    left: -628px;
-    
+    left: -669px; top: 92px;
+    width: 1075px;
+    height: 1px;
+    background-color: #000;
+    margin-top: 110px;
 }
 .imgText1__container .Text1__text1 {
     font-size: 27px;
     color: #411700;
-    position: absolute;
-    left: 339px;
-    top: 31%;
+    margin-top: 143px;
 }
 .imgText1__container .Text1__text2 {
     font-size: 25px;
     color: #d65109;
-    position: absolute;
-    left: 339px;
-    bottom: 28%;
+    margin-top: 61px;
 }
-.imgText1__container .img {
-    background:url(../img/편의점.png)no-repeat center ;
+.imgText1__container .Text1_img1 {
+    background:url(../img/편의점.png)no-repeat;
     width: 715px;
     height: 480px;
-    margin-right: 231px;
-    padding-top: 375px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
 }
 /* //imgText_Type01  */
 
@@ -187,42 +189,48 @@ body {
 #imgText__type02 {
     width:  100%;
     height: 900px;
-    position: relative;
 }
 .imgText2__container {
-    width: 1920px;
+    width: 1200px;
     height: 900px;
     margin: 0 auto;
-}
+    background: #999;
+    position: relative;
 
+}
+.Text2_mame_main {
+    display: flex;
+}
 .imgText2__container .Text2__name {
     font-size: 50px;
-    position: absolute;
-    right:36%;
-    top: 142px;
+    display:block;
+    font-weight: normal;
 }
-.imgText2__container .line {
+.Text2__name::after {
+    content: '';
     position: absolute;
-    border-bottom: 1px solid #000;
-    width: 46%;
-    top: 210px;
-    right: 5px;
-    
+    right:-670px; top: 173px;
+    width: 1075px;
+    height: 1px;
+    background-color: #000;
+    margin-top: 110px;
+}
+.text2_main {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
 }
 .imgText2__container .Text2__text1 {
     font-size: 27px;
-    color: #411700;
-    position: absolute;
-    right: 27%;
-    top: 31%;
+    display: inline;
+    margin-bottom: 182px;
 }
-
-.imgText2__container .img {
+#imgText__type02 .img {
     background:url(../img/사용자조사.png)no-repeat center ;
-    width: 715px;
+    width: 645px;
     height: 480px;
-    margin-left: 231px;
-    padding-top: 504px;
+    display: inline-block;
+    margin-top: 215px;
 }
 
 
@@ -255,7 +263,7 @@ body {
     background: url(../img/honey3.png) no-repeat;
 } */
 .imgText4__container {
-    width: 1920px;
+    width: 1200px;
     height: 900px;
     margin: 0 auto;
 }
@@ -327,7 +335,7 @@ body {
     height: 900px;
 }
 .imgText5__container {
-    width: 1920px;
+    width: 1200px;
     height: 900px;
     margin: 0 auto;
     background: #555;
@@ -378,7 +386,7 @@ body {
     position: relative;
 }
 .imgText6__container {
-    width: 1920px;
+    width: 1200px;
     height: 900px;
     margin: 0 auto;
 }
