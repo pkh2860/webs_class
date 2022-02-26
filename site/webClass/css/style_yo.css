@@ -186,51 +186,45 @@ body {
 /* //imgText_Type01  */
 
 /* imgText__type02 */
-#imgText__type02 {
+#imgText_type02 {
     width:  100%;
-    height: 900px;
 }
 .imgText2__container {
     width: 1200px;
     height: 900px;
-    margin: 0 auto;
-    background: #999;
     position: relative;
-
-}
-.Text2_mame_main {
-    display: flex;
 }
 .imgText2__container .Text2__name {
     font-size: 50px;
-    display:block;
     font-weight: normal;
+    display: inline-block;
+    margin-top: 142px;
+    margin-left: 800px
 }
 .Text2__name::after {
     content: '';
     position: absolute;
-    right:-670px; top: 173px;
-    width: 1075px;
+    left: 800px;
+    top: 92px;
+    width: 1060px;
     height: 1px;
     background-color: #000;
     margin-top: 110px;
 }
-.text2_main {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-}
 .imgText2__container .Text2__text1 {
     font-size: 27px;
-    display: inline;
-    margin-bottom: 182px;
+    color: #411700;
+    margin-top: 143px;
+    margin-left: 706px;
 }
-#imgText__type02 .img {
-    background:url(../img/사용자조사.png)no-repeat center ;
-    width: 645px;
-    height: 480px;
-    display: inline-block;
-    margin-top: 215px;
+
+.imgText2__container .Text2_img1 {
+    background:url(../img/사용자조사.png)no-repeat;
+    width: 660px;
+    height: 420px;
+    position: absolute;
+    left: 0;
+    top: 25%;
 }
 
 
@@ -271,7 +265,6 @@ body {
     font-size: 50px;
     position: absolute;
     top: 120px;
-    margin-left: 170px;
     font-weight: normal;
 }
 
@@ -284,6 +277,7 @@ body {
     background: url(../img/img01.png) no-repeat;
     display: inline-block;
     margin-top: 264px;
+    margin-left: 20px;
 }
 .imgText4__container .imgText2 {
     width: 400px;
@@ -291,6 +285,8 @@ body {
     background: url(../img/img02.png) no-repeat;
     display: inline-block;
     margin-top: 418px;
+    margin-left: 20px;
+
 }
 .imgText4__container .imgText3 {
     width: 400px;
@@ -298,6 +294,7 @@ body {
     background: url(../img/img03.png) no-repeat;
     display: inline-block;
     margin-top: 264px;
+    margin-left: 20px;
 }
 .img__three h3 {
     font-size: 27px;
@@ -330,45 +327,54 @@ body {
 
 
 /* imgText__type05 */
-#imgText__type05 {
+#imgText_type05 {
     width:  100%;
-    height: 900px;
 }
 .imgText5__container {
     width: 1200px;
     height: 900px;
-    margin: 0 auto;
-    background: #555;
+    position: relative;
+    background: #888;
 }
-
 .imgText5__container .Text5__name {
     font-size: 50px;
-
     font-weight: normal;
+    display: inline-block;
+    margin-top: 142px;
+    margin-left: 800px
 }
-.imgText5__container .line {
-    border-bottom: 1px solid #000;
-    width: 46%;
-    top: 210px;
-    right: 5px;
-    
+.Text5__name::after {
+    content: '';
+    position: absolute;
+    left: 800px;
+    top: 92px;
+    width: 1060px;
+    height: 1px;
+    background-color: #000;
+    margin-top: 110px;
 }
-.imgText5__container .subtitle {
+.subtitle {
     font-size: 40px;
-    font-weight: 300;
     color: #411700;
-    text-align: center;
-
+    font-weight: 300;
+    margin-left: 710px;
+    margin-top: 156px;
 }
 .imgText5__container .Text5__text1 {
     font-size: 27px;
     color: #411700;
-
+    margin-top: 35px;
+    margin-left: 706px;
+    font-weight: 300;
 }
+
 .imgText5__container .img {
-    background:url(../img/img04.png)no-repeat center ;
-    width: 715px;
-    height: 480px;
+    background:url(../img/img04.png)no-repeat;
+    width: 660px;
+    height: 420px;
+    position: absolute;
+    left: 0;
+    top: 25%;
 }
 
 
@@ -380,36 +386,7 @@ body {
 
 /* imgText__type06 */
 
-#imgText__type06 {
-    width:  100%;
-    height: 900px;
-    position: relative;
-}
-.imgText6__container {
-    width: 1200px;
-    height: 900px;
-    margin: 0 auto;
-}
-.imgText6__container .type06__subtitle {
-    font-size: 40px;
-    font-weight: 300;
-    color: #411700;
-    position: absolute;
 
-}
-.imgText5__container .Text6__text1 {
-    font-size: 27px;
-    color: #411700;
-}
-.imgText6__container .imgText6_img1 {
-    background:url(../img/img05.png)no-repeat center ;
-    width: 715px;
-    height: 480px;
-    position: absolute;
-    right: 50%;
-    bottom: 50%;
-
-}
 
 #img_type02 {}
 
