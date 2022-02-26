@@ -4,237 +4,126 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>요복조복</title>
-    <style>
-        *{
-            margin: 0;
-        }
-        .ir_pm {
-            display: block;
-            overflow: hidden;
-            font-size: 0;
-            line-height: 0;
-            text-indent: -9999px;
-        }
-        .ir_wa {
-            display: block;
-            overflow: hidden;
-            position: relative;
-            z-index: -1;
-            width: 100px;
-            height: 100px;
-        }
-        .ir_so {
-            overflow: hidden;
-            position: absolute;
-            width: 0;
-            height: 0;
-            line-height: 0;
-            text-indent: -9999px;
-        }
-        body {
-            background-color: #e9e5bd;
-        }
-        #wrap {
-            width:100%;
-            height: 10000px;
-        }
-        #header {
-            width: 1200px;
-            height: 70px;
-            margin: 0 auto;
-        }
-        #header .menu {
-            text-align: center;
-        }
-        #header .menu li {
-            display: inline;
-        }
-        #header .menu li a {
-            padding: 20px 30px;
-            display: inline-block;
-            position: relative;
-            transition: background 0.4s;
-            text-decoration: none;
-            color: #000;
-        }
-        #header .menu li a:hover {
-            background: #f5f5f5;
-            border-radius: 10px;
-        }
-        #header .menu li a:hover {
-            border-bottom: 1px solid #000;
-            text-decoration: underline;
-        }
-
-        #main {
-           
-        }
-        #banner {
-            display: flex;
-            justify-content: space-around;
-            background:  url(img/honey1.png)  no-repeat center center; 
-            background-size: cover;
-            width: 100%;
-            height: 220px;
-        }
-        .banner__container {
-            width: 1920px;
-            height: 1080px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-        }
-        .banner__container .logo {
-            width: 560px;
-            height: 300px;
-            background:url(img/logo.png) no-repeat;
-            position: absolute;
-            margin: 100px 0 0 700px;
-        }
-        .banner__container .name {
-            position: absolute;
-            font-size: 64px;
-            font-weight: normal;
-            color: #a7937b;
-            margin: 330px 0 0 830px;
-        }
-        .banner__container .text1 {
-            position: absolute;
-            font-size: 96px;
-            color: #987c28;
-            margin: 430px 0 0 250px;
-        }
-        .banner__container .text2 {
-            position: absolute;
-            margin: 550px 0 0 530px;
-            font-size: 96px;
-            color: #987c28;
-        }
-        .banner__container .img1 {
-            position: absolute;
-            margin-top: 550px;
-            margin-left: 830px;
-            background: url(img/꿀팁.png) no-repeat;
-            width: 220px;
-            height: 110px;
-        }
-        .banner__container .text3 {
-            position: absolute;
-            font-size: 96px;
-            color: #987c28;
-            right: 30%;
-            bottom: 38%;
-
-            
-        }
-        #banner .img2 {
-            background:  url(img/honey2.png)  no-repeat center center; 
-            background-size: cover;
-            width: 100%;
-            height: 380px;
-            position: absolute;
-            top: 59.5%
-        }
-        #imgText__type01 {
-            width: 100%;
-            display: flex;
-        }
-        .imgText1__container {
-            width: 1920px;
-            height: 900px;
-            position: relative;
-            background: #000;
-            margin: 0 auto;
-        }
-        .imgText1__container .name {
-            margin-left: 540px;
-            margin-top: 140px;
-            font-size: 50px;
-            padding-bottom: 140px; 
-        }
-
-        .imgText1__container .text1 {
-            font-size: 27px;
-            color: #411700;
-            margin-left: 340px;
-            padding-bottom: 61px;
-        }
-        .imgText1__container .text2{
-            font-size: 25px;
-            color: #d65109;
-            margin-left: 340px;
-        }
-        .line {
-            position: absolute;
-            width: 40%;
-            border-bottom: 1px solid #000;
-            top: 60px;
-        }
-        .imgText1__container .img3 {
-            background-image: url(img/편의점.png);
-            width: 700px;
-            height: 430px;
-            position: absolute;
-
-        }
-    </style>
+    <title>aa</title>
+    <link rel="stylesheet" href="css/persona.css">
 </head>
 <body>
-    <div id="wrap">
-        <header id="header">
-            <nav class="menu">
-                <h2 class="ir_so">메인 메뉴</h2>
-                <ul>
-                    <li><a href="#">선정이유</a></li>
-                    <li><a href="#">사용자 조사</a></li>
-                    <li><a href="#">페르소나</a></li>
-                    <li><a href="#">경영전략</a></li>
-                    <li><a href="#">방향성</a></li>
-                    <li><a href="#">활동</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main id="main">
-            <section id="banner">
-            <div class="banner__container">
-                <div class="logo"></div>
-                <h1 class="name">요복조복</h1>
-                <p class="text1">요리보고 조리보고 자취생을 위한</p>
-                <p class="text2">초간단</p>
-                <div class="img1"></div>
-                <p class="text3">레시피</p>
-                </div>
-            <div class="img2"></div>
-            </section>
-            
-            <section id="imgText__type01">
-                <div class="imgText1__container">
-                    <h3 class="name">선정이유</h3>
-                    <div class="line"></div>
-                    <p class="text1">요리는 어렵고 재료를 사기위해 장보는 것은<br>
-                        귀찮은 자취생들이 자주 먹는 편의점 음식을<br>
-                        더욱 더 맛있게 먹을 수 있도록 <br>
-                        레시피들을 모아서 어디서나 제공할 수 있게<br>
-                        선정하게 되었습니다. </p>
-                    <p class="text2">그냥 먹기 심심한 편의점 음식들을<br>
-                        어떻게 요리하고 조리해야 맛이 있을까요? </p>
-                    <div class="img3"></div>
-                </div>
-            </section>
-            <section id="imgText__type02"></section>
-            <section id="img_type01"></section>
-            <section id="imgText__type03"></section>
-            <section id="imgText__type04"></section>
-            <section id="imgText__type05"></section>
-            <section id="imgText__type06"></section>
-            <section id="img_type02"></section>
-            <section id="imgText__type07"></section>
-            <section id="imgText__type08"></section>
-        </main>
-        <footer id="footer"></footer>
-        
-    </div>
+    <div class="section sec-1">
+		<div class="container">
+			<div class="row g-0">
+				<div class="col-lg-3">
+					<h2 class="heading">선정이유</h2>
+					<p>
+						요리는 어렵고 재료를 사기위해 장보는 것은 귀찮은 자취생들이 자주 먹는 편의점<br>음식들을 더욱 더 맛있게 먹을 수 있도록<br>레시피들을 모아서 어디서나 제공할 수 있게 선정하게 되었습니다.
+					</p>
+					<p style="font-size: 20px; color: burlywood;" >그냥 먹기 심심한 편의점 음식들을 어떻게 요리하고 조리해야 맛이 있을까요? </p>
+				</div>
+				<div class="col-lg-7 ms-auto" style="background-image: url(../project/images/편의점.png); background-repeat: no-repeat; background-position: center;">
+					
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<div class="section sec-2">
+		<div class="container">
+			<div class="row g-0">
+				<div class="col-lg-6 mb-4 mb-lg-0">
+					<img src="images/img_4.jpg" alt="IMage" class="img-fluid">
+				</div>
+				<div class="col-lg-3 ms-auto">
+					<h2 class="heading"  style="font-size: 40px;" >사용자 조사</h2>
+					<p>설문조사 내용</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="sec-3 section bg-light">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<h2 class="heading" style="font-size: 40px;" >페르소나</h2>
+					<p>페르소나 내용</p>
+				</div>
+
+				<div class="col-lg-6 ms-auto">
+					<div class="accordion accordion-flush accordion-1" id="accordionFlushExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingOne">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+									이정민
+								</button>
+							</h2>
+							<div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									<div class="row justify-content-between">
+										<div class="col-md-4" style="background-image: url(../project/images/Artboard_2_users.svg);background-size: 80%; background-repeat: no-repeat;">
+											
+										</div>
+										<div class="col-md-8">
+											<p>행동변수</p>
+											<p>불편사항</p>
+											<p>희망사항</p>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingTwo">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+									박찬범
+								</button>
+							</h2>
+							<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									<div class="row justify-content-between">
+										<div class="col-md-4" style="background-image: url(../project/images/Artboard_3_users.svg);background-size: 80%; background-repeat: no-repeat;">
+										</div>
+										<div class="col-md-8">
+											<p>행동변수</p>
+											<p>불편사항</p>
+											<p>희망사항</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+									이미숙
+								</button>
+							</h2>
+							<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">
+									<div class="row justify-content-between">
+										<div class="col-md-4" style="background-image: url(../project/images/Artboard_4_users.svg);background-size: 80%; background-repeat: no-repeat;">
+										</div>
+										<div class="col-md-8">
+											<p>행동변수</p>
+											<p>불편사항</p>
+											<p>희망사항</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/glightbox.min.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 </html>

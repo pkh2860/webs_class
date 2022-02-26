@@ -503,3 +503,17 @@ body {
     background:url(../img/img14.png) no-repeat center;
 }
 
+
+#footer {
+    width: 100%;
+    height: 300px;
+    background: #411700;
+   
+}
+.footer_img {
+    width: 100%;
+    height: 300px;
+    background: url(img/honey1.png) no-repeat;
+    background-size: contain;
+}
+
