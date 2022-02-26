@@ -334,7 +334,6 @@ body {
     width: 1200px;
     height: 900px;
     position: relative;
-    background: #888;
 }
 .imgText5__container .Text5__name {
     font-size: 50px;
@@ -378,18 +377,129 @@ body {
 }
 
 
-
-
-
-
-
-
 /* imgText__type06 */
+#imgText__type06 {
+    width:  100%;
+}
+.imgText6__container {
+    width: 1200px;
+    height: 900px;
+    position: relative;
+}
+.imgText6__container .type06__subtitle {
+    font-size: 40px;
+    color: #411700;
+    font-weight: 300;
+    display: inline-block;
+    margin-top: 105px;
+}
+.imgText6__container .Text6__text1 {
+    font-size: 27px;
+    color: #411700;
+    margin-top: 20px;
+}
+.imgText6__container .imgText6_img1 {
+    background:url(../img/img05.png)no-repeat;
+    width: 715px;
+    height: 480px;
+    position: absolute;
+    left: 40%;
+    top: 20%;
+}
+.imgText6_img2 {
+    background: url(../img/img06.png)no-repeat;
+    width: 548px;
+    height: 320px;
+    position: absolute;
+    margin-top: 53px;
+    margin-left: -35px;
+}
+
+/* //imgText6 */
+
+
+/*  */
+#img_type02 {
+    width: 100%;
+}
+.img_type02_container {
+    width: 1200px;
+    height: 1100px;
+    position: relative;
+}
+.img_type02_container .imgtype02_name {
+    font-size: 50px;
+    font-weight: normal;
+    display: inline-block;
+    margin-top: 142px;
+}
+.imgtype02_name::after {
+    content: '';
+    position: absolute;
+    left: -700px; top: 99px;
+    width: 1075px;
+    height: 1px;
+    background-color: #000;
+    margin-top: 110px;
+}
+.Diagram_img {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.Diagram_img .Diagram1 {
+    width: 394px;
+    height: 325px;
+    background:url(../img/img07.png)
+}
+.Diagram_img .Diagram2 {
+    width: 394px;
+    height: 325px;
+    background:url(../img/img08.png)
+}
+.Diagram_img .Diagram3 {
+    width: 394px;
+    height: 325px;
+    background:url(../img/img09.png)
+}
+.Diagram_img .Diagram4 {
+    width: 394px;
+    height: 325px;
+    background:url(../img/img10.png)
+}
+.Diagram_img .Diagram5 {
+    width: 394px;
+    height: 325px;
+    background:url(../img/img11.png)
+}
+.Diagram_img .Diagram6 {
+    width: 394px;
+    height: 325px;
+    background:url(../img/img12.png)
+}
 
 
 
-#img_type02 {}
+#imgText__type07 {
+    width: 100%;
+}
+.imgText07__container  {
+    width: 1200px;
+    height: 980px;
+    margin: 0 auto;
+}
+.type07_img {
+    background: url(../img/img13.png) no-repeat;
+    width: 1238px;
+    height: 980px;
+    position: absolute;
+    margin-top: 150px;
+    margin-left:-100px;
+}
+#imgText__type08 {
+    width: 100%;
+    height: 1286px;
+    background: #fff;
+    background:url(../img/img14.png) no-repeat center;
+}
 
-#imgText__type07 {}
-
-#imgText__type08 {}
