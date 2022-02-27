@@ -32,12 +32,6 @@
             width: 3460px;      /*이미지 총 길이*/
             transform: translateX(0);
         }
-        .slider {
-            /* width: 700px; */
-            /* position: relative; */
-            
-        }
-
         /* .slider::before {
             position: absolute;
             left: 5px;
@@ -61,6 +55,7 @@
             height: 50px;
             background: rgba(0, 0, 0, 0.4);
             text-align: center;
+            border-radius: 50px;
             line-height: 50px;
             transition: all 0.2s;
             display: block;
@@ -68,10 +63,17 @@
             text-decoration: none;
         }
         .slider__btn a.prev {
-            left: 30%;
+            position: absolute;
+            top: 23%;
+            left: 47%;
+            color: #000;
         }
         .slider__btn a.next {
-            right: 30%;
+            position: absolute;
+            top: 23%;
+            right: 48%;
+            color: #000;
+
         }
         .slider__btn a:hover {
             background: rgb(241, 96, 86)
@@ -252,8 +254,8 @@
                             </div>
                         </div>
                         <div class="slider__btn">
-                            <a href="#a" class="prev">prev</a>
-                            <a href="#a" class="next">next</a>
+                            <a href="#a" class="prev">&lt;</a>
+                            <a href="#a" class="next">&gt;</a>
                         </div>
                         <div class="slider__dot">
                             <a href="#a" class="dot active"></a>
