@@ -26,6 +26,7 @@
 * {
     margin: 0;
     margin: 0 auto;
+    font-family: 'NexonLv1Gothic';
 }
 body {
     background-color: #e9e5bd !important;
@@ -503,6 +504,29 @@ body {
 }
 
 
+.slider {
 
-
-
+}
+#slideType02 {
+    position: relative;
+}
+.slider_container .slide_text {
+    font-size: 50px !important;
+    font-weight: normal !important;
+    position: absolute;
+    margin-top: 100px;
+}
+.slider_container {
+    width: 1200px;
+    height: 900px;
+    margin: 0 auto;   
+}
+.slide_text::after {
+    content: '';
+    position: absolute;
+    left: -669px; top: -45px;
+    width: 1102px;
+    height: 1px;
+    background-color: #000;
+    margin-top: 110px;
+}
