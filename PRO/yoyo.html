@@ -23,7 +23,7 @@
             /* height: 100vh;*/
         }
 
-        .slider__img {          /*화면 보이는 구간*/
+        .slider__img {        
             /* position: relative; */
             width: 770px;
             height: 350px;
@@ -32,27 +32,13 @@
             top: 28%;
             left: 17%;
         }
-        .slider__inner {            /*이미지 움직이는 영역*/
+        .slider__inner {         
             display: flex;
-            width: 3460px;      /*이미지 총 길이*/
+            width: 3460px;      
             transform: translateX(0);
             position: absolute;
             
         }
-        /* .slider::before {
-            position: absolute;
-            left: 5px;
-            top: 5px;
-            background: rgba(0, 0, 0, 0.4);
-            color: #fff;
-            padding: 5px 10px 3px;
-        } */
-        /* .slider:nth-child(1)::before {content: '이미지1';}
-        .slider:nth-child(2)::before {content: '이미지2';}
-        .slider:nth-child(3)::before {content: '이미지3';}
-        .slider:nth-child(4)::before {content: '이미지4';}
-        .slider:nth-child(5)::before {content: '이미지5';} */
-
         .slider__btn a {
             position: absolute;
             top: 53%;
@@ -122,12 +108,12 @@
             <nav class="menu">
                 <h2 class="ir_so">메인 메뉴</h2>
                 <ul>
-                    <li><a href="#">선정이유</a></li>
-                    <li><a href="#">사용자 조사</a></li>
-                    <li><a href="#">페르소나</a></li>
-                    <li><a href="#">경영전략</a></li>
-                    <li><a href="#">방향성</a></li>
-                    <li><a href="#">활동</a></li>
+                    <li><a href="#imgText_type01">선정이유</a></li>
+                    <li><a href="#imgText__type02">사용자 조사</a></li>
+                    <li><a href="#persona">페르소나</a></li>
+                    <li><a href="#imgText__type04">경영전략</a></li>
+                    <li><a href="#imgText__type05">방향성</a></li>
+                    <li><a href="#img_type02">활동</a></li>
                 </ul>
             </nav>
         </header>
@@ -277,7 +263,7 @@
                 </section>
 
 
-            <section class="persona">
+            <section id="persona">
                 <div class="sec-3 section bg-light">
                     <div class="persona_container">
                         <div class="row">
@@ -513,6 +499,21 @@
                 gotoSlider(index);
             })
         })
+
+    
+        document.querySelectorAll(".menu li a").forEach(li=>{
+            li.addEventListener("click", (e) =>{
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior:"smooth"
+                })
+            })
+        })
+
+
+        
+
+
 
     </script>
 </body>
