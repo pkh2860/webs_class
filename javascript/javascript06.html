@@ -961,22 +961,24 @@
             </div>
             <!-- //sample13 -->
 
-             <!-- sample14 -->
-             <div id="sample14" class="sample">
-                <h3>숙제 1</h3>
+               <!-- sample14 -->
+               <div id="sample14" class="sample">
+                <h3>14. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)</h3>
                 <div class="table">
                     <table>
                         <colgroup>
                             <col style="width: 4%">
-                            <col style="width: 32%">
-                            <col style="width: 30%">
-                            <col style="width: 34%">
+                            <col style="width: 28%">
+                            <col style="width: 24%">
+                            <col style="width: 22%">
+                            <col style="width: 22%">
                         </colgroup>
                         <thead>
                             <tr>
                                 <th>번호</th>
                                 <th>기본값</th>
                                 <th>메서드</th>
+                                <th>리턴값</th>
                                 <th>결괏값</th>
                             </tr>
                         </thead>
@@ -985,271 +987,22 @@
                                 <td class="sample14_N1"></td>
                                 <td class="sample14_Q1"></td>
                                 <td class="sample14_M1"></td>
+                                <td class="sample14_P1"></td>
                                 <td class="sample14_R1"></td>
                             </tr>
                             <tr>
                                 <td class="sample14_N2"></td>
                                 <td class="sample14_Q2"></td>
                                 <td class="sample14_M2"></td>
+                                <td class="sample14_P2"></td>
                                 <td class="sample14_R2"></td>
                             </tr>
                             <tr>
                                 <td class="sample14_N3"></td>
                                 <td class="sample14_Q3"></td>
                                 <td class="sample14_M3"></td>
+                                <td class="sample14_P3"></td>
                                 <td class="sample14_R3"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample14_N4"></td>
-                                <td class="sample14_Q4"></td>
-                                <td class="sample14_M4"></td>
-                                <td class="sample14_R4"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample14_N5"></td>
-                                <td class="sample14_Q5"></td>
-                                <td class="sample14_M5"></td>
-                                <td class="sample14_R5"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample14_N6"></td>
-                                <td class="sample14_Q6"></td>
-                                <td class="sample14_M6"></td>
-                                <td class="sample14_R6"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="code">
-<pre class="line-numbers"><code class="language-js">{
-    //300, 400
-    const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
-    const result1 = arrBox1.slice(2, 4);
-
-    document.querySelector(".sample14_R1").innerHTML = result1;
-
-
-    const arrBox2 = [100, 200, 300, 400, 500, 600, 700];
-    const result2 = arrBox2.splice(2, 2);
-
-    document.querySelector(".sample14_R2").innerHTML = result2;
-
-
-
-
-    //100, 300, 500, 700
-    const arrBox3 = [100, 200, 300, 400, 500, 600, 700];
-    const result3 = arrBox3.filter((el, idx) => idx %2==0);
-
-    document.querySelector(".sample14_R3").innerHTML = result3;
-
-
-
-
-
-
-
-
-    //700
-    const arrBox5 = [100, 200, 300, 400, 500, 600, 700];
-    const result5 = arrBox5.find(el =&lt; el ===700);
-
-    document.querySelector(".sample14_R5").innerHTML = result5;
-
-    const arrBox6 = [100, 200, 300, 400, 500, 600, 700];
-    const result6 = arrBox6.slice(6,7)
-
-    document.querySelector(".sample14_R6").innerHTML = result6;
-}</code></pre>
-                </div>
-            </div>
-            <!-- //sample14 -->
-
-             <!-- sample15 -->
-             <div id="sample15" class="sample">
-                <h3>숙제 2</h3>
-                <div class="table">
-                    <table>
-                        <colgroup>
-                            <col style="width: 4%">
-                            <col style="width: 32%">
-                            <col style="width: 30%">
-                            <col style="width: 34%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>번호</th>
-                                <th>기본값</th>
-                                <th>메서드</th>
-                                <th>결괏값</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="sample15_N1"></td>
-                                <td class="sample15_Q1"></td>
-                                <td class="sample15_M1"></td>
-                                <td class="sample15_R1"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample15_N2"></td>
-                                <td class="sample15_Q2"></td>
-                                <td class="sample15_M2"></td>
-                                <td class="sample15_R2"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample15_N3"></td>
-                                <td class="sample15_Q3"></td>
-                                <td class="sample15_M3"></td>
-                                <td class="sample15_R3"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample15_N4"></td>
-                                <td class="sample15_Q4"></td>
-                                <td class="sample15_M4"></td>
-                                <td class="sample15_R4"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="code">
-<pre class="line-numbers"><code class="language-js">{
-    //j
-    const arrBox1 = ["j", "b", "c", "d", "e"]
-    const result1 = arrBox1.splice(0, 1)
-
-    document.querySelector(".sample15_R1").innerHTML = result1;
-
-    const arrBox2 =  ["j", "b", "c", "d", "e"];
-    const result2 = arrBox2.reduce(el => el)
-
-    document.querySelector(".sample15_R2").innerHTML = result2;
-
-
-    //j c
-
-
-
-
-}</code></pre>
-                </div>
-            </div>
-            <!-- //sample15 -->
-
-              <!-- sample16 -->
-              <div id="sample16" class="sample">
-                <h3>숙제3</h3>
-                <div class="table">
-                    <table>
-                        <colgroup>
-                            <col style="width: 4%">
-                            <col style="width: 28%">
-                            <col style="width: 24%">
-                            <col style="width: 22%">
-                            <col style="width: 22%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>번호</th>
-                                <th>기본값</th>
-                                <th>메서드</th>
-                                <th>리턴값</th>
-                                <th>결괏값</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="sample16_N1"></td>
-                                <td class="sample16_Q1"></td>
-                                <td class="sample16_M1"></td>
-                                <td class="sample16_P1"></td>
-                                <td class="sample16_R1"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample16_N2"></td>
-                                <td class="sample16_Q2"></td>
-                                <td class="sample16_M2"></td>
-                                <td class="sample16_P2"></td>
-                                <td class="sample16_R2"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample16_N3"></td>
-                                <td class="sample16_Q3"></td>
-                                <td class="sample16_M3"></td>
-                                <td class="sample16_P3"></td>
-                                <td class="sample16_R3"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample16_N4"></td>
-                                <td class="sample16_Q4"></td>
-                                <td class="sample16_M4"></td>
-                                <td class="sample16_P4"></td>
-                                <td class="sample16_R4"></td>
-                            </tr>
-                          
-                        </tbody>
-                    </table>
-                </div>
-                <div class="code">
-<pre class="line-numbers"><code class="language-js">{
-    const arrBox5 =  ["j", "b", "c", "d", "e"];
-    const result5 = arrBox5.slice(0, 4);
-
-    document.querySelector(".sample16_R1").innerHTML = result5;
-
-
-    const arrBox6 =  ["j", "b", "c", "d", "e"];
-    const result6 = arrBox6.pop()
-
-    document.querySelector(".sample16_R2").innerHTML = arrBox6;
-
-}</code></pre>
-                </div>
-            </div>
-            <!-- //sample16 -->
-
-               <!-- sample17 -->
-               <div id="sample17" class="sample">
-                <h3>21. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)</h3>
-                <div class="table">
-                    <table>
-                        <colgroup>
-                            <col style="width: 4%">
-                            <col style="width: 28%">
-                            <col style="width: 24%">
-                            <col style="width: 22%">
-                            <col style="width: 22%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>번호</th>
-                                <th>기본값</th>
-                                <th>메서드</th>
-                                <th>리턴값</th>
-                                <th>결괏값</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="sample17_N1"></td>
-                                <td class="sample17_Q1"></td>
-                                <td class="sample17_M1"></td>
-                                <td class="sample17_P1"></td>
-                                <td class="sample17_R1"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample17_N2"></td>
-                                <td class="sample17_Q2"></td>
-                                <td class="sample17_M2"></td>
-                                <td class="sample17_P2"></td>
-                                <td class="sample17_R2"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample17_N3"></td>
-                                <td class="sample17_Q3"></td>
-                                <td class="sample17_M3"></td>
-                                <td class="sample17_P3"></td>
-                                <td class="sample17_R3"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1259,25 +1012,277 @@
     const text = "javascript"
     const result = Array.from(text);
 
-    document.querySelector(".sample17_M1").innerHTML = " Array.from(text);"
-    document.querySelector(".sample17_R1").innerHTML = result;
+    document.querySelector(".sample14_M1").innerHTML = " Array.from(text);"
+    document.querySelector(".sample14_R1").innerHTML = result;
 
     const text2 = "javascript"
     const result2 = Array.from(text2, el => el+"10")
 
-    document.querySelector(".sample17_M2").innerHTML = "Array.from(text2, el => el+'10');"
-    document.querySelector(".sample17_R2").innerHTML = result2;
+    document.querySelector(".sample14_M2").innerHTML = "Array.from(text2, el => el+'10');"
+    document.querySelector(".sample14_R2").innerHTML = result2;
 
     const text3 = "javascript";
     const result3 = [...text3].map(el => el)
 
-    document.querySelector(".sample17_M3").innerHTML = ".map();"
-    document.querySelector(".sample17_R3").innerHTML = result3;
+    document.querySelector(".sample14_M3").innerHTML = ".map();"
+    document.querySelector(".sample14_R3").innerHTML = result3;
 
 }</code></pre>
                 </div>
             </div>
-            <!-- //sample17 -->
+            <!-- //sample14 -->
+
+                <!-- sample15 -->
+                <div id="sample15" class="sample">
+                    <h3>숙제 1</h3>
+                    <div class="table">
+                        <table>
+                            <colgroup>
+                                <col style="width: 4%">
+                                <col style="width: 32%">
+                                <col style="width: 30%">
+                                <col style="width: 34%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>기본값</th>
+                                    <th>메서드</th>
+                                    <th>결괏값</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sample15_N1"></td>
+                                    <td class="sample15_Q1"></td>
+                                    <td class="sample15_M1"></td>
+                                    <td class="sample15_R1"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample15_N2"></td>
+                                    <td class="sample15_Q2"></td>
+                                    <td class="sample15_M2"></td>
+                                    <td class="sample15_R2"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample15_N3"></td>
+                                    <td class="sample15_Q3"></td>
+                                    <td class="sample15_M3"></td>
+                                    <td class="sample15_R3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample14_N4"></td>
+                                    <td class="sample14_Q4"></td>
+                                    <td class="sample14_M4"></td>
+                                    <td class="sample14_R4"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample15_N5"></td>
+                                    <td class="sample15_Q5"></td>
+                                    <td class="sample15_M5"></td>
+                                    <td class="sample15_R5"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample15_N6"></td>
+                                    <td class="sample15_Q6"></td>
+                                    <td class="sample15_M6"></td>
+                                    <td class="sample15_R6"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="code">
+    <pre class="line-numbers"><code class="language-js">{
+        //300, 400
+        const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
+        const result1 = arrBox1.slice(2, 4);
+    
+        document.querySelector(".sample14_R1").innerHTML = result1;
+    
+    
+        const arrBox2 = [100, 200, 300, 400, 500, 600, 700];
+        const result2 = arrBox2.splice(2, 2);
+    
+        document.querySelector(".sample14_R2").innerHTML = result2;
+    
+    
+    
+    
+        //100, 300, 500, 700
+        const arrBox3 = [100, 200, 300, 400, 500, 600, 700];
+        const result3 = arrBox3.filter((el, idx) => idx %2==0);
+    
+        document.querySelector(".sample14_R3").innerHTML = result3;
+    
+    
+    
+    
+    
+    
+    
+    
+        //700
+        const arrBox5 = [100, 200, 300, 400, 500, 600, 700];
+        const result5 = arrBox5.find(el =&lt; el ===700);
+    
+        document.querySelector(".sample14_R5").innerHTML = result5;
+    
+        const arrBox6 = [100, 200, 300, 400, 500, 600, 700];
+        const result6 = arrBox6.slice(6,7)
+    
+        document.querySelector(".sample14_R6").innerHTML = result6;
+    }</code></pre>
+                    </div>
+                </div>
+                <!-- //sample14 -->
+    
+                 <!-- sample15 -->
+                 <div id="sample15" class="sample">
+                    <h3>숙제 2</h3>
+                    <div class="table">
+                        <table>
+                            <colgroup>
+                                <col style="width: 4%">
+                                <col style="width: 32%">
+                                <col style="width: 30%">
+                                <col style="width: 34%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>기본값</th>
+                                    <th>메서드</th>
+                                    <th>결괏값</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sample16_N1"></td>
+                                    <td class="sample16_Q1"></td>
+                                    <td class="sample16_M1"></td>
+                                    <td class="sample16_R1"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample16_N2"></td>
+                                    <td class="sample16_Q2"></td>
+                                    <td class="sample16_M2"></td>
+                                    <td class="sample16_R2"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample16_N3"></td>
+                                    <td class="sample16_Q3"></td>
+                                    <td class="sample16_M3"></td>
+                                    <td class="sample16_R3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample16_N4"></td>
+                                    <td class="sample16_Q4"></td>
+                                    <td class="sample16_M4"></td>
+                                    <td class="sample16_R4"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="code">
+    <pre class="line-numbers"><code class="language-js">{
+        //j
+        const arrBox1 = ["j", "b", "c", "d", "e"]
+        const result1 = arrBox1.splice(0, 1)
+    
+        document.querySelector(".sample15_R1").innerHTML = result1;
+    
+        const arrBox2 =  ["j", "b", "c", "d", "e"];
+        const result2 = arrBox2.reduce(el => el)
+    
+        document.querySelector(".sample15_R2").innerHTML = result2;
+    
+    
+        //j c
+    
+    
+    
+    
+    }</code></pre>
+                    </div>
+                </div>
+                <!-- //sample15 -->
+    
+                  <!-- sample16 -->
+                  <div id="sample16" class="sample">
+                    <h3>숙제3</h3>
+                    <div class="table">
+                        <table>
+                            <colgroup>
+                                <col style="width: 4%">
+                                <col style="width: 28%">
+                                <col style="width: 24%">
+                                <col style="width: 22%">
+                                <col style="width: 22%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>기본값</th>
+                                    <th>메서드</th>
+                                    <th>리턴값</th>
+                                    <th>결괏값</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sample17_N1"></td>
+                                    <td class="sample17_Q1"></td>
+                                    <td class="sample17_M1"></td>
+                                    <td class="sample17_P1"></td>
+                                    <td class="sample17_R1"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample17_N2"></td>
+                                    <td class="sample17_Q2"></td>
+                                    <td class="sample17_M2"></td>
+                                    <td class="sample17_P2"></td>
+                                    <td class="sample17_R2"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample17_N3"></td>
+                                    <td class="sample17_Q3"></td>
+                                    <td class="sample17_M3"></td>
+                                    <td class="sample17_P3"></td>
+                                    <td class="sample17_R3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="sample17_N4"></td>
+                                    <td class="sample17_Q4"></td>
+                                    <td class="sample17_M4"></td>
+                                    <td class="sample17_P4"></td>
+                                    <td class="sample17_R4"></td>
+                                </tr>
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="code">
+    <pre class="line-numbers"><code class="language-js">{
+        const arrBox5 =  ["j", "b", "c", "d", "e"];
+        const result5 = arrBox5.slice(0, 4);
+    
+        document.querySelector(".sample16_R1").innerHTML = result5;
+    
+    
+        const arrBox6 =  ["j", "b", "c", "d", "e"];
+        const result6 = arrBox6.pop()
+    
+        document.querySelector(".sample16_R2").innerHTML = arrBox6;
+    
+    }</code></pre>
+                    </div>
+                </div>
+                <!-- //sample17 -->
+    
+    
+    
+    
+    
 
         </div>
         <!-- //script -->
@@ -1808,37 +1813,67 @@
 
          }
 
-         //숙제 답은 2개이상
+
+         
+         //{14}
+         //21. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)
          {
+            const text = "javascript"
+            const result = Array.from(text);
+
+            document.querySelector(".sample14_N1").innerHTML = 1;
+            document.querySelector(".sample14_Q1").innerHTML = "javascript";
+            document.querySelector(".sample14_M1").innerHTML = " Array.from(text);"
+            document.querySelector(".sample14_R1").innerHTML = result;
+
+            const text2 = "javascript"
+            const result2 = Array.from(text2, el => el+"10")
+
+            document.querySelector(".sample14_N2").innerHTML = 2;
+            document.querySelector(".sample14_Q2").innerHTML = "javascript";
+            document.querySelector(".sample14_M2").innerHTML = "Array.from(text2, el => el+'10');"
+            document.querySelector(".sample14_R2").innerHTML = result2;
+
+            const text3 = "javascript";
+            const result3 = [...text3].map(el => el)
+
+            document.querySelector(".sample14_N3").innerHTML = 3;
+            document.querySelector(".sample14_Q3").innerHTML = "javascript";
+            document.querySelector(".sample14_M3").innerHTML = ".map();"
+            document.querySelector(".sample14_R3").innerHTML = result3;
+         }
+    
+            //숙제 답은 2개이상
+           {
             //  arrBox = [100, 200, 300, 400, 500, 600, 700];
 
             const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
             const result1 = arrBox1.slice(2, 4);
 
             //300, 400
-            document.querySelector(".sample14_N1").innerHTML = 1;
-            document.querySelector(".sample14_Q1").innerHTML = "[100, 200, 300, 400, 500, 600, 700]";
-            document.querySelector(".sample14_M1").innerHTML = "slice(2, 4);"
-            document.querySelector(".sample14_R1").innerHTML = result1;
+            document.querySelector(".sample15_N1").innerHTML = 1;
+            document.querySelector(".sample15_Q1").innerHTML = "[100, 200, 300, 400, 500, 600, 700]";
+            document.querySelector(".sample15_M1").innerHTML = "slice(2, 4);"
+            document.querySelector(".sample15_R1").innerHTML = result1;
 
 
             const arrBox2 = [100, 200, 300, 400, 500, 600, 700];
             const result2 = arrBox2.splice(2, 2);
 
-            document.querySelector(".sample14_N2").innerHTML = 2;
-            document.querySelector(".sample14_Q2").innerHTML = "[100, 200, 300, 400, 500, 600, 700]";
-            document.querySelector(".sample14_M2").innerHTML = "splice(2, 2);"
-            document.querySelector(".sample14_R2").innerHTML = result2;
+            document.querySelector(".sample15_N2").innerHTML = 2;
+            document.querySelector(".sample15_Q2").innerHTML = "[100, 200, 300, 400, 500, 600, 700]";
+            document.querySelector(".sample15_M2").innerHTML = "splice(2, 2);"
+            document.querySelector(".sample15_R2").innerHTML = result2;
             
              
              //100, 300, 500, 700
             const arrBox3 = [100, 200, 300, 400, 500, 600, 700];
             const result3 = arrBox3.filter((el, idx) => idx %2==0);
 
-            document.querySelector(".sample14_N3").innerHTML = 3;
-            document.querySelector(".sample14_Q3").innerHTML = "[100, 200, 300, 400, 500, 600, 700]";
-            document.querySelector(".sample14_M3").innerHTML = "find((el,idx) => idx %2==0);"
-            document.querySelector(".sample14_R3").innerHTML = result3;
+            document.querySelector(".sample15_N3").innerHTML = 3;
+            document.querySelector(".sample15_Q3").innerHTML = "[100, 200, 300, 400, 500, 600, 700]";
+            document.querySelector(".sample15_M3").innerHTML = "find((el,idx) => idx %2==0);"
+            document.querySelector(".sample15_R3").innerHTML = result3;
 
             // const arrBox4 = [100, 200, 300, 400, 500, 600, 700];
             // const result4 = arrBox4.
@@ -1847,18 +1882,18 @@
             const arrBox5 = [100, 200, 300, 400, 500, 600, 700];
             const result5 = arrBox5.find(el => el ===700);
 
-            document.querySelector(".sample14_N5").innerHTML = 5;
-            document.querySelector(".sample14_Q5").innerHTML = "[100, 200, 300, 400, 500, 600, 700]";
-            document.querySelector(".sample14_M5").innerHTML = "find(el => el ===700);"
-            document.querySelector(".sample14_R5").innerHTML = result5;
+            document.querySelector(".sample15_N5").innerHTML = 5;
+            document.querySelector(".sample15_Q5").innerHTML = "[100, 200, 300, 400, 500, 600, 700]";
+            document.querySelector(".sample15_M5").innerHTML = "find(el => el ===700);"
+            document.querySelector(".sample15_R5").innerHTML = result5;
 
             const arrBox6 = [100, 200, 300, 400, 500, 600, 700];
             const result6 = arrBox6.slice(6,7)
 
-            document.querySelector(".sample14_N6").innerHTML = 6;
-            document.querySelector(".sample14_Q6").innerHTML = "[100, 200, 300, 400, 500, 600, 700]";
-            document.querySelector(".sample14_M6").innerHTML = "slice(6,7)"
-            document.querySelector(".sample14_R6").innerHTML = result6;
+            document.querySelector(".sample15_N6").innerHTML = 6;
+            document.querySelector(".sample15_Q6").innerHTML = "[100, 200, 300, 400, 500, 600, 700]";
+            document.querySelector(".sample15_M6").innerHTML = "slice(6,7)"
+            document.querySelector(".sample15_R6").innerHTML = result6;
 
             //  arrBox2 = ["j", "b", "c", "d", "e"]
             {
@@ -1867,18 +1902,18 @@
             const arrBox1 = ["j", "b", "c", "d", "e"]
             const result1 = arrBox1.splice(0, 1)
 
-            document.querySelector(".sample15_N1").innerHTML = 1;
-            document.querySelector(".sample15_Q1").innerHTML = "['j', 'b', 'c', 'd', 'e']";
-            document.querySelector(".sample15_M1").innerHTML = "slice(0, 1)"
-            document.querySelector(".sample15_R1").innerHTML = result1;
+            document.querySelector(".sample16_N1").innerHTML = 1;
+            document.querySelector(".sample16_Q1").innerHTML = "['j', 'b', 'c', 'd', 'e']";
+            document.querySelector(".sample16_M1").innerHTML = "slice(0, 1)"
+            document.querySelector(".sample16_R1").innerHTML = result1;
 
             const arrBox2 =  ["j", "b", "c", "d", "e"];
             const result2 = arrBox2.reduce(el => el)
 
-            document.querySelector(".sample15_N2").innerHTML = 2;
-            document.querySelector(".sample15_Q2").innerHTML = "['j', 'b', 'c', 'd', 'e']";
-            document.querySelector(".sample15_M2").innerHTML = "reduce(el => el)"
-            document.querySelector(".sample15_R2").innerHTML = result2;
+            document.querySelector(".sample16_N2").innerHTML = 2;
+            document.querySelector(".sample16_Q2").innerHTML = "['j', 'b', 'c', 'd', 'e']";
+            document.querySelector(".sample16_M2").innerHTML = "reduce(el => el)"
+            document.querySelector(".sample16_R2").innerHTML = result2;
 
 
             //j c
@@ -1888,58 +1923,23 @@
             const arrBox5 =  ["j", "b", "c", "d", "e"];
             const result5 = arrBox5.slice(0, 4);
 
-            document.querySelector(".sample16_N1").innerHTML = 5;
-            document.querySelector(".sample16_Q1").innerHTML = "['j', 'b', 'c', 'd', 'e']";
-            document.querySelector(".sample16_M1").innerHTML = "slice(0, 4)"
-            document.querySelector(".sample16_P1").innerHTML = result5;
-            document.querySelector(".sample16_R1").innerHTML = arrBox5;
+            document.querySelector(".sample17_N1").innerHTML = 5;
+            document.querySelector(".sample17_Q1").innerHTML = "['j', 'b', 'c', 'd', 'e']";
+            document.querySelector(".sample17_M1").innerHTML = "slice(0, 4)"
+            document.querySelector(".sample17_P1").innerHTML = result5;
+            document.querySelector(".sample17_R1").innerHTML = arrBox5;
 
 
             const arrBox6 =  ["j", "b", "c", "d", "e"];
             const result6 = arrBox6.pop()
 
-            document.querySelector(".sample16_N2").innerHTML = 6;
-            document.querySelector(".sample16_Q2").innerHTML = "['j', 'b', 'c', 'd', 'e']";
-            document.querySelector(".sample16_M2").innerHTML = "pop()"
-            document.querySelector(".sample16_P2").innerHTML = result6;
-            document.querySelector(".sample16_R2").innerHTML = arrBox6;
+            document.querySelector(".sample17_N2").innerHTML = 6;
+            document.querySelector(".sample17_Q2").innerHTML = "['j', 'b', 'c', 'd', 'e']";
+            document.querySelector(".sample17_M2").innerHTML = "pop()"
+            document.querySelector(".sample17_P2").innerHTML = result6;
+            document.querySelector(".sample17_R2").innerHTML = arrBox6;
             }
-
-
-             
-
-
-           
          }
-         
-         //{17}
-         //21. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)
-         {
-            const text = "javascript"
-            const result = Array.from(text);
-
-            document.querySelector(".sample17_N1").innerHTML = 1;
-            document.querySelector(".sample17_Q1").innerHTML = "javascript";
-            document.querySelector(".sample17_M1").innerHTML = " Array.from(text);"
-            document.querySelector(".sample17_R1").innerHTML = result;
-
-            const text2 = "javascript"
-            const result2 = Array.from(text2, el => el+"10")
-
-            document.querySelector(".sample17_N2").innerHTML = 2;
-            document.querySelector(".sample17_Q2").innerHTML = "javascript";
-            document.querySelector(".sample17_M2").innerHTML = "Array.from(text2, el => el+'10');"
-            document.querySelector(".sample17_R2").innerHTML = result2;
-
-            const text3 = "javascript";
-            const result3 = [...text3].map(el => el)
-
-            document.querySelector(".sample17_N3").innerHTML = 3;
-            document.querySelector(".sample17_Q3").innerHTML = "javascript";
-            document.querySelector(".sample17_M3").innerHTML = ".map();"
-            document.querySelector(".sample17_R3").innerHTML = result3;
-         }
-    
     
     </script>
 </body>

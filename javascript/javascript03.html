@@ -407,6 +407,28 @@
                 </div>
             </div>
             <!-- //sample15 -->
+
+               <!-- sample16 -->
+               <div id="sample16" class="sample">
+                <h3>16. 파라미터 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(a, b){
+        document.write(arguments[0]);
+        document.write(arguments[1]);
+    }
+    func("함수가 실행되었습니다","함수가 실행되었습니다.")
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        함수가 실행되었습니다.<br>
+                        함수가 실행되었습니다.
+                    </div>
+                </div>
+            </div>
+            <!-- //sample16 -->
         </div>
         <!-- //script -->
          <!-- script -->
@@ -564,15 +586,15 @@
 
             //15. 파라미터 함수 : 인자 자리로 이동
             {
-                function func(){
-                    document.write(str);
-                }
-                func("함수가 실행되었습니다.")
+                // function func(){
+                //     document.write(str);
+                // }
+                // func("함수가 실행되었습니다.")
 
-                function func(str = "함수가 실행되었습니다."){
-                    document.write(str);
-                }
-                func()
+                // function func(str = "함수가 실행되었습니다."){
+                //     document.write(str);
+                // }
+                // func()
             }
             //16 아규먼트 함수 
             {
