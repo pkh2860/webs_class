@@ -80,7 +80,7 @@
                 <li><a href="#sample12">19. 배열 메서드 : filter() : 조건에 만족하는 배열 요소 검색 : 반환(배열)</a></li>
                 <li><a href="#sample13">20. 배열 메서드 : map() : 배열 요소를 추출하여 새로운 배열로 만듦 : 반환(배열)</a></li>
 
-                <li><a href="#sample">21. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)</a></li>
+                <li><a href="#sample17">21. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)</a></li>
             </ul> 
         </div>
         <!-- //list -->
@@ -1208,6 +1208,77 @@
             </div>
             <!-- //sample16 -->
 
+               <!-- sample17 -->
+               <div id="sample17" class="sample">
+                <h3>21. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 4%">
+                            <col style="width: 28%">
+                            <col style="width: 24%">
+                            <col style="width: 22%">
+                            <col style="width: 22%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                                <th>결괏값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample17_N1"></td>
+                                <td class="sample17_Q1"></td>
+                                <td class="sample17_M1"></td>
+                                <td class="sample17_P1"></td>
+                                <td class="sample17_R1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample17_N2"></td>
+                                <td class="sample17_Q2"></td>
+                                <td class="sample17_M2"></td>
+                                <td class="sample17_P2"></td>
+                                <td class="sample17_R2"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample17_N3"></td>
+                                <td class="sample17_Q3"></td>
+                                <td class="sample17_M3"></td>
+                                <td class="sample17_P3"></td>
+                                <td class="sample17_R3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const text = "javascript"
+    const result = Array.from(text);
+
+    document.querySelector(".sample17_M1").innerHTML = " Array.from(text);"
+    document.querySelector(".sample17_R1").innerHTML = result;
+
+    const text2 = "javascript"
+    const result2 = Array.from(text2, el => el+"10")
+
+    document.querySelector(".sample17_M2").innerHTML = "Array.from(text2, el => el+'10');"
+    document.querySelector(".sample17_R2").innerHTML = result2;
+
+    const text3 = "javascript";
+    const result3 = [...text3].map(el => el)
+
+    document.querySelector(".sample17_M3").innerHTML = ".map();"
+    document.querySelector(".sample17_R3").innerHTML = result3;
+
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample17 -->
+
         </div>
         <!-- //script -->
     </main>
@@ -1832,15 +1903,44 @@
             document.querySelector(".sample16_M2").innerHTML = "pop()"
             document.querySelector(".sample16_P2").innerHTML = result6;
             document.querySelector(".sample16_R2").innerHTML = arrBox6;
-
-           
-
             }
+
+
              
 
 
            
          }
+         
+         //{17}
+         //21. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)
+         {
+            const text = "javascript"
+            const result = Array.from(text);
+
+            document.querySelector(".sample17_N1").innerHTML = 1;
+            document.querySelector(".sample17_Q1").innerHTML = "javascript";
+            document.querySelector(".sample17_M1").innerHTML = " Array.from(text);"
+            document.querySelector(".sample17_R1").innerHTML = result;
+
+            const text2 = "javascript"
+            const result2 = Array.from(text2, el => el+"10")
+
+            document.querySelector(".sample17_N2").innerHTML = 2;
+            document.querySelector(".sample17_Q2").innerHTML = "javascript";
+            document.querySelector(".sample17_M2").innerHTML = "Array.from(text2, el => el+'10');"
+            document.querySelector(".sample17_R2").innerHTML = result2;
+
+            const text3 = "javascript";
+            const result3 = [...text3].map(el => el)
+
+            document.querySelector(".sample17_N3").innerHTML = 3;
+            document.querySelector(".sample17_Q3").innerHTML = "javascript";
+            document.querySelector(".sample17_M3").innerHTML = ".map();"
+            document.querySelector(".sample17_R3").innerHTML = result3;
+         }
+    
+    
     </script>
 </body>
 </html>
