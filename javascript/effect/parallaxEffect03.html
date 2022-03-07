@@ -37,6 +37,9 @@
         #parallax__title p {
             font-size: 16px;
         }
+        #parallax__title ul {
+            margin-top: 10px;
+        }
         #parallax__title li {
             display: inline;
         }
@@ -57,11 +60,15 @@
         #parallax__nav {
             position: fixed;
             right: 20px;
-            top: 20px;
+            top: -200px;
             z-index: 1000;
             background-color: rgba(0, 0, 0, 0.4);
             padding: 15px 20px;
             border-radius: 50px;
+            transition: top 0.3s ease-in-out;
+        }
+        #parallax__nav.show {
+            top: 20px;
         }
         #parallax__nav li {
             list-style: none;
@@ -69,16 +76,14 @@
         }
         #parallax__nav li a {
             display: inline-block;
-            width: 30px;
-            height: 30px;
-            padding: 5px;
+            padding: 5px 20px;
             text-align: center;
             line-height: 30px;
         }
         #parallax__nav li.active a {
             background: #fff;
             color: #000;
-            border-radius: 50%;
+            border-radius: 30px;
         }
         #parallax__cont {
             max-width: 1600px;
@@ -180,7 +185,6 @@
             margin-right: auto;
             margin-right: -4vw;
         }
-        #parallax__footer {}
         .scrollTop {
             position: fixed;
             left: 20px;
@@ -205,17 +209,17 @@
             list-style: none;
             line-height: 1.6;
         }
-
+     
     </style>
 </head>
 <body>
     <header id="parallax__title">
-        <h1><a href="parallaxEffect.html">JavaScript Parallax Effect01</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 메뉴 이동</p>
+        <h1><a href="parallaxEffect.html">JavaScript Parallax Effect03</a></h1>
+        <p>패럴랙스 스크롤링 효과 - 숨김 메뉴</p>
         <ul>
-            <li class="active"><a href="parallaxEffect01.html">1</a></li>
+            <li><a href="parallaxEffect01.html">1</a></li>
             <li><a href="parallaxEffect02.html">2</a></li>
-            <li><a href="parallaxEffect03.html">3</a></li>
+            <li class="active"><a href="parallaxEffect03.html">3</a></li>
             <li><a href="parallaxEffect04.html">4</a></li>
             <li><a href="parallaxEffect05.html">5</a></li>
             <li><a href="parallaxEffect06.html">6</a></li>
@@ -226,15 +230,15 @@
 
     <nav id="parallax__nav">
         <ul>
-            <li class="active"><a href="#section1">s1</a></li>
-            <li><a href="#section2">s2</a></li>
-            <li><a href="#section3">s3</a></li>
-            <li><a href="#section4">s4</a></li>
-            <li><a href="#section5">s5</a></li>
-            <li><a href="#section6">s6</a></li>
-            <li><a href="#section7">s7</a></li>
-            <li><a href="#section8">s8</a></li>
-            <li><a href="#section9">s9</a></li>
+            <li class="active"><a href="#section1"><span>메뉴1</span></a></li>
+            <li><a href="#section2"><span>메뉴2</span></a></li>
+            <li><a href="#section3"><span>메뉴3</span></a></li>
+            <li><a href="#section4"><span>메뉴4</span></a></li>
+            <li><a href="#section5"><span>메뉴5</span></a></li>
+            <li><a href="#section6"><span>메뉴6</span></a></li>
+            <li><a href="#section7"><span>메뉴7</span></a></li>
+            <li><a href="#section8"><span>메뉴8</span></a></li>
+            <li><a href="#section9"><span>메뉴9</span></a></li>
         </ul>
     </nav>
     <!-- //parallax__nav -->
@@ -338,70 +342,58 @@
     <div class="scrollTop">
         scrollTop : <span>0</span>px
     </div>
-    <div class="scrollInfo">
-        <ul>
-            <li>#section1 offset() : <span class="offset1">0</span>px</li>
-            <li>#section2 offset() : <span class="offset2">0</span>px</li>
-            <li>#section3 offset() : <span class="offset3">0</span>px</li>
-            <li>#section4 offset() : <span class="offset4">0</span>px</li>
-            <li>#section5 offset() : <span class="offset5">0</span>px</li>
-            <li>#section6 offset() : <span class="offset6">0</span>px</li>
-            <li>#section7 offset() : <span class="offset7">0</span>px</li>
-            <li>#section8 offset() : <span class="offset8">0</span>px</li>
-            <li>#section9 offset() : <span class="offset9">0</span>px</li>
-        </ul>
-    </div>
     <!-- //info -->
     <!-- script -->
     <script>
+        // window.addEventListener("scroll", () => {       //스크롤 탑 값을 3가지 방식
+            // let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY
 
+            // //스크롤 값이 0보다 크면 show 클래스를 nav에게 추가
+           
+            // if(scrollTop > 0){ //scrollTop이 0보다 클때 show를 추가하고 아니면 show를 삭제
+            // document.querySelector("#parallax__nav").classList.add("show")
+            //     }else {
+            // document.querySelector("#parallax__nav").classList.remove("show")
+            //     }
 
-        document.querySelectorAll("#parallax__nav li a").forEach(li=>{
-            li.addEventListener("click", (e) =>{
-                e.preventDefault();
-                document.querySelector(li.getAttribute("href")).scrollIntoView({
-                    behavior:"smooth"
-                })
-            })
-        })
+        //     document.querySelector(".scrollTop span").innerText = Math.round(scrollTop) //scrollTop값 화면에 출력
+        // })
 
-        window.addEventListener("scroll", ()=>{
+        let nowScroll = true;
+        let lastScroll = 0;
 
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop ||  window.scrollY;
+        function scrollProgress(){
+            nowScroll = true;
 
-          
-            //for
-            for(let i=1; i<9; i++){
-                if(scrollTop >= document.getElementById("section"+i).offsetTop -2){
-                    document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-                        li.classList.remove("active");
-                    })
-                    document.querySelector("#parallax__nav ul li:nth-child("+i+")").classList.add("active")
+            setInterval(()=>{
+                if(nowScroll){
+                    nowScroll = false;
+                    hasScroll()
                 }
+            },300);
+
+        }
+
+        function hasScroll(){
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY            
+            
+             if(scrollTop < lastScroll){ //lastScroll이 scrollTop보다 클때 show를 추가하고 아니면 show를 삭제
+                 document.querySelector("#parallax__nav").classList.add("show")
+            }else {
+                document.querySelector("#parallax__nav").classList.remove("show")
             }
+                lastScroll = scrollTop;
+        }
 
-            // forEach 
-            document.querySelectorAll(".content__item").forEach((element, index)=>{
-                if(scrollTop >= element.offsetTop -2){
-                    document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-                        li.classList.remove("active");
-                    });
-                    document.querySelector("#parallax__nav ul li:nth-child("+(index+1)+")").classList.add("active")
-                }
+        window.addEventListener("scroll", scrollProgress)
+
+        document.querySelectorAll("#parallax__nav a").forEach(el => {
+            el.addEventListener("click", e =>{
+                e.preventDefault();
+                document.querySelector(el.getAttribute("href")).scrollIntoView({behavior: "smooth"})
             })
-            // info
-            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop); //스크롤이 내려간 값을 화면에 출력
-
-            document.querySelector(".offset1").innerText = document.getElementById("section1").offsetTop
-            document.querySelector(".offset2").innerText = document.getElementById("section2").offsetTop
-            document.querySelector(".offset3").innerText = document.getElementById("section3").offsetTop
-            document.querySelector(".offset4").innerText = document.getElementById("section4").offsetTop
-            document.querySelector(".offset5").innerText = document.getElementById("section5").offsetTop
-            document.querySelector(".offset6").innerText = document.getElementById("section6").offsetTop
-            document.querySelector(".offset7").innerText = document.getElementById("section7").offsetTop
-            document.querySelector(".offset8").innerText = document.getElementById("section8").offsetTop
-            document.querySelector(".offset9").innerText = document.getElementById("section9").offsetTop
         })
+
     </script>
 
 </body>
