@@ -317,18 +317,18 @@
 
            
             document.querySelectorAll(".content__item").forEach(item => {
-                let offset1 = (scrollTop - item.offsetTop) * 0.1;        
-                let offset2 = (scrollTop - item.offsetTop) * 0.15;        
+                let offset1 = (scrollTop - item.offsetTop) * 0.1;         //offset1에 scrollTop - item.offsetTop * 0.1를 저장
+                let offset2 = (scrollTop - item.offsetTop) * 0.15;        //offset2에 scrollTop - item.offsetTop * 0.15를 저장
 
-                const target1 = item.querySelector(".content__item__img");
-                const target2 = item.querySelector(".content__item__desc");
-                const target3 = item.querySelector(".content__item__num");
+                const target1 = item.querySelector(".content__item__img");      //target1에 content__item__img 저장
+                const target2 = item.querySelector(".content__item__desc");     //target2에 content__item__desc 저장
+                const target3 = item.querySelector(".content__item__num");      //target3에 content__item__num 저장
 
               
-                // target1.style.transform= `translateY(${offset1}px)`
+                // target1.style.transform= `translateY(${offset1}px)`  style transform:translateY css를 줌
                 // target2.style.transform= `translateY(${offset2}px)`
                 // target3.style.transform= `translateY(${-offset2}px)`
-                gsap.to(target1,{duration: .3, y:offset1, ease: "power1.out"});
+                gsap.to(target1,{duration: .3, y:offset1, ease: "power1.out"}); //위의것을 gsap로 설정
                 gsap.to(target2,{duration: .3, y:offset2, ease: "power1.out"});
             })
             requestAnimationFrame(scroll)

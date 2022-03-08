@@ -356,7 +356,7 @@
         //     splitWrap = "<span>" + splitWrap + "</span>"        //span으로 감쌈
         //     text.innerHTML = splitWrap;     //span으로 감싼 글씨를 innerHTML로 가져옴
 
-        //여러개 글씨 쪼개기
+        //여러개 글씨 쪼개기 (위의 식을 다중(forEach)로 바꿔서 모든 desc가 효과를 받게 바꿈)
             document.querySelectorAll(".content__item__desc").forEach(desc=>{
                 let  splitText = desc.innerText;
                 let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>"); //웹 표준을 준수하기 위해 hidden을 씀 글자 사이 띄어쓰기를 읽기때문에 hidden으로 숨김

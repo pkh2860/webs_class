@@ -371,14 +371,14 @@
 
           
             //for
-            for(let i=1; i<9; i++){
-                if(scrollTop >= document.getElementById("section"+i).offsetTop -2){
-                    document.querySelectorAll("#parallax__nav ul li").forEach(li => {
-                        li.classList.remove("active");
-                    })
-                    document.querySelector("#parallax__nav ul li:nth-child("+i+")").classList.add("active")
-                }
-            }
+            // for(let i=1; i<9; i++){
+            //     if(scrollTop >= document.getElementById("section"+i).offsetTop -2){
+            //         document.querySelectorAll("#parallax__nav ul li").forEach(li => {
+            //             li.classList.remove("active");
+            //         })
+            //         document.querySelector("#parallax__nav ul li:nth-child("+i+")").classList.add("active")
+            //     }
+            // }
 
             // forEach 
             document.querySelectorAll(".content__item").forEach((element, index)=>{
