@@ -399,6 +399,18 @@
         //글씨를 span으로 감싸주고
         //글씨를 다 넣어주기
 
+        
+        document.querySelectorAll(".content__item__desc").forEach(desc=>{
+
+        let descText = desc.innerText;
+        let descWrap = "<span>" + descText + "</span>";
+            desc.innerHTML = descWrap;
+            if(desc.classList.contains(".reveal")){
+                desc.innerHTML = descText
+            } else {
+                desc.innerHTML = descWrap;
+            }
+        })
         function scroll(){
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY  
             
@@ -416,20 +428,8 @@
             //         desc.setAttribute("aria-label", splitText)  
             // })
 
-            // document.querySelectorAll(".content__item__desc").forEach(desc=>{
-            //     if(getElementById(reveal)){
-            //         desc.document.createElement('span')
-            //     }
-            // })
 
-            document.querySelectorAll(".content__item__desc").forEach(desc=>{
-
-                let descText = desc.innerText;
-                let descWrap = descText.join("</span><span aria-hidden='true'>");
-                    descWrap = "<span aria-hidden='true'>" + descWrap + "</span>"
-                    desc.innerHTML = descwrap;
-
-            })
+            
 
 
 
