@@ -299,11 +299,12 @@
         }
         #section6 .content__item__desc span.show {
             opacity: 1;
-            animation: zoomIn 0.5s;
+            animation: shakeX 0.5s;
         }
-        @keyframes zoomIn {
-            0% {opacity: 0; transform: scale3d(.3, .3, .3)}
-            50% {opacity: 1}
+        @keyframes shakeX {
+            0%,to {transform: translateZ(0)}
+            10%,30%,50%,70%,90% { transform: translate3d(-10px, 0, 0)}
+            20%,40%,60%,80% { transform: translate3d(10px, 0, 0)}
         }
 
          /* section7 */
@@ -314,12 +315,13 @@
         }
         #section7 .content__item__desc span.show {
             opacity: 1;
-            animation: slideInRight 0.5s;
+            animation: fadeInTopLeft 0.5s;
         }
-        @keyframes slideInRight {
-            0% {transform: translate3d(100%, 0, 0); visibility: visible }
-            to {transform: translateZ(0)}
+        @keyframes fadeInTopLeft {
+            0% {opacity: 0;transform: translate3d(-100%, -100%, 0) }
+            to { opacity: 1;transform: translateZ(0) }
         }
+
 
         /* section8 */
          #section8 .content__item__desc span {
