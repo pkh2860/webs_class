@@ -394,12 +394,6 @@
     <script src="js/gsap.min.js"></script>
     <script>
 
-
-        //만약에 reveal 클래스가 있는데 
-        //글씨를 span으로 감싸주고
-        //글씨를 다 넣어주기
-
-        
         document.querySelectorAll(".content__item__desc").forEach(desc=>{
 
         let descText = desc.innerText;
@@ -418,15 +412,10 @@
             reveal.forEach(elem =>{
                 let revealOffetset = elem.offsetTop + elem.parentElement.offsetTop;
                 let revealDelay = elem.dataset.delay;            //데이터가 있는지 없는지 dataset로 가져옴
-                
 
-            //     document.querySelectorAll(".content__item__desc").forEach(desc=>{
-            //     let  splitText = desc.innerText;
-            //     let splitWrap = splitText.unshift("<span>").push("</span>"); 
-            //         splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>"
-            //         desc.innerHTML = splitWrap;
-            //         desc.setAttribute("aria-label", splitText)  
-            // })
+                //만약에 reveal 클래스가 있는데 
+                //글씨를 span으로 감싸주고
+                //글씨를 다 넣어주기
                 if(scrollTop >= revealOffetset - window.innerHeight/2){ 
                     if(revealDelay == undefined){
                         elem.classList.add("show")
