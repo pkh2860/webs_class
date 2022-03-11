@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NexonLv1Gothic';
+            font-weight: 300;
+        }
+        body {
+            height: 20000px;
+        }
+        .scrollTop {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            width: 60px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            z-index: 10000;
+        }
+        /* common */
+        .fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+            object-fit: cover;
+        }
+        /* section1__bg */
+        .section1__bg img {
+            width: 70%;
+            height: 17vh;
+            /* width: 100%;
+            height: 100vh; */
+        }
+        .section_text1 {
+            font-size: 7vw;
+            transform: translate(-50%, -50%) scale(0) ;
+            color: #fff;
+        }
+        .section_text2 {
+            font-size: 7vw;
+            transform:translate(-50%, -50%) scale(1); 
+            white-space: nowrap;
+            font-weight: 500;
+            color: #fff;
+        }
+        .section_text3 {
+            font-size: 7vw;
+            transform:translate(-50%, -50%) scale(0); 
+            font-weight: 500;
+            color: #fff;
+            white-space: nowrap; 
+        }
+            /* section2__bg */
+            .section2__bg {
+                width: 100%;
+                height: 100vh;
+                background: rgb(63, 59, 59);
+            }
+            .section2_Text1 {
+                font-size: 4vw;
+                color: #fff;
+                white-space: nowrap;
+            }
+            .section2_img1 {
+                width: 50vw;
+                
+            }
+    </style>
+</head>
+<body>
+    <div class="scrollTop">0</div>
+    <div id="contents">
+        <section id="section1"
+            data-8500 = "display : block"
+            data-8501 = "display : none"
+        >
+            <div class="section1__bg ">
+                <img class="fixed" src="img/img02.jpg" alt="이미지"
+                        data-0 = "width: 70%; height: 17vh"
+                        data-1000 ="width: 100%; height: 17vh"
+                        data-2000 ="width: 100%; height: 50vh"
+                        data-7000 ="width: 100%; height: 50vh"
+                        data-8000 ="width: 100%; height: 0vh"
+                >
+            </div>
+            <div class="section_text1 fixed" 
+                data-1100 = "transform: translate(-50%, -50%) scale(0); top:50%"
+                data-2000 = "transform: translate(-50%, -50%) scale(1); top:50%"
+                data-3000 = "transform: translate(-50%, -50%) scale(1); top:50%"
+                data-4000 = "transform: translate(-50%, -50%) scale(1); top:-10%"
+            > 안녕하세요!</div>
+
+            <div class="section_text2 fixed" 
+                data-3000 = "transform: translate(-50%, -50%) scale(1); top: 100%; left:50%" 
+                data-4000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left:50%" 
+                data-5000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left:50%" 
+                data-6000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left:-100%" 
+            > 포트폴리오 사이트입니다.</div>
+
+            <div class="section_text3 fixed" 
+                data-5000 = "transform: translate(-50%, -50%) scale(1); top: 50%;left: 150%" 
+                data-6000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 50%" 
+                data-7000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 50%" 
+                data-8000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: -100%" 
+            > 지금부터 보여드릴게요!</div>
+                </section>
+            <!-- //section1 -->
+            <section id="section2"
+                data-8700 = "display : none"
+                data-8701 = "display: block"
+            >
+                <div class="section2__bg fixed"
+                data-9000 = "width: 0%; height: 0vh; border-radius: 50px;"
+                data-10000 = "width: 100%; height: 100vh; border-radius: 0px;"
+                ></div>
+                <div class="section2_Text1 fixed"
+                    data-8500 = "transform: translate(-50%, -50%) scale(0); top:50%"
+                    data-9500 = "transform: translate(-50%, -50%) scale(1); top:50%"
+                    data-11000= "transform: translate(-50%, -50%) scale(1); top:50%"
+                    data-12000= "transform: translate(-50%, -50%) scale(1); top:20%"
+                > I 've Been Working In On Sites</div>
+                <div class="section2_img fixed"
+                data-12000 = "transform: translate(-50%, -50%) scale(1); top:150%"
+                data-13000 = "transform: translate(-50%, -50%) scale(1); top:100%"
+                data-14000 ="transform: translate(-50%, -50%) scale(1); top:60%"
+                >
+                    <img src="img/MacBook Pro 13.png" alt="이미지2">
+                </div>
+            </section>
+
+            <!-- //section2 -->
+            <section id="section3"></section><!-- //section3 -->
+            <section id="section4"></section><!-- //section4 -->
+            <section id="section5"></section><!-- //section5 -->
+            <section id="section6"></section><!-- //section6 -->
+    </div>
+
+
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+
+        function scroll(){
+
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;  
+        document.querySelector(".scrollTop").innerText = Math.round(scrollTop); 
+
+
+
+        requestAnimationFrame(scroll);
+
+        }
+        scroll();
+    </script>
+</body>
+</html>
