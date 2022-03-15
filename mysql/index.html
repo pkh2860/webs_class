@@ -470,11 +470,111 @@ default 'x' comment "남성은 m, 여성은 w" AFTER youBirth;
 
                     <h4>지정 삭제 : 지정한 멤버 삭제</h4>
 <pre class="language-js"><code>DELETE FROM myMember WHERE memberID IN(8,9,10)</code></pre>
-
-
-
-
                     </div>
+                <!-- //box -->
+
+                   <!-- box -->
+                   <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">테이블 합치기</h2>
+
+                    <h3 id=intro8-1 class="page-header">JOIN 사용하기</h3> 
+                    <div class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 엘리어스 JOIN 연결할 테이블명 엘리어스 ON(조건문)
+                    </div>
+<pre class="language-js"><code>SELECT m.youName, m.youEmail, r.youCont, r.regTime FROM myMember m JOIN myReview r ON(m.memberID = r.memberID);</code></pre>
+
+
+<pre class="language-js"><code>CREATE TABLE myMember (
+    memberID int(10) unsigned auto_increment,
+    youEmail varchar(40) NOT NULL,
+    youName varchar(20) NOT NULL,
+    youPass varchar(20) NOT NULL,
+    youBirth int(20) NOT NULL,
+    youAge int(20) NOT NULL,
+    youPhone int(20) NOT NULL,
+    regTime int(11) NOT NULL,
+    PRIMARY KEY (memberID)
+) charset=utf8;
+
+CREATE TABLE myReview (
+    reviewID int(10) unsigned auto_increment,
+    memberID int(10) unsigned,
+    youCont tinytext NOT NULL,
+    regTime int(11) NOT NULL,
+    PRIMARY KEY (reviewID)
+) charset=utf8;
+
+INSERT INTO myReview (memberID, youCont, regTime) VALUES('4', '정말 감사합니다', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES('1', '유익하네요', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES('2', '이거 정말 사야해', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES('3', '너무 좋아요!', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES('5', '감사합니다', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES('7', '가성비 좋네요', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES('9', '정말 감사합니다', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES('10', '정말 감사합니다', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES('13', '정말 감사합니다', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES('16', '정말 감사합니다', '12345');
+</code></pre>
+
+
+                    <h4 class="pt20">필드명 바꾸기</h4>
+                    <div class="bs-callout bs-callout-info">
+                        SELECT 필드명 AS 기존 필드명 대신 출력할 필드명 FROM 테이블명
+                    </div>
+<pre class="language-js"><code>SELECT m.youName, m.youEmail, r.youCont, r.regTime AS reviewTime FROM myMember m JOIN myReview r ON(m.memberID = r.memberID);</code></pre>
+
+
+                    <h4 class="pt20">필드 내용이 없는 경우 표시</h4>
+                    <div class="bs-callout bs-callout-info">
+                        LEFT JOIN
+                    </div>
+<pre class="language-js"><code>SELECT m.youName, m.youEmail, r.youCont, r.regTime FROM myMember m LEFT JOIN myReview r ON(m.memberID = r.memberID);</code></pre>
+                 </div>   
+                <!-- //box -->
+
+
+                <!-- box -->
+                <div class="bs-docs-section">
+                    <h2 id="intro9" class="page-header">집계함수</h2>
+
+<pre class="language-js"><code>CREATE TABLE myRecode (
+    recodeID int(10) unsigned auto_increment,
+    memberID int(10) unsigned,
+    javascript tinyint unsigned NOT NULL,
+    html tinyint NOT NULL, 
+    css tinyint NOT NULL, 
+    mysql tinyint NOT NULL, 
+    react tinyint NOT NULL, 
+    PRIMARY KEY (recodeID)
+) charset=utf8;
+
+INSERT INTO myRecode(memberID, javascript, html, css, mysql, react) VALUE(1, 60, 30, 10, 20, 20);
+INSERT INTO myRecode(memberID, javascript, html, css, mysql, react) VALUE(2, 50, 40, 20, 30, 30);
+INSERT INTO myRecode(memberID, javascript, html, css, mysql, react) VALUE(3, 40, 50, 40, 40, 50);
+INSERT INTO myRecode(memberID, javascript, html, css, mysql, react) VALUE(4, 30, 60, 50, 10, 40);
+INSERT INTO myRecode(memberID, javascript, html, css, mysql, react) VALUE(5, 20, 70, 80, 50, 60);
+INSERT INTO myRecode(memberID, javascript, html, css, mysql, react) VALUE(6, 10, 80, 70, 60, 90);
+INSERT INTO myRecode(memberID, javascript, html, css, mysql, react) VALUE(7, 80, 10, 60, 70, 70);
+INSERT INTO myRecode(memberID, javascript, html, css, mysql, react) VALUE(8, 70, 20, 50, 80, 60);
+INSERT INTO myRecode(memberID, javascript, html, css, mysql, react) VALUE(9, 90, 30, 40, 90, 90);
+INSERT INTO myRecode(memberID, javascript,  html, css, mysql, react) VALUE(10, 10, 40, 30, 90, 30);
+</code></pre>
+                    <h3 id="intro9-1" class="pt20" class="page-header">집계함수의 종류</h3>
+<pre class="language-js"><code>SELECT count(javascript) FROM myRecode;</code></pre>
+<pre class="language-js"><code>SELECT sum(javascript) FROM myRecode;</code></pre>
+<pre class="language-js"><code>SELECT avg(javascript) FROM myRecode;    (평균)</code></pre>
+<pre class="language-js"><code>SELECT max(javascript) FROM myRecode;    (최고)</code></pre>
+<pre class="language-js"><code>SELECT min(javascript) FROM myRecode;    (최저)</code></pre>
+
+
+                    <h3 id="intro9-2"class="pt20"class="page-header">그룹별 집계</h3>
+                    <h4>GROUP BY</h4>
+                    <div class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 GROUP BY 필드명
+                    </div>
+<pre class="language-js"><code></code></pre>
+
+                 </div>   
                 <!-- //box -->
             </div>
 
@@ -516,6 +616,17 @@ default 'x' comment "남성은 m, 여성은 w" AFTER youBirth;
                                 <li><a href="#intro07-4">데이터 삭제하기(회원탈퇴)</a></li>
                             </ul>
                         </li>
+                    </li>
+                    <li><a href="#intro8">테이블 합치기</a>
+                        <ul class="nav bs-sidenav">
+                            <li><a href="#intro08-1">데이터 JOIN</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#intro9">집계함수</a>
+                        <ul class="nav bs-sidenav">
+                            <li><a href="#intro09-1"></a></li>
+                        </ul>
+                    </li>
 
                     </ul>
                 </div>
