@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+        <link rel="stylesheet" href="css/nexon.css">
+    <style>
+
+        .ir_pm {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        .ir_wa {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ir_so {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NexonLv1Gothic';
+        }
+
+        #wrap {
+            /* width: 100%; */
+        }
+
+        .container {
+            width: 1200px;
+        }
+
+        #header {
+            padding: 10px;
+            border-bottom: 9px solid #411700;
+            display: flex;
+            align-items: center;
+        }
+
+        #header .logo {
+            background: url(img/logo2.png) no-repeat;
+            width: 100px;
+            height: 60px;
+            display: inline-block;
+            margin-left: 48%;
+        }
+
+        #header .member {
+            display: inline-block;
+            padding: 10px 18px;
+            margin-left: auto;
+        }
+
+        #header .member a {
+            padding: 9px 22px;
+            border: 1px solid #e9e5bd;
+            border-radius: 50px;
+            background: #e9e5bd;
+            text-decoration: none;
+            color: #000;
+            font-weight: 900;
+
+        }
+        #contents {
+
+        }
+        .container {
+            margin: 0 auto;
+        }
+       .member-form .login {
+           font-size: 143px;
+           font-weight: 300;
+           text-align: center;
+           margin-top: 359px;
+           margin-bottom:189px;
+       }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo"></div>
+
+            <div class="member">
+                <a href="join.html">회원가입</a>
+                <a href="login.html">로그인</a>
+            </div>
+        </header>
+
+        <main id="contents">
+            <div class="container">
+            <h2 class="ir_so">컨텐츠 영역</h2>
+            <section class="join-type">
+                <div class="member-form">
+                    <h3 class="login">LOGIN</h3>
+                    <form action="#" name="join" method="post">
+                        <fieldset>
+                            <legend class="ir_so">회원가입 입력폼</legend>
+                            <div class="join-box">
+                                <div>
+                                    <label for="youEmail"></label>
+                                    <input type="email" id="youEmail" name="youEmail" placeholder="이메일"
+                                        autocomplete="off" autofocus required>
+                                </div>
+                                <div>
+                                    <label for="youPass"></label>
+                                    <input type="password" id="youPass" name="youPass" maxlength="20"
+                                        placeholder="비밀번호" autocomplete="off" required>
+                                </div>
+
+                            </div>
+                            <button id="joinBtn" class="join-submint" type="submit">로그인</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </div>
+        </main>
+        <!-- //contents -->
+    </div>
+</body>
+
+</html>
