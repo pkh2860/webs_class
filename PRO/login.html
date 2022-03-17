@@ -77,7 +77,7 @@
 
         }
 
-        .join-type {
+        .login-type {
             padding: 200px 0;
         }
 
@@ -122,14 +122,13 @@
         .member-form .blue {
             padding: 20px;
         }
-
-        .join-box label {
+        .login-box label {
             display: block;
             width: 100%;
             margin-bottom: 5px;
         }
 
-        .join-box input {
+        .login-box input {
             width: 100%;
             padding: 15px;
             height: 50px;
@@ -138,12 +137,10 @@
             border: none;
             border-bottom: 3px solid #411700;
         }
-
-        .join-box input::before {
+        .login-box input::before {
             border: 0;
         }
-
-        .join-submint {
+        .login-submint {
             margin-top: 20px;
             margin-left: 60px;
             font-size: 15px;
@@ -158,19 +155,16 @@
             padding-top: 20px;
             border: none;
         }
-
         .find {
             margin-top: 50px;
             text-align: center;
         }
-
         .find a {
             text-decoration: none;
             color: #000;
             /* padding: 55px; */
             padding: 3px 30px 0 30px;
         }
-
         .find .col1 {
             border-right: 1px solid #c8c8c8;
         }
@@ -191,13 +185,13 @@
 
         <main id="contents">
             <h2 class="ir_so">컨텐츠 영역</h2>
-            <section class="join-type">
+            <section class="login-type">
                 <div class="member-form">
                     <h3>LOGIN</h3>
-                    <form action="#" name="join" method="post">
+                    <form action="#" name="login" method="post">
                         <fieldset style="border:0 solid ;">
                             <legend class="ir_so">회원가입 입력폼</legend>
-                            <div class="join-box">
+                            <div class="login-box">
                                 <div>
                                     <label for="youEmail"></label>
                                     <input type="email" id="youEmail" name="youEmail" placeholder="이메일"
@@ -209,7 +203,7 @@
                                         autocomplete="off" required>
                                 </div>
                             </div>
-                            <button id="joinBtn" class="join-submint" type="submit">로그인</button>
+                            <button id="loginBtn" class="login-submint" type="submit">로그인</button>
                         </fieldset>
                     </form>
                     <div class="find">
