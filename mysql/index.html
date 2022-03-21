@@ -438,6 +438,9 @@ default 'x' comment "남성은 m, 여성은 w" AFTER youBirth;
                     <h4 class="pt20">모든 회원의 비밀번호를 '1234' 변경</h4>
 <pre class="language-js"><code>UPDATE myMember SET youPass = "1234";</code></pre>
 
+                    <h4 class="pt20">아이디 번호가 3, 비밀번호를 '1234'로 변경</h4>
+<pre class="language-js"><code>UPDATE myMember SET youPass = "1234" WHERE boardID = 3;</code></pre>
+
                     <h4 class="pt20">5회원부터 10회원까지 비밀번호를 '1234567'로 변경</h4>
 <pre class="language-js"><code>UPDATE myMember SET youPass = '1234567' WHERE memberID BETWEEN 5 AND 10;</code></pre>
 
