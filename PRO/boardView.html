@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ir_pm {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        .ir_wa {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ir_so {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NexonLv1Gothic';
+            box-sizing: border-box;
+        }
+
+        #header {
+            padding: 10px;
+            border-bottom: 3px solid #411700;
+            display: flex;
+            align-items: center;
+        }
+
+        #header .logo {
+            background: url(img/logo2.png) no-repeat;
+            width: 100px;
+            height: 60px;
+            display: inline-block;
+            margin-left: 49%;
+        }
+        #header .member {
+            display: inline-block;
+            padding: 10px 18px;
+            margin-left: auto;
+        }
+        #header .member a {
+            padding: 9px 22px;
+            border: 1px solid #e9e5bd;
+            border-radius: 50px;
+            background: #e9e5bd;
+            text-decoration: none;
+            color: #000;
+            font-weight: 900;
+        }
+
+        .board__table table {
+            width: 100%;
+            border: 2px solid #000;
+            border-bottom: 2px solid #000;
+        }
+        .board__table table th {
+            background-color: #EED8BE;
+            font-weight: 500;
+        }
+        .board__table table th,
+        .board__table table td {
+            border-bottom: 1px solid #000;
+            padding: 20px 0;
+            font-size: 14px;
+            border-left: 1px solid #000;
+        }
+        .board__table table td {
+            vertical-align: top;
+            border-top: 1px solid #000;
+        }
+        .board__table table.hover tr {
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .board__table table.hover tr:hover {
+            background-color: #ededed;
+        }
+        .board__table table .left {
+            text-align: left;
+            padding-left: 20px;
+        }
+        .board__table table .height {
+            height: 400px;
+            line-height: 1.6;
+        }
+        .board__btn a,
+        .board__btn button {
+            background: #E9E5BD;
+            padding: 9px 20px;
+            border-radius: 5px;
+            color: #000;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 15px;
+            text-decoration: none;
+        }
+
+
+        /* reset.css */
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        /* common.css */
+        /* 컨테이너 */
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            /* background: rgba(0,0,0,0.3); */
+        }
+
+        #contents {
+            min-height: 70vh;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section__title {
+            font-size: 50px;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .section__desc {
+            font-size: 22px;
+            line-height: 1.5;
+            font-weight: 300;
+            color: #777;
+            margin-bottom: 80px;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo"></div>
+            <div class="member">
+                <a href="login.html">로그인</a>
+                <a href="join.html">회원가입</a>
+            </div>
+        </header>
+        <main id="contents">
+            <h2 class="ir_so">컨텐츠 영역</h2>
+            <section id="board-type" class="section center mb100">
+                <div class="container">
+                    <h3 class="section__title">게시글 보기</h3>
+                    <div class="board__inner">
+                        <div class="board__table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 20%">
+                                    <col>
+                                    <col style="width: 10%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>제목</th>
+                                        <td class="left">이번주 숙제 내용입니다. 숙제 확인하고 꼭 제출하세요!</td>
+                                    </tr>
+                                    <tr>
+                                        <th>작성자</th>
+                                        <td class="left">박근혁</td>
+                                        <td>2022.03.22</td>
+                                        <td>조회수</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left height">
+                                            웹을 제작하다보면<br>
+                                            이런식으로<br>
+                                            select 나 input 박스가 아이폰(아이패드)에서만 <br>
+                                            둥그런 기본 스타일이 적용 되어서<br>
+                                            디자인이 틀어지는 경우가 있어요.<br>
+                                            기껏 디자인했는데 틀어지면 마음아프잖아여... <br>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="board__btn">
+                            <a href="#">목록보기</a>
+                            <a href="#">삭제하기</a>
+                            <a href="#">수정하기</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- //main -->
+
+    </div>
+</body>
+
+</html>
