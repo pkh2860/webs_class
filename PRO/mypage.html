@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="css/nexon.css">
+    <style>
+        .ir_pm {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+        .ir_wa {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
+        .ir_so {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NexonLv1Gothic';
+            box-sizing: border-box;
+            
+        }
+
+        .container {
+            width: 1200px;
+        }
+        #header {
+            padding: 10px;
+            border-bottom: 3px solid #411700;
+            display: flex;
+            align-items: center;
+        }
+        #header .logo {
+            background: url(img/logo2.png) no-repeat;
+            width: 100px;
+            height: 60px;
+            display: inline-block;
+            margin-left: 49%;
+        }
+        #header .member {
+            display: inline-block;
+            padding: 10px 18px;
+            margin-left: auto;
+        }
+        #header .member a {
+            padding: 9px 22px;
+            border: 1px solid #e9e5bd;
+            border-radius: 50px;
+            background: #e9e5bd;
+            text-decoration: none;
+            color: #000;
+            font-weight: 900;
+        }
+
+        .join-type {
+            padding:100px 0;
+            display: flex;
+        }
+        .mypage__intro {
+            height: 330px;
+            border: 1px solid #000;
+            margin-bottom: 50px;
+
+        }
+        .mypage__face {
+            width: 180px;
+            height: 180px;
+            margin: 50px auto 0 auto;
+            border-radius: 50%;
+            background: #b7b7b7;
+        }
+        .member-form {
+            margin: 0 auto;
+        }
+        .member-form h3 {
+            font-weight: 500;
+            font-size: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .member_form h4 {
+            font-weight: 500;
+            font-size: 16px;
+            text-decoration: underline;
+        }
+        .member-form .list li {
+            font-size: 14px;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 10px;
+        }
+        .member-form .list li::before {
+            content: '';
+            width: 3px;
+            height: 3px;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+       .member-form .blue {
+            padding: 20px;
+        }
+
+        .join-box {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .join-box label {
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        .join-box input {
+            width: 100%;
+            padding: 25px;
+            height: 50px;
+            margin-bottom: 30px;
+            font-size: 15px;
+            border-radius: 5px;
+        }
+        .join-box input::before {
+            border: 0;
+        }
+
+        .join-submint {
+            margin-top: 35px;
+            margin-left: 60px;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 15px;
+            display: block;
+            width: 80%;
+            transition: all 0.3s;
+            cursor: pointer;
+            background: #e9e5bd;
+            border-radius: 50px;
+            padding-top: 20px;
+            border: none;
+        }
+        .mypage__intro button {
+            padding: 10px 45px;
+            margin-top: 35px;
+            margin-left: 89px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo"></div>
+
+            <div class="member">
+                <a href="login.html">로그인</a>
+                <a href="join.html">회원가입</a>
+            </div>
+        </header>
+
+        <main id="contents">
+            <h2 class="ir_so">컨텐츠 영역</h2>
+            <section class="join-type">
+                <div class="member-form">
+                    <h3>회원정보 수정</h3>
+                    <div class="mypage__intro">
+                            <div class="mypage__face"></div>
+                            <button>파일</button>
+                    </div>
+                    <form action="#" name="join" method="post">
+                        <fieldset style="border:0;">
+                            <legend class="ir_so">회원가입 입력폼</legend>
+                            <div class="join-box">
+                                <div>
+                                    <label for="youEmail">이메일</label>
+                                    <input type="email" id="youEmail" name="youEmail" autocomplete="off" autofocus
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="youName">닉네임</label>
+                                    <input type="text" id="youName" name="youName" maxlength="5" autocomplete="off"
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="youPass">비밀번호</label>
+                                    <input type="password" id="youPass" name="youPass" maxlength="20" autocomplete="off"
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="youBirth">생년월일</label>
+                                    <input type="text" id="youBirth" name="youBirth" maxlength="12" autocomplete="off"
+                                        required>
+                                </div>
+                                <div>
+                                    <label for="youPhone">휴대폰 번호</label>
+                                    <input type="text" id="youPhone" name="youPhone" maxlength="15" autocomplete="off"
+                                        required>
+                                </div>
+                            </div>
+                            <button id="joinBtn" class="join-submint" type="submit">회원가입</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <!-- //contents -->
+    </div>
+</body>
+
+</html>
