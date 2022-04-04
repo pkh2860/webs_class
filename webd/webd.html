@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .ir_so {
+        overflow: hidden;
+        position: absolute;
+        width: 0;
+        height: 0;
+        line-height: 0;
+        text-indent: -9999px;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+    }
+    #wrap {
+        width: 1200px;
+    }
+
+    #header {height: 100px;}
+    #header h1 {float: left; padding-top: 5px;}
+    #header h1 img {width: 130px;}
+    #header .nav {float: right; z-index: 100; position: relative; margin-top: 20px;}
+    #header .nav li {position: relative; float: left; width: 120px; text-align: center; white-space: nowrap; list-style: none;}
+    #header .nav li a {display: block; padding: 20px 15px; background: #ccc;}
+    a {text-decoration: none; color: #000;}
+    #header .nav li a:hover {background: #ddd;}
+    #header .nav li ul.submenu {display: none; position: absolute; left: 0; top: 59px; background: #ddd;}
+    #header .nav li ul.submenu li a {padding: 10px;}
+    #header .nav li ul.submenu li a:hover {background: #999;}
+    .clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
+   
+    .notice {position: relative; padding: 30px;}
+    .notice ul li {
+        /* float: left; */
+        margin-right: 20px;
+    }
+    .notice ul li a {font-size: 24px; color: #999; font-weight: bold;}
+    .notice ul li.active a {color: #000;}
+    .notice ul li ul {
+        position: absolute;
+        /* left: 30px; */
+        top: 70px;
+    }
+    .notice ul li ul li {width: 95%; padding: 5px 0;}
+    .notice ul li ul li a {float: left; width: 60%; font-size: 16px; color: #333; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: normal;}
+    .notice ul li ul li span {float: right; width: 20%;}
+    .notice .more {position: absolute; right: 30px; top: 35px;}
+   
+    /* #header {
+        width: 1920px;
+        height: 100px;
+
+    }
+    #header .logo {
+        background-image: url(img/logo.png);
+        background-repeat: no-repeat;
+        background-size: 120px;
+        width: 120px;
+        height: 100px;
+        margin-left: 0;
+    }
+    #header {
+        display: flex;
+        width: 960px;
+        height: 100px;
+    }
+    .menu {
+        margin-top: 70px;
+    }
+    .menu ul {
+        margin-left:210px;
+    }
+    .menu li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .menu li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 15px;
+        margin-left: 30px;
+        font-weight: 800;
+    } */
+    #contents {
+        margin: 0 auto;
+    }
+    #banner {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .notice .container {
+        width: 960px;
+    }
+    .banner_img {
+        background-image: url(img/Slice1.png);
+        background-repeat: no-repeat;
+        background-size: 960px;
+        width: 960px;
+        height: 360px;
+    }
+    /*.left .title {
+        margin-bottom: 20px;
+    }
+    .left .title span {
+        font-size: 15px;
+        margin-left: 10px;
+        font-weight: 300;
+        color: #dedede;
+    } 
+    .left li {
+        list-style:none;
+        margin-bottom: 15px;
+    }
+    .left li span {
+        float: right;
+    } */
+    .right .img {
+        background-image: url(img/Slice6.png);
+        background-repeat: no-repeat;
+        background-size: 500px;
+        width: 500px;
+        height: 230px;
+        float: right;
+    } 
+    /* .card {
+    }
+    .card .container {
+        display: flex;
+    }
+    .card .card__img01 {
+        background-image: url(img/Slice2.png);
+        background-repeat: no-repeat;
+        background-size: 250px;
+        width: 240px;
+        height: 240px;
+    }
+    .card .card__img02 {
+        background-image: url(img/Slice3.png);
+        background-repeat: no-repeat;
+        background-size: 250px;
+        width: 240px;
+        height: 240px;
+    }
+    .card .card__img03 {
+        background-image: url(img/Slice4.png);
+        background-repeat: no-repeat;
+        background-size: 250px;
+        width: 240px;
+        height: 240px;
+    }
+    .card .card__img04 {
+        background-image: url(img/Slice5.png);
+        background-repeat: no-repeat;
+        background-size: 250px;
+        width: 240px;
+        height: 240px;
+    } */
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header id="header" class="clearfix">
+            <h1><a href="#"><img src="img/logo.png" alt="롯데월드"></a></h1>
+            <nav class="nav">
+                <ul class="clearfix">
+                    <li><a href="#">즐길거리</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">요금/우대혜택</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">참여프로그램</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이용가이드</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소통서비스</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+   
+        <!-- //header -->
+
+        <main id="contents">
+            <h2 class="ir_so">컨텐츠 영역</h2>
+            <section id="banner">
+                <h3 class="ir_so">배너 영역</h3>
+                    <div class="banner_img"></div>
+                </section>
+                <!-- banner -->
+
+                <article class="notice">
+                    <div class="container">
+                        <div class="left">
+                            <ul class="clearfix">
+                                <li class="active"><a href="#">롯데월드 소식</a>
+                                    <ul>
+                                        <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                                        <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                                        <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                                        <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">뉴스&middot;공지</a>
+                                    <ul>
+                                        <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                                        <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                                        <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                                        <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <a href="#" class="more">더보기 +</a>
+                        </div>
+                            <div class="right">
+                                <div class="img"></div>
+                            </div>
+                    </div>
+                </article>
+
+            <!-- <section id="cardtext">
+                <div class="container">
+                    <div class="left">
+                        <h3 class="title">롯데월드 소식</h3>
+                        <ul>
+                            <li>그럴싸진관 미라클 <span>2018.11.19</span></li>
+                            <li>드림스테이지 "힘내 소중한 너" <span>2018.11.20</span></li>
+                            <li>"힘내 소중한 너" 음원 발매 <span>2018.11.13</span></li>
+                            <li>이용 요금 조정 안내 <span>2018.11.12</span></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div class="img"></div>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- <section class="card">
+                <div class="container">
+                    <h3>특별한 경험</h3>
+                    <div>
+                        <div class="card__img01"></div>
+                        <p>연간회원안내</p>
+                    </div>
+                    <div>
+                        <div class="card__img02"></div>
+                        <p>프리미엄투어</p>
+                    </div>
+                    <div>
+                        <div class="card__img03"></div>
+                        <p>공연참여 프로그램</p>
+                    </div>
+                    <div>
+                        <div class="card__img04"></div>
+                        <p>단체프로그램</p>
+                    </div>
+                </div>
+            </section> -->
+              
+        </main>
+        <!-- //main -->
+
+        <footer id="footer">
+           
+        </footer>
+        <!-- //footer -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+
+</body>
+</html>
