@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+         .ir_so {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1000px;
+            height: 100px;
+            display: flex;
+        }
+        #header h1 {
+            margin-left: 0px;
+            margin-top: 40px;
+        }
+        #header h1 img {
+            width: 130px;
+        }
+      
+        /* #banner {
+            width: 1000px;
+            height: 390px;
+        }
+        .banner_img {
+            background-image: url(img/img01.jpg);
+            background-repeat: no-repeat;
+            background-size: 1000px;
+            width: 1000px;
+            height: 390px;
+        } */
+        #card {
+            width: 1000px;
+            height: 190px;
+            margin-top: 25px;
+        }
+        #card h3 {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            white-space: nowrap;
+        }
+        #card .middle {
+            font-size: 15px;
+            margin-bottom: 25px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        #card .card01 {
+            background: #f2f2f2;
+            width: 480px;
+            float: left;
+            height: 155px;
+        }
+        .card01 .img01 {
+            background-image: url(img/img8.jpg);
+            background-repeat: no-repeat;
+            background-size: 85px;
+            width: 80px;
+            height: 80px;
+            float: right;
+            margin-top: 40px;
+            margin-right: 30px;
+        }
+        .card01 div {
+            margin-left: 35px;
+        }
+        .card01 a {
+            background-image: url(img/img10.jpg);
+            background-repeat: no-repeat;
+            background-size: 20px;
+            width: 50px;
+            height: 50px;
+            color: #000;
+            text-decoration: none;
+        }
+        .card01 span {
+            margin-left: 25px;
+            font-weight: 900;
+        }
+        .card02 div {
+            margin-left: 35px;
+        }
+        #card .card02 {
+            background: #f2f2f2;
+            width: 480px;
+            float: right;
+            height: 155px;
+        }
+        .card02 .img02 {
+            background-image: url(img/img9.jpg);
+            background-repeat: no-repeat;
+            background-size: 85px;
+            width: 80px;
+            height: 80px;
+            float: right;
+            margin-top: 40px;
+            margin-right: 30px;
+        }
+        .card02 a {
+            background-image: url(img/img12.jpg);
+            background-repeat: no-repeat;
+            background-size: 100px;
+            width: 100px;
+            height: 100px;
+            color: #000;
+            text-decoration: none;
+        }
+        .card02 span {
+            margin-left: 105px;
+            font-weight: 900;
+        }
+        #card__text {
+            width: 1000px;
+            height: 465px;
+            position: relative;
+        }
+        #card__text .menu {
+            font-size: 25px;
+            color: #000;
+            text-decoration: none;
+            white-space: nowrap;
+            font-weight: bold;
+        }
+        .one .card__img01 {
+            background-image: url(img/img04.jpg);
+            background-repeat: no-repeat;
+            background-size: 300px;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        .one .card__img02 {
+            background-image: url(img/img05.jpg);
+            background-repeat: no-repeat;
+            background-size: 300px;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        .one .card__img03 {
+            background-image: url(img/img06.jpg);
+            background-repeat: no-repeat;
+            background-size: 300px;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        .one {
+            display: flex;
+            margin-top: 30px;
+        }
+        .one .name {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .one span {
+            font-weight: 7px;
+        }
+        .one .price {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .one span {
+            font-weight: 100;
+            color: #565656;
+        }
+
+        /*  */
+        .one1 .card__img01 {
+            background-image: url(img/img06.jpg);
+            background-repeat: no-repeat;
+            background-size: 300px;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        .one1 .card__img02 {
+            background-image: url(img/img05.jpg);
+            background-repeat: no-repeat;
+            background-size: 300px;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        .one1 .card__img03 {
+            background-image: url(img/img04.jpg);
+            background-repeat: no-repeat;
+            background-size: 300px;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        .one1 {
+            display: flex;
+            margin-top: 30px;
+        }
+        .one1 .name {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .one1 span {
+            font-weight: 7px;
+        }
+        .one1 .price {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .one1 span {
+            font-weight: 100;
+            color: #565656;
+        }
+        .cart {
+            background-image: url(img/img13.jpg);
+            background-repeat: no-repeat;
+            background-size: 30px;
+            width: 30px;
+            height: 30px;
+            float: right;
+            margin-top: -28px;
+        }
+        /* #footer {
+            width: 100%;
+            height: 15em;
+            background: #202020;
+        } */
+        .container {
+            width: 1000px;
+        }
+        #footer img {
+            width: 130px;
+        }
+
+        /* .nav {
+            margin-left: 140px;
+            margin-top: 20px;
+        }
+        .nav li {
+            display: inline-block;
+            font-size: 20px;
+            text-align: center;
+        }
+       
+        .nav li a {
+            text-decoration: none;
+            color: #000;
+            margin-left: 30px;
+            text-align: center;
+            white-space: nowrap;
+        } 
+        .desc ul {
+            float: left;
+        }
+        .desc {
+            margin-top: 35px;
+        }
+        .desc ul {
+           display: none;
+           position: absolute;
+           z-index: 1000;
+        }
+        .desc li:hover > ul {
+            display: block;
+        }
+        .desc {
+            text-align: center;
+        }
+        .desc li ul li {
+            display: block;
+            padding: 10px;
+        }
+        .desc li ul {
+            text-align: center;
+        } */
+
+        .hide {
+            display: none;
+        }
+        #card__text span:hover {
+            cursor: pointer;
+        }
+        #card__text .review:hover {
+            cursor: pointer;
+        }
+        em {
+            font-style: normal;
+        }
+    /*  */
+        #footer {
+            width: 100%;
+            background-color: rgb(32,32,32);
+        }
+        #footer .container {
+            width: 1000px;
+            padding: 30px 0 50px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .FDesc > ul {
+            color: rgba(255, 255, 255, 0.082);
+        }
+        .FDesc > ul li {
+            display: inline-block;
+        }
+        .FDesc > ul li a {
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .FDesc > p {
+            margin-top: 25px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.397);
+            line-height: 2;
+        }
+        .FDesc > p > em{
+            color: rgba(255, 255, 255, 0.082);
+        }
+    </style>
+</head> 
+<body>
+
+    <div id="wrap">
+        <header id="header">
+            <h1><a href="#"><img src="img/logo.jpg" alt="COOKIT"></a></h1>
+
+            <nav class="nav">
+                <ul class="clearfix">
+                    <li><a href="#">COOKIT소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">COOKIT메뉴</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">리뷰</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이벤트</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MY쿡킷</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- <nav class="nav">
+                <ul class="desc">
+                    <li><a href="#">COOKIT소개</a>
+                        <ul>
+                            <li><a href="#">subMenu1</a></li>
+                            <li><a href="#">subMenu2</a></li>
+                            <li><a href="#">subMenu3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">COOKIT 메뉴</a>
+                        <ul>
+                            <li><a href="#">subMenu1</a></li>
+                            <li><a href="#">subMenu2</a></li>
+                            <li><a href="#">subMenu3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">리뷰</a>
+                        <ul>
+                            <li><a href="#">subMenu1</a></li>
+                            <li><a href="#">subMenu2</a></li>
+                            <li><a href="#">subMenu3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"">이벤트</a>
+                        <ul>
+                            <li><a href="#">subMenu1</a></li>
+                            <li><a href="#">subMenu2</a></li>
+                            <li><a href="#">subMenu3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MY쿡킷</a>
+                        <ul>
+                            <li><a href="#">subMenu1</a></li>
+                            <li><a href="#">subMenu2</a></li>
+                            <li><a href="#">subMenu3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav> -->
+           
+        </header>
+        <!-- //header -->
+
+        <main id="contents">
+            <h2 class="ir_so">컨텐츠 영역</h2>
+            <div class="con">
+                <div class="slideList">
+                    <div class="slideImg">
+                        <h2>이미지1</h2>
+                        <img src="img/img01.jpg" alt="쿡킷을 더 편리하게 COOKIT 앱 런칭기념 이벤트1">
+                    </div>
+                    <div class="slideImg">
+                        <h2>이미지2</h2>
+                        <img src="img/img01.jpg" alt="쿡킷을 더 편리하게 COOKIT 앱 런칭기념 이벤트2">
+                    </div>
+                    <div class="slideImg">
+                        <h2>이미지3</h2>
+                        <img src="img/img01.jpg" alt="쿡킷을 더 편리하게 COOKIT 앱 런칭기념 이벤트3">
+                    </div>
+                </div>
+            </div>
+                <!-- <section id="banner">
+                    <h3 class="ir_so">배너 영역</h3>
+                        <div class="banner_img"></div>
+                    </section> -->
+                    <!-- banner -->
+                
+                <section id="card">
+                    <div class="card01">
+                        <div class="img01"></div>
+                        <div>
+                            <h3>우리집도 COOKIT 배송이 되나요?</h3>
+                            <p class="middle">배송이 가능한지 알려드려요</p>
+                            <a href="#" class="ir_so">위치</a>
+                            <span>배송지 검색</span>
+                        </div>
+                    </div>
+                    <div class="right">
+                    <div class="card02">
+                        <div class="img02"></div>
+                        <div>
+                            <h3>7월 30일(화)에 받을 수 있어요</h3>
+                            <p class="middle">오전 7시까지 주문하시면 다음날 배송됩니다.</p>
+                            <a href="#" class="ir_so">시계</a>
+                            <span>남은시간</span>
+                        </div>
+                    </div>
+                </div>
+                </section>
+             
+                <section id="card__text">
+                     <!-- <a class="menu"><span class="best active">실시간 베스트</span> | <span class="review">생생한 리뷰</span></a> -->
+                     <h3><span class="best black">실시간 베스트</span> | <em class="review">생생한 리뷰</em></h3>
+                    <div class="one"> 
+                        <div>
+                            <div class="card__img01"></div>
+                            <a href="#" class="name">평양식 어복쟁반</a>
+                            <p class="price">33,800원<span> /3인분</span></p>
+                            <a class="cart"></a>
+                        </div>
+                        <div>
+                            <div class="card__img02"></div>
+                            <a href="#" class="name">새우주꾸미삼겹살</a>
+                            <p class="price">29,800원<span> /3인분</span></p>
+                            <a class="cart"></a>
+                        </div>
+                        <div>
+                            <div class="card__img03"></div>
+                            <a href="#" class="name">방풍나물 아귀찜</a>
+                            <p class="price">32,800원<span> /3인분</span></p>
+                            <a class="cart"></a>
+                        </div>
+                    </div>
+
+                    <div class="one1 hide">
+                        <div>
+                            <div class="card__img01"></div>
+                            <a href="#" class="name">평양식 어복쟁반</a>
+                            <p class="price">33,800원<span> /3인분</span></p>
+                            <a class="cart"></a>
+                        </div>
+
+                        <div>
+                            <div class="card__img02"></div>
+                            <a href="#" class="name">새우주꾸미삼겹살</a>
+                            <p class="price">29,800원<span> /3인분</span></p>
+                            <a class="cart"></a>
+                        </div>
+                        <div>
+                            <div class="card__img03"></div>
+                            <a href="#" class="name">방풍나물 아귀찜</a>
+                            <p class="price">32,800원<span> /3인분</span></p>
+                            <a class="cart"></a>
+                        </div>
+                    </div>
+                </section>
+                <footer id="footer">
+                    <div class="container">
+                        <div class="FLogo"><img src="img/footerlogo.jpg" alt=""></div>
+                        <div class="FDesc">
+                            <ul>
+                                <li><a href="#">이용약관</a></li>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <li><a href="#">개인정보처리 방침</a></li>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <li><a href="#">법적고지</a></li>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+                                <li><a href="#">사업자정보 확인</a></li>
+                            </ul>
+                            <p>씨제이제일제당(주)&nbsp;<em>|</em>&nbsp;대표자:신현재<br>주소:서울 중구 동호로 330 CJ제일제당 센터(우)04560&nbsp;<em>|</em>&nbsp;사업자등록번호:104-86-09535<br>통신판매업신고 중구 제 07767호&nbsp;<em>|</em>&nbsp;개인정보보호책임자:류화정</p>
+                        </div>
+                    </div>
+                </footer>
+                   <!-- layer -->
+                   <div class="layer_bg"></div>
+                   <div class="layer">
+                       <h2>제목</h2>
+                       <a href="#" class="close">닫기</a>
+                   </div>
+                
+
+        </main>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- <script src="script/script_2.js"></script> -->
+        <script>
+            var currentIndex = 0;
+            // setInterval(function(){
+            //     if(currentIndex < 2){
+            //         currentIndex ++;
+            //     }else {
+            //         currentIndex = 0;
+            //     }
+            //     var slidePosition = currentIndex * (-1000)+"px";
+            //     $(".slideList").animate({left: slidePosition}, 400);
+            // }, 3000);
+
+            $(".right").click(function(){
+                $(".layer").slideDown(300);
+                $(".layer_bg").show();
+            });
+            $(".layer .close").click(function(){
+                $(".layer").slideUp(300);
+                $(".layer_bg").hide();
+            })
+
+
+            $(".best").click(function () {
+                $(".one").removeClass("hide");
+                $(".best").addClass("black");
+                $(".review").removeClass("black");
+                $(".one1").addClass("hide");
+            })
+            $(".review").click(function () {
+                $(".one").addClass("hide");
+                $(".best").removeClass("black");
+                $(".review").addClass("black");
+                $(".one1").removeClass("hide");
+            })
+
+        </script>
+</body>
+</html>
