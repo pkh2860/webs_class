@@ -552,15 +552,15 @@
         <!-- <script src="script/script_2.js"></script> -->
         <script>
             var currentIndex = 0;
-            // setInterval(function(){
-            //     if(currentIndex < 2){
-            //         currentIndex ++;
-            //     }else {
-            //         currentIndex = 0;
-            //     }
-            //     var slidePosition = currentIndex * (-1000)+"px";
-            //     $(".slideList").animate({left: slidePosition}, 400);
-            // }, 3000);
+            setInterval(function(){
+                if(currentIndex < 2){
+                    currentIndex ++;
+                }else {
+                    currentIndex = 0;
+                }
+                var slidePosition = currentIndex * (-1000)+"px";
+                $(".slideList").animate({left: slidePosition}, 400);
+            }, 3000);
 
             $(".right").click(function(){
                 $(".layer").slideDown(300);
