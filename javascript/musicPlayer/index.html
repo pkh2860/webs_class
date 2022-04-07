@@ -291,11 +291,9 @@
             musicAudio.src = `songs/${allMusic[num -1].audio}.mp3`;
         }
 
-
         window.addEventListener("load", ()=>{
             loadMusic(musicIndex);
         });
-
 
         function playMusic(){
             musicWrap.classList.add("paused");
