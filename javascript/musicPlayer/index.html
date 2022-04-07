@@ -298,11 +298,19 @@
         });
 
         function playMusic(){
+            musicWrap.classList.add("paused");
+            musicPlay.innerText = "pause";
             musicAudio.play();
+        }
+        function pauseMusic(){
+            musicWrap.classList.remove("paused")
+            musicPlay.innerText = "play_arrow";
+            musicAudio.pause();
         }
 
         musicPlay.addEventListener("click", ()=> {
-            playMusic()
+            const isMusicPaused = musicWrap.classList.contains("paused");
+            isMusicPaused ? pauseMusic() : playMusic();
         })
     </script>
 </body>
