@@ -280,8 +280,6 @@
         const musicAudio = musicWrap.querySelector("#main-audio");
         const musicPlay = musicWrap.querySelector("#control-play");
 
-
-        control-play
         let musicIndex = 10;
 
         //음악 재생
@@ -293,13 +291,15 @@
             musicAudio.src = `songs/${allMusic[num -1].audio}.mp3`;
         }
 
+
         window.addEventListener("load", ()=>{
             loadMusic(musicIndex);
         });
 
+
         function playMusic(){
             musicWrap.classList.add("paused");
-            musicPlay.innerText = "pause";
+            musicPlay.innerText = "pause"
             musicAudio.play();
         }
         function pauseMusic(){
