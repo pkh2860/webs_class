@@ -279,7 +279,10 @@
         const musicArtist = musicWrap.querySelector(".music__song .artist");
         const musicAudio = musicWrap.querySelector("#main-audio");
         const musicPlay = musicWrap.querySelector("#control-play");
+        const musicPrevBtn = musicWrap.querySelector("#control-prev");
+        const musicNextBtn = musicWrap.querySelector("#control-next");
 
+        
         let musicIndex = 10;
 
         //음악 재생
@@ -294,22 +297,45 @@
         window.addEventListener("load", ()=>{
             loadMusic(musicIndex);
         });
-
+        //플레이 버튼
         function playMusic(){
             musicWrap.classList.add("paused");
             musicPlay.innerText = "pause"
             musicAudio.play();
         }
+        //정지 버튼
         function pauseMusic(){
             musicWrap.classList.remove("paused")
             musicPlay.innerText = "play_arrow";
             musicAudio.pause();
         }
 
+        //이전 곡 듣기 버튼(1)
+        function pervMusic(){
+            musicIndex--;
+            //번호 값이 1이면 --> 20으로 변경
+            musicIndex < 1 ? musicIndex = all.Music.length : musicIndex = musicIndex;
+            loadMusic(musicIndex);
+            playMusic();
+
+        }
+
+        //다음 곡 듣기 버튼(20)
+        function nextMusic(){
+            musicIndex++;
+            //번호값이 20이면 --> 1로 변경
+            musicIndex > allMusic.length ? musicIndex = 1 : musicIndex = musicIndex;
+            loadMusic(musicIndex);
+            playMusic();
+
+        }
+
         musicPlay.addEventListener("click", ()=> {
             const isMusicPaused = musicWrap.classList.contains("paused");
             isMusicPaused ? pauseMusic() : playMusic();
-        })
+        });
+        musicPrevBtn.addEventListener("click", pervMusic);
+        musicNextBtn.addEventListener("click", nextMusic);
     </script>
 </body>
 </html>
