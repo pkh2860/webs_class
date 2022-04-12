@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이펙트5</title>
+
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/nexon.css">
+    <link rel="stylesheet" href="css/dracula.min.css">
+
+    <style>
+        body::before {
+            background-color: rgba(8, 31, 36, .8)
+        }
+        .mouse__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            cursor: none;
+        }
+        .mouse__img {
+            position: relative;
+            text-align: center;
+            transform:rotateX(0deg) rotateY(0deg);      /*3D 효과*/
+            transform-style: preserve-3d;
+            will-change: transform;
+
+        }
+        .mouse__img figure {
+            width: 50vw;
+            position: relative;
+        }
+        .mouse__img figure::before {
+            content:'';
+            position: absolute;
+            left: 5%;
+            bottom: -40px;
+            width: 90%;
+            height: 40px;
+            background: url(img/img10.jpg) center center no-repeat;
+            background-size: 100% 40px;
+            filter: blur(8px);
+            opacity: 0.9;
+            z-index: -1;
+        }
+        .mouse__img figcaption {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            font-size: 1vw;
+            white-space: nowrap;
+            line-height: 1.6;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 1vw 2vw;
+            transform: translate3d(-50%, -50%, 150px)
+        }
+        .cursor {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+            mix-blend-mode: difference;
+        }
+        .mouse__img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            width: 50%;
+        }
+        .mouse__text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -20%);
+            color: #fff;
+            font-size: 3vw;
+            line-height: 1.5;
+        }
+        .mouse__text .line {
+            width: 100%;
+            display: flex;
+        }
+        .mouse__text .line .left {
+            width: 50vw;
+            color: orange;
+            transform: skew(0deg, -15deg);
+            overflow: hidden;
+        }
+        .mouse__text .line .left .spanWrap {
+            width: 100vw;
+            text-align: center;
+        }
+        .mouse__text .line .right {
+            width: 50vw;
+            overflow: hidden;
+            transform: skew(0deg, 15deg);
+        }
+        .mouse__text .line .right .spanWrap {
+            width: 100vw;
+            text-align: center;
+            transform: translateX(-50vw);
+        }
+        .cursor {
+            position: absolute;
+            left: 0;top: 0;
+            width: 20px;
+            height: 20px;
+            z-index: 99999;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            user-select: none;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="img02">
+    
+    <!-- main -->
+    <main>
+        <section id="mouseTpye01">
+            <div class="cursor"></div>
+            <div class="mouse__wrap">
+                <div class="mouse__img">
+                    <figure>
+                        <img src="img/img10.jpg" alt="">
+                    </figure>
+                </div>
+                <div class="mouse__text">
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <div class="spanSlow">Whatever you do</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <div class="spanSlow">Whatever you do</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <div class="spanFast">make it pay.</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <div class="spanFast">make it pay.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <div class="spanSlow">네가 무엇을 하든 간에</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <div class="spanSlow">네가 무엇을 하든 간에</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <div class="spanFast">그것이 도움이 되도록 하라.</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <div class="spanFast">그것이 도움이 되도록 하라.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- //main -->
+
+    <!-- info -->
+    <div class="info">
+        <div class="title">
+            <h1><a href="mouseEffect.html">JavaScript Mouse Effect06</a></h1>
+            <p>마우스 이펙트 - 텍스트 효과</p>
+        </div>
+
+        <div class="number">
+            <ul>   
+                <li><a href="mouseEffect01.html">1</a></li>
+                <li><a href="mouseEffect02.html">2</a></li>
+                <li><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li><a href="mouseEffect05.html">5</a></li>
+                <li class="active"><a href="mouseEffect06.html">6</a></li>
+                <li><a href="mouseEffect07.html">7</a></li>
+                <li><a href="mouseEffect08.html">8</a></li>
+            </ul>
+        </div>
+
+        <div class="source">
+            <button class="source-btn">소스보기</button>
+            <div id="modal">
+                <div class="modal-wrap">
+                    <div class="modal-cont">
+                        <div class="code-view">
+                            <div class="view-header" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="view-title">
+                                <ul>
+                                    <li class="active"><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">Javascript</a></li>
+                                </ul>
+                            </div>
+                            <div class="view-cont">
+                                <div>
+<pre><code class="language-javascript">
+
+</code></pre>
+                                </div>
+                                <div>
+<pre><code class="language-javascript">
+
+</code></pre>
+                                </div>
+                                <div>
+<pre><code class="language-javascript">
+
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="modal-close">닫기</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="attr">
+            <ul>
+                <li>mousePageX : <span class="mousePageX">0</span>px</li>
+                <li>mousePageY : <span class="mousePageY">0</span>px</li>
+                <li>centerPageX : <span class="centerPageX">0</span>px</li>
+                <li>centerPageY : <span class="centerPageY">0</span>px</li>
+                <li>maxPageX : <span class="maxPageX">0</span>px</li>
+                <li>maxPageY : <span class="maxPageY">0</span>px</li>
+            </ul>
+        </div>
+    </div>
+    
+      <!-- script -->
+      <script src="js/highligt.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="js/gsap.min.js"></script>
+      <script>
+        //   highlight();
+        //   modal();
+        //   tabMenu();
+        
+
+          function mousemove(e){
+              let positionSlow = (e.pageX - (window.innerWidth/2)) * 0.1;
+              let positionFast = (e.pageX - (window.innerWidth/2)) * 0.2;
+
+              gsap.to(".spanSlow", {duration: 0.4, x: positionSlow});
+              gsap.to(".spanFast", {duration: 0.4, x: positionFast});
+              gsap.to(".cursor", {duration:0.3, left: e.pageX, top: e.pageY})
+          }
+
+          document.addEventListener("mousemove", mousemove);
+
+        
+
+        </script>
+</body>
+</html>
