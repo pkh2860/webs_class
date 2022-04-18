@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -84,11 +85,35 @@
             80%  {transform: translateX(8px);}
             100% {transform: translateX(0);}
         }
+        .card__sound {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+          
+        }
+        .card__sound button {
+            line-height: 40px;
+            background: #fff;
+            width: 40px;
+            height: 40px;
+            color: #007BFF;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 0;
+        }
+        
     </style>
 </head>
 <body>
     <div class="wrap__card">
         <div class="card__inner">
+            <div class="card__sound">
+                <button class="material-icons">volume_off</button>
+                <!-- <button class="material-icons">volume_up</button> -->
+                <audio id="song" src="audio/Jeremy_Black.mp3" loop="loop"></audio>
+            </div>
             <ul class="cards">
                 <li>
                     <div class="view front">
@@ -233,9 +258,34 @@
         //07. 빨리 클릭하면 버그 발생 처리하기
 
         const cards = document.querySelectorAll(".cards li");
+        const cardSound = document.querySelector(".card__sound button")
+        const cardSong = document.querySelector("#song")
 
         let cardOne, cardTwo;
         let disableDeck = false;
+
+        let sound = [
+            "audio/match2.mp3",
+            "audio/match.mp3",
+            "audio/up.mp3",
+        ]
+        let soundMatch = new Audio(sound[0]);
+        let soundNoMatch = new Audio(sound[1]);
+        let soundSuccess = new Audio(sound[2]);
+
+        //뮤직재생
+        cardSound.addEventListener("click",() => {
+            cardSound.classList.toggle("is-playing");
+            
+            if(cardSound.classList.contains("is-playing")){
+                cardSound.innerText = "volume_up";
+                cardSong.play()
+            }else {
+                cardSound.innerText = "volume_off";
+                cardSong.pause()
+            }
+        })
+
 
         function flipCard(e){   //클릭 카드 = e 타겟
             let clickedCard = e.target;
@@ -267,6 +317,7 @@
                 cardTwo.removeEventListener("click", flipCard)
                 cardOne = cardTwo = ""; //초기화
                 return disableDeck = false; //클릭했을때만 true 안했으면 false
+                soundMatch.play()
 
             } else {
 
@@ -281,6 +332,8 @@
                     cardOne = cardTwo = ""; //초기화
                     disableDeck = false;
                 }, 1200);
+
+                soundNoMatch.play();
             }
             
         }
@@ -288,6 +341,11 @@
         cards.forEach(card => {
             card.addEventListener("click", flipCard);   //카드를 클릭 했을때 뒤짚어지게 
         })
+        
+
+       
+        
+        
 
     </script>
 </body>
