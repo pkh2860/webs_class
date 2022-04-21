@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css" rel="stylesheet">
+    <title>memoryGame</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'NexonMaplestory';
+        }
+        body {
+            background: steelblue;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        button {
+            border: 0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:active {
+            opacity: 0.6;
+        }
+        .start__btn, .info__box,.card__wrap, .result__box {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.17);
+            opacity: 0;
+            pointer-events: none;
+        }
+        .start__btn.active, .info__box.active, .card__wrap.active, .result__box.active{
+            opacity: 1;
+            z-index: 10;
+            pointer-events: auto;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .start__btn button {
+            background: #fff;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-size: 1.3em;
+        }
+        .info__box {
+            width: 500px;
+            background: #fff;
+            border-radius: 5px;
+            font-size: 1.3em;
+            transition: all 0.3s;
+        }
+        .info__box .title {
+            border-bottom: 1px solid #ccc;
+            padding: 1rem 2rem;
+        }
+        .info__box ol {
+            padding: 1.3rem 2.5rem;
+        }
+        .info__box .buttons {
+            border-top: 1px solid #ccc;
+            text-align: center;
+        }
+        .info__box .buttons button {
+            background: #fff;
+            color: dodgerblue;
+            padding: 0.4rem 2rem;
+            margin: 0.6rem 0;
+            border-radius: 5px;
+            font-size: 1.1em;
+            border: 1px solid dodgerblue;
+        }
+        .info__box .buttons .start {
+            background: dodgerblue;
+            color: #fff;
+        }
+        .card__wrap {
+            width: 600px;
+            height: 600px;
+            background: #fff;
+        }
+        .card__wrap li {
+            list-style: none;
+        }
+        .card__inner {
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            width: 100%;
+            height: 100%;
+        }
+        .cards li {
+            width: calc(100% / 4 - 20px);
+            height: calc(100% / 4 - 20px);
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        .cards li .view {
+            position: absolute;
+            background: #FFD17B;
+            padding: 10%;
+            transition: transform 0.25s linear;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            user-select: none;
+            pointer-events: none;
+        }
+        .cards li .view.front {
+            transform: rotateY(0deg)
+        }
+        .cards li .view.back {
+            transform: rotateY(-180deg)
+        }
+        .cards li.flip .view.front {
+            transform: rotateY(180deg)
+        }
+        .cards li.flip .view.back {
+            transform: rotateY(0deg)
+        }
+        .cards li.shake {
+            animation: shake 0.35s ease-in-out;
+        }
+        @keyframes shake {
+            0%   {transform: translateX(0);}
+            20%  {transform: translateX(-13px);}
+            40%  {transform: translateX(13px);}
+            60%  {transform: translateX(-8px);}
+            80%  {transform: translateX(8px);}
+            100% {transform: translateX(0);}
+        }
+
+        .result__box {
+            width: 500px;
+            background: #fff;
+            border-radius: 5px;
+            font-size: 1.3em;
+            z-index: 100;
+        }
+        .result__box .title {
+            border-bottom: 1px solid #ccc;
+            padding: .6rem 2rem;
+            text-align: center;
+            font-size: 1.4em
+        }
+        .result__box .score {
+            padding: 2rem;
+            height: 300px;
+        }
+        .result__box .buttons {
+            border-top: 1px solid #ccc;
+            padding: .8rem 2rem;
+            text-align: center;
+        }
+        .result__box .buttons button {
+            background: #007BFF;
+            color: #fff;
+            padding: .4rem 2rem;
+            border-radius: 5px;
+            font-size: 1em;
+            border: 1px solid #007BFF;
+            margin: 0 0.2em;
+            display: inline-block;
+        }
+        .result__box .buttons button:first-child {
+            background: #fff;
+            border: 1px solid #007BFF;
+            color: #007BFF
+        }
+    </style>
+</head>
+<body>
+    <!-- 시작 버튼 -->
+    <div class="start__btn active">
+        <button>Start</button>
+    </div>
+    <!-- 규칙 박스 -->
+    <div class="info__box">
+        <div class="title">메모리 게임을 하기 위한 규칙</div>
+        <div class="list">
+            <ol>
+                <li>당신에게는 기회가 <em>5번</em> 있습니다.</li>
+                <li>기회 5번을 모두 소진하면, 한 번 더 기회를 드립니다.</li>
+                <li></li>
+                <li>1등에게는 기프티콘 커피를 드립니다.</li>
+            </ol>
+        </div>
+        <div class="buttons">
+            <button class="stop">나가기</button>
+            <button class="start">도전하기</button>
+        </div>
+    </div>
+
+    <!-- 카드 박스 -->
+    <div class="card__wrap">
+        <div class="card__inner">
+            <ul class="cards">
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-2.png" alt="">                        
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-2.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-3.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                       
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-3.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-4.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-4.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-5.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-5.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-6.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-6.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-7.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-7.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-8.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-8.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-9.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="view front">
+                        <img src="img/img-1.png" alt="">
+                    </div>
+                    <div class="view back">
+                        <img src="img/img-9.png" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 결과 박스 -->
+    <div class="result__box">
+        <div class="title">게임을 성공하였습니다.</div>
+        <div class="score">
+            <span>score : <span id='score'>0</span></span>
+            <span>Time : <span id="time">00:00</span></span>
+        </div>
+        <div class="buttons">
+            <button class="stop">나가기</button>
+            <button class="restart">다시 도전하기</button>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        const startBtn = document.querySelector(".start__btn");
+        const infoBox = document.querySelector(".info__box");
+        const resultBox = document.querySelector(".result__box");
+        const cardWrap = document.querySelector(".card__wrap");
+        const cards = document.querySelectorAll(".cards li");
+        const infoBoxStart = infoBox.querySelector(".start");
+        const resultBoxRestart = resultBox.querySelector(".restart");
+
+        const Time = resultBox.querySelector("#time")
+        let cardOne, cardTwo;
+        let disableDeck = false;
+        let matchedCard = 0;
+
+        let sound = [
+            "audio/match2.mp3",
+            "audio/match.mp3",
+            "audio/up.mp3",
+        ]
+        let soundMatch = new Audio(sound[0]);
+        let soundNoMatch = new Audio(sound[1]);
+        let soundSuccess = new Audio(sound[2]);
+
+        let startTime = new Date().getTime(); //a
+        let endTime = new Date().getTime(); //a
+        var newTime = startTime - endTime;
+        newTime.innerText = Time;
+
+        //시작버튼
+        startBtn.onclick = () => {
+            infoBox.classList.add("active");
+            startBtn.classList.remove("active");
+        }
+
+        // 게임 시작 버튼
+        infoBoxStart.onclick = () => {
+            cardWrap.classList.add("active");
+            setTimeout(() => {
+                infoBox.classList.remove("active");
+                shuffledCard();
+                scoreInit();
+            }, 1000)
+        }
+
+        //게임 다시 시작 버튼
+        resultBoxRestart.onclick = () => {
+            resultBox.classList.remove("active");
+            cardWrap.classList.add("active");
+            shuffledCard();
+        }
+
+         //카드 클릭
+         cards.forEach(card => {
+            //card.classList.add("flip")
+            card.addEventListener("click", flipCard);   //카드를 클릭 했을때 뒤짚어지게 
+        })
+
+        function flipCard(e){   //클릭 카드 = e 타겟
+            let clickedCard = e.target;
+           
+            if(clickedCard !== cardOne && !disableDeck){    //(빨리 클릭 버그)클릭카드와 첫번째 카드가 같지 않으면
+                clickedCard.classList.add("flip");
+
+                if(!cardOne){   //첫번째 카드에 아무것도 없을때 
+                    return cardOne = clickedCard;   
+                }
+                cardTwo = clickedCard;
+                disableDeck = true;
+
+                let cardOneImg = cardOne.querySelector(".back img").src//이미지 값 가져오기 첫번째 클릭 이미지 값
+                let cardTwoImg = cardTwo.querySelector(".back img").src//두번째 클릭 이미지 값 속성값 src를 붙여서 문자열로 비교하게 함
+                // console.log(cardOne, cardTwo)
+
+                matchCards(cardOneImg, cardTwoImg)  //카드1 카드2를 넘겨줌
+            };
+        }
+
+        //카드 확인하기
+        function matchCards(img1, img2){
+            
+            if(img1 == img2){   //맞췄을때 클래스 click를 삭제
+                matchedCard++;
+
+                //완성했을 때
+                if(matchedCard == 8){
+                    setTimeout(()=>{
+                        cardWrap.classList.remove("active")
+                        resultBox.classList.add("active");
+                    }, 1000)
+                }
+
+                cardOne.removeEventListener("click", flipCard)
+                cardTwo.removeEventListener("click", flipCard)
+                cardOne = cardTwo = ""; //초기화
+                disableDeck = false; //클릭했을때만 true 안했으면 false
+                soundMatch.play()
+                scorePlus()
+
+            } else {
+                setTimeout(()=> {   //틀리면 이미지가 흔들리고
+                    cardOne.classList.add("shake");
+                    cardTwo.classList.add("shake");
+                }, 400);
+
+                setTimeout(()=> {   // 다시 뒤집어지게 설정
+                    cardOne.classList.remove("shake", "flip");  
+                    cardTwo.classList.remove("shake", "flip");
+                    cardOne = cardTwo = ""; //초기화
+                    disableDeck = false;
+                }, 1200);
+                soundNoMatch.play();
+                scoreMinus()
+            } 
+        }
+
+        function shuffledCard(){
+            cardOne, cardTwo = "";
+            disableDeck = false;
+            matchedCard = 0;
+
+            //let arr =[2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9];
+            let arr = [2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9]
+            //let result = arr.sort(() => Math.random() > 0.5 ? 1 : -1)//sort를 이용해서 랜덤으로 나오게 설정 0.5보다 크면 1로 작으면 -1로
+
+            cards.forEach((card, index) => {
+                card.addEventListener("click", flipCard)
+                card.classList.remove("flip");
+
+                setTimeout(() => {
+                    card.classList.add("flip")
+                }, 200 * index)
+              
+
+                setTimeout(() => {
+                    card.classList.remove("flip")
+                },4000)
+
+                let imgTag = card.querySelector(".back img");
+                imgTag.src = `img/img-${arr[index]}.png`
+            })
+        }
+
+            // 점수 초기화
+            function scoreInit(){
+                score = 0;
+                openedCtn = 0;
+                $('#score').text(score);
+            }
+            // 점수 증가
+            function scorePlus(){
+                score += 12.5;
+                $('#score').text(score);
+            }
+            // 점수 감소
+            function scoreMinus(){
+                score -= 5;
+                $('#score').text(score);
+            }
+
+
+
+        
+            
+
+
+               
+
+    </script>
+</body>
+</html>
