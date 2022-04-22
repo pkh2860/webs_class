@@ -33,7 +33,7 @@
                 </a>
             </div>
 
-            <div class="icon icon2 momory">
+            <div class="icon icon2">
                 <a href="#">
                     <img src="assets/img/personalcomputer-light.svg" alt="">
                     <span>Momory</span>
@@ -46,6 +46,27 @@
                     <span>Typing Game</span>
                 </a>
             </div>
+
+            <div class="icons icon4">
+                <a href="#">
+                    <img src="assets/img/penguin-light.svg" alt="">
+                    <span>PHP</span>
+                </a>
+            </div>
+
+            <div class="icons icon5">
+                <a href="#">
+                    <img src="assets/img/bearface-light.svg" alt="">
+                    <span>React</span>
+                </a>
+            </div>
+
+            <div class="icons icon6">
+                <a href="#">
+                    <img src="assets/img/smilingfacewithopenmouth-light.svg" alt="">
+                    <span>Web Standards</span>
+                </a>
+            </div>
         </main>
     </div>
 
@@ -53,15 +74,24 @@
         <iframe class="musicBoxIframe" src="musicPlayer/index.html" frameborder="0"></iframe>
     </div>
 
-   
-
     <div class="memoryBox">
         <iframe class="memoryBoxIframe" src="memoryGame/index2.html" frameborder="0"></iframe>
     </div>
 
-    <!-- <div class="typing">
+    <div class="typing">
         <iframe class="typingBoxIframe" src="typingGame/index.html" frameborder="0"></iframe>
-    </div> -->
+    </div>
+
+
+    <div class="PHP">
+        <iframe class="typingBoxIframe" src="http://rmsgur2275.dothome.co.kr/php/pages/main.php" frameborder="0"></iframe>
+    </div>
+    <div class="React">
+        <iframe class="typingBoxIframe" src="https://2860.netlify.app/" frameborder="0"></iframe>
+    </div>
+    <div class="Web">
+        <iframe class="typingBoxIframe" src="https://pkh2860.github.io/webs_class/site/webClass/index.html" frameborder="0"></iframe>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -72,18 +102,33 @@
         $(".icon1").draggable();
         $(".icon2").draggable();
         $(".icon3").draggable();
+        $(".icon4").draggable();
+        $(".icon5").draggable();
+        $(".icon6").draggable();
 
         $(".icon1").click(function(){
             $(".musicBox").toggleClass("show")
         })
 
-        // $(".icon2").click(function(){
-        //     $(".memory").toggleClass("show")
-        // })
+        $(".icon2").click(function(){
+            $(".memoryBox").toggleClass("show")
+        })
 
-        // $(".icon3").click(function(){
-        //     $(".typing").toggleClass("show")
-        // })
+        $(".icon3").click(function(){
+            $(".typing").toggleClass("show")
+        })
+        
+        $(".icon4").click(function(){
+            $(".PHP").toggleClass("show")
+        })
+
+        $(".icon5").click(function(){
+            $(".React").toggleClass("show")
+        })
+
+        $(".icon6").click(function(){
+            $(".Web").toggleClass("show")
+        })
 
           //마우스 움직이기
           window.addEventListener("mousemove", (e)=>{

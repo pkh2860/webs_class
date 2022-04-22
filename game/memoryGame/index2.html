@@ -89,7 +89,8 @@
             list-style: none;
         }
         .card__inner {
-            padding: 20px;
+            /* padding: 20px; */
+            padding: 25px;
             width: 100%;
             height: 100%;
         }
@@ -181,11 +182,23 @@
             border: 1px solid #007BFF;
             color: #007BFF
         }
+/* 
+        .time {
+            position: absolute;
+            left: 50%; top: 3%;
+            transform: translate(-50%, -50%);
+            z-index: 99999;
+            font-size: 30px;
+        }
+        .time .clock {
+
+        } */
     </style>
 </head>
 <body>
-    <!-- 시작 버튼 -->
-    <div class="start__btn active">
+   
+      <!-- 시작 버튼 -->
+      <div class="start__btn active">
         <button>Start</button>
     </div>
     <!-- 규칙 박스 -->
@@ -204,7 +217,7 @@
             <button class="start">도전하기</button>
         </div>
     </div>
-
+   
     <!-- 카드 박스 -->
     <div class="card__wrap">
         <div class="card__inner">
@@ -347,13 +360,11 @@
         <div class="title">게임을 성공하였습니다.</div>
         <div class="score">
             <span>score : <span id='score'>0</span></span>
-            <span>Time : <span id="time">00:00</span></span>
         </div>
         <div class="buttons">
             <button class="stop">나가기</button>
             <button class="restart">다시 도전하기</button>
         </div>
-    </div>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
         const startBtn = document.querySelector(".start__btn");
@@ -363,8 +374,6 @@
         const cards = document.querySelectorAll(".cards li");
         const infoBoxStart = infoBox.querySelector(".start");
         const resultBoxRestart = resultBox.querySelector(".restart");
-
-        const Time = resultBox.querySelector("#time")
         let cardOne, cardTwo;
         let disableDeck = false;
         let matchedCard = 0;
@@ -378,10 +387,7 @@
         let soundNoMatch = new Audio(sound[1]);
         let soundSuccess = new Audio(sound[2]);
 
-        let startTime = new Date().getTime(); //a
-        let endTime = new Date().getTime(); //a
-        var newTime = startTime - endTime;
-        newTime.innerText = Time;
+      
 
         //시작버튼
         startBtn.onclick = () => {
@@ -513,14 +519,6 @@
                 score -= 5;
                 $('#score').text(score);
             }
-
-
-
-        
-            
-
-
-               
 
     </script>
 </body>

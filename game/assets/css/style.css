@@ -83,6 +83,40 @@ body {
     left: 330px;
     top: 100px;
 }
+
+.icons {
+    position: absolute;
+    text-align: center;
+}
+.icons a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    transition: all 0.3s;
+}
+.icons a span {
+    position: absolute;
+    left: 50%; bottom: -20px;
+    transform: translateX(-50%);
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+.icon4 {
+    right: 100px;
+    top: 100px;
+}
+.icon5 {
+    right: 220px;
+    top: 100px;
+}
+.icon6 {
+    right: 330px;
+    top: 100px;
+}
 .musicBox {
     position: absolute;
     right: -500px;
@@ -108,36 +142,32 @@ iframe {
     pointer-events: none;
 }
 
-/* .typing {
+.typing {
     position: absolute;
-    top: 150px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: -300%;
+    margin: auto;
     width: 1000px;
-    height: 700px;
-    transition: all 0.4s;
-    right: -1000px;
+    height: 600px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+                0 6px 10px 0 rgba(0,0,0,0.17);
+    transition: all 1s;
 }
 .typing.show {
-    right: 500px;
-} */
-
-/* .memory {
-    position: absolute;
-    top: 100px;
-    width: 1000px;
-    height: 900px;
-    transition: all 0.4s;
-    right: -1000px;
+    right: 1%;
 }
-.memory.show {
-    right: 480px;
-} */
 
 .memoryBox {
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
-    right: 0;
+    right: -200%;
     margin: auto;
     width: 600px;
     height: 600px;
@@ -145,5 +175,72 @@ iframe {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
-                0 6px 10px 0 rgba(0,0,0,0.17)
+                0 6px 10px 0 rgba(0,0,0,0.17);
+    transition: all 1s;
+}
+
+.memoryBox.show {
+  right: 1%;
+}
+
+
+.PHP {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: -200%;
+    margin: auto;
+    width: 50%;
+    height: 60%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+                0 6px 10px 0 rgba(0,0,0,0.17);
+    transition: all 1s;
+}
+.PHP.show {
+    right: 1%;
+  }
+
+.React {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: -200%;
+    margin: auto;
+    width: 60%;
+    height: 60%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+                0 6px 10px 0 rgba(0,0,0,0.17);
+    transition: all 1s;
+}
+.React.show {
+    right: 1%;
+}
+
+
+.Web {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: -200%;
+    margin: auto;
+    width: 70%;
+    height: 60%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+                0 6px 10px 0 rgba(0,0,0,0.17);
+    transition: all 1s;
+}
+.Web.show {
+    right: 1%;
 }
