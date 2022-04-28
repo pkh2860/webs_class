@@ -28,7 +28,7 @@
         <main class="img">
             <div class="icon icon1">
                 <a href="#">
-                    <img src="assets/img/guitar-light.svg" alt="">
+                    <img src="assets/img/musicalnote-light.svg" alt="">
                     <span>Music</span>
                 </a>
             </div>
@@ -49,14 +49,14 @@
 
             <div class="icons icon4">
                 <a href="#">
-                    <img src="assets/img/penguin-light.svg" alt="">
+                    <img src="assets/img/angryface-light.svg" alt="">
                     <span>PHP</span>
                 </a>
             </div>
 
             <div class="icons icon5">
                 <a href="#">
-                    <img src="assets/img/bearface-light.svg" alt="">
+                    <img src="assets/img/disappointedface-light.svg" alt="">
                     <span>React</span>
                 </a>
             </div>
@@ -65,6 +65,13 @@
                 <a href="#">
                     <img src="assets/img/smilingfacewithopenmouth-light.svg" alt="">
                     <span>Web Standards</span>
+                </a>
+            </div>
+
+            <div class="icon icon7">
+                <a href="#">
+                    <img src="assets/img/guitar-light.svg" alt="Typing">
+                    <span>TETRIS</span>
                 </a>
             </div>
         </main>
@@ -93,6 +100,11 @@
         <iframe class="typingBoxIframe" src="https://pkh2860.github.io/webs_class/site/webClass/index.html" frameborder="0"></iframe>
     </div>
 
+    <div class="TETRIS">
+        <iframe class="tetrisIframe" src="tetrisGame/index.html" frameborder="0"></iframe>
+    </div>
+    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
@@ -105,6 +117,7 @@
         $(".icon4").draggable();
         $(".icon5").draggable();
         $(".icon6").draggable();
+        $(".icon7").draggable();
 
         $(".icon1").click(function(){
             $(".musicBox").toggleClass("show")
@@ -128,6 +141,9 @@
 
         $(".icon6").click(function(){
             $(".Web").toggleClass("show")
+        })
+        $(".icon7").click(function(){
+            $(".TETRIS").toggleClass("show")
         })
 
           //마우스 움직이기

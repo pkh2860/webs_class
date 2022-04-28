@@ -80,7 +80,11 @@ body {
     top: 100px;
 }
 .icon3 {
-    left: 330px;
+    left: 300px;
+    top: 100px;
+}
+.icon7 {
+    left: 400px;
     top: 100px;
 }
 
@@ -110,13 +114,14 @@ body {
     top: 100px;
 }
 .icon5 {
-    right: 220px;
+    right: 200px;
     top: 100px;
 }
 .icon6 {
-    right: 330px;
+    right: 300px;
     top: 100px;
 }
+
 .musicBox {
     position: absolute;
     right: -500px;
@@ -242,5 +247,25 @@ iframe {
     transition: all 1s;
 }
 .Web.show {
+    right: 1%;
+}
+
+.TETRIS {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: -200%;
+    margin: auto;
+    width: 70%;
+    height: 60%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+                0 6px 10px 0 rgba(0,0,0,0.17);
+    transition: all 1s;
+}
+.TETRIS.show {
     right: 1%;
 }
