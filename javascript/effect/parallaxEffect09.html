@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스 효과</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: "NexonLv1Gothic";
+            font-weight: 300;
+        }
+        #parallax__title {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            z-index: 10000;
+        }
+        #parallax__title h1 {
+            font-size: 30px;
+            border-bottom: 1px dashed #fff;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            font-weight: 400;
+            display: inline-block;
+        }
+        #parallax__title p {
+            font-size: 16px;
+        }
+        #parallax__title ul {
+            margin-top: 10px;
+        }
+        #parallax__title li {
+            display: inline;
+        }
+        #parallax__title li a {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px dashed #fff;
+            display: inline-block;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+        }
+        #parallax__title li.active a {
+            background: #fff;
+            color: #000;
+        }
+
+        /* info */
+        .scrollTop {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 10000;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 10px 30px;
+            border-radius: 50px;
+        }
+        .scrollInfo {
+            position: fixed;
+            left: 20px;
+            bottom: 70px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .scrollInfo li {
+            list-style: none;
+            line-height: 1.6;
+        }
+      
+        /* option */    
+        #parallax__cont {
+     
+        }
+        .content__item {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .content__item__num {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 20vw;
+            font-family: 'Lato';
+            font-weight: 100;
+            line-height: 1;
+        }
+        #section1 {background-color: #999; z-index: 7000;}
+        #section2 {background-color: #888; z-index: 6000;}
+        #section3 {background-color: #777; z-index: 5000;}
+        #section4 {
+            background-color: #666; z-index: 4000;
+            height: 500vh;
+        }
+        #section4 .sec4 {
+            position: fixed;
+            left: 0; top: 0;
+            width: 400vh;
+            height: 100%;
+            background-color: red;
+        }
+        #section5 {background-color: #555; z-index: 5000;}
+        #section6 {background-color: #444; z-index: 6000;}
+        #section7 {background-color: #333; z-index: 7000;}
+        #section8 {background-color: #222; z-index: 8000;}
+        #section9 {background-color: #111; z-index: 9000;}
+    </style>
+</head>
+<body>
+    <header id="parallax__title">
+        <h1><a href="parallaxEffect.html">JavaScript Parallax Effect09</a></h1>
+        <p>패럴랙스 스크롤링 효과 - 가로세로모드</p>
+        <ul>
+            <li><a href="parallaxEffect01.html">1</a></li>
+            <li><a href="parallaxEffect02.html">2</a></li>
+            <li><a href="parallaxEffect03.html">3</a></li>
+            <li><a href="parallaxEffect04.html">4</a></li>
+            <li><a href="parallaxEffect05.html">5</a></li>
+            <li><a href="parallaxEffect06.html">6</a></li>
+            <li><a href="parallaxEffect07.html">7</a></li>
+            <li><a href="parallaxEffect08.html">8</a></li>
+            <li class="active"><a href="parallaxEffect09.html">9</a></li>
+        </ul>
+    </header>
+    <!-- //parallax__title -->
+
+    <!-- main -->
+    <main id="parallax__cont">
+        <section id="section1" class="content__item">
+            <span class="content__item__num">01</span>
+        </section>
+        <!-- //section1 -->
+        <section id="section2" class="content__item">
+            <span class="content__item__num">02</span>
+        </section>
+        <!-- //section2 -->
+        <section id="section3" class="content__item">
+            <span class="content__item__num">03</span>
+        </section>
+        <!-- //section3 -->
+        <section id="section4" class="content__item">
+            <div class="sec4">
+                <span class="content__item__num">04</span>
+            </div>
+        </section>
+        <!-- //section4 -->
+        <section id="section5" class="content__item">
+            <span class="content__item__num">05</span>
+        </section>
+        <!-- //section5 -->
+        <section id="section6" class="content__item">
+            <span class="content__item__num">06</span>
+        </section>
+        <!-- //section6 -->
+        <section id="section7" class="content__item">
+            <span class="content__item__num">07</span>
+        </section>
+        <!-- //section7 -->
+        <section id="section8" class="content__item">
+            <span class="content__item__num">08</span>
+        </section>
+        <!-- //section8 -->
+        <section id="section9" class="content__item">
+            <span class="content__item__num">09</span>
+        </section>
+        <!-- //section9 -->
+    </main>
+    <!-- //main -->
+
+    <!-- info -->
+    <div class="scrollTop">scrollTop : <span>0</span>px</div>
+    <!-- //info -->
+
+    <!-- script -->
+    <script src="js/gsap.min.js"></script>
+    <script>
+        //section4 섹션에 왔을 때 red를 blue로 변경
+        
+
+        function scroll(){
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.screenY
+
+            //4번째 섹션에 왔을 때 스크롤탑을 0으로 초기화해서 시작
+            let offset = scrollTop - document.querySelector("#section4").offsetTop
+
+            if(scrollTop >= document.querySelector("#section4").offsetTop){
+                //document.querySelector(".sec4").style.backgroundColor = "blue";
+                gsap.to(".sec4", {left: -offset, ease:"linear"})
+            }
+
+            document.querySelector(".scrollTop span").innerText = scrollTop;
+            requestAnimationFrame(scroll);
+
+        }
+        scroll()
+
+    </script>
+
+</body>
+</html>

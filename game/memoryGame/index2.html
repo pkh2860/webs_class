@@ -104,7 +104,7 @@
       .card__inner {
         padding: 40px;
         width: 100%;
-        height: 100%;
+        height: 95%;
       }
       .cards {
         display: flex;
@@ -245,14 +245,13 @@
         border: 1px solid #007bff;
         color: #007bff;
       }
-
-      .card__wrap span {
-        font-size: 25px;
-        position: absolute;
-      }
       #turns {
         position: absolute;
         z-index: 1;
+      }
+      .turns {
+        text-align: center;
+        font-size: 20px;
       }
     </style>
   </head>
@@ -277,7 +276,7 @@
 
     <!-- 카드 박스 -->
     <div class="card__wrap">
-      <div>기회 : <span id="turns">5</span></div>
+      <div class="turns">기회 : <span id="turns">5</span></div>
       <div class="card__inner">
         <ul class="cards">
           <li>
@@ -434,7 +433,7 @@
       </div>
     </div>
 
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/min.js"></script>
     <script>
       const startBtn = document.querySelector(".start__btn");
       const infoBox = document.querySelector(".info__box");
@@ -444,6 +443,7 @@
       const infoBoxStart = infoBox.querySelector(".start");
       const resultBoxRestart = resultBox.querySelector(".restart");
       const OutBox = document.querySelector(".out__box");
+      const OutBoxrestart = document.querySelector(".out__box > .buttons > .restart");
 
       let turnsCount = 5; //기회
       let cardOne, cardTwo;
@@ -470,6 +470,25 @@
           scoreInit();
         }, 1000);
       };
+
+
+      resultBoxRestart.onclick = () => {
+        cardWrap.classList.add("active");
+        resultBox.classList.remove("active");
+          shuffledCard();
+          scoreInit();
+          turnsCountInit()
+        }
+      
+      //게임 다시시작
+      OutBoxrestart.onclick = () => {
+        cardWrap.classList.add("active");
+        OutBox.classList.remove("active");
+        shuffledCard();
+        scoreInit();
+        turnsCountInit()
+
+      }
 
       //카드 클릭
       cards.forEach((card) => {
@@ -536,15 +555,14 @@
           }, 1200);
           soundNoMatch.play();
           scoreMinus();
-
-          turnsCount--;
-          document.querySelector("#turns").innerText = turnsCount;
-          if (turnsCount == 0) {
-            setTimeout(() => {
-              cardWrap.classList.remove("active");
-              OutBox.classList.add("active");
-              // alert("실패")
-            }, 1000);
+          Count()
+          
+            document.querySelector("#turns").innerText = turnsCount;
+            if (turnsCount == 0) {
+              setTimeout(() => {
+                cardWrap.classList.remove("active");
+                OutBox.classList.add("active");
+              }, 1000);
           }
         }
       }
@@ -585,12 +603,24 @@
       function scorePlus() {
         score += 12.5;
         $("#score").text(score);
-        turnsCount--; //기회
+        // turnsCount--; //기회
       }
       // 점수 감소
       function scoreMinus() {
         score -= 5;
         $("#score").text(score);
+      }
+
+      //횟수 감소
+      function Count() {
+        turnsCount--;
+        $(".card__wrap #turns").text(turnsCount)
+      }
+      //횟수 초기화
+      function turnsCountInit() {
+        turnsCount = 5;
+        openedCtn = 5;
+        $(".card__wrap #turns").text(turnsCount)
       }
     </script>
   </body>
