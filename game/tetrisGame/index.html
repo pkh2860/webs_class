@@ -160,6 +160,43 @@
         background: dodgerblue;
         color: #fff;
       }
+      .result__box {
+        width: 500px;
+        background: #fff;
+        border-radius: 5px;
+        font-size: 1.3em;
+        z-index: 100;
+      }
+      .result__box .title {
+        border-bottom: 1px solid #ccc;
+        padding: 0.6rem 2rem;
+        text-align: center;
+        font-size: 1.4em;
+      }
+      .result__box .score {
+        padding: 2rem;
+        /* height: 300px; */
+      }
+      .result__box .buttons {
+        border-top: 1px solid #ccc;
+        padding: 0.8rem 2rem;
+        text-align: center;
+      }
+      .result__box .buttons button {
+        background: #007bff;
+        color: #fff;
+        padding: 0.4rem 2rem;
+        border-radius: 5px;
+        font-size: 1em;
+        border: 1px solid #007bff;
+        margin: 0 0.2em;
+        display: inline-block;
+      }
+      .result__box .buttons button:first-child {
+        background: #fff;
+        border: 1px solid #007bff;
+        color: #007bff;
+      }
     </style>
   </head>
   <body>
@@ -212,7 +249,9 @@
       const tetrisWrap = document.querySelector(".tetris__wrap")
       const infoBox = document.querySelector(".info__box");
       const infoBoxStart = infoBox.querySelector(".start");
-    
+      const resultBoxScore = document.querySelector("#score")
+
+
       const Restart = document.querySelector(".restart")
 
 
@@ -429,12 +468,13 @@
             infoBox.classList.remove("active");
         }, 1000);
         };
+
         //게임 다시 시작 버튼
         Restart.onclick = () => {
             tetrisInner.innerHTML = "";
-            resultBox.classList.remove("active")
-            init()
-
+            resultBox.classList.remove("active");
+            scoreInit();
+            init();
         }
 
       //시작하기
@@ -552,6 +592,7 @@
             tetrisLine();
             gameScore++;
             tetrisS.innerText = gameScore;
+            resultBoxScore.innerText = gameScore
           }
         });
         generateNewBlock();
@@ -602,12 +643,12 @@
         gameInterval = setInterval(() => {
           moveBlock("top", 1);
         }, 10);
+        event.preventDefault();
       }
 
       function gameover() {
         tetrisWrap.classList.remove("active");
-        resultBox.classList.add("active");
-        // document.querySelector("#score").innerText = gameScore
+        resultBox.classList.add("active");  
     }
 
       //키보드 이벤트
@@ -633,19 +674,11 @@
             break;
         }
       });
-
-    //    // 점수 초기화
-    //    function scoreInit() {
-    //     score = 0;
-    //     openedCtn = 0;
-    //     $("#score").text(score);
-    //   }
-    //   // 점수 증가
-    //   function scorePlus() {
-    //     score += 12.5;
-    //     $("#score").text(score);
-    //     turnsCount--; //기회
-    //   }
+  
+      function scoreInit() {
+        gameScore = 0;
+        $(".score #score").text(gameScore);
+      }
     </script>
   </body>
 </html>
