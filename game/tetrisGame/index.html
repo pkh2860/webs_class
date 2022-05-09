@@ -242,7 +242,7 @@
 
     <script src="js/min.js"></script>
     <script>
-        const startBtn = document.querySelector(".start__btn");
+      const startBtn = document.querySelector(".start__btn");
       const tetrisInner = document.querySelector(".tetris__inner > ul");
       const tetrisS = document.querySelector(".tetris__inner .s");
       const resultBox = document.querySelector(".result__box");
@@ -677,6 +677,7 @@
   
       function scoreInit() {
         gameScore = 0;
+        tetrisS = 0;
         $(".score #score").text(gameScore);
       }
     </script>
