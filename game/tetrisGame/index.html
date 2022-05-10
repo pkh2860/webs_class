@@ -473,7 +473,9 @@
         Restart.onclick = () => {
             tetrisInner.innerHTML = "";
             resultBox.classList.remove("active");
-            scoreInit();
+            // scoreInit()
+            tetrisS.innerText = 0;
+            gameScore = 0
             init();
         }
 
@@ -675,11 +677,11 @@
         }
       });
   
-      function scoreInit() {
-        gameScore = 0;
-        tetrisS = 0;
-        $(".score #score").text(gameScore);
-      }
+      // function scoreInit() {
+      //   gameScore = 0;
+      //   tetrisS.innerText = 0;
+      //   $(".score #score").text(gameScore);
+      // }
     </script>
   </body>
 </html>
