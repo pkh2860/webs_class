@@ -16,7 +16,6 @@
       }
       body {
         background-color: #ebebeb;
-
       }
       #header {
         width: 100%;
@@ -26,29 +25,69 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #ebebeb;
       }
-      .toggie {
+      .menu-trigger {
+        margin-right: 70px;
+        margin-bottom: 50px;
+        width: 35px;
+        height: 44px;
         display: none;
-        position: absolute;
-        right: 32px;
-        
+        position: relative;
+        width: 35px;
+        height: 44px;
+        margin-top: 4vw;
       }
+      .menu-trigger,
+      .menu-trigger span {
+        display: inline-block;
+        transition: all .4s;
+        box-sizing: border-box;
+        display: none;
+      }
+      .menu-trigger span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 4px;
+      }
+
+      .menu-trigger span:nth-of-type(1) {
+        top: 0;
+      }
+
+      .menu-trigger span:nth-of-type(2) {
+        top: 7px;
+      }
+
+      .menu-trigger span:nth-of-type(3) {
+        bottom: 26px;
+      }
+
+      .menu-trigger.active-1 span:nth-of-type(1) {
+        transform: translateY(15px) rotate(-45deg);
+      }
+
+      .menu-trigger.active-1 span:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      .menu-trigger.active-1 span:nth-of-type(3) {
+        transform: translateY(1px) rotate(45deg);
+      }
+
+/*  */
       #header .menu ul {
-        /* padding-top: 0.5rem; */
         display: flex;
         padding-left: 0;
-        background-color: #ebebeb;
-        
+        background-color: rgba(235, 235, 235, 0.76);
       }
       #header .menu li {
-        /* display: inline; */
-        /* padding: 1rem; */
         padding: 8px 12px;
       }
       #header .menu li a {
         padding: 20px 30px;
-        /* padding: 1rem 1rem; */
         display: inline-block;
         font-family: "Jura";
         color: #3c6b56;
@@ -66,9 +105,8 @@
         font-weight: normal;
         line-height: 130%;
         margin-right: 10px;
-        
-    }
-      #banner h2 span {
+      }
+      #banner span {
         font-size: 3rem;
         font-family: "Saint Monica";
         color: #b99e56;
@@ -77,13 +115,40 @@
       }
       #banner p {
         font-family: "GmarketSans";
-        font-weight: 100;
+        font-weight: 300;
         line-height: 150%;
         color: #3c6b56;
-        text-transform: uppercase;
         position: absolute;
-        margin-left: 16rem;
-        margin-top: -5rem;
+        margin-left: 12vw;
+        margin-top: -4vw;
+        font-size: 1.4rem;
+
+      }
+      .one {
+        width: 755px;
+        height: 755px;
+        border-radius: 50%;
+        opacity: 0.1;
+        border: solid 1px #3C6B56;
+        position: absolute;
+        background-color: transparent;
+        z-index: -1;
+        left: 44%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+      }
+      .two {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        opacity: 0.1;
+        border: solid 1px #3C6B56;
+        position: absolute;
+        background-color: transparent;
+        z-index: -1;
+        left: 58%;
+        bottom: 60%;
+        transform: translate(-50% -50%);
       }
       @media (max-width: 1600px) {
         #header .menu ul {
@@ -95,7 +160,7 @@
           padding: 1vw;
         }
         #banner {
-          position: relative;
+          /* position: relative; */
         }
         #banner h2 {
           font-size: 20vw;
@@ -106,10 +171,18 @@
         }
         #banner p {
           position: absolute;
-          margin-left: 30px;
-          font-size: 1vw;
-          margin-top: -2vw;
+          margin-left: 3vw;
+          font-size: 1.3vw;
+          margin-top: -4vw;
           margin-left: 14vw;
+        }
+        .one {
+          width: 38vw;
+          height: 38vw;
+        }
+        .two {
+          width: 14vw;
+          height: 14vw;
         }
       }
       @media (max-width: 900px) {
@@ -118,14 +191,34 @@
           align-items: flex-start;
         }
         #header .menu ul {
+          width: 100%;
+          justify-content: center;
+        }
+        #header .menu li a {
+          font-size: 2.2vw;
+          text-align: center;
+          width: 100%;
+        }
+        #banner {
+          margin: 0;
+        }
+        /* .toggle {
+          display: none;
+          display: block;
+          top: 4vw;
+          z-index: 99999;
+          position: absolute;
+          right: -10%;
+        } */
+      }
+      @media (max-width: 600px) {
+        #header .menu ul {
           flex-direction: column;
           align-items: center;
           width: 100%;
           display: none;
           position: relative;
           z-index: 99999;
-        }
-        #header .menu li a {
         }
         #header .menu li {
           width: 100%;
@@ -134,35 +227,27 @@
         #header .menu ul.active {
           display: block;
         }
-        #banner {
-          margin: 0;
+        #header .menu li a {
+          font-size: 4vw;
         }
-        .toggie {
+        .menu-trigger span, .menu-trigger {
           display: block;
-          top: 4vw;
-          z-index: 99999;
+          right: -90vw;
         }
       }
-
-    .one {
-        width: 600px;
-        height: 600px;
-        border-radius: 50%;
-        opacity: 0.1;
-        border: solid 1px #000;
-        position: absolute;
-        background-color:transparent;
-        z-index: -1;
-        left: 50%;
-        top: 50%;
-        transform:translate(-57%, -50%); 
-    }
+      
     </style>
   </head>
   <body>
     <div id="wrap">
       <header id="header">
+       
         <nev class="menu">
+          <a class="menu-trigger" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
           <ul>
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">WORK</a></li>
@@ -171,36 +256,43 @@
             <li><a href="#">CONTACT</a></li>
           </ul>
 
-          <a href="#" class="toggie"
-            ><img src="assets//img/img01.svg" alt="햄버거"
-          /></a>
+         
         </nev>
       </header>
       <main id="contents">
-        
         <h2 class="ir_so">컨텐츠 영역</h2>
         <section id="banner">
           <h3 class="ir_so">배너 영역</h3>
+
           <div class="one"></div>
+          <div class="two"></div>
           <!-- <div class="container"> -->
-            
-                <h2>Portfolio <span>2022</span></h2>
-                <p>
-                    welcome to my portfolio <br />
-                    We will become a developing frontend
-                </p>
-              
+          <div>
+            <h2>Portfolio <span>2022</span></h2>
+            <p>
+              WELCOME TO MY PORTFOLIO<br />
+              WE WILL BECOME A DEVELOPING FRONTEND
+            </p>
+          </div>
           <!-- </div> -->
         </section>
       </main>
     </div>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>
-    const Toggie = document.querySelector(".toggie");
     const Menu = document.querySelector(".menu ul");
 
-    Toggie.addEventListener("click", () => {
-      Menu.classList.toggle("active");
+    var burger = $('.menu-trigger');
+
+    burger.each(function(index){
+      var $this = $(this);
+      
+      $this.on('click', function(e){
+        e.preventDefault();
+        Menu.classList.toggle("active");
+        $(this).toggleClass('active-' + (index+1));
+      })
     });
   </script>
 </html>
