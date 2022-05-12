@@ -7,16 +7,9 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400&display=swap");
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background-color: #ebebeb;
-      }
       #header {
         width: 100%;
         height: 100px;
@@ -40,13 +33,13 @@
       .menu-trigger,
       .menu-trigger span {
         display: inline-block;
-        transition: all .4s;
+        transition: all 0.4s;
         box-sizing: border-box;
         display: none;
       }
       .menu-trigger span {
         position: absolute;
-        left: 0;
+        left: 70vw;
         width: 100%;
         height: 4px;
         background-color: #d1c5c5;
@@ -77,17 +70,18 @@
         transform: translateY(1px) rotate(45deg);
       }
 
-/*  */
+      /*  */
       #header .menu ul {
         display: flex;
         padding-left: 0;
         background-color: rgba(235, 235, 235, 0.76);
       }
       #header .menu li {
-        padding: 8px 12px;
+        /* padding: 8px 12px; */
+        padding: 0.5vw 0.8vw;
       }
       #header .menu li a {
-        padding: 20px 30px;
+        padding: 2vw 2vw;
         display: inline-block;
         font-family: "Jura";
         color: #3c6b56;
@@ -95,16 +89,37 @@
       }
       #banner {
         position: relative;
-        margin-top: 5rem;
+        margin-top: 8rem;
       }
       #banner h2 {
-        font-size: 25rem;
+        font-size: 22vw;
         text-align: center;
         font-family: "Partizeno";
         color: #3c6b56;
         font-weight: normal;
         line-height: 130%;
         margin-right: 10px;
+      }
+
+      #banner h2::before {
+        content: "WELCOME TO MY PORTFOLIO \A WE WILL BECOME A DEVELOPING FRONTEND";
+        font-size: 1vw;
+        font-family: "GmarketSans";
+        position: absolute;
+        margin-top: 23vw;
+        text-align: left;
+        text-transform: uppercase;
+        white-space: pre;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+        font-weight: 100;
+      }
+
+      #banner h2::after {
+        content: "2022";
+        font-size: 2vw;
+        font-family: "Saint Monica";
+        color: #b99e56;
       }
       #banner span {
         font-size: 3rem;
@@ -122,100 +137,41 @@
         margin-left: 11em;
         margin-top: -4vw;
         font-size: 1.4rem;
-
       }
       .one {
-        width: 755px;
-        height: 755px;
+        width: 42.5vw;
+        height: 42.5vw;
         border-radius: 50%;
         opacity: 0.1;
-        border: solid 1px #3C6B56;
+        border: solid 1px #3c6b56;
         position: absolute;
         background-color: transparent;
         z-index: -1;
-        left: 44%;
-        top: 60%;
+        left: 41%;
+        top: 50%;
         transform: translate(-50%, -50%);
       }
       .two {
-        width: 300px;
-        height: 300px;
+        width: 15vw;
+        height: 15vw;
         border-radius: 50%;
         opacity: 0.1;
-        border: solid 1px #3C6B56;
+        border: solid 1px #3c6b56;
         position: absolute;
         background-color: transparent;
         z-index: -1;
-        left: 58%;
-        bottom: 60%;
+        left: 56%;
+        bottom: 71%;
         transform: translate(-50% -50%);
       }
-      @media (max-width: 1600px) {
-        #header .menu ul {
-          padding: 1vw;
-          display: flex;
-          font-size: 1vw;
-        }
-        #header .menu li {
-          padding: 1vw;
-        }
+      @media (max-width: 500px) {
         #banner {
-          /* position: relative; */
-        }
-        #banner h2 {
-          font-size: 20vw;
-        }
-        #banner h2 span {
-          font-size: 2.5vw;
           margin-top: 5vw;
         }
-        #banner p {
-          position: absolute;
-          margin-left: 3vw;
-          font-size: 1.3vw;
-          margin-top: -4vw;
-          margin-left: 14vw;
-        }
-        .one {
-          width: 38vw;
-          height: 38vw;
-        }
-        .two {
-          width: 14vw;
-          height: 14vw;
-        }
-      }
-      @media (max-width: 900px) {
-        #header .menu {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        #header .menu ul {
-          width: 100%;
-          justify-content: center;
-        }
-        #header .menu li a {
-          font-size: 2.2vw;
-          text-align: center;
-          width: 100%;
-        }
-        #banner {
-          margin: 0;
-        }
-        /* .toggle {
-          display: none;
-          display: block;
-          top: 4vw;
-          z-index: 99999;
-          position: absolute;
-          right: -10%;
-        } */
-      }
-      @media (max-width: 600px) {
         #header .menu ul {
           flex-direction: column;
           align-items: center;
-          width: 100%;
+          justify-content: center;
           display: none;
           position: relative;
           z-index: 99999;
@@ -226,37 +182,36 @@
         }
         #header .menu ul.active {
           display: block;
+          position: absolute;
+          margin-top: 40vw;
         }
         #header .menu li a {
           font-size: 4vw;
         }
-        .menu-trigger span, .menu-trigger {
+        .menu-trigger span,
+        .menu-trigger {
           display: block;
-          right: -90vw;
+          right: 20vw;
         }
       }
-      
     </style>
   </head>
   <body>
     <div id="wrap">
       <header id="header">
-       
         <nev class="menu">
           <a class="menu-trigger" href="#">
             <span></span>
             <span></span>
             <span></span>
           </a>
-          <ul>
+          <ul class="">
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">WORK</a></li>
             <li><a href="#">CODE</a></li>
             <li><a href="#">SCRIPT</a></li>
             <li><a href="#">CONTACT</a></li>
           </ul>
-
-         
         </nev>
       </header>
       <main id="contents">
@@ -268,14 +223,36 @@
           <div class="two"></div>
           <!-- <div class="container"> -->
           <div>
-            <h2>Portfolio <span>2022</span></h2>
-            <p>
-              WELCOME TO MY PORTFOLIO<br />
-              WE WILL BECOME A DEVELOPING FRONTEND
-            </p>
+            <h2>Portfolio</h2>
           </div>
           <!-- </div> -->
         </section>
+
+        <!-- <section id="about">
+          <h3 class="ir_so">ABOUT 영역</h3>
+          <div class="about__cont">
+            <h3>
+              About
+              <p>
+                안녕하세요 신입 웹퍼블리셔/프론트엔드 개발자 박근혁입니다.
+                처음에는 코딩의 코자도 모르고 알지도 못하는것에 도전하는것이
+                많이 낯설고 무서웠습니다 그래도 용기를 내서 국비지원 학원을
+                알아보고 바로 다니기 시작했습니다 처음에는 알지도 못하는
+                언어들이 나오고 이 일을 정말 할 수 있을까 의문이 들었지만 하다가
+                오류가 나면 앉은 자리에서 시간가는줄 모르고 틀린 부분을 고치면
+                뿌듯함이 느껴졌습니다 배움은 조금 느려도 포기하지 않고
+                알아보려고 노력하였습니다. 짧으면 짧고 길면 긴 6개월이 저에게는
+                너무나 짧게 느껴졌고 아직 배움이 부족하다고 생각합니다. 앞으로도
+                계속 발전하고 노력하는 개발자가 되겠습니다.
+              </p>
+            </h3>
+            <div class="card">
+              <div class="card1"></div>
+              <div class="card2"></div>
+              <div class="card3"></div>
+            </div>
+          </div>
+        </section> -->
       </main>
     </div>
   </body>
@@ -283,16 +260,16 @@
   <script>
     const Menu = document.querySelector(".menu ul");
 
-    var burger = $('.menu-trigger');
+    var burger = $(".menu-trigger");
 
-    burger.each(function(index){
+    burger.each(function (index) {
       var $this = $(this);
-      
-      $this.on('click', function(e){
+
+      $this.on("click", function (e) {
         e.preventDefault();
         Menu.classList.toggle("active");
-        $(this).toggleClass('active-' + (index+1));
-      })
+        $(this).toggleClass("active-" + (index + 1));
+      });
     });
   </script>
 </html>
