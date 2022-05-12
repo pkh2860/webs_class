@@ -10,190 +10,52 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400&display=swap");
-      #header {
-        width: 100%;
-        height: 100px;
-      }
-      #header .menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .menu-trigger {
-        margin-right: 70px;
-        margin-bottom: 50px;
-        width: 35px;
-        height: 44px;
-        display: none;
-        position: relative;
-        width: 35px;
-        height: 44px;
-        margin-top: 4vw;
-      }
-      .menu-trigger,
-      .menu-trigger span {
-        display: inline-block;
-        transition: all 0.4s;
-        box-sizing: border-box;
-        display: none;
-      }
-      .menu-trigger span {
-        position: absolute;
-        left: 70vw;
-        width: 100%;
-        height: 4px;
-        background-color: #d1c5c5;
-        border-radius: 4px;
-      }
 
-      .menu-trigger span:nth-of-type(1) {
-        top: 0;
-      }
+      #about {
+      margin-top: 25vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    #about h3 {
+      font-size: 13vw;
+      font-family: "Partizeno";
 
-      .menu-trigger span:nth-of-type(2) {
-        top: 7px;
-      }
+    }
+    #about p {
+      font-family: "ChosunNm";
+      font-weight: normal;
+      font-size: 1vw;
+      width: 50vw;
+    }
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: inline-block;
 
-      .menu-trigger span:nth-of-type(3) {
-        bottom: 26px;
-      }
-
-      .menu-trigger.active-1 span:nth-of-type(1) {
-        transform: translateY(15px) rotate(-45deg);
-      }
-
-      .menu-trigger.active-1 span:nth-of-type(2) {
-        opacity: 0;
-      }
-
-      .menu-trigger.active-1 span:nth-of-type(3) {
-        transform: translateY(1px) rotate(45deg);
-      }
-
-      /*  */
-      #header .menu ul {
-        display: flex;
-        padding-left: 0;
-        background-color: rgba(235, 235, 235, 0.76);
-      }
-      #header .menu li {
-        /* padding: 8px 12px; */
-        padding: 0.5vw 0.8vw;
-      }
-      #header .menu li a {
-        padding: 2vw 2vw;
-        display: inline-block;
-        font-family: "Jura";
-        color: #3c6b56;
-        font-size: 1.3rem;
-      }
-      #banner {
-        position: relative;
-        margin-top: 8rem;
-      }
-      #banner h2 {
-        font-size: 22vw;
-        text-align: center;
-        font-family: "Partizeno";
-        color: #3c6b56;
-        font-weight: normal;
-        line-height: 130%;
-        margin-right: 10px;
-      }
-
-      #banner h2::before {
-        content: "WELCOME TO MY PORTFOLIO \A WE WILL BECOME A DEVELOPING FRONTEND";
-        font-size: 1vw;
-        font-family: "GmarketSans";
-        position: absolute;
-        margin-top: 23vw;
-        text-align: left;
-        text-transform: uppercase;
-        white-space: pre;
-        line-height: 1.5;
-        letter-spacing: 0.01em;
-        font-weight: 100;
-      }
-
-      #banner h2::after {
-        content: "2022";
-        font-size: 2vw;
-        font-family: "Saint Monica";
-        color: #b99e56;
-      }
-      #banner span {
-        font-size: 3rem;
-        font-family: "Saint Monica";
-        color: #b99e56;
-        position: absolute;
-        margin-top: 7rem;
-      }
-      #banner p {
-        font-family: "GmarketSans";
-        font-weight: 300;
-        line-height: 150%;
-        color: #3c6b56;
-        position: absolute;
-        margin-left: 11em;
-        margin-top: -4vw;
-        font-size: 1.4rem;
-      }
-      .one {
-        width: 42.5vw;
-        height: 42.5vw;
-        border-radius: 50%;
-        opacity: 0.1;
-        border: solid 1px #3c6b56;
-        position: absolute;
-        background-color: transparent;
-        z-index: -1;
-        left: 41%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
-      .two {
-        width: 15vw;
-        height: 15vw;
-        border-radius: 50%;
-        opacity: 0.1;
-        border: solid 1px #3c6b56;
-        position: absolute;
-        background-color: transparent;
-        z-index: -1;
-        left: 56%;
-        bottom: 71%;
-        transform: translate(-50% -50%);
-      }
-      @media (max-width: 500px) {
-        #banner {
-          margin-top: 5vw;
-        }
-        #header .menu ul {
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          display: none;
-          position: relative;
-          z-index: 99999;
-        }
-        #header .menu li {
-          width: 100%;
-          text-align: center;
-        }
-        #header .menu ul.active {
-          display: block;
-          position: absolute;
-          margin-top: 40vw;
-        }
-        #header .menu li a {
-          font-size: 4vw;
-        }
-        .menu-trigger span,
-        .menu-trigger {
-          display: block;
-          right: 20vw;
-        }
-      }
+    }
+    .card1 {
+      display: inline-block;
+      width: 30vw;
+      height: 15vw;
+      background: #000;
+    }
+    .card2 {
+      display: inline-block;
+      width: 30vw;
+      height: 15vw;
+      background: #000;
+    }
+    .card3 {
+      display: inline-block;
+      width: 30vw;
+      height: 15vw;
+      background: #000;
+    }
+    .container {
+      width: 1400px;
+    }
     </style>
   </head>
   <body>
@@ -228,11 +90,10 @@
           <!-- </div> -->
         </section>
 
-        <!-- <section id="about">
+        <section id="about">
           <h3 class="ir_so">ABOUT 영역</h3>
-          <div class="about__cont">
-            <h3>
-              About
+          <div class="about__cont container">
+            <h3>About </h3>
               <p>
                 안녕하세요 신입 웹퍼블리셔/프론트엔드 개발자 박근혁입니다.
                 처음에는 코딩의 코자도 모르고 알지도 못하는것에 도전하는것이
@@ -245,14 +106,14 @@
                 너무나 짧게 느껴졌고 아직 배움이 부족하다고 생각합니다. 앞으로도
                 계속 발전하고 노력하는 개발자가 되겠습니다.
               </p>
-            </h3>
-            <div class="card">
-              <div class="card1"></div>
-              <div class="card2"></div>
-              <div class="card3"></div>
-            </div>
+              <div class="card">
+                <div class="card1"></div>
+                <div class="card2"></div>
+                <div class="card3"></div>
+              </div>
           </div>
-        </section> -->
+       
+        </section>
       </main>
     </div>
   </body>
