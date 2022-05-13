@@ -1,519 +1,549 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins";
-        }
-        :root {
-            --pink : #ff74a4;
-            --violet : #9f6ea3;
-            --white : #fff;
-            --lightshadow : rgba(0, 0, 0, 0.15);
-            --lightblack : #515c6f;
-            --pinkshadow : #ffcbdd;
-            --darkwhite : #cecaca;
-        }
-        body {
-            height: 100vh;
-            /* background: linear-gradient(var(--pink) 0%, var(--violet) 100%) */
-        }
-        .wrap__music {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100%;
-            overflow: hidden;
-            user-select: none;
-        }
-        .music__inner {
-            width: 380px;
-            padding: 25px 30px;
-            overflow: hidden;
-            position: relative;
-            border-radius: 15px;
-            background: var(--white);
-            box-shadow: 0px 6px 15px var(--lightshadow);
-        }
-        .music__top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .music__top i {
-            font-size: 30px;
-            color: var(--lightblack);
-        }
-        .music__top h3 {
-            font-size: 18px;
-            color: var(--lightblack);
-            font-weight: 500;
-        }
-        .music__img {
-            width: 100%;
-            height: 256px;
-            overflow: hidden;
-            border-radius: 15px;
-            margin-top: 25px;
-            box-shadow: 0px 6px 12px var(--lightshadow);
-        }
-        .music__img img {
-            width: 100%;
-            height: 100%;
-            vertical-align: top;
-            object-fit: cover;
-        }
-        .music__song {
-            text-align: center;
-            margin: 30px;
-        }
-        .music__song p {
-            color: var(--lightblack);
-        }
-        .music__song .name {
-            font-size: 21px;
-        }
-        .music__song .artist {
-            font-size: 18px;
-            opacity: 0.9;
-            line-height: 35px;
-            font-weight: 300;
-        }
-        .music__progress {
-            height: 6px;
-            width: 100%;
-            border-radius: 10px;
-            background: #f0f0f0;
-            cursor: pointer;
-            /* margin-bottom: 40px; */
-        }
-        .music__progress .bar {
-            height: inherit;
-            width: 0%;
-            position: relative;
-            border-radius: inherit;
-            background: linear-gradient(90deg, var(--pink) 0%, var(--violet) 100%)
-        }
-        .music__progress .timer {
-            margin-top: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: var(--lightblack);
-            font-size: 0.9em;
-            pointer-events: none;
-        }
-        .music__control {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 40px;
-        }
-        .music__control i {
-            font-size: 28px;
-            user-select: none;
-            background: linear-gradient(90deg, var(--pink) 0%, var(--violet) 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;       /*글씨에만 색 들어감*/
-        }
-        .music__control i:nth-child(2),
-        .music__control i:nth-child(4) {
-            font-size: 40px;
-        }
-        .music__control .play-pause {
-            width: 54px; height: 54px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: linear-gradient(var(--white) 0%, var(--darkwhite) 100%);
-            box-shadow: 0 0  0 2px var(--pink);
-            z-index: 1;
-        }
-        .music__control .play-pause::before {
-            content: '';
-            width: 40px; height: 40px;
-            border-radius: inherit;
-            background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
-            position: absolute;
-            z-index: -1;
-        }
-        .music__control .play-pause i {
-            -webkit-text-fill-color: var(--white);
-            opacity: 0.8;
-        }
-        .music__list {
-            position: absolute;
-            background:var(--white);
-            width: 100%;
-            left: 0;
-            bottom: 0;
-            z-index: 10;
-            border-radius: 15px;
-            padding: 15px 30px;
-            box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.15s ease-out;
-            bottom: -400px;
-            opacity: 0;
-            pointer-events: none;
-        }
-        .music__list.show {
-            bottom: 0;
-            opacity: 1;
-            pointer-events: auto;
-        }
-        .music__list .title {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: var(--lightblack);
-            margin-bottom: 10px;
-        }
-        .music__list .title .queue {
-            vertical-align: -6px;
-        }
-        .music__list .list {
-            color: var(--lightblack);
-        }
-        .music__list .list > ul {
-            max-height: 260px;
-            margin: 10px 0;
-            overflow: auto;
-        }
-        .music__list .list > ul::-webkit-scrollbar {
-            width: 0;   /*스크롤바*/
-        }
-        .music__list .list > ul > li {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #e5e5e5;
-            padding-bottom: 5px;
-            margin-bottom: 5px;
-        }
-        .music__list .list > ul > li.playing {
-            color: var(--pink);
-        }
-        .music__list .list > ul > li > div em {
-            font-style: normal;
-        }
-        .music__list .list > ul > li > div p{
-            opacity: 0.8;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins";
+      }
+      :root {
+        --pink: #ff74a4;
+        --violet: #9f6ea3;
+        --white: #fff;
+        --lightshadow: rgba(0, 0, 0, 0.15);
+        --lightblack: #515c6f;
+        --pinkshadow: #ffcbdd;
+        --darkwhite: #cecaca;
+      }
+      body {
+        height: 100vh;
+        background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
+      }
+      .wrap__music {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100%;
+        overflow: hidden;
+        user-select: none;
+      }
+      .music__inner {
+        width: 380px;
+        padding: 25px 30px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 15px;
+        background: var(--white);
+        box-shadow: 0px 6px 15px var(--lightshadow);
+      }
+      .music__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .music__top i {
+        font-size: 30px;
+        color: var(--lightblack);
+      }
+      .music__top h3 {
+        font-size: 18px;
+        color: var(--lightblack);
+        font-weight: 500;
+      }
+      .music__img {
+        width: 100%;
+        height: 256px;
+        overflow: hidden;
+        border-radius: 15px;
+        margin-top: 25px;
+        box-shadow: 0px 6px 12px var(--lightshadow);
+      }
+      .music__img img {
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+        object-fit: cover;
+      }
+      .music__song {
+        text-align: center;
+        margin: 30px;
+      }
+      .music__song p {
+        color: var(--lightblack);
+      }
+      .music__song .name {
+        font-size: 21px;
+      }
+      .music__song .artist {
+        font-size: 18px;
+        opacity: 0.9;
+        line-height: 35px;
+        font-weight: 300;
+      }
+      .music__progress {
+        height: 6px;
+        width: 100%;
+        border-radius: 10px;
+        background: #f0f0f0;
+        cursor: pointer;
+        /* margin-bottom: 40px; */
+      }
+      .music__progress .bar {
+        height: inherit;
+        width: 0%;
+        position: relative;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--pink) 0%, var(--violet) 100%);
+      }
+      .music__progress .timer {
+        margin-top: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--lightblack);
+        font-size: 0.9em;
+        pointer-events: none;
+      }
+      .music__control {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 40px;
+      }
+      .music__control i {
+        font-size: 28px;
+        user-select: none;
+        background: linear-gradient(90deg, var(--pink) 0%, var(--violet) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; /*글씨에만 색 들어감*/
+      }
+      .music__control i:nth-child(2),
+      .music__control i:nth-child(4) {
+        font-size: 40px;
+      }
+      .music__control .play-pause {
+        width: 54px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: linear-gradient(var(--white) 0%, var(--darkwhite) 100%);
+        box-shadow: 0 0 0 2px var(--pink);
+        z-index: 1;
+      }
+      .music__control .play-pause::before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        border-radius: inherit;
+        background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
+        position: absolute;
+        z-index: -1;
+      }
+      .music__control .play-pause i {
+        -webkit-text-fill-color: var(--white);
+        opacity: 0.8;
+      }
+      .music__list {
+        position: absolute;
+        background: var(--white);
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+        border-radius: 15px;
+        padding: 15px 30px;
+        box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.15s ease-out;
+        bottom: -400px;
+        opacity: 0;
+        pointer-events: none;
+      }
+      .music__list.show {
+        bottom: 0;
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .music__list .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--lightblack);
+        margin-bottom: 10px;
+      }
+      .music__list .title .queue {
+        vertical-align: -6px;
+      }
+      .music__list .list {
+        color: var(--lightblack);
+      }
+      .music__list .list > ul {
+        max-height: 260px;
+        margin: 10px 0;
+        overflow: auto;
+      }
+      .music__list .list > ul::-webkit-scrollbar {
+        width: 0; /*스크롤바*/
+      }
+      .music__list .list > ul > li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+      }
+      .music__list .list > ul > li.playing {
+        color: var(--pink);
+      }
+      .music__list .list > ul > li > div em {
+        font-style: normal;
+      }
+      .music__list .list > ul > li > div p {
+        opacity: 0.8;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrap__music">
-        <div class="music__inner">
-            <div class="music__top">
-                <i class="material-icons">expand_more</i>
-                <h3>Now Playing</h3>
-                <i class="material-icons">more_horiz</i>
-            </div>
-            <!-- //music__top -->
-            <div class="music__img">
-                <img src="images/music-1.jpg" alt="이미지1">
-            </div>
-            <!-- //music__img -->
-            <div class="music__song">
-                <p class="name"></p>
-                <p class="artist"></p>
-            </div>
-            <!-- //music__song  -->
-            <div class="music__progress">
-                <div class="bar">
-                    <audio id="main-audio" src=""></audio>
-                </div>
-                <div class="timer">
-                    <span class="current">0:00</span>
-                    <span class="duration">0:00</span>
-                </div>
-            </div>
-            <!-- //music__progress -->
-            <div class="music__control">
-                <i id="control-repeat" class="material-icons" title="전체 반복">repeat</i>
-                <i id="control-prev" class="material-icons" title="이전곡 재생">skip_previous</i>
-                <div class="play-pause">
-                    <i id="control-play" class="material-icons" title="재생">play_arrow</i>
-                    <!-- <i class="material-icons">pause</i> -->
-                </div>
-                <i id="control-next" class="material-icons" title="다음곡 재생">skip_next</i>
-                <i id="control-list" class="material-icons" title="재생 목록 보기">queue_music</i>
-                <!-- <i class="material-icons" title="한 곡 반복">repeat_one</i>
+      <div class="music__inner">
+        <div class="music__top">
+          <i class="material-icons">expand_more</i>
+          <h3>Now Playing</h3>
+          <i class="material-icons">more_horiz</i>
+        </div>
+        <!-- //music__top -->
+        <div class="music__img">
+          <img src="images/music-1.jpg" alt="이미지1" />
+        </div>
+        <!-- //music__img -->
+        <div class="music__song">
+          <p class="name"></p>
+          <p class="artist"></p>
+        </div>
+        <!-- //music__song  -->
+        <div class="music__progress">
+          <div class="bar">
+            <audio id="main-audio" src=""></audio>
+          </div>
+          <div class="timer">
+            <span class="current">0:00</span>
+            <span class="duration">0:00</span>
+          </div>
+        </div>
+        <!-- //music__progress -->
+        <div class="music__control">
+          <i id="control-repeat" class="material-icons" title="전체 반복"
+            >repeat</i
+          >
+          <i id="control-prev" class="material-icons" title="이전곡 재생"
+            >skip_previous</i
+          >
+          <div class="play-pause">
+            <i id="control-play" class="material-icons" title="재생"
+              >play_arrow</i
+            >
+            <!-- <i class="material-icons">pause</i> -->
+          </div>
+          <i id="control-next" class="material-icons" title="다음곡 재생"
+            >skip_next</i
+          >
+          <i id="control-list" class="material-icons" title="재생 목록 보기"
+            >queue_music</i
+          >
+          <!-- <i class="material-icons" title="한 곡 반복">repeat_one</i>
                 <i class="material-icons" title="랜덤 반복">shuffle</i> -->
-            </div>
-            <!-- //music__control -->
+        </div>
+        <!-- //music__control -->
 
-            <div class="music__list">
-                <div class="title">
-                    <div>
-                        <i class="material-icons queue">queue_music</i>
-                        <span>Music List</span>
-                    </div>
-                    <i class="material-icons close">close</i>
-                </div>
-                <div class="list">
-                    <ul>
-                        <!-- Javascript -->
-                        <!-- <li>
+        <div class="music__list">
+          <div class="title">
+            <div>
+              <i class="material-icons queue">queue_music</i>
+              <span>Music List</span>
+            </div>
+            <i class="material-icons close">close</i>
+          </div>
+          <div class="list">
+            <ul>
+              <!-- Javascript -->
+              <!-- <li>
                             <div>
                                 <em>제목제목제목</em>
                                 <p>가수이름</p>
                             </div>
                             <span>3:36</span>
                         </li> -->
-                    </ul>
-                </div>
-            </div>
-            <!-- //music__list -->
+            </ul>
+          </div>
         </div>
+        <!-- //music__list -->
+      </div>
     </div>
     <script src="api/music.js"></script>
     <script>
-        const musicWrap = document.querySelector(".wrap__music");
-        const musicImg = musicWrap.querySelector(".music__img img");
-        const musicName = musicWrap.querySelector(".music__song .name");
-        const musicArtist = musicWrap.querySelector(".music__song .artist");
-        const musicAudio = musicWrap.querySelector("#main-audio");
-        const musicPlay = musicWrap.querySelector("#control-play");
-        const musicPrevBtn = musicWrap.querySelector("#control-prev");
-        const musicNextBtn = musicWrap.querySelector("#control-next");
-        const musicProgress = musicWrap.querySelector(".music__progress");
-        const musicProgressBar = musicWrap.querySelector(".bar");
-        const musicProgressCurrent = musicWrap.querySelector(".current");
-        const musicProgressDuration = musicWrap.querySelector(".duration");
-        const musicRepeat = musicWrap.querySelector("#control-repeat");
-        const musicList = musicWrap.querySelector(".music__list");
-        const musicListBtn = musicWrap.querySelector("#control-list");
-        const musicListClose = musicList.querySelector(".close")
-        const musicListUl = musicList.querySelector(".list ul")
-        
-        let musicIndex = Math.floor((Math.random() * allMusic.length) + 1 );
+      const musicWrap = document.querySelector(".wrap__music");
+      const musicImg = musicWrap.querySelector(".music__img img");
+      const musicName = musicWrap.querySelector(".music__song .name");
+      const musicArtist = musicWrap.querySelector(".music__song .artist");
+      const musicAudio = musicWrap.querySelector("#main-audio");
+      const musicPlay = musicWrap.querySelector("#control-play");
+      const musicPrevBtn = musicWrap.querySelector("#control-prev");
+      const musicNextBtn = musicWrap.querySelector("#control-next");
+      const musicProgress = musicWrap.querySelector(".music__progress");
+      const musicProgressBar = musicWrap.querySelector(".bar");
+      const musicProgressCurrent = musicWrap.querySelector(".current");
+      const musicProgressDuration = musicWrap.querySelector(".duration");
+      const musicRepeat = musicWrap.querySelector("#control-repeat");
+      const musicList = musicWrap.querySelector(".music__list");
+      const musicListBtn = musicWrap.querySelector("#control-list");
+      const musicListClose = musicList.querySelector(".close");
+      const musicListUl = musicList.querySelector(".list ul");
 
-        //음악 재생
-        function loadMusic(num){
-            musicImg.src = `images/${allMusic[num -1].img}.jpg`;
-            musicImg.art = allMusic[num -1].name;
-            musicName.innerText = allMusic[num -1].name;
-            musicArtist.innerText = allMusic[num -1].artist;
-            musicAudio.src = `songs/${allMusic[num -1].audio}.mp3`;
-        }
+      let musicIndex = Math.floor(Math.random() * allMusic.length + 1);
 
- 
-        //플레이 버튼
-        function playMusic(){
-            musicWrap.classList.add("paused");
-            musicPlay.innerText = "pause"
-            musicPlay.setAttribute("title", "재생")
-            musicAudio.play();
-        }
-        //정지 버튼
-        function pauseMusic(){
-            musicWrap.classList.remove("paused")
-            musicPlay.innerText = "play_arrow";
-            musicPlay.setAttribute("title", "정지")
+      //음악 재생
+      function loadMusic(num) {
+        musicImg.src = `images/${allMusic[num - 1].img}.jpg`;
+        musicImg.art = allMusic[num - 1].name;
+        musicName.innerText = allMusic[num - 1].name;
+        musicArtist.innerText = allMusic[num - 1].artist;
+        musicAudio.src = `songs/${allMusic[num - 1].audio}.mp3`;
+      }
 
-            musicAudio.pause();
-        }
+      //플레이 버튼
+      function playMusic() {
+        musicWrap.classList.add("paused");
+        musicPlay.innerText = "pause";
+        musicPlay.setAttribute("title", "재생");
+        musicAudio.play();
+      }
+      //정지 버튼
+      function pauseMusic() {
+        musicWrap.classList.remove("paused");
+        musicPlay.innerText = "play_arrow";
+        musicPlay.setAttribute("title", "정지");
 
-        //이전 곡 듣기 버튼(1)
-        function pervMusic(){
-            musicIndex--;
-            //번호 값이 1이면 --> 20으로 변경
-            musicIndex < 1 ? musicIndex = all.Music.length : musicIndex = musicIndex;
-            loadMusic(musicIndex);
-            playMusic();
-            playListMusic()
-        }
+        musicAudio.pause();
+      }
 
-        //다음 곡 듣기 버튼(20)
-        function nextMusic(){
-            musicIndex++;
-            //번호값이 20이면 --> 1로 변경
-            musicIndex > allMusic.length ? musicIndex = 1 : musicIndex = musicIndex;
-            loadMusic(musicIndex);
-            playMusic();
-            playListMusic()
-        }
+      //이전 곡 듣기 버튼(1)
+      function pervMusic() {
+        musicIndex--;
+        //번호 값이 1이면 --> 20으로 변경
+        musicIndex < 1
+          ? (musicIndex = all.Music.length)
+          : (musicIndex = musicIndex);
+        loadMusic(musicIndex);
+        playMusic();
+        playListMusic();
+      }
 
-        //뮤직 진행바 진행되고있는 상태
-        musicAudio.addEventListener("timeupdate", (e) => {
-            //console.log(e)
-            const currentTime = e.target.currentTime;
-            const duration = e.target.duration;
-            let progressWidth = (currentTime / duration) * 100;
-            musicProgressBar.style.width = `${progressWidth}%`;
+      //다음 곡 듣기 버튼(20)
+      function nextMusic() {
+        musicIndex++;
+        //번호값이 20이면 --> 1로 변경
+        musicIndex > allMusic.length
+          ? (musicIndex = 1)
+          : (musicIndex = musicIndex);
+        loadMusic(musicIndex);
+        playMusic();
+        playListMusic();
+      }
 
-            musicAudio.addEventListener("loadeddata", () => {
-                let audioDuration = musicAudio.duration;
-                let totalMin = Math.floor(audioDuration / 60) //몇 분
-                let totalSec = Math.floor(audioDuration % 60) //몇 초
-                if(totalSec < 10) totalSec = `0${totalSec}`//totalSec에 0이 붙게 설정 안붙으면 2:2 나옴 붙으면 2:02 나옴
-                musicProgressDuration.innerText = `${totalMin}:${totalSec}`; //음악 총 길이가 나오게 설정
-            })
+      //뮤직 진행바 진행되고있는 상태
+      musicAudio.addEventListener("timeupdate", (e) => {
+        //console.log(e)
+        const currentTime = e.target.currentTime;
+        const duration = e.target.duration;
+        let progressWidth = (currentTime / duration) * 100;
+        musicProgressBar.style.width = `${progressWidth}%`;
 
-             //진행되고있는 현재 시간 설정
-            let currentMin = Math.floor(currentTime / 60)
-            let currentSec = Math.floor(currentTime % 60)
-            if(currentSec < 10) currentSec = `0${currentSec}`
-            musicProgressCurrent.innerText = `${currentMin}:${currentSec}` 
-        })
-
-
-        //플레이 버튼
-        musicPlay.addEventListener("click", ()=> {
-            const isMusicPaused = musicWrap.classList.contains("paused");
-            isMusicPaused ? pauseMusic() : playMusic();
+        musicAudio.addEventListener("loadeddata", () => {
+          let audioDuration = musicAudio.duration;
+          let totalMin = Math.floor(audioDuration / 60); //몇 분
+          let totalSec = Math.floor(audioDuration % 60); //몇 초
+          if (totalSec < 10) totalSec = `0${totalSec}`; //totalSec에 0이 붙게 설정 안붙으면 2:2 나옴 붙으면 2:02 나옴
+          musicProgressDuration.innerText = `${totalMin}:${totalSec}`; //음악 총 길이가 나오게 설정
         });
-        //이전 곡 버튼
-        musicPrevBtn.addEventListener("click", () => {
-            pervMusic();
-        });
-        //다음 곡 버튼
-        musicNextBtn.addEventListener("click", () => {
+
+        //진행되고있는 현재 시간 설정
+        let currentMin = Math.floor(currentTime / 60);
+        let currentSec = Math.floor(currentTime % 60);
+        if (currentSec < 10) currentSec = `0${currentSec}`;
+        musicProgressCurrent.innerText = `${currentMin}:${currentSec}`;
+      });
+
+      //플레이 버튼
+      musicPlay.addEventListener("click", () => {
+        const isMusicPaused = musicWrap.classList.contains("paused");
+        isMusicPaused ? pauseMusic() : playMusic();
+      });
+      //이전 곡 버튼
+      musicPrevBtn.addEventListener("click", () => {
+        pervMusic();
+      });
+      //다음 곡 버튼
+      musicNextBtn.addEventListener("click", () => {
+        nextMusic();
+      });
+      //진행 버튼 클릭
+      musicProgress.addEventListener("click", (e) => {
+        let progressWidth = musicProgress.clientWidth;
+        let clickedOffestX = e.offsetX;
+        let songDuration = musicAudio.duration;
+
+        musicAudio.currentTime =
+          (clickedOffestX / progressWidth) * songDuration;
+        playMusic();
+      });
+
+      //반복 버튼 this쓰려면 function을 써야함 화살표 함수에선 this를 못 씀
+      musicRepeat.addEventListener("click", () => {
+        let getText = musicRepeat.innerText;
+
+        //switch문을 이용해서 클릭할때마다 3개의 메뉴가 바뀌게 만듬
+        switch (getText) {
+          case "repeat":
+            musicRepeat.innerText = "repeat_one";
+            musicRepeat.setAttribute("title", "한곡 반복");
+            break;
+          case "repeat_one":
+            musicRepeat.innerText = "shuffle";
+            musicRepeat.setAttribute("title", "랜덤 반복");
+            break;
+          case "shuffle":
+            musicRepeat.innerText = "repeat";
+            musicRepeat.setAttribute("title", "전체 반복");
+
+            break;
+        }
+      });
+
+      //오디오가 끝나고
+      musicAudio.addEventListener("ended", () => {
+        let getText = musicRepeat.innerText;
+
+        switch (getText) {
+          case "repeat":
             nextMusic();
-        });
-        //진행 버튼 클릭
-        musicProgress.addEventListener("click", (e)=>{
-            let progressWidth = musicProgress.clientWidth
-            let clickedOffestX = e.offsetX;
-            let songDuration = musicAudio.duration;
-
-            musicAudio.currentTime = (clickedOffestX / progressWidth) * songDuration;  
+            break;
+          case "repeat_one": //한 곡 버튼을 누르면
+            loadMusic(musicIndex);
             playMusic();
-        })
+            break;
+          case "shuffle": //랜덤재생
+            let randIndex = Math.floor(Math.random() * allMusic.length + 1);
+            do {
+              //do while문을 써서 musicIndex 와 randIndex 같을때만 실행함
+              randIndex = Math.floor(Math.random() * allMusic.length + 1);
+            } while (musicIndex == randIndex);
+            musicIndex = randIndex;
+            loadMusic(musicIndex);
+            playMusic();
+            playListMusic();
+            break;
+        }
+      });
 
-        //반복 버튼 this쓰려면 function을 써야함 화살표 함수에선 this를 못 씀
-        musicRepeat.addEventListener("click", () => {
-            let getText = musicRepeat.innerText;
+      //뮤직 리스트 버튼
+      musicListBtn.addEventListener("click", () => {
+        musicList.classList.add("show");
+      });
 
-            //switch문을 이용해서 클릭할때마다 3개의 메뉴가 바뀌게 만듬
-            switch(getText){
-                case "repeat":
-                    musicRepeat.innerText = "repeat_one"
-                    musicRepeat.setAttribute("title", "한곡 반복")
-                break;
-                case "repeat_one":
-                    musicRepeat.innerText = "shuffle"
-                    musicRepeat.setAttribute("title", "랜덤 반복")
-                break;
-                case "shuffle":
-                    musicRepeat.innerText = "repeat"
-                    musicRepeat.setAttribute("title", "전체 반복")
+      //뮤직 리스트 닫기 버튼
+      musicListClose.addEventListener("click", () => {
+        musicList.classList.remove("show");
+      });
 
-                break;
-            }
-        })
-
-        //오디오가 끝나고
-        musicAudio.addEventListener("ended", () => {
-            let getText = musicRepeat.innerText
-
-            switch(getText){
-                case "repeat":
-                        nextMusic();
-                break;
-                case "repeat_one":  //한 곡 버튼을 누르면
-                        loadMusic(musicIndex)
-                        playMusic();
-                break;
-                case "shuffle": //랜덤재생
-                        let randIndex = Math.floor((Math.random() * allMusic.length) + 1 )
-                        do {    //do while문을 써서 musicIndex 와 randIndex 같을때만 실행함
-                            randIndex = Math.floor((Math.random() * allMusic.length) + 1 )
-                        } while (musicIndex == randIndex);
-                        musicIndex = randIndex;
-                        loadMusic(musicIndex)
-                        playMusic();
-                        playListMusic()
-                break;
-            }
-        })
-        
-        //뮤직 리스트 버튼
-        musicListBtn.addEventListener("click", () => {
-            musicList.classList.add("show");
-        })
-
-        //뮤직 리스트 닫기 버튼
-        musicListClose.addEventListener("click", ()=>{
-            musicList.classList.remove("show")
-        })
-
-        //뮤직 리스트 구현하기
-        for(let i=0; i<allMusic.length; i++){
-            let li = `
+      //뮤직 리스트 구현하기
+      for (let i = 0; i < allMusic.length; i++) {
+        let li = `
                 <li data-index="${i + 1}">
                     <div>
                         <em>${allMusic[i].name}</em>
                         <p>${allMusic[i].artist}</p>
                     </div>
-                    <audio class="${allMusic[i].audio}" src="songs/${allMusic[i].audio}.mp3"></audio>
-                    <span id="${allMusic[i].audio}" class="audio-duration">3:36</span>
+                    <audio class="${allMusic[i].audio}" src="songs/${
+          allMusic[i].audio
+        }.mp3"></audio>
+                    <span id="${
+                      allMusic[i].audio
+                    }" class="audio-duration">3:36</span>
                 </li>
             `;
-            musicListUl.insertAdjacentHTML("beforeend", li);
-            
-            let liAudioDuration = musicListUl.querySelector(`#${allMusic[i].audio}`);//20개의 노래들을 선택함
-            let liAudio = musicListUl.querySelector(`.${allMusic[i].audio}`);
+        musicListUl.insertAdjacentHTML("beforeend", li);
 
-            liAudio.addEventListener("loadeddata", () => {
-                let audioDuration  = liAudio.duration;
-                let totalMin = Math.floor(audioDuration / 60) //몇 분
-                let totalSec = Math.floor(audioDuration % 60) //몇 초
-                if(totalSec < 10) totalSec = `0${totalSec}`//totalSec에 0이 붙게 설정 안붙으면 2:2 나옴 붙으면 2:02 나옴
-                liAudioDuration.innerText = `${totalMin}:${totalSec}`; //음악 총 길이가 나오게 설정
-                liAudioDuration.setAttribute("data-duration", `${totalMin}:${totalSec}` );
-            })
-        }
+        let liAudioDuration = musicListUl.querySelector(
+          `#${allMusic[i].audio}`
+        ); //20개의 노래들을 선택함
+        let liAudio = musicListUl.querySelector(`.${allMusic[i].audio}`);
 
-        //뮤직 리스트 클릭하면 클릭 한 음악이 나오게
-        function playListMusic(){
-            const musicListAll = musicListUl.querySelectorAll("li");
-
-            for(let j=0; j<musicListAll.length; j++){
-                let audioTag = musicListAll[j].querySelector(".audio-duration");
-
-                if(musicListAll[j].classList.contains("playing")){
-                    musicListAll[j].classList.remove("playing")
-                    let adDuration = audioTag.getAttribute("data-duration");
-                    audioTag.innerText = adDuration
-                }
-
-                if(musicListAll[j].getAttribute("data-index") == musicIndex){
-                    musicListAll[j].classList.add("playing");
-                    audioTag.innerText = "재생중"
-                }
-
-                musicListAll[j].setAttribute("onclick", "clicked(this)")  //클릭하면 함수화시켜줌 onclick
-            }
-        }
-        //리스트 클릭하기
-        function clicked(el){   //클릭한 해당 번호를 가져옴
-            let getLiIndex = el.getAttribute("data-index");
-            musicIndex = getLiIndex;
-            loadMusic(musicIndex);
-            playMusic()
-            playListMusic()
-        }
-
-
-        //플레이
-        window.addEventListener("load", ()=>{
-            loadMusic(musicIndex);
-            playListMusic()
+        liAudio.addEventListener("loadeddata", () => {
+          let audioDuration = liAudio.duration;
+          let totalMin = Math.floor(audioDuration / 60); //몇 분
+          let totalSec = Math.floor(audioDuration % 60); //몇 초
+          if (totalSec < 10) totalSec = `0${totalSec}`; //totalSec에 0이 붙게 설정 안붙으면 2:2 나옴 붙으면 2:02 나옴
+          liAudioDuration.innerText = `${totalMin}:${totalSec}`; //음악 총 길이가 나오게 설정
+          liAudioDuration.setAttribute(
+            "data-duration",
+            `${totalMin}:${totalSec}`
+          );
         });
+      }
 
+      //뮤직 리스트 클릭하면 클릭 한 음악이 나오게
+      function playListMusic() {
+        const musicListAll = musicListUl.querySelectorAll("li");
+
+        for (let j = 0; j < musicListAll.length; j++) {
+          let audioTag = musicListAll[j].querySelector(".audio-duration");
+
+          if (musicListAll[j].classList.contains("playing")) {
+            musicListAll[j].classList.remove("playing");
+            let adDuration = audioTag.getAttribute("data-duration");
+            audioTag.innerText = adDuration;
+          }
+
+          if (musicListAll[j].getAttribute("data-index") == musicIndex) {
+            musicListAll[j].classList.add("playing");
+            audioTag.innerText = "재생중";
+          }
+
+          musicListAll[j].setAttribute("onclick", "clicked(this)"); //클릭하면 함수화시켜줌 onclick
+        }
+      }
+      //리스트 클릭하기
+      function clicked(el) {
+        //클릭한 해당 번호를 가져옴
+        let getLiIndex = el.getAttribute("data-index");
+        musicIndex = getLiIndex;
+        loadMusic(musicIndex);
+        playMusic();
+        playListMusic();
+      }
+
+      //플레이
+      window.addEventListener("load", () => {
+        loadMusic(musicIndex);
+        playListMusic();
+      });
     </script>
-</body>
+  </body>
 </html>
