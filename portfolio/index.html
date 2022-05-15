@@ -10,42 +10,25 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400&display=swap");
-
-      #about {
-        margin-top: 25vw;
-      }
-      #about h3 {
-        font-size: 13vw;
-        font-family: "Partizeno";
-      }
-      #about p {
-        font-family: "ChosunNm";
-        font-weight: normal;
-        font-size: 1vw;
-        width: 50vw;
-      }
-      .card {
+      .about__cont {
         display: flex;
-        margin-top: 10vw;
-        justify-content: space-between;
+      }
+      .about__text h3 {
+        font-size: 10vw;
+      }
+      .about__text p {
+
       }
 
-      .card1 {
-        width: 30vw;
-        height: 15vw;
-        background: #000;
+
+      /* site */
+      #site {
+
       }
-      .card2 {
-        width: 30vw;
-        height: 15vw;
-        background: #000;
+      #site h3 {
+        
       }
-      .card3 {
-        width: 30vw;
-        height: 15vw;
-        background: #000;
-      }
-    </style>
+  </style>
   </head>
   <body>
     <div id="wrap">
@@ -80,27 +63,41 @@
         </section>
 
         <section id="about">
-          <h3 class="ir_so">ABOUT 영역</h3>
-          <div class="about__cont container">
-            <h3>About</h3>
-            <p>
-              안녕하세요 신입 웹퍼블리셔/프론트엔드 개발자 박근혁입니다.
-              처음에는 코딩의 코자도 모르고 알지도 못하는것에 도전하는것이 많이
-              낯설고 무서웠습니다 그래도 용기를 내서 국비지원 학원을 알아보고
-              바로 다니기 시작했습니다 처음에는 알지도 못하는 언어들이 나오고 이
-              일을 정말 할 수 있을까 의문이 들었지만 하다가 오류가 나면 앉은
-              자리에서 시간가는줄 모르고 틀린 부분을 고치면 뿌듯함이
-              느껴졌습니다 배움은 조금 느려도 포기하지 않고 알아보려고
-              노력하였습니다. 짧으면 짧고 길면 긴 6개월이 저에게는 너무나 짧게
-              느껴졌고 아직 배움이 부족하다고 생각합니다. 앞으로도 계속 발전하고
-              노력하는 개발자가 되겠습니다.
-            </p>
-          </div>
-          <div class="card">
-            <div class="card1"></div>
-            <div class="card2"></div>
-            <div class="card3"></div>
-          </div>
+          <div class="container">
+            <h3 class="ir_so">ABOUT 영역</h3>
+            <div class="about__cont">
+            <div class="card">
+              <div class="about__img">
+                <a href="#"><img src="" alt=""></a>
+              </div>
+              <div class="about__text">
+                <h3>About</h3>
+                <p>
+                  안녕하세요 신입 웹퍼블리셔/프론트엔드 개발자 박근혁입니다.
+                  처음에는 코딩의 코자도 모르고 알지도 못하는것에 도전하는것이 많이
+                  낯설고 무서웠습니다 그래도 용기를 내서 국비지원 학원을 알아보고
+                  바로 다니기 시작했습니다 처음에는 알지도 못하는 언어들이 나오고 이
+                  일을 정말 할 수 있을까 의문이 들었지만 하다가 오류가 나면 앉은
+                  자리에서 시간가는줄 모르고 틀린 부분을 고치면 뿌듯함이
+                  느껴졌습니다 배움은 조금 느려도 포기하지 않고 알아보려고
+                  노력하였습니다. 짧으면 짧고 길면 긴 6개월이 저에게는 너무나 짧게
+                  느껴졌고 아직 배움이 부족하다고 생각합니다. 앞으로도 계속 발전하고
+                  노력하는 개발자가 되겠습니다.
+                </p>
+              </div>
+            </div>
+            </div>
+        </section>
+         
+
+        <section id="site">
+          <h3>Site</h3>
+          <ul>
+            <li><a href="#">Webstandard</a></li>
+            <li><a href="#">REACT.JS</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">VUE.JS</a></li>
+          </ul>
         </section>
       </main>
     </div>
