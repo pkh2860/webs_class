@@ -10,77 +10,35 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400&display=swap");
-      #about {
-      }
-      .about__cont {
+
+      #Site {
         margin-top: 20vw;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
       }
-      .about__text h3 {
+      #Site h3 {
+        font-weight: 100;
         font-size: 13vw;
         font-family: "Partizeno";
         margin-bottom: 30px;
       }
-      .about__text p {
-        /* width: 90%; */
+      #Site ul {
+        display: flex;
+        margin-bottom: 30px;
+      }
+      #Site li {
+        margin-right: 2vw;
+      }
+      #Site li a {
+        font-family: "Partizeno";
+        display: inline-block;
+        font-size: 1.5vw;
+        color: #3c6b56;
+      }
+      #Site p {
+        width: 45%;
         font-family: "ChosunNm";
-        font-size: 1vw;
         margin-bottom: 5vw;
-      }
-      /* slider */
-      .slider__wrap {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      }
-
-      .slider__img {
-        /*화면 보이는 구간*/
-        position: relative;
-        width: 800px;
-        height: 480px;
-      }
-      .slider__inner {
-        /*이미지 움직이는 영역*/
-        position: relative;
-        display: flex;
-        width: 2400px; /*이미지 총 길이*/
-        left: -800px;
-      }
-      .slider__inner.transition {
-        transition: all 600ms;
-      }
-      .slider {
-        width: 800px;
-        position: relative;
-      }
-      .slider__btn a {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 100;
-        width: 50px;
-        height: 50px;
-        background: rgba(0, 0, 0, 0.4);
-        text-align: center;
-        line-height: 50px;
-        transition: all 0.2s;
-        display: block;
-        color: #fff;
-        text-decoration: none;
-      }
-      .slider__btn a.prev {
-        left: 0;
-      }
-      .slider__btn a.next {
-        right: 0;
-      }
-      .slider__inner:nth-child(1) .slider {
-        margin: 0 auto;
+        line-height: 1.6;
+        color: #3c6b56;
       }
     </style>
   </head>
@@ -153,30 +111,28 @@
             </div>
           </div>
         </section>
+
+        <section id="Site">
+          <div class="container">
+            <h3>Site</h3>
+            <ul>
+              <li><a href="#">1. Webstandard</a></li>
+              <li><a href="#">2. React.js</a></li>
+              <li><a href="#">3. PHP</a></li>
+              <li><a href="#">4. Vue.js</a></li>
+            </ul>
+            <p>
+              HTML,CSS,JAVASCRIPT,JQUERY를 이용하여 웹표준에 맞게 사이트를
+              제작하고 그 사이트를 토대로 REACT.PHP를 이용하여 회원가입,게시글
+              작성, 게시글 수정과 같은 많은 기능들은 추가하였습니다.
+            </p>
+          </div>
+        </section>
       </main>
     </div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>
-    // const sliderWrap = document.querySelector(".slider__wrap");
-    // const sliderImg = document.querySelector(".slider__img"); //이미지 보이는 영역
-    // const sliderInner = document.querySelector(".slider__inner"); //이미지 움직이는 전체 영역
-    // const slider = document.querySelectorAll(".slider"); //슬라이드 이미지
-    // const sliderBtn = document.querySelector(".slider__btn"); //버튼
-    // const sliderBtnPrev = sliderBtn.querySelector(".prev"); //이전 버튼
-    // const sliderBtnNext = sliderBtn.querySelector(".next"); //다음 버튼
-    // const sliderDot = document.querySelector(".slider__dot"); //dot 버튼
-
-    // let currentIndex = 0; //현재 이미지
-    // let sliderWidth = sliderImg.offsetWidth; //이미지 가로 값
-    // let sliderLength = slider.length; //이미지 총 갯수
-    // let sliderFirst = slider[0]; //첫번째 이미지
-    // let sliderLast = slider[sliderLength - 1]; //마지막 이미지
-    // let cloneFirst = sliderFirst.cloneNode(true); //첫 번째 이미지 복사를 변수에 저장
-    // let cloneLast = sliderLast.cloneNode(true); //마지막 이미지 복사
-    // //clone() 제이쿼리에서 복사
-    // let posInitial = "";
-    // let dotIndex = "";
     const Menu = document.querySelector(".menu ul");
 
     var burger = $(".menu-trigger");
@@ -190,41 +146,5 @@
         $(this).toggleClass("active-" + (index + 1));
       });
     });
-
-    //이미지 복사   appendTo/prependTo : append/prepend
-    // sliderInner.appendChild(cloneFirst); //첫 번째 이미지
-    // sliderInner.insertBefore(cloneLast, sliderFirst); //마지막 이미지
-
-    // //이미지 움직이기
-    // function gotoSlider(direction) {
-    //   sliderInner.classList.add("transition");
-    //   posInitial = sliderInner.offsetLeft;
-    //   console.log(currentIndex);
-
-    //   //오른쪽 버튼 1이 들어가면 이미지 가로값 sliderWidth을 - 함
-    //   if (direction == 1) {
-    //     //left : -800px
-    //     sliderInner.style.left = posInitial - sliderWidth + "px";
-    //     currentIndex++; //다음을 가야해서  currentIndex ++
-    //   }
-    //   //왼쪽 버튼
-    //   if (direction == -1) {
-    //     sliderInner.style.left = posInitial + sliderWidth + "px";
-    //     currentIndex--;
-    //   }
-
-    //   dotActive();
-    // }
-
-    // //버튼 클릭하기
-    // sliderBtnPrev.addEventListener("click", () => {
-    //   gotoSlider(-1);
-    // }); //prev 버튼을 클릭하면  -1이 들어감
-    // sliderBtnNext.addEventListener("click", () => {
-    //   gotoSlider(1);
-    // }); //Next
-    // sliderInner.addEventListener("transitionend", checkIndex);
-
-    // dotInit();
   </script>
 </html>
