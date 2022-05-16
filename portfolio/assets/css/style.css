@@ -6,6 +6,7 @@
 }
 body {
   background-color: #ebebeb;
+  height: 10000px;
 }
 #header {
   width: 100%;
@@ -191,6 +192,3 @@ body {
     right: 20vw;
   }
 }
-
-
-

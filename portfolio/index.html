@@ -10,25 +10,44 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400&display=swap");
+      #about {
+      }
       .about__cont {
+        margin-top: 20vw;
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
       }
       .about__text h3 {
-        font-size: 10vw;
+        font-size: 13vw;
+        font-family: "Partizeno";
+        margin-bottom: 30px;
       }
       .about__text p {
-
+        /* width: 90%; */
+        font-family: "ChosunNm";
+        font-size: 1vw;
+        margin-bottom: 5vw;
+      }
+      .slider__inner {
+        display: flex;
       }
 
-
-      /* site */
-      #site {
-
+      .slider__img {
+        /*화면 보이는 구간*/
+        position: relative;
+        width: 800px;
+        height: 480px;
+        /* overflow: hidden; */
       }
-      #site h3 {
-        
+      .slider__inner {
+        /*이미지 움직이는 영역*/
+        display: flex;
+        width: 4800px; /*이미지 총 길이*/
+        transform: translateX(0);
       }
-  </style>
+    </style>
   </head>
   <body>
     <div id="wrap">
@@ -61,43 +80,41 @@
           </div>
           <!-- </div> -->
         </section>
-
         <section id="about">
           <div class="container">
             <h3 class="ir_so">ABOUT 영역</h3>
             <div class="about__cont">
-            <div class="card">
-              <div class="about__img">
-                <a href="#"><img src="" alt=""></a>
-              </div>
               <div class="about__text">
                 <h3>About</h3>
                 <p>
                   안녕하세요 신입 웹퍼블리셔/프론트엔드 개발자 박근혁입니다.
-                  처음에는 코딩의 코자도 모르고 알지도 못하는것에 도전하는것이 많이
-                  낯설고 무서웠습니다 그래도 용기를 내서 국비지원 학원을 알아보고
-                  바로 다니기 시작했습니다 처음에는 알지도 못하는 언어들이 나오고 이
-                  일을 정말 할 수 있을까 의문이 들었지만 하다가 오류가 나면 앉은
-                  자리에서 시간가는줄 모르고 틀린 부분을 고치면 뿌듯함이
-                  느껴졌습니다 배움은 조금 느려도 포기하지 않고 알아보려고
-                  노력하였습니다. 짧으면 짧고 길면 긴 6개월이 저에게는 너무나 짧게
-                  느껴졌고 아직 배움이 부족하다고 생각합니다. 앞으로도 계속 발전하고
-                  노력하는 개발자가 되겠습니다.
+                  처음에는 코딩의 코자도 모르고 알지도 못하는것에 도전하는것이
+                  많이 낯설고 무서웠습니다 그래도 용기를 내서 국비지원 학원을
+                  알아보고 바로 다니기 시작했습니다 처음에는 알지도 못하는
+                  언어들이 나오고 이 일을 정말 할 수 있을까 의문이 들었지만
+                  하다가 오류가 나면 앉은 자리에서 시간가는줄 모르고 틀린 부분을
+                  고치면 뿌듯함이 느껴졌습니다 배움은 조금 느려도 포기하지 않고
+                  알아보려고 노력하였습니다. 짧으면 짧고 길면 긴 6개월이
+                  저에게는 너무나 짧게 느껴졌고 아직 배움이 부족하다고
+                  생각합니다. 앞으로도 계속 발전하고 노력하는 개발자가
+                  되겠습니다.
                 </p>
               </div>
             </div>
+          </div>
+          <div class="slider__img">
+            <div class="slider__inner">
+              <div class="slider">
+                <img src="assets/img/img02.jpg" alt="이미지1" />
+              </div>
+              <div class="slider">
+                <img src="assets/img/img03.jpg" alt="이미지2" />
+              </div>
+              <div class="slider">
+                <img src="assets/img/img04.jpg" alt="이미지3" />
+              </div>
             </div>
-        </section>
-         
-
-        <section id="site">
-          <h3>Site</h3>
-          <ul>
-            <li><a href="#">Webstandard</a></li>
-            <li><a href="#">REACT.JS</a></li>
-            <li><a href="#">PHP</a></li>
-            <li><a href="#">VUE.JS</a></li>
-          </ul>
+          </div>
         </section>
       </main>
     </div>
