@@ -8,37 +8,86 @@
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/common.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/fonts/ChosunCentennial_ttf.ttf" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
     <style>
-      #Site {
-        margin-top: 20vw;
+      iframe {
+        width: 65vw;
+        height: 35vw;
       }
-      #Site h3 {
-        font-weight: 100;
-        font-size: 13vw;
-        font-family: "Partizeno";
-        margin-bottom: 2vw;
-      }
-      #Site ul {
+      .scripts__wrap {
         display: flex;
-        margin-bottom: 2vw;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
       }
-      #Site li {
-        margin-right: 2vw;
+
+      .scripts__img {
+        /*화면 보이는 구간*/
+        position: relative;
+        /* width: 800px;
+        height: 480px; */
+        width: 62vw;
+        height: 35vw;
+        overflow: hidden;
       }
-      #Site li a {
-        font-family: "Partizeno";
-        display: inline-block;
-        font-size: 1.5vw;
-        color: #3c6b56;
+      .scripts__inner {
+        /*이미지 움직이는 영역*/
+        position: relative;
+        display: flex;
+        width: 400%; /*이미지 총 길이*/
+        /* left: -1504px; */
       }
-      #Site .desc {
-        font-weight: 100;
-        width: 45%;
-        font-family: "ChosunNm";
-        margin-bottom: 5vw;
-        line-height: 1.6;
-        color: #3c6b56;
+      .scripts__inner.transition {
+        transition: all 600ms;
+      }
+      .scripts {
+        width: 1204px;
+        position: relative;
+      }
+
+      .scripts::before {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        padding: 5px 10px 3px;
+      }
+      .scripts:nth-child(1)::before {
+        content: "이미지1";
+      }
+      .scripts:nth-child(2)::before {
+        content: "이미지2";
+      }
+      .scripts:nth-child(3)::before {
+        content: "이미지3";
+      }
+      .scripts:nth-child(4)::before {
+        content: "이미지4";
+      }
+      .scripts__btn a {
+        position: absolute;
+        /* top: 50%; */
+        transform: translateY(-50%);
+        z-index: 100;
+        width: 50px;
+        height: 50px;
+        background: rgba(0, 0, 0, 0.4);
+        text-align: center;
+        line-height: 50px;
+        transition: all 0.2s;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+      }
+      .scripts__btn a.prev {
+        left: 1%;
+      }
+      .scripts__btn a.next {
+        right: 0;
+      }
+      .scripts__btn a:hover {
+        background: rgb(241, 96, 86);
       }
     </style>
   </head>
@@ -123,9 +172,172 @@
             </ul>
             <p class="desc">
               HTML,CSS,JAVASCRIPT,JQUERY를 이용하여 웹표준에 맞게 사이트를
-              제작하고 그 사이트를 토대로 REACT.PHP를 이용하여 회원가입,게시글
-              작성, 게시글 수정과 같은 많은 기능들은 추가하였습니다.
+              제작하고 <br />
+              그 사이트를 토대로 REACT.PHP를 이용하여 회원가입,게시글 작성,
+              게시글 수정과<br />
+              같은 많은 기능들은 추가하였습니다.
             </p>
+          </div>
+          <div class="card__text01">
+            <div class="left">
+              <div class="web__img01">
+                <a href="#" class="view">VIEW</a>
+                <img src="assets/img/web.jpg" alt="" />
+              </div>
+            </div>
+            <div class="right">
+              <div class="text">
+                <h4 class="title">WebStandard</h4>
+                <p class="sub">
+                  기본 레이아웃을 바탕으로 카드타입, 이미지타입 등 섹션을 나눠서
+                  작업하였습니다.<br />
+                  스와이퍼 플러그인을 사용하여 이미지 슬라이더를 만들고 웹
+                  접근성을 위해 ir기법을 이용해 대체 텍스트가 아닌 숨긴 텍스트를
+                  사용했습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- //card__text01 -->
+
+          <div class="card__text02">
+            <div class="left">
+              <div class="text">
+                <h4 class="title">WebStandard</h4>
+                <p class="sub">
+                  웹에서 사용되는 표준 기술이나 규칙적인 웹표준을 준수하여
+                  제작한 사이트입니다. HTML과 CSS를 분리하여 불필요한 마크업을
+                  최소화하고, HTML과 CSS의 가독성을 높였습니다 또한 SKIP메뉴와
+                  IMAGE태그의 ALT속성 등으로 접근성을 향상시켰습니다
+                </p>
+              </div>
+            </div>
+            <div class="right">
+              <div class="web__img02">
+                <a href="#" class="view">VIEW</a>
+                <img src="assets/img/web2.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- //card__text02 -->
+
+          <div class="card__text03">
+            <div class="left">
+              <div class="web__img03">
+                <a href="#" class="view">VIEW</a>
+                <img src="assets/img/react.jpg" alt="" />
+              </div>
+            </div>
+            <div class="right">
+              <div class="text">
+                <h4 class="title">REACT.JS</h4>
+                <p class="sub">
+                  React를 이용해 기존의 HTML 구조의 사이트를 React 방식으로 변경
+                  후 YouTube API와 TMDB API를 이용하여 유튜브 영상 검색 및 목록
+                  영화 순위 관련 차트 페이지를 만들었습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- //card__text03 -->
+
+          <div class="card__text04">
+            <div class="left">
+              <div class="text">
+                <h4 class="title">PHP</h4>
+                <p class="sub">
+                  웹표준을 준수하여 만든 사이트입니다. 데이터 베이스를 연결해
+                  로그인,회원가입이 가능합니다. 메인에는 최신 글과 댓글을
+                  보여주는 페이지를 구성하였고 게시판 작성, 수정, 삭제등
+                  기능들을 구현하였습니다.
+                </p>
+              </div>
+            </div>
+            <div class="right">
+              <div class="web__img04">
+                <a href="#" class="view">VIEW</a>
+                <img src="assets/img/php.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- //card__text04 -->
+
+          <div class="card__text05">
+            <div class="left">
+              <div class="web__img05">
+                <a href="#" class="view">VIEW</a>
+                <img src="assets/img/react.jpg" alt="" />
+              </div>
+            </div>
+            <div class="right">
+              <div class="text">
+                <h4 class="title">VUE.JS</h4>
+                <p class="sub">
+                  React를 이용해 기존의 HTML 구조의 사이트를 React 방식으로 변경
+                  후 YouTube API와 TMDB API를 이용하여 유튜브 영상 검색 및 목록
+                  영화 순위 관련 차트 페이지를 만들었습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- //card__text05 -->
+        </section>
+
+        <section id="Script">
+          <div class="container">
+            <h3>Script</h3>
+            <ul>
+              <li><a href="#">1. Quit Effect</a></li>
+              <li><a href="#">2. Mouse Effect</a></li>
+              <li><a href="#">3. Parallax Effect</a></li>
+              <li><a href="#">4. Slider Effect</a></li>
+            </ul>
+            <p class="desc">
+              스크립트와 제이쿼리를 이용하여 각 페이지마다 다양한 효과를 주고<br />
+              코드를 어떻게 만들었는지 보이기 위해 소스보기 버튼을 만들어서<br />
+              HTML, CSS, JAVASCRIPT 종류별로 나눠서 보여줄 수 있도록<br />
+              만들었습니다.
+            </p>
+          </div>
+
+          <div class="scripts__wrap">
+            <div class="scripts__img">
+              <div class="scripts__inner">
+                <div class="scripts s1">
+                  <iframe
+                    class="quiz"
+                    src="https://pkh2860.github.io/webs_class/javascript/effect/quizEffect.html"
+                    frameborder="0"
+                  ></iframe>
+                </div>
+
+                <div class="scripts s2">
+                  <iframe
+                    class="mouse"
+                    src="https://pkh2860.github.io/webs_class/javascript/effect/mouseEffect.html"
+                    frameborder="0"
+                  ></iframe>
+                </div>
+                <div class="scripts s3">
+                  <iframe
+                    class="parallax"
+                    src="https://pkh2860.github.io/webs_class/javascript/effect/parallaxEffect.html"
+                    frameborder="0"
+                  ></iframe>
+                </div>
+                <div class="scripts s4">
+                  <iframe
+                    class="scripts"
+                    src="https://pkh2860.github.io/webs_class/javascript/effect/sliderEffect.html"
+                    frameborder="0"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="scripts__btn">
+              <a href="" class="prev">prev</a>
+              <a href="" class="next">next</a>
+            </div> -->
           </div>
         </section>
       </main>
@@ -146,5 +358,102 @@
         $(this).toggleClass("active-" + (index + 1));
       });
     });
+
+    // const scriptsWrap = document.querySelector(".scripts__wrap");
+    // const scriptsImg = document.querySelector(".scripts__img"); //이미지 보이는 영역
+    // const scriptsInner = document.querySelector(".scripts__inner"); //이미지 움직이는 영역
+    // const scripts = document.querySelectorAll(".scripts");
+    // const scriptsBtn = document.querySelector(".scripts__btn"); //버튼
+    // const scriptsDot = document.querySelector(".scripts__dot"); //dot 버튼
+
+    // let currentIndex = 0; //현재 보이는 이미지
+    // let scriptsCount = scripts.length; //이미지의 총 갯수
+    // let scriptsWidth = scriptsImg.offsetWidth; //이미지 가로 값
+    // let dotIndex = "";
+    // let dotActive;
+
+    // function gotoscripts(num) {
+    //   scriptsInner.style.transition = "all 400ms"; //scripts__inner에게 style transition 추가
+    //   scriptsInner.style.transform =
+    //     "translateX(" + -scriptsWidth * num + "px)"; //scripts__inner에 transitionX + 이미지 가로값 + PX 추가
+    //   currentIndex = num; //currentIndex-- currentIndex++
+    // }
+
+    // document.querySelectorAll(".scripts__btn a").forEach((btn, index) => {
+    //   btn.addEventListener("click", () => {
+    //     let prevIndex = (currentIndex + (scriptsCount - 1)) % scriptsCount;
+    //     let nextIndex = (currentIndex + 1) % scriptsCount;
+
+    //     if (btn.classList.contains("prev")) {
+    //       gotoscripts(prevIndex);
+    //     } else {
+    //       gotoscripts(nextIndex);
+    //     }
+    //   });
+    // });
+
+    // const scriptsWrap = document.querySelector(".scripts__wrap");
+    // const scriptsImg = document.querySelector(".scripts__img"); //이미지 보이는 영역
+    // const scriptsInner = document.querySelector(".scripts__inner"); //이미지 움직이는 전체 영역
+    // const scripts = document.querySelectorAll(".scripts"); //슬라이드 이미지
+    // const scriptsBtn = document.querySelector(".scripts__btn"); //버튼
+    // const scriptsBtnPrev = scriptsBtn.querySelector(".prev"); //이전 버튼
+    // const scriptsBtnNext = scriptsBtn.querySelector(".next"); //다음 버튼
+    // const scriptsDot = document.querySelector(".scripts__dot"); //dot 버튼
+
+    // let currentIndex = 0; //현재 이미지
+    // let scriptsWidth = scriptsImg.offsetWidth; //이미지 가로 값
+    // let scriptsLength = scripts.length; //이미지 총 갯수
+    // let scriptsFirst = scripts[0]; //첫번째 이미지
+    // let scriptsLast = scripts[scriptsLength - 1]; //마지막 이미지
+    // let cloneFirst = scriptsFirst.cloneNode(true); //첫 번째 이미지 복사를 변수에 저장
+    // let cloneLast = scriptsLast.cloneNode(true); //마지막 이미지 복사
+    // //clone() 제이쿼리에서 복사
+    // let posInitial = "";
+    // let dotIndex = "";
+    // let scriptsTimer = "";
+    // let interval = 3000;
+
+    // //이미지 복사   appendTo/prependTo : append/prepend
+    // scriptsInner.appendChild(cloneFirst); //첫 번째 이미지
+    // scriptsInner.insertBefore(cloneLast, scriptsFirst); //마지막 이미지
+
+    // //이미지 움직이기
+    // function gotoscripts(index) {
+    //   //index에 1 2 3 4 5 값이 들어감
+    //   scriptsInner.classList.add("transition");
+    //   scriptsInner.style.left = -scriptsWidth * (index + 1) + "px";
+
+    //   console.log(currentIndex);
+    //   currentIndex = index;
+    //   //두번째 이미지 : left: -1600px
+    //   //세번째 이미지 : left: -2400px
+    //   //네번째 이미지 : left: -3200px
+    //   //다섯번째 이미지 : left: -4000px
+    // }
+
+    // scriptsBtnPrev.addEventListener("click", () => {
+    //   let prevIndex = currentIndex - 1;
+    //   gotoscripts(prevIndex);
+    // });
+
+    // scriptsBtnNext.addEventListener("click", () => {
+    //   let nextIndex = currentIndex + 1;
+    //   gotoscripts(nextIndex);
+    // });
+
+    // scriptsInner.addEventListener("transitionend", () => {
+    //   //transition 있을떄 실행
+    //   scriptsInner.classList.remove("transition");
+
+    //   if (currentIndex == -1) {
+    //     scriptsInner.style.left = -(scriptsLength * scriptsWidth) + "px";
+    //     currentIndex = scriptsLength - 1;
+    //   }
+    //   if (currentIndex == scriptsLength) {
+    //     scriptsInner.style.left = -(1 * scriptsWidth) + "px";
+    //     currentIndex = 0;
+    //   }
+    // });
   </script>
 </html>
