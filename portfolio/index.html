@@ -10,84 +10,21 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/fonts.css" />
     <style>
-      iframe {
-        width: 65vw;
-        height: 35vw;
-      }
-      .scripts__wrap {
+      .scripts__inner {
         display: flex;
-        align-items: center;
+        align-content: center;
         justify-content: center;
-        height: 100vh;
       }
 
       .scripts__img {
-        /*화면 보이는 구간*/
-        position: relative;
-        /* width: 800px;
-        height: 480px; */
-        width: 62vw;
-        height: 35vw;
-        overflow: hidden;
       }
-      .scripts__inner {
-        /*이미지 움직이는 영역*/
-        position: relative;
-        display: flex;
-        width: 400%; /*이미지 총 길이*/
-        /* left: -1504px; */
-      }
-      .scripts__inner.transition {
-        transition: all 600ms;
+      .scripts__inner iframe {
+        width: 100%;
+        height: 100%;
       }
       .scripts {
-        width: 1204px;
-        position: relative;
-      }
-
-      .scripts::before {
-        position: absolute;
-        left: 5px;
-        top: 5px;
-        background: rgba(0, 0, 0, 0.4);
-        color: #fff;
-        padding: 5px 10px 3px;
-      }
-      .scripts:nth-child(1)::before {
-        content: "이미지1";
-      }
-      .scripts:nth-child(2)::before {
-        content: "이미지2";
-      }
-      .scripts:nth-child(3)::before {
-        content: "이미지3";
-      }
-      .scripts:nth-child(4)::before {
-        content: "이미지4";
-      }
-      .scripts__btn a {
-        position: absolute;
-        /* top: 50%; */
-        transform: translateY(-50%);
-        z-index: 100;
-        width: 50px;
-        height: 50px;
-        background: rgba(0, 0, 0, 0.4);
-        text-align: center;
-        line-height: 50px;
-        transition: all 0.2s;
-        display: block;
-        color: #fff;
-        text-decoration: none;
-      }
-      .scripts__btn a.prev {
-        left: 1%;
-      }
-      .scripts__btn a.next {
-        right: 0;
-      }
-      .scripts__btn a:hover {
-        background: rgb(241, 96, 86);
+        width: 65vw;
+        height: 30vw;
       }
     </style>
   </head>
@@ -190,10 +127,9 @@
                 <h4 class="title">WebStandard</h4>
                 <p class="sub">
                   기본 레이아웃을 바탕으로 카드타입, 이미지타입 등 섹션을 나눠서
-                  작업하였습니다.<br />
-                  스와이퍼 플러그인을 사용하여 이미지 슬라이더를 만들고 웹
-                  접근성을 위해 ir기법을 이용해 대체 텍스트가 아닌 숨긴 텍스트를
-                  사용했습니다.
+                  작업하였습니다. 스와이퍼 플러그인을 사용하여 이미지 슬라이더를
+                  만들고 웹 접근성을 위해 ir기법을 이용해 대체 텍스트가 아닌
+                  숨긴 텍스트를 사용했습니다.
                 </p>
               </div>
             </div>
@@ -311,13 +247,14 @@
                   ></iframe>
                 </div>
 
-                <div class="scripts s2">
+                <!-- <div class="scripts s2">
                   <iframe
                     class="mouse"
                     src="https://pkh2860.github.io/webs_class/javascript/effect/mouseEffect.html"
                     frameborder="0"
                   ></iframe>
                 </div>
+
                 <div class="scripts s3">
                   <iframe
                     class="parallax"
@@ -325,13 +262,14 @@
                     frameborder="0"
                   ></iframe>
                 </div>
+
                 <div class="scripts s4">
                   <iframe
                     class="scripts"
                     src="https://pkh2860.github.io/webs_class/javascript/effect/sliderEffect.html"
                     frameborder="0"
                   ></iframe>
-                </div>
+                </div> -->
               </div>
             </div>
             <!-- <div class="scripts__btn">
@@ -358,102 +296,5 @@
         $(this).toggleClass("active-" + (index + 1));
       });
     });
-
-    // const scriptsWrap = document.querySelector(".scripts__wrap");
-    // const scriptsImg = document.querySelector(".scripts__img"); //이미지 보이는 영역
-    // const scriptsInner = document.querySelector(".scripts__inner"); //이미지 움직이는 영역
-    // const scripts = document.querySelectorAll(".scripts");
-    // const scriptsBtn = document.querySelector(".scripts__btn"); //버튼
-    // const scriptsDot = document.querySelector(".scripts__dot"); //dot 버튼
-
-    // let currentIndex = 0; //현재 보이는 이미지
-    // let scriptsCount = scripts.length; //이미지의 총 갯수
-    // let scriptsWidth = scriptsImg.offsetWidth; //이미지 가로 값
-    // let dotIndex = "";
-    // let dotActive;
-
-    // function gotoscripts(num) {
-    //   scriptsInner.style.transition = "all 400ms"; //scripts__inner에게 style transition 추가
-    //   scriptsInner.style.transform =
-    //     "translateX(" + -scriptsWidth * num + "px)"; //scripts__inner에 transitionX + 이미지 가로값 + PX 추가
-    //   currentIndex = num; //currentIndex-- currentIndex++
-    // }
-
-    // document.querySelectorAll(".scripts__btn a").forEach((btn, index) => {
-    //   btn.addEventListener("click", () => {
-    //     let prevIndex = (currentIndex + (scriptsCount - 1)) % scriptsCount;
-    //     let nextIndex = (currentIndex + 1) % scriptsCount;
-
-    //     if (btn.classList.contains("prev")) {
-    //       gotoscripts(prevIndex);
-    //     } else {
-    //       gotoscripts(nextIndex);
-    //     }
-    //   });
-    // });
-
-    // const scriptsWrap = document.querySelector(".scripts__wrap");
-    // const scriptsImg = document.querySelector(".scripts__img"); //이미지 보이는 영역
-    // const scriptsInner = document.querySelector(".scripts__inner"); //이미지 움직이는 전체 영역
-    // const scripts = document.querySelectorAll(".scripts"); //슬라이드 이미지
-    // const scriptsBtn = document.querySelector(".scripts__btn"); //버튼
-    // const scriptsBtnPrev = scriptsBtn.querySelector(".prev"); //이전 버튼
-    // const scriptsBtnNext = scriptsBtn.querySelector(".next"); //다음 버튼
-    // const scriptsDot = document.querySelector(".scripts__dot"); //dot 버튼
-
-    // let currentIndex = 0; //현재 이미지
-    // let scriptsWidth = scriptsImg.offsetWidth; //이미지 가로 값
-    // let scriptsLength = scripts.length; //이미지 총 갯수
-    // let scriptsFirst = scripts[0]; //첫번째 이미지
-    // let scriptsLast = scripts[scriptsLength - 1]; //마지막 이미지
-    // let cloneFirst = scriptsFirst.cloneNode(true); //첫 번째 이미지 복사를 변수에 저장
-    // let cloneLast = scriptsLast.cloneNode(true); //마지막 이미지 복사
-    // //clone() 제이쿼리에서 복사
-    // let posInitial = "";
-    // let dotIndex = "";
-    // let scriptsTimer = "";
-    // let interval = 3000;
-
-    // //이미지 복사   appendTo/prependTo : append/prepend
-    // scriptsInner.appendChild(cloneFirst); //첫 번째 이미지
-    // scriptsInner.insertBefore(cloneLast, scriptsFirst); //마지막 이미지
-
-    // //이미지 움직이기
-    // function gotoscripts(index) {
-    //   //index에 1 2 3 4 5 값이 들어감
-    //   scriptsInner.classList.add("transition");
-    //   scriptsInner.style.left = -scriptsWidth * (index + 1) + "px";
-
-    //   console.log(currentIndex);
-    //   currentIndex = index;
-    //   //두번째 이미지 : left: -1600px
-    //   //세번째 이미지 : left: -2400px
-    //   //네번째 이미지 : left: -3200px
-    //   //다섯번째 이미지 : left: -4000px
-    // }
-
-    // scriptsBtnPrev.addEventListener("click", () => {
-    //   let prevIndex = currentIndex - 1;
-    //   gotoscripts(prevIndex);
-    // });
-
-    // scriptsBtnNext.addEventListener("click", () => {
-    //   let nextIndex = currentIndex + 1;
-    //   gotoscripts(nextIndex);
-    // });
-
-    // scriptsInner.addEventListener("transitionend", () => {
-    //   //transition 있을떄 실행
-    //   scriptsInner.classList.remove("transition");
-
-    //   if (currentIndex == -1) {
-    //     scriptsInner.style.left = -(scriptsLength * scriptsWidth) + "px";
-    //     currentIndex = scriptsLength - 1;
-    //   }
-    //   if (currentIndex == scriptsLength) {
-    //     scriptsInner.style.left = -(1 * scriptsWidth) + "px";
-    //     currentIndex = 0;
-    //   }
-    // });
   </script>
 </html>
