@@ -6,7 +6,7 @@
 }
 body {
   background-color: #ebebeb;
-  height: 10000px;
+  /* height: 10000px; */
   color: #3c6b56;
 }
 #header {
@@ -304,7 +304,7 @@ body {
   margin-bottom: 5vw;
   line-height: 1.6;
   color: #3c6b56;
-  font-size: 1.1rem;
+  font-size: 1vw;
 }
 @media (max-width: 960px) {
   #Site li a {
@@ -683,7 +683,7 @@ body {
   margin-bottom: 5vw;
   line-height: 1.6;
   color: #3c6b56;
-  font-size: 1.1rem;
+  font-size: 1vw;
 }
 
 @media (max-width: 960px) {
