@@ -35,7 +35,7 @@
 
       /* banner */
       #banner {
-        height: 800px;
+        /* height: 800px; */
       }
 
       .banner__text {
@@ -50,6 +50,7 @@
         left: 50vw; */
       }
       #banner h2 {
+
       }
       #banner em {
         font-family: "Partizeno";
@@ -88,6 +89,23 @@
         }
       }
 
+      #nav {
+        opacity: 0;
+        top: -100%;
+      }
+      .banner__text em {
+        opacity: 0 ;
+        transform: translateX(100px) translateY(100px)
+      }
+      .banner__text strong {
+        opacity: 0 ;
+        transform: translateX(100px) translateY(100px)
+      }
+      .banner__text p {
+        opacity: 0 ;
+        transform: translateX(100px) translateY(100px)
+      }
+
       #test1 {
         background: #000;
         height: 100px;
@@ -112,7 +130,7 @@
         <section id="banner">
           <canvas id="canvas_bg"></canvas>
           <div class="banner__text">
-            <h2><em>Portfolio</em> <strong>2022</strong></h2>
+            <h2><em class="port">Portfolio</em> <strong>2022</strong></h2>
             <p>
               welcome to my portfolio <br />
               We will become a developing frontend
@@ -120,12 +138,60 @@
           </div>
         </section>
 
-        <section id="test1"></section>
+        <!-- <section id="test1"></section> -->
       </main>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script>
+      const Porttext = document.querySelector(".banner__text .port");
+
+    
+      setTimeout (() => {
+            gsap.to(".banner__text em", {
+                duration: 0.5,
+                x:0,
+                y:0,
+                opacity:1,
+                delay: 1.0,
+                ease: "circ.out"
+            })
+            gsap.to(".banner__text strong", {
+                duration: 0.5,
+                x:0,
+                y:0,
+                opacity:1,
+                delay: 1.3,
+                ease: "circ.out"
+            })
+            gsap.to(".banner__text p", {
+                duration: 0.5,
+                x:0,
+                y:0,
+                opacity:1,
+                delay: 1.5,
+                ease: "circ.out"
+            })
+            gsap.to("#nav", {
+                duration: 0.5,
+                x:0,
+                y:0,
+                opacity:1,
+                delay: 1.8,
+            });
+        }, 10)
+
+
+        function munja(){
+          spanText = "";
+          for(var i=0; i<Porttext.length; i++){
+            spanText += "<span>"+  +"</span>"
+          }
+
+        }
+
+
+
       var canvas = document.getElementById("canvas_bg");
       var ctx = canvas.getContext("2d");
       var cw = (canvas.width = window.innerWidth),
