@@ -28,26 +28,27 @@ input,
 select,
 button,
 figure,
-figcaption {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+figcaption,
+section {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* 시멘틱 태그 초기화 */
-article, 
-aside, 
-details, 
-figcaption, 
-figure, 
-footer, 
-header, 
-hgroup, 
-menu, 
-nav, 
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
 section {
-	display: block;
-    box-sizing: border-box;
+  display: block;
+  box-sizing: border-box;
 }
 
 /* 폰트 초기화 */
@@ -57,38 +58,39 @@ input,
 select,
 table,
 textarea {
-    color: #222;
-    font-family: 'NexonLv1Gothic', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', '맑은 고딕', dotum, 돋움;
+  color: #222;
+  font-family: "NexonLv1Gothic", "AppleSDGothicNeo-Regular", "Malgun Gothic",
+    "맑은 고딕", dotum, 돋움;
 }
 
 /* 링크 초기화 */
 a {
-    color: #222;
-    text-decoration: none;
+  color: #222;
+  text-decoration: none;
 }
 
 /* 목록 초기화 */
 ol,
 ul,
 li {
-    list-style: none;
+  list-style: none;
 }
 
 /* 스타일 초기화 */
-em, 
+em,
 address {
-    font-style: normal;
+  font-style: normal;
 }
 img {
-    width: 100%;
-    vertical-align: top;
+  width: 100%;
+  vertical-align: top;
 }
-img, 
-fieldset, 
+img,
+fieldset,
 button {
-    border: 0;
+  border: 0;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }

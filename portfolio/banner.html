@@ -13,8 +13,6 @@
       rel="stylesheet"
     />
     <style>
-      * {
-      }
       body {
         background: #ebebeb;
       }
@@ -24,6 +22,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: rgba(235, 235, 235, 0.76);
       }
       #nav ul li {
         padding: 20px;
@@ -31,26 +30,77 @@
       #nav ul li a {
         font-family: "Jura";
         font-size: 23px;
+        font-weight: 100;
+        color: #3c6b56;
+      }
+
+      .menu-trigger {
+        margin-right: 70px;
+        margin-bottom: 50px;
+        width: 35px;
+        height: 44px;
+        display: none;
+        position: relative;
+        width: 35px;
+        height: 44px;
+        margin-top: 4vw;
+      }
+      .menu-trigger,
+      .menu-trigger span {
+        display: inline-block;
+        transition: all 0.4s;
+        box-sizing: border-box;
+        display: none;
+      }
+      .menu-trigger span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #d1c5c5;
+        border-radius: 4px;
+      }
+
+      .menu-trigger span:nth-of-type(1) {
+        top: 0;
+      }
+
+      .menu-trigger span:nth-of-type(2) {
+        top: 7px;
+      }
+
+      .menu-trigger span:nth-of-type(3) {
+        bottom: 26px;
+      }
+
+      .menu-trigger.active-1 span:nth-of-type(1) {
+        transform: translateY(15px) rotate(-45deg);
+      }
+
+      .menu-trigger.active-1 span:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      .menu-trigger.active-1 span:nth-of-type(3) {
+        transform: translateY(1px) rotate(45deg);
       }
 
       /* banner */
       #banner {
-        /* height: 800px; */
       }
 
       .banner__text {
         position: absolute;
-        top: 50%;
+        top: 42%;
         left: 50%;
         transform: translate(-50%, -50%);
         /* display: flex;
         justify-content: center;
-        align-items: center; 
-         top: 25vw;
+        align-items: center;
+        top: 25vw;
         left: 50vw; */
       }
       #banner h2 {
-
       }
       #banner em {
         font-family: "Partizeno";
@@ -76,39 +126,64 @@
         font-weight: 300;
         text-transform: uppercase;
         color: #3c6b56;
-        bottom: -0.5vh;
+        bottom: -8vh;
       }
-
-      @media (max-width: 1200px) {
-        .banner__text p {
-          text-align: center;
-          left: 50%;
-          top: 100%;
-          white-space: nowrap;
-          transform: translate(-50%, -50%);
-        }
-      }
-
-      #nav {
-        opacity: 0;
-        top: -100%;
-      }
-      .banner__text em {
-        opacity: 0 ;
-        transform: translateX(100px) translateY(100px)
-      }
-      .banner__text strong {
-        opacity: 0 ;
-        transform: translateX(100px) translateY(100px)
-      }
-      .banner__text p {
-        opacity: 0 ;
-        transform: translateX(100px) translateY(100px)
+      canvas {
+        width: 100%;
       }
 
       #test1 {
         background: #000;
-        height: 100px;
+        height: 800px;
+      }
+      @media (max-width: 1200px) {
+        .banner__text {
+          /* text-align: center; */
+        }
+      }
+
+      @media (max-width: 1000px) {
+        .banner__text p {
+          margin-left: 10vw;
+          text-align: center;
+        }
+      }
+      @media (max-width: 780px) {
+        .banner__text strong {
+          display: none;
+        }
+      }
+      @media (max-width: 540px) {
+        #header #nav ul {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          display: none;
+          position: relative;
+          z-index: 99999;
+        }
+        #header #nav li {
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+        }
+        #header #nav ul.active {
+          display: block;
+          /* margin-top: -22vw; */
+          /* margin-left: 35vw; */
+          left: 50%;
+          top: 20%;
+          transform: translate(-50%, -50%);
+          position: absolute;
+        }
+        #header #nav li a {
+          font-size: 4vw;
+        }
+        .menu-trigger span,
+        .menu-trigger {
+          display: block;
+          right: -88vw;
+        }
       }
     </style>
   </head>
@@ -116,7 +191,12 @@
     <div>
       <header id="header">
         <nav id="nav">
-          <ul>
+          <a class="menu-trigger" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+          <ul class="">
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">WORK</a></li>
             <li><a href="#">CODE</a></li>
@@ -130,7 +210,7 @@
         <section id="banner">
           <canvas id="canvas_bg"></canvas>
           <div class="banner__text">
-            <h2><em class="port">Portfolio</em> <strong>2022</strong></h2>
+            <h1><em>portfolio</em> <strong>2022</strong></h1>
             <p>
               welcome to my portfolio <br />
               We will become a developing frontend
@@ -138,59 +218,62 @@
           </div>
         </section>
 
-        <!-- <section id="test1"></section> -->
+        <section id="test1"></section>
       </main>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-      const Porttext = document.querySelector(".banner__text .port");
+      const Menu = document.querySelector("#nav ul");
 
-    
-      setTimeout (() => {
-            gsap.to(".banner__text em", {
-                duration: 0.5,
-                x:0,
-                y:0,
-                opacity:1,
-                delay: 1.0,
-                ease: "circ.out"
-            })
-            gsap.to(".banner__text strong", {
-                duration: 0.5,
-                x:0,
-                y:0,
-                opacity:1,
-                delay: 1.3,
-                ease: "circ.out"
-            })
-            gsap.to(".banner__text p", {
-                duration: 0.5,
-                x:0,
-                y:0,
-                opacity:1,
-                delay: 1.5,
-                ease: "circ.out"
-            })
-            gsap.to("#nav", {
-                duration: 0.5,
-                x:0,
-                y:0,
-                opacity:1,
-                delay: 1.8,
-            });
-        }, 10)
+      // 메뉴
+      var burger = $(".menu-trigger");
 
+      burger.each(function (index) {
+        var $this = $(this);
 
-        function munja(){
-          spanText = "";
-          for(var i=0; i<Porttext.length; i++){
-            spanText += "<span>"+  +"</span>"
-          }
+        $this.on("click", function (e) {
+          e.preventDefault();
+          Menu.classList.toggle("active");
+          $(this).toggleClass("active-" + (index + 1));
+        });
+      });
 
-        }
+      document.querySelectorAll(".banner__text em").forEach((desc) => {
+        let splitText = desc.innerText;
+        let splitWrap = splitText
+          .split("")
+          .join("</span><span aria-hidden='true'>");
+        splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+        desc.innerHTML = splitWrap;
+        desc.setAttribute("aria-label", splitText);
+      });
 
+      gsap.set(".banner__text h1 em span", { opacity: 0, y: 20 });
+      gsap.set(".banner__text strong", { opacity: 0 });
+      gsap.set(".banner__text p", { opacity: 0 });
+      gsap.set("#header", { opacity: 0, top: -100 });
+      gsap.set("#canvas_bg", { opacity: 0 });
 
+      setTimeout(() => {
+        const tl = gsap.timeline();
+        tl.to(".banner__text h1 em span", {
+          duration: 0.6,
+          stagger: 0.1,
+          y: 0,
+          autoAlpha: 1,
+          ease: "power2.out",
+        });
+        tl.to(".banner__text strong", { duration: 0.3, autoAlpha: 1 });
+        tl.to(".banner__text p", {
+          duration: 0.3,
+          autoAlpha: 1,
+          ease: "power2.out",
+        });
+        tl.to("#header", { duration: 0.3, autoAlpha: 1, top: 0 });
+        tl.to("#canvas_bg", { duration: 0.3, autoAlpha: 1 });
+      }, 2000);
 
       var canvas = document.getElementById("canvas_bg");
       var ctx = canvas.getContext("2d");
