@@ -1,0 +1,161 @@
+body {
+  background: #ebebeb;
+}
+#nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#nav ul li {
+  padding: 20px;
+}
+#nav ul li a {
+  font-family: "Jura";
+  font-size: 23px;
+  font-weight: 100;
+  color: #3c6b56;
+}
+
+.menu-trigger {
+  margin-right: 70px;
+  margin-bottom: 50px;
+  width: 35px;
+  height: 44px;
+  display: none;
+  position: relative;
+  width: 35px;
+  height: 44px;
+  margin-top: 4vw;
+}
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+  display: none;
+}
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #d1c5c5;
+  border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+  top: 7px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+  bottom: 26px;
+}
+
+.menu-trigger.active-1 span:nth-of-type(1) {
+  transform: translateY(15px) rotate(-45deg);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+  transform: translateY(1px) rotate(45deg);
+}
+
+/* banner */
+#banner {
+  /* height: 80vw; */
+  height: 1200px;
+}
+.banner__text {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#banner em {
+  font-family: "Partizeno";
+  font-size: 20vw;
+  color: #3c6b56;
+  line-height: 1.3;
+  font-weight: 100;
+}
+#banner strong {
+  font-family: "Saint Monica";
+  font-size: 2vw;
+  line-height: 1.3;
+  color: #b99e56;
+  font-weight: 100;
+  position: absolute;
+  bottom: 6vw;
+}
+.banner__text p {
+  position: absolute;
+  font-family: "Gmarket Sans";
+  line-height: 1.5;
+  font-size: 1vw;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #3c6b56;
+  bottom: -8vh;
+}
+canvas {
+  width: 100%;
+}
+#test1 {
+  background: #000;
+  height: 800px;
+}
+
+@media (max-width: 1000px) {
+  .banner__text p {
+    margin-left: 10vw;
+    text-align: center;
+  }
+}
+@media (max-width: 780px) {
+  .banner__text strong {
+    display: none;
+  }
+}
+@media (max-width: 540px) {
+  #header #nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: relative;
+    z-index: 99999;
+  }
+  #header #nav li {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  #nav {
+    background-color: rgba(235, 235, 235, 0.76);
+  }
+  #header #nav ul.active {
+    display: block;
+    left: 50%;
+    top: 43vw;
+    background-color: rgba(235, 235, 235, 0.76);
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+  #header #nav li a {
+    font-size: 4vw;
+  }
+  .menu-trigger span,
+  .menu-trigger {
+    display: block;
+    right: -88vw;
+    z-index: 1;
+  }
+}
