@@ -48,11 +48,11 @@
 /* Saint Monica */
 @font-face {
   font-family: "Saint Monica";
-  src: url("SaintMonicaItalic.eot");
-  src: url("SaintMonicaItalic.eot?#iefix") format("embedded-opentype"),
-    url("SaintMonicaItalic.woff2") format("woff2"),
-    url("SaintMonicaItalic.woff") format("woff"),
-    url("SaintMonicaItalic.svg#SaintMonicaItalic") format("svg");
+  src: url("../fonts/SaintMonicaItalic.eot");
+  src: url("../fonts/SaintMonicaItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/SaintMonicaItalic.woff2") format("woff2"),
+    url("../fonts/SaintMonicaItalic.woff") format("woff"),
+    url("../fonts/SaintMonicaItalic.svg#SaintMonicaItalic") format("svg");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -60,11 +60,11 @@
 
 @font-face {
   font-family: "Saint Monica";
-  src: url("SaintMonicaRegular.eot");
-  src: url("SaintMonicaRegular.eot?#iefix") format("embedded-opentype"),
-    url("SaintMonicaRegular.woff2") format("woff2"),
-    url("SaintMonicaRegular.woff") format("woff"),
-    url("SaintMonicaRegular.svg#SaintMonicaRegular") format("svg");
+  src: url("../fonts/SaintMonicaRegular.eot");
+  src: url("../fonts/SaintMonicaRegular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/SaintMonicaRegular.woff2") format("woff2"),
+    url("../fonts/SaintMonicaRegular.woff") format("woff"),
+    url("../fonts/SaintMonicaRegular.svg#SaintMonicaRegular") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -73,11 +73,11 @@
 /* Partizeno */
 @font-face {
   font-family: "Partizeno";
-  src: url("PartizenoRegular.eot");
-  src: url("PartizenoRegular.eot?#iefix") format("embedded-opentype"),
-    url("PartizenoRegular.woff2") format("woff2"),
-    url("PartizenoRegular.woff") format("woff"),
-    url("PartizenoRegular.svg#PartizenoRegular") format("svg");
+  src: url("../fonts/PartizenoRegular.eot");
+  src: url("../fonts/PartizenoRegular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/PartizenoRegular.woff2") format("woff2"),
+    url("../fonts/PartizenoRegular.woff") format("woff"),
+    url("../fonts/PartizenoRegular.svg#PartizenoRegular") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -88,39 +88,6 @@
   font-family: "ChosunNm";
   font-weight: normal;
   font-style: normal;
-  src: url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.eot");
-  src: url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.woff2")
-      format("woff2"),
-    url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.woff")
-      format("woff"),
-    url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.ttf")
-      format("truetype");
-  font-display: swap;
-}
-
-/*  */
-@font-face {
-  font-family: "Saint Monica";
-  src: url("SaintMonicaItalic.eot");
-  src: url("SaintMonicaItalic.eot?#iefix") format("embedded-opentype"),
-    url("SaintMonicaItalic.woff2") format("woff2"),
-    url("SaintMonicaItalic.woff") format("woff"),
-    url("SaintMonicaItalic.svg#SaintMonicaItalic") format("svg");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Saint Monica";
-  src: url("SaintMonicaRegular.eot");
-  src: url("SaintMonicaRegular.eot?#iefix") format("embedded-opentype"),
-    url("SaintMonicaRegular.woff2") format("woff2"),
-    url("SaintMonicaRegular.woff") format("woff"),
-    url("SaintMonicaRegular.svg#SaintMonicaRegular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+  src: url("../fonts/ChosunNm.woff");
+  src: url("../fonts/ChosunNm.woff2") format("embedded-opentype");
 }
