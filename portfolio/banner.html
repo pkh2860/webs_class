@@ -16,13 +16,11 @@
       body {
         background: #ebebeb;
       }
-      #nav {
-      }
       #nav ul {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(235, 235, 235, 0.76);
+        width: 100%;
       }
       #nav ul li {
         padding: 20px;
@@ -86,21 +84,11 @@
       }
 
       /* banner */
-      #banner {
-      }
-
       .banner__text {
         position: absolute;
         top: 42%;
         left: 50%;
         transform: translate(-50%, -50%);
-        /* display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 25vw;
-        left: 50vw; */
-      }
-      #banner h2 {
       }
       #banner em {
         font-family: "Partizeno";
@@ -131,17 +119,10 @@
       canvas {
         width: 100%;
       }
-
       #test1 {
         background: #000;
         height: 800px;
       }
-      @media (max-width: 1200px) {
-        .banner__text {
-          /* text-align: center; */
-        }
-      }
-
       @media (max-width: 1000px) {
         .banner__text p {
           margin-left: 10vw;
@@ -167,12 +148,15 @@
           text-align: center;
           justify-content: center;
         }
+        #nav {
+          background-color: rgba(235, 235, 235, 0.76);
+        }
         #header #nav ul.active {
           display: block;
-          /* margin-top: -22vw; */
-          /* margin-left: 35vw; */
           left: 50%;
-          top: 20%;
+          top: 40vw;
+          background-color: rgba(235, 235, 235, 0.76);
+
           transform: translate(-50%, -50%);
           position: absolute;
         }
