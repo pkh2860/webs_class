@@ -235,30 +235,30 @@
         desc.setAttribute("aria-label", splitText);
       });
 
-      // gsap.set(".banner__text h1 em span", { opacity: 0, y: 20 });
-      // gsap.set(".banner__text strong", { opacity: 0 });
-      // gsap.set(".banner__text p", { opacity: 0 });
-      // gsap.set("#header", { opacity: 0, top: -100 });
-      // gsap.set("#canvas_bg", { opacity: 0 });
+      gsap.set(".banner__text h1 em span", { opacity: 0, y: 20 });
+      gsap.set(".banner__text strong", { opacity: 0 });
+      gsap.set(".banner__text p", { opacity: 0 });
+      gsap.set("#header", { opacity: 0, top: -100 });
+      gsap.set("#canvas_bg", { opacity: 0 });
 
-      // setTimeout(() => {
-      //   const tl = gsap.timeline();
-      //   tl.to(".banner__text h1 em span", {
-      //     duration: 0.6,
-      //     stagger: 0.1,
-      //     y: 0,
-      //     autoAlpha: 1,
-      //     ease: "power2.out",
-      //   });
-      //   tl.to(".banner__text strong", { duration: 0.3, autoAlpha: 1 });
-      //   tl.to(".banner__text p", {
-      //     duration: 0.3,
-      //     autoAlpha: 1,
-      //     ease: "power2.out",
-      //   });
-      //   tl.to("#header", { duration: 0.3, autoAlpha: 1, top: 0 });
-      //   tl.to("#canvas_bg", { duration: 0.3, autoAlpha: 1 });
-      // }, 2000);
+      setTimeout(() => {
+        const tl = gsap.timeline();
+        tl.to(".banner__text h1 em span", {
+          duration: 0.6,
+          stagger: 0.1,
+          y: 0,
+          autoAlpha: 1,
+          ease: "power2.out",
+        });
+        tl.to(".banner__text strong", { duration: 0.3, autoAlpha: 1 });
+        tl.to(".banner__text p", {
+          duration: 0.3,
+          autoAlpha: 1,
+          ease: "power2.out",
+        });
+        tl.to("#header", { duration: 0.3, autoAlpha: 1, top: 0 });
+        tl.to("#canvas_bg", { duration: 0.3, autoAlpha: 1 });
+      }, 2000);
 
       var canvas = document.getElementById("canvas_bg");
       var ctx = canvas.getContext("2d");
