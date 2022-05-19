@@ -123,6 +123,7 @@
         background: #000;
         height: 800px;
       }
+
       @media (max-width: 1000px) {
         .banner__text p {
           margin-left: 10vw;
@@ -154,9 +155,8 @@
         #header #nav ul.active {
           display: block;
           left: 50%;
-          top: 40vw;
+          top: 43vw;
           background-color: rgba(235, 235, 235, 0.76);
-
           transform: translate(-50%, -50%);
           position: absolute;
         }
@@ -167,6 +167,7 @@
         .menu-trigger {
           display: block;
           right: -88vw;
+          z-index: 1;
         }
       }
     </style>
@@ -234,30 +235,30 @@
         desc.setAttribute("aria-label", splitText);
       });
 
-      gsap.set(".banner__text h1 em span", { opacity: 0, y: 20 });
-      gsap.set(".banner__text strong", { opacity: 0 });
-      gsap.set(".banner__text p", { opacity: 0 });
-      gsap.set("#header", { opacity: 0, top: -100 });
-      gsap.set("#canvas_bg", { opacity: 0 });
+      // gsap.set(".banner__text h1 em span", { opacity: 0, y: 20 });
+      // gsap.set(".banner__text strong", { opacity: 0 });
+      // gsap.set(".banner__text p", { opacity: 0 });
+      // gsap.set("#header", { opacity: 0, top: -100 });
+      // gsap.set("#canvas_bg", { opacity: 0 });
 
-      setTimeout(() => {
-        const tl = gsap.timeline();
-        tl.to(".banner__text h1 em span", {
-          duration: 0.6,
-          stagger: 0.1,
-          y: 0,
-          autoAlpha: 1,
-          ease: "power2.out",
-        });
-        tl.to(".banner__text strong", { duration: 0.3, autoAlpha: 1 });
-        tl.to(".banner__text p", {
-          duration: 0.3,
-          autoAlpha: 1,
-          ease: "power2.out",
-        });
-        tl.to("#header", { duration: 0.3, autoAlpha: 1, top: 0 });
-        tl.to("#canvas_bg", { duration: 0.3, autoAlpha: 1 });
-      }, 2000);
+      // setTimeout(() => {
+      //   const tl = gsap.timeline();
+      //   tl.to(".banner__text h1 em span", {
+      //     duration: 0.6,
+      //     stagger: 0.1,
+      //     y: 0,
+      //     autoAlpha: 1,
+      //     ease: "power2.out",
+      //   });
+      //   tl.to(".banner__text strong", { duration: 0.3, autoAlpha: 1 });
+      //   tl.to(".banner__text p", {
+      //     duration: 0.3,
+      //     autoAlpha: 1,
+      //     ease: "power2.out",
+      //   });
+      //   tl.to("#header", { duration: 0.3, autoAlpha: 1, top: 0 });
+      //   tl.to("#canvas_bg", { duration: 0.3, autoAlpha: 1 });
+      // }, 2000);
 
       var canvas = document.getElementById("canvas_bg");
       var ctx = canvas.getContext("2d");
@@ -266,7 +267,7 @@
       var ch = (canvas.height = window.innerHeight),
         cy = ch / 2;
 
-      ctx.fillStyle = "#000";
+      ctx.fillStyle = "#3C6B56";
       var circlesRy = [];
       var circlesNum = 5;
       var requestId = null;
@@ -383,7 +384,7 @@
       }
 
       function markPoint(p) {
-        ctx.fillStyle = "#000";
+        ctx.fillStyle = "#3C6B56";
         ctx.beginPath();
         ctx.arc(p.x, p.y, 2, 0, 2 * Math.PI);
         ctx.fill();
