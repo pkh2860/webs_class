@@ -149,25 +149,6 @@
                 <div class="carousel--progress-bar"></div>
               </div>
             </div>
-            <!-- <div class="about__wrap">
-              <div class="about__img">
-                <div class="about__inner">
-               
-                    <div class="about s1">
-                      <img src="assets/img/img02.jpg" alt="이미지1" />
-                    </div>
-                    <div class="about s2">
-                      <img src="assets/img/img03.jpg" alt="이미지2" />
-                    </div>
-          
-
-               
-                  <div class="about s3">
-                    <img src="assets/img/img04.jpg" alt="이미지3" />
-                  </div>
-      
-                </div>
-              </div> -->
           </div>
         </section>
       </main>
@@ -358,7 +339,7 @@
 
       // 슬라이드
       const lerp = (f0, f1, t) => (1 - t) * f0 + t * f1;
-      // const clamp = (val, min, max) => Math.max(min, Math.min(val, max));
+      const clamp = (val, min, max) => Math.max(min, Math.min(val, max));
 
       class DragScroll {
         constructor(obj) {
@@ -470,8 +451,8 @@
       }
 
       /*--------------------
-Instances
---------------------*/
+      Instances
+      --------------------*/
       const scroll = new DragScroll({
         el: ".carousel",
         wrap: ".carousel--wrap",
@@ -480,8 +461,8 @@ Instances
       });
 
       /*--------------------
-One raf to rule em all
---------------------*/
+      One raf to rule em all
+      --------------------*/
       const raf = () => {
         requestAnimationFrame(raf);
         scroll.raf();
