@@ -66,6 +66,7 @@ body {
   height: 1px;
   /* background: rgba(255, 255, 255, 0.2); */
   background-color: #ccc;
+  display: none;
 }
 .carousel--progress-bar {
   position: absolute;
@@ -78,4 +79,5 @@ body {
   background-color: #000;
   transform: scaleX(0);
   transform-origin: 0% 0%;
+  display: none;
 }

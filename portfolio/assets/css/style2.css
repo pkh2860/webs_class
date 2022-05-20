@@ -159,3 +159,88 @@ canvas {
     z-index: 1;
   }
 }
+
+
+/* about */
+#about {
+  height: 60vw;
+}
+.about__text {
+  padding-bottom: 15vh;
+}
+.about__cont {
+  width: 100%;
+}
+.about__cont h2 {
+  color: #3c6b56;
+  font-size: 15vw;
+  /* font-size: 25vh; */
+  line-height: 1.3;
+  font-weight: 100;
+  font-family: "Partizeno";
+}
+.about__cont p {
+  line-height: 1.6;
+  font-weight: 100;
+  color: #3c6b56;
+  font-size: 2vh;
+  font-family: "ChosunNm";
+}
+.about__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.about__inner:nth-child(1) .about {
+  margin: 0 auto;
+  margin-left: 1vw;
+}
+.about__img {
+  /*화면 보이는 구간*/
+  position: relative;
+  width: 800px;
+  height: 320px;
+}
+.about__inner {
+  /*이미지 움직이는 영역*/
+  position: relative;
+  display: flex;
+  width: 2400px; /*이미지 총 길이*/
+  left: -800px;
+}
+.about__inner.transition {
+  transition: all 600ms;
+}
+.about {
+  width: 800px;
+  position: relative;
+}
+
+.scrollTop {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+.about__text h2 span {
+  opacity: 0;
+  
+}
+.about__text h2 span.show  {
+  opacity: 1;
+  transition: all 0.9s 1.0s ease-out;
+}
+
+.about__text p span {
+  opacity: 0;
+  
+}
+.about__text p span.show  {
+  opacity: 1;
+  transition: all 0.9s 1.0s ease-out;
+}
