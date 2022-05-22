@@ -233,7 +233,7 @@ canvas {
 }
 .about__text h2 span.show  {
   opacity: 1;
-  transition: all 0.9s 1.0s ease-out;
+  transition: all 0.9s ease-out;
 }
 
 .about__text p span {
@@ -277,6 +277,17 @@ canvas {
   color: #3c6b56;
   font-size: 2vh;
 }
+.site__text h3 span {
+  opacity: 0;
+  
+}
+.site__text h3 span.show  {
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+
+
+/* card01 */
 
 .card__text01 {
   display: flex;
@@ -437,6 +448,8 @@ canvas {
   backdrop-filter: saturate(180%) blur(20px);
   text-align: center;
 }
+
+
 
 /* 3 */
 .card__text03 {

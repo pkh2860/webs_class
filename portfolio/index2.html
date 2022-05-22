@@ -260,21 +260,21 @@
                 <li><a href="#">4. Slider Effect</a></li>
               </ul>
               <p>
-                스크립트와 제이쿼리를 이용하여 각 페이지마다 다양한 효과를 주고<br />
-                코드를 어떻게 만들었는지 보이기 위해 소스보기 버튼을 만들어서<br />
-                HTML, CSS, JAVASCRIPT 종류별로 나눠서 보여줄 수 있도록<br />
-                만들었습니다.
+               <span> 스크립트와 제이쿼리를 이용하여 각 페이지마다 다양한 효과를 주고<br /></span>
+               <span>  코드를 어떻게 만들었는지 보이기 위해 소스보기 버튼을 만들어서<br /></span>
+               <span>  HTML, CSS, JAVASCRIPT 종류별로 나눠서 보여줄 수 있도록<br />
+                만들었습니다.</span>
               </p>
             </div>
           </div>
 
-          
+
         </section>
       </main>
     </div>
-    <div class="scrollTop">
+    <!-- <div class="scrollTop">
       scrollTop : <span>0</span>px
-  </div>
+  </div> -->
    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
@@ -294,17 +294,17 @@
         });
       });
 
-      document.querySelectorAll(".banner__text em").forEach((desc) => {
-        let splitText = desc.innerText;
-        let splitWrap = splitText
-          .split("")
-          .join("</span><span aria-hidden='true'>");
-        splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
-        desc.innerHTML = splitWrap;
-        desc.setAttribute("aria-label", splitText);
-      });
+      // document.querySelectorAll("").forEach((desc) => {
+      //   let splitText = desc.innerText;
+      //   let splitWrap = splitText
+      //     .split("")
+      //     .join("</span><span aria-hidden='true'>");
+      //   splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+      //   desc.innerHTML = splitWrap;
+      //   desc.setAttribute("aria-label", splitText);
+      // });
 
-      document.querySelectorAll(".about__text h2").forEach((desc) => {
+      document.querySelectorAll(".banner__text em, .about__text h2, .site__text h3").forEach((desc) => {
         let splitText = desc.innerText;
         let splitWrap = splitText
           .split("")
@@ -331,22 +331,16 @@
 
 
       // 스크롤
-
-
       function scrollAnim(){
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY  
-            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
-            document.querySelectorAll(".about__text").forEach(item =>{  
+            document.querySelectorAll(".about__text, .site__text").forEach(item =>{  
                 if(scrollTop > item.offsetTop){
-                    item.querySelectorAll(".about__text h2 span, p span").forEach((span, index)=>{
-
+                    item.querySelectorAll(".about__text h2 span, p span, .site__text h3 span").forEach((span, index)=>{
                         setTimeout(()=>{
                             span.classList.add("show");
-                        }, 50 * (index +1))
-                      })
-                      
+                        })
+                      })     
                 }
-                
             })
             
             requestAnimationFrame(scrollAnim)
