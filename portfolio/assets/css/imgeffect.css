@@ -26,7 +26,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 205vh;
+  height: 100vh;
   width: 100%;
   position: relative;
 }
@@ -41,9 +41,9 @@ img {
 .reveal {
   visibility: hidden;
   position: relative;
-  width: 100%;
-  /* width: 60%; */
-  height: 60%;
+  /* width: 100%; */
+  /* width: 60%;
+  height: 60%; */
 }
 
 * {

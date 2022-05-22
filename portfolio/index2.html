@@ -17,98 +17,7 @@
     />
 
     <style>
-      #site {
-        padding-top: 60vh;
-      }
-      #site h3 {
-        color: #3c6b56;
-        font-size: 15vw;
-        line-height: 1.3;
-        font-weight: 100;
-        font-family: "Partizeno";
-      }
-      .site__text ul {
-        display: flex;
-        margin-bottom: 2vw;
-      }
-      .site__text li {
-        margin-right: 2vw;
-      }
-      .site__text li a {
-        font-family: "Partizeno";
-        display: inline-block;
-        font-size: 1.9rem;
-        color: #3c6b56;
-      }
-      .site__text p {
-        font-weight: 100;
-        font-family: "ChosunNm";
-        margin-bottom: 5vw;
-        line-height: 1.6;
-        color: #3c6b56;
-        font-size: 2vh;
-      }
 
-      .card__text01 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        padding-top: 20vw;
-      }
-      .web__img01 img {
-        flex: 0 0 65%;
-      }
-
-      .card__text01 .right {
-        flex: 0 0 30%;
-      }
-      .card__text01 .right .title {
-        font-size: 4.9vw;
-        font-weight: 100;
-        font-family: "Partizeno";
-        margin-left: 0.5vw;
-        text-align: center;
-      }
-      .card__text01 .right .sub {
-        font-family: "ChosunNm";
-        /* font-size: 1.2rem; */
-        font-size: 1vw;
-        margin-top: 2vw;
-        margin-left: 1vw;
-        line-height: 1.6;
-        /* width: 90%; */
-      }
-      .card__text01 .web__img01 {
-        position: relative;
-      }
-      .card__text01 .view {
-        padding-top: 0.6vw;
-        margin-left: 1.6rem;
-        color: #fff;
-        font-size: 3vw;
-        font-weight: 100;
-        font-family: "Partizeno";
-        line-height: 1;
-        left: 48%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        position: absolute;
-        text-align: center;
-      }
-      .card__text01 .view::after {
-        content: "";
-        background-color: rgba(60, 107, 86, 0.5);
-        width: 10vw;
-        height: 10vw;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        position: absolute;
-        border-radius: 50%;
-        z-index: -1;
-        backdrop-filter: saturate(180%) blur(20px);
-      }
     </style>
   </head>
   <body>
@@ -217,11 +126,7 @@
               <div class="card__text01">
                 <div class="left">
                   <div class="web__img01">
-                    <a
-                      href="https://pkh2860.github.io/webs_class/site/webClass/index.html"
-                      class="view"
-                      >VIEW</a
-                    >
+                    <a href="https://pkh2860.github.io/webs_class/site/webClass/index.html" class="view"></a>
                     <img src="assets/img/web.jpg" alt="" />
                   </div>
                 </div>
@@ -241,7 +146,129 @@
             </div>
           </div>
 
+          <div class='effectimg'>
+            <div class='reveal'>
+              <div class="card__text02">
+                <div class="left">
+                  <div class="web__img02">
+                    <a href="https://pkh2860.github.io/webs_class/webstandard/index.html" class="view"></a>
+                    <img src="assets/img/web2.jpg" alt="" />
+                  </div>
+                </div>
 
+                <div class="right">
+                  <div class="text">
+                    <h4 class="title">WebStandard</h4>
+                    <p class="sub">
+                      웹에서 사용되는 표준 기술이나 규칙적인 웹표준을 준수하여
+                      제작한 사이트입니다. HTML과 CSS를 분리하여 불필요한 마크업을
+                      최소화하고, HTML과 CSS의 가독성을 높였습니다 또한 SKIP메뉴와
+                      IMAGE태그의 ALT속성 등으로 접근성을 향상시켰습니다
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class='effectimg'>
+            <div class='reveal'>
+              <div class="card__text03">
+                <div class="left">
+                  <div class="web__img03">
+                    <a href="https://2860.netlify.app/" class="view"></a>
+                    <img src="assets/img/react.jpg" alt="" />
+                  </div>
+                </div>
+
+                <div class="right">
+                  <div class="text">
+                    <h4 class="title">REACT.JS</h4>
+                    <p class="sub">
+                      React를 이용해 기존의 HTML 구조의 사이트를 React 방식으로 변경
+                      후 YouTube API와 TMDB API를 이용하여 유튜브 영상 검색 및 목록
+                      영화 순위 관련 차트 페이지를 만들었습니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class='effectimg'>
+            <div class='reveal'>
+              <div class="card__text04">
+                <div class="left">
+                  <div class="web__img04">
+                    <a   href="http://rmsgur2275.dothome.co.kr/php/pages/main.php" class="view"></a>
+                    <img src="assets/img/php.jpg" alt="" />
+                  </div>
+                </div>
+
+                <div class="right">
+                  <div class="text">
+                    <h4 class="title">PHP</h4>
+                    <p class="sub">
+                      웹표준을 준수하여 만든 사이트입니다. 데이터 베이스를 연결해
+                      로그인,회원가입이 가능합니다. 메인에는 최신 글과 댓글을
+                      보여주는 페이지를 구성하였고 게시판 작성, 수정, 삭제등
+                      기능들을 구현하였습니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class='effectimg'>
+            <div class='reveal'>
+              <div class="card__text05">
+                <div class="left">
+                  <div class="web__img05">
+                    <a href="#" class="view"></a>
+                    <img src="assets/img/php.jpg" alt="" />
+                  </div>
+                </div>
+
+                <div class="right">
+                  <div class="text">
+                    <h4 class="title">VUE.JS</h4>
+                    <p class="sub">
+                      React를 이용해 기존의 HTML 구조의 사이트를 React 방식으로 변경
+                      후 YouTube API와 TMDB API를 이용하여 유튜브 영상 검색 및 목록
+                      영화 순위 관련 차트 페이지를 만들었습니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <section id="script">
+          <div class="container">
+            <div class="script__text">
+              <h3>Script</h3>   
+              <ul>
+                <li><a href="#">1. Quit Effect</a></li>
+                <li><a href="#">2. Mouse Effect</a></li>
+                <li><a href="#">3. Parallax Effect</a></li>
+                <li><a href="#">4. Slider Effect</a></li>
+              </ul>
+              <p>
+                스크립트와 제이쿼리를 이용하여 각 페이지마다 다양한 효과를 주고<br />
+                코드를 어떻게 만들었는지 보이기 위해 소스보기 버튼을 만들어서<br />
+                HTML, CSS, JAVASCRIPT 종류별로 나눠서 보여줄 수 있도록<br />
+                만들었습니다.
+              </p>
+            </div>
+          </div>
+
+          
         </section>
       </main>
     </div>
