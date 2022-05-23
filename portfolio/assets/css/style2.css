@@ -233,19 +233,24 @@ canvas {
 }
 .about__text h2 span.show  {
   opacity: 1;
-  transition: all 0.9s ease-out;
+  transition: all  0.2s ease-out;
 }
 .about__text p span {
   opacity: 0;
   min-width: 1.4vw;
-  transition: all 3s ease-in-out;  
+  transition: all 0.8s ease-in-out;  
 }
 
 .about__text p span.show {
   opacity: 1;
 }
-
-
+/* .carousel {
+  opacity: 0;
+}
+.carousel.show {
+  opacity: 1;
+  transition: all 0.9s ease-in-out;
+} */
 /*  */
 #site {
   padding-top: 60vh;
@@ -280,7 +285,6 @@ canvas {
 }
 .site__text h3 span {
   opacity: 0;
-  
 }
 .site__text h3 span.show  {
   opacity: 1;
@@ -291,15 +295,20 @@ canvas {
 }
 .site__text li span.show  {
   opacity: 1;
-  animation: power2-out 0.5s;
+  animation: power2-out 5s;
+  /* transition-duration: 2s */
+  transition: all 0.5s ease-out;
 }
-@keyframes power2-out {
-  0% {animation-duration: 0;}
-  20% {animation-duration: 2s;}
-  40% {animation-duration: 4s;}
-  60% { animation-duration: 6s;}
-  100% {animation-duration: 8s;}
+.site__text p span {
+  opacity: 0;
 }
+.site__text p span.show  {
+  opacity: 1;
+  animation: power2-out 1s;
+  /* transition-duration: 2s */
+  transition: all  5s ease-out;
+}
+
 
 /* card01 */
 
@@ -806,3 +815,28 @@ canvas {
   color: #3c6b56;
   font-size: 2vh;
 }
+/* .script__text h3 span {
+  opacity: 0;
+}
+.script__text h3 span.show  {
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+.script__text li span {
+  opacity: 0;
+}
+.script__text li span.show  {
+  opacity: 1;
+  animation: power2-out 5s;
+  /* transition-duration: 2s */
+  transition: all 0.5s ease-out;
+}
+.script__text p span {
+  opacity: 0;
+}
+.script__text p span.show  {
+  opacity: 1;
+  animation: power2-out 1s;
+  /* transition-duration: 2s */
+  transition: all  5s ease-out;
+} */
