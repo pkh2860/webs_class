@@ -18,6 +18,9 @@
 
     <style>
 
+
+
+      
     </style>
   </head>
   <body>
@@ -106,10 +109,10 @@
             <div class="site__text">
               <h3>Site</h3>   
               <ul>
-                <li><a href="#">1. Webstandard</a></li>
-                <li><a href="#">2. React.js </a></li>
-                <li><a href="#">3. PHP</a></li>
-                <li><a href="#">4. Vue.js</a></li>
+                <li><a href="#"><span>1. Webstandard</span></a></li>
+                <li><a href="#"><span>2. React.js </span></a></li>
+                <li><a href="#"><span>3. PHP</span></a></li>
+                <li><a href="#"><span>4. Vue.js</span></a></li>
               </ul>
               <p>
                 HTML,CSS,JAVASCRIPT,JQUERY를 이용하여 웹표준에 맞게 사이트를
@@ -329,13 +332,12 @@
         tl.to("#canvas_bg", { duration: 0.3, autoAlpha: 1 });
       }, 1000);
 
-
       // 스크롤
       function scrollAnim(){
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY  
             document.querySelectorAll(".about__text, .site__text").forEach(item =>{  
                 if(scrollTop > item.offsetTop){
-                    item.querySelectorAll(".about__text h2 span, p span, .site__text h3 span").forEach((span, index)=>{
+                    item.querySelectorAll(".about__text h2 span, p span, .site__text h3 span, .site__text li span").forEach((span, index)=>{
                         setTimeout(()=>{
                             span.classList.add("show");
                         })
