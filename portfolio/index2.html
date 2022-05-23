@@ -297,16 +297,6 @@
         });
       });
 
-      // document.querySelectorAll("").forEach((desc) => {
-      //   let splitText = desc.innerText;
-      //   let splitWrap = splitText
-      //     .split("")
-      //     .join("</span><span aria-hidden='true'>");
-      //   splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
-      //   desc.innerHTML = splitWrap;
-      //   desc.setAttribute("aria-label", splitText);
-      // });
-
       document.querySelectorAll(".banner__text em, .about__text h2, .site__text h3").forEach((desc) => {
         let splitText = desc.innerText;
         let splitWrap = splitText
@@ -322,6 +312,7 @@
       gsap.set(".banner__text p", { opacity: 0 });
       gsap.set("#header", { opacity: 0, top: -100 });
       gsap.set("#canvas_bg", { opacity: 0 });
+      // gsap.set(".site__text li span", { opacity: 0 });
 
       setTimeout(() => {
         const tl = gsap.timeline();
@@ -340,15 +331,17 @@
                     item.querySelectorAll(".about__text h2 span, p span, .site__text h3 span, .site__text li span").forEach((span, index)=>{
                         setTimeout(()=>{
                             span.classList.add("show");
-                        })
+                           
+                        }, 50 * (index +1))
                       })     
                 }
             })
-            
             requestAnimationFrame(scrollAnim)
         }
         scrollAnim();
 
+
+        // 
       var canvas = document.getElementById("canvas_bg");
       var ctx = canvas.getContext("2d");
       var cw = (canvas.width = window.innerWidth),
