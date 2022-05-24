@@ -23,7 +23,14 @@
           justify-content: center;
         }
       } 
+      @media (max-width: 990px) {
+        iframe {
+          height: 30vh;
+          width: 50vh;
+        }
+      }
     
+      
     </style>
   </head>
   <body>
@@ -531,7 +538,7 @@
                 .forEach((span, index) => {
                   setTimeout(() => {
                     span.classList.add("show");
-                  }, 150 * (index + 1));
+                  }, 130 * (index + 2));
                 });
             }
           });
