@@ -79,7 +79,8 @@ img {
   overflow-x: hidden;
 } */
 iframe {
-  width: 120vh;
+  /* width: 120vh; */
+  width: 60vw;
   height: 85vh;
   object-fit: cover;
 }
@@ -155,7 +156,7 @@ button {
   height: 55px;
 }
 
-.controls {
+/* .controls {
   position: relative;
   z-index: 1;
   display: flex;
@@ -168,8 +169,7 @@ button {
   left: 10%;
   bottom: 60vh;
   transform: translate(-50%, -50%);
-  /* width: 100px;
-  height: 100px; */
+
   width: 6vw;
   height: 6vw;
   border-radius: 50%;
@@ -183,8 +183,7 @@ button {
   left: 90%;
   bottom: 60vh;
   transform: translate(-50%, -50%);
-  /* width: 100px;
-  height: 100px; */
+
   width: 6vw;
   height: 6vw;
   border-radius: 50%;
@@ -232,7 +231,7 @@ button {
   flex-basis: 15%;
   font-size: 2rem;
   color: #232323;
-}
+} */
 .previous:hover .icon,
 .next:hover .icon {
   transform: scale(1.5);
@@ -271,6 +270,7 @@ button {
 
 
 @media (min-width: 62rem) {
+
   nav ul {
     justify-content: flex-end;
   }
@@ -288,7 +288,7 @@ button {
   }
   .intro .title {
     font-size: 4.25rem;
-    padding: 2.5rem 2.5rem 3rem 2.5rem;
+    /* padding: 2.5rem 2.5rem 3rem 2.5rem; */
   }
 
   iframe {
@@ -329,7 +329,7 @@ button {
 
 /*  */
 
-.slider__btn a {
+/* .slider__btn a {
   position: absolute;
   transform: translateY(-50%);
   z-index: 100;
@@ -342,10 +342,59 @@ button {
   display: block;
   color: #fff;
   text-decoration: none;
-}
-/* .slider__btn a.Previous {
-  left: 0;
-}
-.slider__btn a.nexts {
-  right: 0;
 } */
+.controls {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  /* justify-content: flex-end; */
+  justify-content: center;
+
+  padding: 0.25rem 0 0.25rem 0;
+}
+.controls .previous {
+  border: 1px solid #232323;
+}
+.controls .next {
+  border-top: 1px solid #232323;
+  border-right: 1px solid #232323;
+  border-bottom: 1px solid #232323;
+}
+.controls .icon {
+  position: relative;
+  margin: auto;
+  width: 20px;
+  height: 1px;
+  background-color: currentColor;
+}
+.controls .icon.arrow-left::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: -4px;
+  width: 9px;
+  height: 9px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  transform: rotate(-135deg);
+}
+.controls .icon.arrow-right::before {
+  content: "";
+  position: absolute;
+  right: 1px;
+  top: -4px;
+  width: 9px;
+  height: 9px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  transform: rotate(45deg);
+}
+
+.previous, .next {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-basis: 15%;
+  font-size: 2rem;
+  color: #232323;
+}
