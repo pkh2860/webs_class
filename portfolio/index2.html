@@ -646,7 +646,7 @@
         });
       });
 
-      document.querySelectorAll(".banner__text em, .about__text h2, .site__text h3, .script__text h3,script__text h3").forEach((desc) => {
+      document.querySelectorAll(".banner__text em, .about__text h2, .site__text h3, .script__text h3, .script__text h3, .game__text h3").forEach((desc) => {
           let splitText = desc.innerText;
           let splitWrap = splitText
             .split("")
@@ -685,10 +685,10 @@
       function scrollAnim() {
         let scrollTop =
           window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-        document.querySelectorAll(".about__text, .site__text, .script__text")
+        document.querySelectorAll(".about__text, .site__text, .script__text, .game__text")
           .forEach((item) => {
             if (scrollTop > item.offsetTop) {
-               item.querySelectorAll(".about__text h2 span, p span, .site__text h3 span, .site__text li span, .site__text p span, .script__text h3 span, .script__text li span, .script__text p span")
+               item.querySelectorAll(".about__text span, .site__text span, .script__text span, .game__text span")
                 .forEach((span, index) => {
                   setTimeout(() => {
                     span.classList.add("show");
@@ -906,8 +906,14 @@
         }
 
         move() {
-          this.progress = clamp(this.progress, -800, this.maxScroll);
-          this.maxScroll = clamp(this.progress, +800, this.maxScroll);
+          
+          if(matchMedia("screen and (min-width:1500px)").matches){
+            this.progress = clamp(this.progress, -700, this.maxScroll);
+            this.maxScroll = clamp(this.progress, +700, this.maxScroll);
+          } else {
+            this.progress = clamp(this.progress, -250, this.maxScroll);
+            this.maxScroll = clamp(this.progress, +250, this.maxScroll);
+          } 
         }
 
         events() {

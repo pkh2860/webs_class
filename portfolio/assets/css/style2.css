@@ -233,6 +233,7 @@ canvas {
 }
 .about__text h2 span.show  {
   opacity: 1;
+  transition-timing-function: linear;
   transition: all  0.3s ease-out;
 }
 .about__text p span {
@@ -244,13 +245,7 @@ canvas {
 .about__text p span.show {
   opacity: 1;
 }
-/* .carousel {
-  opacity: 0;
-}
-.carousel.show {
-  opacity: 1;
-  transition: all 0.9s ease-in-out;
-} */
+
 /*  */
 #site {
   padding-top: 60vh;
@@ -288,6 +283,8 @@ canvas {
 }
 .site__text h3 span.show  {
   opacity: 1;
+  /* transition-timing-function: linear; */
+  transition-duration: 2s;
   transition: all 0.5s ease-out;
 }
 .site__text li span {
@@ -844,6 +841,7 @@ canvas {
 }
 .script__text li span.show  {
   opacity: 1;
+  transition-duration: 2s;
   /* animation: power2-out 5s; */
   transition: all 0.9s ease-out;
 }
@@ -887,4 +885,31 @@ canvas {
   line-height: 1.6;
   color: #3c6b56;
   font-size: 2vh;
+}
+
+.game__text h3 span {
+  opacity: 0; 
+}
+.game__text h3 span.show  {
+  opacity: 1;
+  transition-timing-function: linear;
+  transition: all  0.3s ease-out;
+}
+.game__text p span {
+  opacity: 0;
+  min-width: 1.4vw;
+  transition: all 0.9s ease-in-out;  
+}
+
+.game__text p span.show {
+  opacity: 1;
+}
+.game__text li span {
+  opacity: 0;
+}
+.game__text li span.show  {
+  opacity: 1;
+  animation: power2-out 2s;
+  /* transition-duration: 2s */
+  transition: all 0.5s ease-out;
 }
