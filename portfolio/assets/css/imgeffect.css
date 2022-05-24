@@ -300,7 +300,8 @@ button {
   }
 
   iframe {
-    height: 60vh;
+    /* height: 60vh; */
+    height: 70vh;
   }
 
   .description {

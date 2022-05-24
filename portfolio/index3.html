@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio3</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/skn8ash.css">
+    <link rel="stylesheet" href="assets/css/scroll.css">
+    <link rel="stylesheet" href="assets/css/style3.css">
+    <style>
+   
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav id="nav">
+          <a class="menu-trigger" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+          <ul class="">
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">WORK</a></li>
+            <li><a href="#">CODE</a></li>
+            <li><a href="#">SCRIPT</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <main id="main">
+        <div class="section">
+            <section data-bgcolor="#bcb8ad" data-textcolor="#032f35">
+              <div id="banner">
+                <canvas id="canvas_bg"></canvas>
+                <div class="banner__text">
+                    <h1 data-scroll data-scroll-speed="1"><em>portfolio</em> <strong>2022</strong></h1>
+                    <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">
+                        <span>welcome to my portfolio</span> <br>
+                        <span> We will become a developing frontend</span>
+                    </p>
+                </div>
+              </div>
+            </section>
+
+            <div class="section">
+                <div id="about">
+                    <div class="about__cont">
+                        <div class="container">
+                          <div class="about__text">
+                            <h2>About</h2>
+                            <p>
+                              <span>
+                                안녕하세요 신입 웹퍼블리셔/프론트엔드 개발자 박근혁입니다.
+                                처음에는 코딩의 코자도 모르고 알지도 못하는것에 도전하는것이
+                                <br
+                              /></span>
+                              <span
+                                >많이 낯설고 무서웠습니다 그래도 용기를 내서 국비지원 학원을
+                                알아보고 바로 다니기 시작했습니다<br /></span
+                              ><span>
+                                처음에는 알지도 못하는 언어들이 나오고 이 일을 정말 할 수
+                                있을까 의문이 들었지만 하다가 오류가 나면 앉은 자리에서
+                                시간가는줄 모르고<br /></span
+                              ><span>
+                                틀린 부분을 고치면 뿌듯함이 느껴졌습니다 배움은 조금 느려도
+                                포기하지 않고 알아보려고 노력하였습니다.<br /></span
+                              ><span>
+                                짧으면 짧고 길면 긴 6개월이 저에게는 너무나 짧게 느껴졌고
+                                아직 배움이 부족하다고 생각합니다.<br /></span
+                              ><span>
+                                앞으로도 계속 발전하고 노력하는 개발자가 되겠습니다.</span
+                              >
+                            </p>
+                          </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        
+            <section id="sectionPin">
+              <div class="pin-wrap">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+                <!-- <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+                <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+                <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt=""> -->
+                    <div class="pin01">pin01</div>
+                    <div class="pin02">pin02</div>
+                    <div class="pin03">pin03</div>
+              </div>
+            </section>
+            
+            <section data-bgcolor="#e3857a" data-textcolor="#f1dba7"><img src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+              <h2 data-scroll data-scroll-speed="1" class="credit"><a href="https://thisisadvantage.com" target="_blank">Made by Advantage</a></h2>
+            </section>
+        </div>
+    </main>
+ 
+
+
+
+
+
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script>
+   gsap.registerPlugin(ScrollTrigger);
+
+    const pageContainer = document.querySelector(".section");
+
+
+    const scroller = new LocomotiveScroll({
+    el: pageContainer,
+    smooth: true
+    });
+
+    scroller.on("scroll", ScrollTrigger.update);
+
+    ScrollTrigger.scrollerProxy(pageContainer, {
+    scrollTop(value) {
+        return arguments.length
+        ? scroller.scrollTo(value, 0, 0)
+        : scroller.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+        return {
+        left: 0,
+        top: 0,
+        width: window.innerWidth,
+        height: window.innerHeight
+        };
+    },
+    pinType: pageContainer.style.transform ? "transform" : "fixed"
+    });
+
+    window.addEventListener("load", function () {
+    let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+    let pinWrap = document.querySelector(".pin-wrap");
+    let pinWrapWidth = pinWrap.offsetWidth;
+    let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
+    
+
+    gsap.to(".pin-wrap", {
+        scrollTrigger: {
+        scroller: pageContainer, 
+        scrub: true,
+        trigger: "#sectionPin",
+        pin: true,
+        start: "top top",
+        end: pinWrapWidth
+        },
+        x: -horizontalScrollLength,
+        ease: "none"
+    });
+
+    ScrollTrigger.addEventListener("refresh", () => scroller.update()); 
+
+    ScrollTrigger.refresh();
+    });
+
+    // 캔버스
+    var canvas = document.getElementById("canvas_bg");
+      var ctx = canvas.getContext("2d");
+      var cw = (canvas.width = window.innerWidth),
+        cx = cw / 2;
+      var ch = (canvas.height = window.innerHeight),
+        cy = ch / 2;
+
+      ctx.fillStyle = "#3C6B56";
+      var circlesRy = [];
+      var circlesNum = 5;
+      var requestId = null;
+      function Circle() {
+        this.r = randomIntFromInterval(300, 300);
+        this.x = randomIntFromInterval(this.r, cw - this.r);
+        this.y = randomIntFromInterval(this.r, ch - this.r);
+
+        this.vx = randomIntFromInterval(25, 100) / 100;
+        this.vy = randomIntFromInterval(25, 100) / 100;
+
+        this.update = function () {
+          this.edges();
+          this.x += this.vx;
+          this.y += this.vy;
+        };
+
+        this.edges = function () {
+          if (this.x < this.r || this.x > cw - this.r) {
+            this.vx *= -1;
+          }
+          if (this.y < this.r || this.y > ch - this.r) {
+            this.vy *= -1;
+          }
+        };
+
+        this.draw = function () {
+          ctx.strokeStyle = "#ccc";
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+          ctx.stroke();
+        };
+      }
+
+      for (var i = 0; i < circlesNum; i++) {
+        var circle = new Circle();
+        circlesRy.push(circle);
+      }
+
+      function Draw() {
+        requestId = window.requestAnimationFrame(Draw);
+        ctx.clearRect(0, 0, cw, ch);
+        for (var i = 0; i < circlesRy.length; i++) {
+          var c = circlesRy[i];
+          c.update();
+          c.draw();
+        }
+        for (var i = 0; i < circlesRy.length; i++) {
+          var c = circlesRy[i];
+          for (var j = i + 1; j < circlesRy.length; j++) {
+            var c1 = circlesRy[j];
+            var d = dist(c, c1);
+            if (d < c.r + c1.r && d > Math.abs(c.r - c1.r)) {
+              getIntersection(c, c1, d);
+            }
+          }
+        }
+      }
+
+      function Init() {
+        circlesRy.length = 0;
+        for (var i = 0; i < circlesNum; i++) {
+          var circle = new Circle();
+          circlesRy.push(circle);
+        }
+
+        if (requestId) {
+          window.cancelAnimationFrame(requestId);
+          requestId = null;
+        }
+
+        (cw = canvas.width = window.innerWidth), (cx = cw / 2);
+        (ch = canvas.height = window.innerHeight), (cy = ch / 2);
+
+        Draw();
+      }
+
+      setTimeout(function () {
+        Init();
+
+        addEventListener("resize", Init, false);
+      }, 15);
+
+      function getIntersection(p1, p2, d) {
+        var p3 = {}; // middle point
+        var p4 = {}; // intersection 1
+        var p5 = {}; // intersection 2
+
+        var a =
+          (Math.pow(p1.r, 2) - Math.pow(p2.r, 2) + Math.pow(d, 2)) / (2 * d);
+        var h = Math.sqrt(Math.pow(p1.r, 2) - Math.pow(a, 2));
+
+        p3.x = p1.x + (a * (p2.x - p1.x)) / d;
+        p3.y = p1.y + (a * (p2.y - p1.y)) / d;
+
+        p4.x = p3.x + (h * (p2.y - p1.y)) / d;
+        p4.y = p3.y - (h * (p2.x - p1.x)) / d;
+
+        p5.x = p3.x - (h * (p2.y - p1.y)) / d;
+        p5.y = p3.y + (h * (p2.x - p1.x)) / d;
+
+        markPoint(p4);
+        markPoint(p5);
+      }
+
+      function dist(p1, p2) {
+        var dx = p2.x - p1.x;
+        var dy = p2.y - p1.y;
+        return Math.sqrt(dx * dx + dy * dy);
+      }
+
+      function randomIntFromInterval(mn, mx) {
+        return ~~(Math.random() * (mx - mn + 1) + mn);
+      }
+
+      function markPoint(p) {
+        ctx.fillStyle = "#3C6B56";
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2, 0, 2 * Math.PI);
+        ctx.fill();
+      }
+    </script>
+</body>
+</html>
