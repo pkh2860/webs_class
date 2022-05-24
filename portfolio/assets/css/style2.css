@@ -340,7 +340,7 @@ canvas {
 .card__text01 .right .sub {
   font-family: "ChosunNm";
   /* font-size: 1.2rem; */
-  font-size: 1vw;
+  font-size: 2vh;
   margin-top: 2vw;
   margin-left: 1vw;
   line-height: 1.6;
@@ -422,7 +422,7 @@ canvas {
 .card__text02 .right .sub {
   font-family: "ChosunNm";
   /* font-size: 1.2rem; */
-  font-size: 1vw;
+  font-size: 2vh;
   margin-top: 2vw;
   margin-left: 1vw;
   line-height: 1.6;
@@ -504,7 +504,7 @@ canvas {
 .card__text03 .right .sub {
   font-family: "ChosunNm";
   /* font-size: 1.2rem; */
-  font-size: 1vw;
+  font-size: 2vh;
   margin-top: 2vw;
   /* margin-left: 1vw; */
   line-height: 1.6;
@@ -586,7 +586,7 @@ canvas {
 .card__text04 .right .sub {
   font-family: "ChosunNm";
   /* font-size: 1.2rem; */
-  font-size: 1vw;
+  font-size: 2vh;
   margin-top: 2vw;
   margin-left: 1vw;
   line-height: 1.6;
@@ -668,7 +668,7 @@ canvas {
 .card__text05 .right .sub {
   font-family: "ChosunNm";
   /* font-size: 1.2rem; */
-  font-size: 1vw;
+  font-size: 2vh;
   margin-top: 2vw;
   margin-left: 1vw;
   line-height: 1.6;
@@ -749,11 +749,11 @@ canvas {
   .card__text05 .title {
     text-align: center;
   }
-  .card__text01 .right .sub,
-  .card__text02 .left .sub,
-  .card__text03 .right .sub,
-  .card__text04 .left .sub,
-  .card__text05 .right .sub {
+  .card__text01 .text .sub,
+  .card__text02 .text .sub,
+  .card__text03 .text .sub,
+  .card__text04 .text .sub,
+  .card__text05 .text .sub {
     text-align: center;
     width: 97%;
   }
@@ -815,7 +815,7 @@ canvas {
   color: #3c6b56;
   font-size: 2vh;
 }
-/* .script__text h3 span {
+.script__text h3 span {
   opacity: 0;
 }
 .script__text h3 span.show  {
@@ -828,7 +828,6 @@ canvas {
 .script__text li span.show  {
   opacity: 1;
   animation: power2-out 5s;
-  /* transition-duration: 2s */
   transition: all 0.5s ease-out;
 }
 .script__text p span {
@@ -837,6 +836,5 @@ canvas {
 .script__text p span.show  {
   opacity: 1;
   animation: power2-out 1s;
-  /* transition-duration: 2s */
   transition: all  5s ease-out;
-} */
+} 

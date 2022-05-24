@@ -15,11 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    
-
     <style>
-
+      @media (max-width: 1120px) {
+      } 
+    
     </style>
   </head>
   <body>
@@ -488,11 +487,7 @@
         });
       });
 
-      document
-        .querySelectorAll(
-          ".banner__text em, .about__text h2, .site__text h3, .script__text h3"
-        )
-        .forEach((desc) => {
+      document.querySelectorAll(".banner__text em, .about__text h2, .site__text h3, .script__text h3,script__text h3").forEach((desc) => {
           let splitText = desc.innerText;
           let splitWrap = splitText
             .split("")
@@ -530,17 +525,11 @@
       // 스크롤
       function scrollAnim() {
         let scrollTop =
-          window.pageYOffset ||
-          document.documentElement.scrollTop ||
-          window.scrollY;
-        document
-          .querySelectorAll(".about__text, .site__text")
+          window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+        document.querySelectorAll(".about__text, .site__text, .script__text")
           .forEach((item) => {
             if (scrollTop > item.offsetTop) {
-              item
-                .querySelectorAll(
-                  ".about__text h2 span, p span, .site__text h3 span, .site__text li span, site__text p span"
-                )
+               item.querySelectorAll(".about__text h2 span, p span, .site__text h3 span, .site__text li span, .site__text p span, .script__text h3 span, .script__text li span, .script__text p span")
                 .forEach((span, index) => {
                   setTimeout(() => {
                     span.classList.add("show");

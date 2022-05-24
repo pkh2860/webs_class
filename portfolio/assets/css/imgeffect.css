@@ -80,15 +80,15 @@ img {
 } */
 iframe {
   width: 120vh;
-  height: 75vh;
+  height: 85vh;
   object-fit: cover;
 }
 
 .vertical {
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   display: flex;
+  align-content: center;
 }
 
 .intro {
@@ -168,8 +168,10 @@ button {
   left: 10%;
   bottom: 60vh;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
+  width: 6vw;
+  height: 6vw;
   border-radius: 50%;
 
   border: 1px solid #232323;
@@ -181,8 +183,10 @@ button {
   left: 90%;
   bottom: 60vh;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
+  width: 6vw;
+  height: 6vw;
   border-radius: 50%;
 
   border: 1px solid #232323;
@@ -265,15 +269,16 @@ button {
   }
 }
 
+
 @media (min-width: 62rem) {
-  iframe {
-    height: 60vh;
+  nav ul {
+    justify-content: flex-end;
   }
 
-  .description {
+  #logo {
     font-size: 1.25rem;
-    margin: 1rem 0 0 0;
   }
+
   .controls {
     padding: 1.75rem 0 1.75rem 0;
   }
@@ -286,13 +291,16 @@ button {
     padding: 2.5rem 2.5rem 3rem 2.5rem;
   }
 
+  iframe {
+    height: 60vh;
+  }
+
   .description {
     font-size: 1.25rem;
     margin: 1rem 0 0 0;
   }
 
-  .previous,
-  .next {
+  .previous, .next {
     flex-basis: 8.33%;
   }
 
@@ -301,6 +309,10 @@ button {
   }
 
   .slider-item.active .show-mobile {
+    display: none;
+  }
+
+  .toggle-nav {
     display: none;
   }
 }
@@ -314,9 +326,11 @@ button {
   width: 1px;
 }
 
+
+/*  */
+
 .slider__btn a {
   position: absolute;
-  /* top: 50%; */
   transform: translateY(-50%);
   z-index: 100;
   width: 50px;
@@ -329,36 +343,9 @@ button {
   color: #fff;
   text-decoration: none;
 }
-.slider__btn a.Previous {
+/* .slider__btn a.Previous {
   left: 0;
 }
 .slider__btn a.nexts {
   right: 0;
-}
-.slider__btn a:hover {
-  background: rgb(241, 96, 86);
-}
-.slider__dot {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 20px;
-}
-.slider__dot .dot {
-  width: 20px;
-  height: 20px;
-  background: rgba(0, 0, 0, 0.4);
-  display: inline-block;
-  border-radius: 50%;
-  transition: all 0.3s;
-  margin: 3px;
-}
-.slider__dot .dot.active {
-  background: rgba(255, 255, 255, 0.9);
-}
-
-/* @media (max-width: 1050px) {
-  iframe {
-    height: 60vh;
-  }
 } */
