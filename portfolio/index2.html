@@ -954,9 +954,6 @@
         }
       }
 
-      /*--------------------
-      Instances
-      --------------------*/
       const scroll = new DragScroll({
         el: ".carousel",
         wrap: ".carousel--wrap",
@@ -964,9 +961,6 @@
         bar: ".carousel--progress-bar",
       });
 
-      /*--------------------
-      One raf to rule em all
-      --------------------*/
       const raf = () => {
         requestAnimationFrame(raf);
         scroll.raf();

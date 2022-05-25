@@ -1,161 +1,157 @@
+body {
+  background: #ebebeb;
+  transition: 0.3s ease-out;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  overscroll-behavior: none;
+}
 
-    body {
-        background: #ebebeb;
-        transition: 0.3s ease-out;
-        overflow-x: hidden;
-        max-width: 100%;
-        width: 100%;
-        overscroll-behavior: none;
-    }
+section:not(#sectionPin) {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  padding: 50px 10vw;
+  margin: auto;
+  place-items: center;
+}
 
-    section:not(#sectionPin) {
-        min-height: 100vh;
-        width: 100%;
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-gap: 2rem;
-        padding: 50px 10vw;
-        margin: auto;
-        place-items: center;
-    }
+img {
+  height: 80vh;
+  width: auto;
+  object-fit: cover;
+}
 
-    img {
-    height: 80vh;
-    width: auto;
-    object-fit: cover;
-    }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 16vw;
+  }
+}
+h1 span {
+  display: block;
+}
 
-    @media (max-width: 768px) {
-    h1 {
-        font-size: 16vw;
-    }
-    }
-    h1 span {
-    display: block;
-    }
+h2 {
+  font-size: 2rem;
+  max-width: 400px;
+}
 
-    h2 {
-    font-size: 2rem;
-    max-width: 400px;
-    }
+.credit {
+  font-family: Termina, sans-serif;
+}
+.credit a {
+  color: var(--text-color);
+}
 
-    .credit {
-    font-family: Termina, sans-serif;
-    }
-    .credit a {
-    color: var(--text-color);
-    }
+* {
+  box-sizing: border-box;
+}
 
-    * {
-    box-sizing: border-box;
-    }
+#sectionPin {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+}
 
-    #sectionPin {
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    left: 0;
-    background: var(--text-color);
-    color: var(--bg-color);
-    }
+.pin-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 10vw;
+}
+.pin-wrap > * {
+  min-width: 60vw;
+  /* min-width: 80vw; */
+  padding: 0 5vw;
+}
+.pin01 {
+  height: 80vh;
+  width: auto;
+  object-fit: cover;
+  background-color: #ccc;
+}
+.pin02 {
+  height: 80vh;
+  width: auto;
+  object-fit: cover;
+  background-color: #555;
+}
+.pin03 {
+  height: 80vh;
+  width: auto;
+  object-fit: cover;
+  background-color: #999;
+}
 
-    .pin-wrap {
-        height: 100vh;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 50px 10vw;
-    }
-    .pin-wrap > * {
-        min-width: 60vw;
-        /* min-width: 80vw; */
-        padding: 0 5vw;
-    }
-    .pin01 {
-        height: 80vh;
-        width: auto;
-        object-fit: cover;
-        background-color: #ccc;
-    }
-    .pin02 {
-        height: 80vh;
-        width: auto;
-        object-fit: cover;
-        background-color: #555;
-    }
-    .pin03 {
-        height: 80vh;
-        width: auto;
-        object-fit: cover;
-        background-color: #999;
-    }
+/* nav */
+#nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#nav ul li {
+  padding: 20px;
+}
+#nav ul li a {
+  font-family: "Jura";
+  font-size: 23px;
+  font-weight: 100;
+  color: #3c6b56;
+}
 
-    /* nav */
-    #nav ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    #nav ul li {
-        padding: 20px;
-    }
-    #nav ul li a {
-        font-family: "Jura";
-        font-size: 23px;
-        font-weight: 100;
-        color: #3c6b56;
-    }
+/* banner */
+#banner {
+  height: 90vh;
+}
+.banner__text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#banner em {
+  font-family: "Partizeno";
+  font-size: 20vw;
+  color: #3c6b56;
+  line-height: 1.3;
+  font-weight: 100;
+}
+#banner strong {
+  font-family: "Saint Monica";
+  font-size: 2vw;
+  line-height: 1.3;
+  color: #b99e56;
+  font-weight: 100;
+  position: absolute;
+  bottom: 6vw;
+}
+.banner__text p {
+  position: absolute;
+  font-family: "Gmarket Sans";
+  line-height: 1.5;
+  /* font-size: 1vw; */
+  font-size: 2.5vh;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #3c6b56;
+  bottom: -8vh;
+}
+canvas {
+  width: 100%;
+}
+#test1 {
+  background: #000;
+  height: 800px;
+}
 
-    /* banner */
-    #banner {
-    height: 90vh;
-    }
-    .banner__text {
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    #banner em {
-        font-family: "Partizeno";
-        font-size: 20vw;
-        color: #3c6b56;
-        line-height: 1.3;
-        font-weight: 100;
-    }
-    #banner strong {
-        font-family: "Saint Monica";
-        font-size: 2vw;
-        line-height: 1.3;
-        color: #b99e56;
-        font-weight: 100;
-        position: absolute;
-        bottom: 6vw;
-    }
-    .banner__text p {
-        position: absolute;
-        font-family: "Gmarket Sans";
-        line-height: 1.5;
-        /* font-size: 1vw; */
-        font-size: 2.5vh;
-        font-weight: 300;
-        text-transform: uppercase;
-        color: #3c6b56;
-        bottom: -8vh;
-    }
-    canvas {
-        width: 100%;
-    
-    }
-    #test1 {
-        background: #000;
-        height: 800px;
-    }
-
-    /* about */
-    #about {
+/* about */
+#about {
   height: 60vw;
 }
 .about__text {
@@ -179,7 +175,7 @@
   font-size: 2vh;
   font-family: "ChosunNm";
 }
-    /* @media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
         .banner__text p {
             margin-left: 10vw;
             text-align: center;
@@ -226,8 +222,282 @@
         }
     } */
 
-    .container {
-        max-width: 1400px;
-        margin: 0 auto;
-        width: 100%;
-    }
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* site  */
+#site {
+  padding-top: 15vh;
+}
+#site h3 {
+  color: #3c6b56;
+  font-size: 15vw;
+  line-height: 1.3;
+  font-weight: 100;
+  font-family: "Partizeno";
+}
+.site__text ul {
+  display: flex;
+  margin-bottom: 2vw;
+}
+.site__text li {
+  margin-right: 2vw;
+}
+.site__text li a {
+  font-family: "Partizeno";
+  display: inline-block;
+  font-size: 1.9rem;
+  color: #3c6b56;
+}
+.site__text p {
+  font-weight: 100;
+  font-family: "ChosunNm";
+  margin-bottom: 5vw;
+  line-height: 1.6;
+  color: #3c6b56;
+  /* font-size: 2vh; */
+  font-size: 2.5vh;
+}
+
+/* card01 */
+.card__text01 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+  padding-top: 10rem;
+}
+.card__text01 .web__img01 img {
+  flex: 0 0 65%;
+  z-index: -1;
+}
+.card__text01 .text {
+  margin-top: -1rem;
+}
+.card__text01 .right {
+}
+.card__text01 .right .title {
+  font-size: 4.9vw;
+  font-weight: 100;
+  font-family: "Partizeno";
+  text-align: center;
+  color: #3c6b56;
+}
+.card__text01 .right .sub {
+  font-family: "ChosunNm";
+  /* font-size: 1.2rem; */
+  font-size: 2vh;
+  margin-top: 1.5vh;
+  margin-left: 4vh;
+  line-height: 1.6;
+  width: 75%;
+  color: #3c6b56;
+}
+.card__text01 .web__img01 {
+  position: relative;
+}
+.card__text01 .view {
+  /* padding-top: 0.6vw;
+    margin-left: 1.6rem; */
+  color: #fff;
+  font-size: 3vw;
+  font-weight: 100;
+  font-family: "Partizeno";
+  line-height: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* position: absolute; */
+  /* text-align: center; */
+}
+.card__text01 .view::after {
+  content: "VIEW";
+  width: 10vw;
+  height: 10vw;
+  /* left: 52.6%;
+    top: 60%; */
+  left: 36.5vw;
+  top: 23.5vw;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 99999;
+  /* margin-top: 5rem; */
+}
+.card__text01 .view::before {
+  content: "";
+  background-color: rgba(60, 107, 86, 0.5);
+  width: 10vw;
+  height: 10vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 99999;
+  backdrop-filter: saturate(180%) blur(20px);
+  text-align: center;
+}
+
+/* card02 */
+.card__text02 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+  padding-top: 10rem;
+  flex-direction: row-reverse;
+}
+.card__text02 .web__img02 img {
+  /* flex: 0 0 65%; */
+  z-index: -1;
+}
+.card__text02 .text {
+  margin-top: -1rem;
+}
+.card__text02 .right {
+  /* flex: 0 0 30%; */
+}
+.card__text02 .right .title {
+  font-size: 4.9vw;
+  font-weight: 100;
+  font-family: "Partizeno";
+  text-align: center;
+  color: #3c6b56;
+}
+.card__text02 .right .sub {
+  font-family: "ChosunNm";
+  /* font-size: 1.2rem; */
+  font-size: 2vh;
+  margin-top: 1.5vh;
+  margin-left: 4vh;
+  line-height: 1.6;
+  width: 75%;
+  color: #3c6b56;
+}
+.card__text02 .web__img02 {
+  position: relative;
+}
+.card__text02 .view {
+  /* padding-top: 0.6vw;
+    margin-left: 1.6rem; */
+  color: #fff;
+  font-size: 3vw;
+  font-weight: 100;
+  font-family: "Partizeno";
+  line-height: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* position: absolute; */
+  /* text-align: center; */
+}
+.card__text02 .view::after {
+  content: "VIEW";
+  width: 10vw;
+  height: 10vw;
+  left: 52.6%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 99999;
+  /* margin-top: 5rem; */
+}
+.card__text02 .view::before {
+  content: "";
+  background-color: rgba(60, 107, 86, 0.5);
+  width: 10vw;
+  height: 10vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 99999;
+  backdrop-filter: saturate(180%) blur(20px);
+  text-align: center;
+}
+
+/* card03 */
+.card__text03 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+  padding-top: 10rem;
+}
+.card__text03 .web__img03 img {
+  flex: 0 0 65%;
+  z-index: -1;
+}
+.card__text03 .text {
+  margin-top: -1rem;
+}
+.card__text03 .right {
+}
+.card__text03 .right .title {
+  font-size: 4.9vw;
+  font-weight: 100;
+  font-family: "Partizeno";
+  text-align: center;
+  color: #3c6b56;
+}
+.card__text03 .right .sub {
+  font-family: "ChosunNm";
+  /* font-size: 1.2rem; */
+  font-size: 2vh;
+  margin-top: 1.5vh;
+  margin-left: 4vh;
+  line-height: 1.6;
+  width: 75%;
+  color: #3c6b56;
+}
+.card__text03 .web__img03 {
+  position: relative;
+}
+.card__text03 .view {
+  /* padding-top: 0.6vw;
+    margin-left: 1.6rem; */
+  color: #fff;
+  font-size: 3vw;
+  font-weight: 100;
+  font-family: "Partizeno";
+  line-height: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* position: absolute; */
+  /* text-align: center; */
+}
+.card__text03 .view::after {
+  content: "VIEW";
+  width: 10vw;
+  height: 10vw;
+  /* left: 52.6%;
+    top: 60%; */
+  left: 36.5vw;
+  top: 23.5vw;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 99999;
+  /* margin-top: 5rem; */
+}
+.card__text03 .view::before {
+  content: "";
+  background-color: rgba(60, 107, 86, 0.5);
+  width: 10vw;
+  height: 10vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 99999;
+  backdrop-filter: saturate(180%) blur(20px);
+  text-align: center;
+}
