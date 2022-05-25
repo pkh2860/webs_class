@@ -1,6 +1,4 @@
-:root {
-    --text-color: #111;
-    }
+
     body {
         background: #ebebeb;
         transition: 0.3s ease-out;
@@ -71,6 +69,7 @@
     }
     .pin-wrap > * {
         min-width: 60vw;
+        /* min-width: 80vw; */
         padding: 0 5vw;
     }
     .pin01 {
@@ -180,7 +179,7 @@
   font-size: 2vh;
   font-family: "ChosunNm";
 }
-    @media (max-width: 1000px) {
+    /* @media (max-width: 1000px) {
         .banner__text p {
             margin-left: 10vw;
             text-align: center;
@@ -225,7 +224,7 @@
             right: -88vw;
             z-index: 1;
         }
-    }
+    } */
 
     .container {
         max-width: 1400px;
