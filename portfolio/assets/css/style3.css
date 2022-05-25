@@ -2,13 +2,14 @@ body {
   background: #ebebeb;
   transition: 0.3s ease-out;
   overflow-x: hidden;
-  max-width: 100%;
-  width: 100%;
+  /* max-width: 100%;
+  width: 100%; */
   overscroll-behavior: none;
 }
 
 section:not(#sectionPin) {
   min-height: 100vh;
+  /* height: 100%; */
   width: 100%;
   position: relative;
   display: grid;
@@ -18,36 +19,24 @@ section:not(#sectionPin) {
   margin: auto;
   place-items: center;
 }
-
+/* .effectimg img {
+  height: 100%;
+  width: 100%;
+} */
 img {
-  height: 80vh;
-  width: auto;
+  /* height: 80vh; */
+  height: 100%;
+  width: 100%;
+  /* width: auto; */
+  /* object-fit: cover; */
+}
+iframe {
+  /* height: 70vh;
+  width: 125vh; */
+  /* width: auto; */
   object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 16vw;
-  }
-}
-h1 span {
-  display: block;
-}
-
-h2 {
-  font-size: 2rem;
-  max-width: 400px;
-}
-
-.credit {
-  font-family: Termina, sans-serif;
-}
-.credit a {
-  color: var(--text-color);
-}
-
-* {
-  box-sizing: border-box;
+  width: 115vh;
+  height: 55vh;
 }
 
 #sectionPin {
@@ -59,21 +48,27 @@ h2 {
 
 .pin-wrap {
   height: 100vh;
+  /* height: 105vh; */
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 50px 10vw;
+  /* padding: 50px 10vw; */
+  padding: 50px 40vw;
 }
 .pin-wrap > * {
   min-width: 60vw;
   /* min-width: 80vw; */
   padding: 0 5vw;
 }
+.pin {
+  height: 80vh;
+  width: auto;
+  object-fit: cover;
+}
 .pin01 {
   height: 80vh;
   width: auto;
   object-fit: cover;
-  background-color: #ccc;
 }
 .pin02 {
   height: 80vh;
@@ -175,6 +170,7 @@ canvas {
   font-size: 2vh;
   font-family: "ChosunNm";
 }
+
 /* @media (max-width: 1000px) {
         .banner__text p {
             margin-left: 10vw;
@@ -279,6 +275,8 @@ canvas {
   margin-top: -1rem;
 }
 .card__text01 .right {
+  /* flex: 0 0 30%; */
+  flex: 2 2 20%;
 }
 .card__text01 .right .title {
   font-size: 4.9vw;
@@ -289,12 +287,14 @@ canvas {
 }
 .card__text01 .right .sub {
   font-family: "ChosunNm";
-  /* font-size: 1.2rem; */
-  font-size: 2vh;
+  font-size: 1.2rem;
+  margin-top: 0.9vw;
+  margin-left: 2vw;
+  /* font-size: 1vw;
   margin-top: 1.5vh;
-  margin-left: 4vh;
+  margin-left: 4vh; */
   line-height: 1.6;
-  width: 75%;
+  /* width: 75%; */
   color: #3c6b56;
 }
 .card__text01 .web__img01 {
@@ -318,9 +318,10 @@ canvas {
   content: "VIEW";
   width: 10vw;
   height: 10vw;
-  /* left: 52.6%;
-    top: 60%; */
-  left: 36.5vw;
+  /* left: 36.9vw;
+  top: 23.6vw; */
+  /* left: 36.4vw; */
+  left: 36.6vw;
   top: 23.5vw;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -349,18 +350,18 @@ canvas {
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
-  padding-top: 10rem;
   flex-direction: row-reverse;
+  padding-top: 25rem;
 }
 .card__text02 .web__img02 img {
-  /* flex: 0 0 65%; */
+  flex: 0 0 65%;
   z-index: -1;
 }
 .card__text02 .text {
   margin-top: -1rem;
 }
 .card__text02 .right {
-  /* flex: 0 0 30%; */
+  flex: 2 2 20%;
 }
 .card__text02 .right .title {
   font-size: 4.9vw;
@@ -372,9 +373,9 @@ canvas {
 .card__text02 .right .sub {
   font-family: "ChosunNm";
   /* font-size: 1.2rem; */
-  font-size: 2vh;
-  margin-top: 1.5vh;
-  margin-left: 4vh;
+  font-size: 1.2rem;
+  margin-top: 0.9vw;
+  margin-left: 2vw;
   line-height: 1.6;
   width: 75%;
   color: #3c6b56;
@@ -400,8 +401,10 @@ canvas {
   content: "VIEW";
   width: 10vw;
   height: 10vw;
-  left: 52.6%;
-  top: 60%;
+  /* left: 52.6%;
+  top: 60%; */
+  left: 36.6vw;
+  top: 23.5vw;
   transform: translate(-50%, -50%);
   position: absolute;
   z-index: 99999;
@@ -429,7 +432,7 @@ canvas {
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
-  padding-top: 10rem;
+  padding-top: 25rem;
 }
 .card__text03 .web__img03 img {
   flex: 0 0 65%;
@@ -437,22 +440,22 @@ canvas {
 }
 .card__text03 .text {
   margin-top: -1rem;
+  margin-left: 2vw;
 }
 .card__text03 .right {
+  flex: 2 2 20%;
 }
 .card__text03 .right .title {
   font-size: 4.9vw;
   font-weight: 100;
   font-family: "Partizeno";
-  text-align: center;
   color: #3c6b56;
 }
 .card__text03 .right .sub {
   font-family: "ChosunNm";
   /* font-size: 1.2rem; */
-  font-size: 2vh;
-  margin-top: 1.5vh;
-  margin-left: 4vh;
+  font-size: 1.2rem;
+  margin-top: 0.9vw;
   line-height: 1.6;
   width: 75%;
   color: #3c6b56;
@@ -480,7 +483,7 @@ canvas {
   height: 10vw;
   /* left: 52.6%;
     top: 60%; */
-  left: 36.5vw;
+  left: 36.6vw;
   top: 23.5vw;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -500,4 +503,296 @@ canvas {
   z-index: 99999;
   backdrop-filter: saturate(180%) blur(20px);
   text-align: center;
+}
+
+/* card04 */
+.card__text04 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+  padding-top: 25rem;
+
+  flex-direction: row-reverse;
+}
+.card__text04 .web__img04 img {
+  flex: 0 0 65%;
+  z-index: -1;
+}
+.card__text04 .text {
+  margin-top: -1rem;
+  margin-left: 2vw;
+}
+.card__text04 .right {
+  flex: 2 2 20%;
+}
+.card__text04 .right .title {
+  font-size: 4.9vw;
+  font-weight: 100;
+  font-family: "Partizeno";
+  /* text-align: center; */
+  color: #3c6b56;
+}
+.card__text04 .right .sub {
+  font-family: "ChosunNm";
+  /* font-size: 1.2rem; */
+  font-size: 1.2rem;
+  margin-top: 0.9vw;
+  line-height: 1.6;
+  width: 75%;
+  color: #3c6b56;
+}
+.card__text04 .web__img04 {
+  position: relative;
+}
+.card__text04 .view {
+  /* padding-top: 0.6vw;
+      margin-left: 1.6rem; */
+  color: #fff;
+  font-size: 3vw;
+  font-weight: 100;
+  font-family: "Partizeno";
+  line-height: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* position: absolute; */
+  /* text-align: center; */
+}
+.card__text04 .view::after {
+  content: "VIEW";
+  width: 10vw;
+  height: 10vw;
+  /* left: 52.6%;
+  top: 60%; */
+  left: 36.6vw;
+  top: 23.5vw;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 99999;
+  /* margin-top: 5rem; */
+}
+.card__text04 .view::before {
+  content: "";
+  background-color: rgba(60, 107, 86, 0.5);
+  width: 10vw;
+  height: 10vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 99999;
+  backdrop-filter: saturate(180%) blur(20px);
+  text-align: center;
+}
+
+/* card05 */
+.card__text05 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+  padding-top: 25rem;
+  padding-bottom: 10vh;
+}
+.card__text05 .web__img05 img {
+  flex: 0 0 65%;
+  z-index: -1;
+}
+.card__text05 .text {
+  margin-top: -1rem;
+  margin-left: 2vw;
+}
+.card__text05 .right {
+  flex: 2 2 20%;
+}
+.card__text05 .right .title {
+  font-size: 4.9vw;
+  font-weight: 100;
+  font-family: "Partizeno";
+  color: #3c6b56;
+}
+.card__text05 .right .sub {
+  font-family: "ChosunNm";
+  /* font-size: 1.2rem; */
+  font-size: 1.2rem;
+  margin-top: 0.9vw;
+  line-height: 1.6;
+  width: 75%;
+  color: #3c6b56;
+}
+.card__text05 .web__img05 {
+  position: relative;
+}
+.card__text05 .view {
+  color: #fff;
+  font-size: 3vw;
+  font-weight: 100;
+  font-family: "Partizeno";
+  line-height: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.card__text05 .view::after {
+  content: "VIEW";
+  width: 10vw;
+  height: 10vw;
+  /* left: 52.6%;
+  top: 60%; */
+  left: 36.6vw;
+  top: 23.5vw;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 99999;
+}
+.card__text05 .view::before {
+  content: "";
+  background-color: rgba(60, 107, 86, 0.5);
+  width: 10vw;
+  height: 10vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: 99999;
+  backdrop-filter: saturate(180%) blur(20px);
+  text-align: center;
+}
+
+/* card media */
+@media (max-width: 960px) {
+  .card__text01,
+  .card__text03,
+  .card__text05 {
+    flex-direction: column;
+  }
+  .card__text02,
+  .card__text04 {
+    /* flex-direction: column-reverse; */
+    flex-direction: column;
+  }
+  .right {
+    margin-top: 5vw;
+  }
+  .left {
+    margin-top: 5vw;
+  }
+  .card__text01 .view {
+    left: 45%;
+    margin-left: 1.5vw;
+  }
+  .view::after {
+    left: 52%;
+    top: 56.5%;
+  }
+  .card__text03 .title,
+  .card__text04 .title,
+  .card__text05 .title {
+    text-align: center;
+  }
+  .card__text01 .text .sub,
+  .card__text02 .text .sub,
+  .card__text03 .text .sub,
+  .card__text04 .text .sub,
+  .card__text05 .text .sub {
+    text-align: center;
+    width: 97%;
+  }
+  .card__text01 .view::after {
+    /* left: 51vw;
+      top: 32.9vw; */
+    left: 50.2vw;
+    top: 33.2vw;
+  }
+  .card__text02 .view::after,
+  .card__text03 .view::after,
+  .card__text04 .view::after,
+  .card__text05 .view::after {
+    left: 50.3vw;
+    top: 31.3vw;
+  }
+}
+
+/* script */
+#script {
+  /* padding-top: 60vh; */
+}
+#script h3 {
+  color: #3c6b56;
+  font-size: 15vw;
+  line-height: 1.3;
+  font-weight: 100;
+  font-family: "Partizeno";
+  text-align: right;
+}
+.script__text ul {
+  justify-content: flex-end;
+  display: flex;
+  margin-bottom: 2vw;
+}
+.script__text li {
+  /* margin-right: 2vw; */
+  margin-left: 2vw;
+}
+.script__text li a {
+  font-family: "Partizeno";
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #3c6b56;
+}
+.script__text p {
+  text-align: right;
+  font-weight: 100;
+  font-family: "ChosunNm";
+  margin-bottom: 5vw;
+  line-height: 1.6;
+  color: #3c6b56;
+  /* font-size: 2vh; */
+  font-size: 2.5vh;
+}
+.script__text h3 span {
+  opacity: 0;
+}
+.script__text h3 span.show {
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+
+/* game */
+#game {
+  padding-top: 60vh;
+}
+#game h3 {
+  color: #3c6b56;
+  font-size: 15vw;
+  line-height: 1.3;
+  font-weight: 100;
+  font-family: "Partizeno";
+}
+.game__text ul {
+  display: flex;
+  margin-bottom: 2vw;
+}
+.game__text li {
+  margin-right: 2vw;
+}
+.game__text li a {
+  font-family: "Partizeno";
+  display: inline-block;
+  font-size: 1.9rem;
+  color: #3c6b56;
+}
+.game__text p {
+  font-weight: 100;
+  font-family: "ChosunNm";
+  margin-bottom: 5vw;
+  line-height: 1.6;
+  color: #3c6b56;
+  /* font-size: 2vh; */
+  font-size: 2.5vh;
 }

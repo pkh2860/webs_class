@@ -12,7 +12,34 @@
     <link rel="stylesheet" href="assets/css/scroll.css" />
     <link rel="stylesheet" href="assets/css/slider.css" />
     <link rel="stylesheet" href="assets/css/style3.css" />
-    <style></style>
+    <style>
+      .intro .title {
+        display: inline-block;
+        /* font-size: 6rem; */
+        font-size: 4.9vw;
+        font-weight: 500;
+        line-height: 1.1;
+        display: flex;
+        justify-content: center;
+        font-family: "Partizeno";
+        margin: 1rem;
+      }
+      .intro .title .underline {
+        color: #3c6b56;
+      }
+
+      .description {
+        position: relative;
+        z-index: 1;
+        margin: 1rem 0 1.5rem 0;
+        /* font-size: 2vh; */
+        font-size: 2vh;
+        line-height: 1.6;
+        animation: fadeIn 0.8s 0.6s ease forwards;
+        text-align: center;
+        font-family: "ChosunNm";
+      }
+    </style>
   </head>
   <body>
     <header id="header">
@@ -49,7 +76,7 @@
           </div>
         </section>
 
-        <div class="section1">
+        <div class="section">
           <div id="about">
             <div class="about__cont">
               <div class="container">
@@ -82,7 +109,6 @@
                 </div>
               </div>
               <!-- 슬라이드 -->
-
               <div class="carousel">
                 <div class="carousel--wrap">
                   <div class="carousel--item">
@@ -108,7 +134,7 @@
           </div>
         </div>
 
-        <section class="section2">
+        <div class="section">
           <div id="site">
             <div class="container">
               <div class="site__text">
@@ -157,9 +183,10 @@
                   <div class="text">
                     <h4 class="title">WebStandard</h4>
                     <p class="sub">
-                      기본 레이아웃을 바탕으로 카드타입, 이미지타입 등 섹션을
-                      나눠서 작업하였습니다. 스와이퍼 플러그인을 사용하여 이미지
-                      슬라이더를 만들고 웹 접근성을 위해 ir기법을 이용해 대체
+                      기본 레이아웃을 바탕으로 카드타입, 이미지타입 등 섹션을<br />
+                      나눠서 작업하였습니다. 스와이퍼 플러그인을 사용하여
+                      이미지<br />
+                      슬라이더를 만들고 웹 접근성을 위해 ir기법을 이용해 대체<br />
                       텍스트가 아닌 숨긴 텍스트를 사용했습니다.
                     </p>
                   </div>
@@ -220,21 +247,203 @@
               </div>
             </div>
           </div>
+
+          <!-- card4 -->
+          <div class="effectimg">
+            <div class="reveal">
+              <div class="card__text04">
+                <div class="left">
+                  <div class="web__img04">
+                    <a
+                      href="http://rmsgur2275.dothome.co.kr/php/pages/main.php"
+                      class="view"
+                    ></a>
+                    <img src="assets/img/php.jpg" alt="" />
+                  </div>
+                </div>
+
+                <div class="right">
+                  <div class="text">
+                    <h4 class="title">PHP</h4>
+                    <p class="sub">
+                      웹표준을 준수하여 만든 사이트입니다. 데이터 베이스를
+                      연결해 로그인,회원가입이 가능합니다. 메인에는 최신 글과
+                      댓글을 보여주는 페이지를 구성하였고 게시판 작성, 수정,
+                      삭제등 기능들을 구현하였습니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card5 -->
+          <div class="effectimg">
+            <div class="reveal">
+              <div class="card__text05">
+                <div class="left">
+                  <div class="web__img05">
+                    <a href="#" class="view"></a>
+                    <img src="assets/img/php.jpg" alt="" />
+                  </div>
+                </div>
+
+                <div class="right">
+                  <div class="text">
+                    <h4 class="title">VUE.JS</h4>
+                    <p class="sub">
+                      React를 이용해 기존의 HTML 구조의 사이트를 React 방식으로
+                      변경 후 YouTube API와 TMDB API를 이용하여 유튜브 영상 검색
+                      및 목록 영화 순위 관련 차트 페이지를 만들었습니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- end -->
-        </section>
+        </div>
 
         <section id="sectionPin">
           <div class="pin-wrap">
-            <h2>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </h2>
-            <!-- <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
-                  <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
-                  <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt=""> -->
-            <div class="pin01">pin01</div>
-            <div class="pin02">pin02</div>
+            <div id="script">
+              <div class="script__text">
+                <h3>Script</h3>
+                <ul>
+                  <li>
+                    <a href="#"><span> 1. Quit Effect</span> </a>
+                  </li>
+                  <li>
+                    <a href="#"><span> 2. Mouse Effect</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span> 3. Parallax Effect</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span> 4. Slider Effect</span> </a>
+                  </li>
+                </ul>
+                <p>
+                  <span>
+                    스크립트와 제이쿼리를 이용하여 각 페이지마다 다양한 효과를
+                    주고<br
+                  /></span>
+                  <span>
+                    코드를 어떻게 만들었는지 보이기 위해 소스보기 버튼을
+                    만들어서<br
+                  /></span>
+                  <span>
+                    HTML, CSS, JAVASCRIPT 종류별로 나눠서 보여줄 수 있도록<br />
+                    만들었습니다.
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            <div class="pin">
+              <iframe
+                class="parallax"
+                src="https://pkh2860.github.io/webs_class/javascript/effect/parallaxEffect.html"
+                frameborder="0"
+              ></iframe>
+              <div>
+                <div class="intro">
+                  <a href="#">
+                    <h1 class="title">
+                      <span class="underline">Quiz Effect</span>
+                    </h1>
+                  </a>
+                </div>
+                <p class="description">
+                  스크립트를 이용하여 문제를 만들고 푸는 퀴즈 이펙트를
+                  만들었습니다 정답과 오답에 각각 다른 효과를 줘서 정답이면<br />
+                  강아지가 웃고오답이면 강아지가 눈물을 흘리는효과를
+                  추가하였습니다 정답 확인하기 버튼을 클릭하면 정답이 나오고<br />
+                  1번~7번까지의 페이지 마다 해당하는 코드를 볼 수 있도록
+                  소스보기 버튼을 만들고 <br />소스보기를 클릭하거나 닫을때
+                  애니메이션 효과를 줘서 더 자연스럽게 만들었습니다.<br />
+                </p>
+              </div>
+            </div>
+
+            <div class="pin">
+              <iframe
+                class="parallax"
+                src="https://pkh2860.github.io/webs_class/javascript/effect/mouseEffect.html"
+                frameborder="0"
+              ></iframe>
+              <div>
+                <div class="intro">
+                  <a href="#">
+                    <h1 class="title">
+                      <span class="underline">Mouse Effect</span>
+                    </h1>
+                  </a>
+                </div>
+                <p class="description">
+                  플러그인을 사용하지 않고 javascript와 jquery를 이용한
+                  슬라이드예제입니다. <br />
+                  요소를 만들어서 마우스 화면에서의 x,y값을 부여했습니다.<br />
+                  페이드 효과, 가로, 세로로 움직이는 효과들과 <br />
+                  버튼, 닷 메뉴를 이용한 방식들의 이미지 슬라이드를 제작해
+                  보았습니다.<br />
+                </p>
+              </div>
+            </div>
+
+            <div class="pin">
+              <iframe
+                class="parallax"
+                src="https://pkh2860.github.io/webs_class/javascript/effect/parallaxEffect.html"
+                frameborder="0"
+              ></iframe>
+              <div>
+                <div class="intro">
+                  <a href="#">
+                    <h1 class="title">
+                      <span class="underline">Parallax Effect</span>
+                    </h1>
+                  </a>
+                </div>
+                <p class="description">
+                  스크롤값에 따라 이질감을 주어 스크롤을 내릴때<br />
+                  사진과 글자가 위에서 아래로 내려오거나 한자 한자씩 아래에서
+                  위로<br />
+                  올라오게끔 구현하였습니다.글자를 SPLIT로 쪼개준 후 <br />
+                  SETTIMEOUT으로 시간차를 주어 한 글자씩 CLASS가 붙어 시간이
+                  <br />
+                  지남에 따라 한 자씩 천천히 올라오게 구현하였습니다
+                </p>
+              </div>
+            </div>
+            <div class="pin">
+              <iframe
+                class="parallax"
+                src="https://pkh2860.github.io/webs_class/javascript/effect/sliderEffect.html"
+                frameborder="0"
+              ></iframe>
+              <div>
+                <div class="intro">
+                  <a href="#">
+                    <h1 class="title">
+                      <span class="underline">Slider Effect</span>
+                    </h1>
+                  </a>
+                </div>
+                <p class="description">
+                  플러그인을 사용하지 않고 javascript와 jquery를 이용한<br />
+                  슬라이드 예제입니다. 페이드 효과, 가로, 세로로 움직이는<br />
+                  효과들과 버튼, 닷 메뉴를 이용한 방식들의<br />
+                  이미지 슬라이드를 제작하였습니다.
+                </p>
+              </div>
+            </div>
+            <!-- <div class="pin"></div>
             <div class="pin03">pin03</div>
+            <div class="pin03">pin03</div>
+            <div class="pin03">pin03</div>
+            <div class="pin03">pin03</div>
+            <div class="pin03">pin03</div> -->
           </div>
         </section>
 
@@ -301,7 +510,9 @@
             trigger: "#sectionPin",
             pin: true,
             start: "top top",
-            end: pinWrapWidth,
+            // end: pinWrapWidth,
+            end: "+=5980",
+            scrub: 1,
           },
           x: -horizontalScrollLength,
           ease: "none",

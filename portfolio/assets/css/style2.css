@@ -161,7 +161,6 @@ canvas {
   }
 }
 
-
 /* about */
 #about {
   height: 60vw;
@@ -219,28 +218,27 @@ canvas {
 }
 
 .scrollTop {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    z-index: 1000;
-    background: rgba(0,0,0,0.4);
-    color: #fff;
-    padding: 10px 30px;
-    border-radius: 50px;
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 50px;
 }
 .about__text h2 span {
   opacity: 0;
-  
 }
-.about__text h2 span.show  {
+.about__text h2 span.show {
   opacity: 1;
   transition-timing-function: linear;
-  transition: all  0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .about__text p span {
   opacity: 0;
   min-width: 1.4vw;
-  transition: all 0.9s ease-in-out;  
+  transition: all 0.9s ease-in-out;
 }
 
 .about__text p span.show {
@@ -283,7 +281,7 @@ canvas {
 .site__text h3 span {
   opacity: 0;
 }
-.site__text h3 span.show  {
+.site__text h3 span.show {
   opacity: 1;
   /* transition-timing-function: linear; */
   transition-duration: 2s;
@@ -292,7 +290,7 @@ canvas {
 .site__text li span {
   opacity: 0;
 }
-.site__text li span.show  {
+.site__text li span.show {
   opacity: 1;
   animation: power2-out 2s;
   /* transition-duration: 2s */
@@ -300,15 +298,14 @@ canvas {
 }
 .site__text p span {
   opacity: 0;
-
 }
-.site__text p span.show  {
+.site__text p span.show {
   opacity: 1;
   animation: power2-out 1s;
   /* transition-duration: 2s */
-  transition: all  5s ease-out;
+  transition: all 5s ease-out;
 }
-@media (max-width: 820px ) {
+@media (max-width: 820px) {
   .script__text ul {
     flex-wrap: wrap;
     display: flex;
@@ -316,7 +313,7 @@ canvas {
     align-items: flex-end;
   }
 }
-@media (max-width: 615px ){
+@media (max-width: 615px) {
   .game__text ul,
   .site__text ul {
     align-items: flex-start;
@@ -351,7 +348,7 @@ canvas {
   font-weight: 100;
   font-family: "Partizeno";
   text-align: center;
-  color: #3C6B56;
+  color: #3c6b56;
 }
 .card__text01 .right .sub {
   font-family: "ChosunNm";
@@ -361,7 +358,7 @@ canvas {
   margin-left: 1vw;
   line-height: 1.6;
   width: 90%;
-  color: #3C6B56;
+  color: #3c6b56;
 }
 .card__text01 .web__img01 {
   position: relative;
@@ -416,7 +413,7 @@ canvas {
   flex-wrap: nowrap;
   position: relative;
   padding-top: 10rem;
-  flex-direction: row-reverse
+  flex-direction: row-reverse;
 }
 .web__img02 img {
   flex: 0 0 65%;
@@ -433,7 +430,7 @@ canvas {
   font-weight: 100;
   font-family: "Partizeno";
   text-align: center;
-  color: #3C6B56;
+  color: #3c6b56;
 }
 .card__text02 .right .sub {
   font-family: "ChosunNm";
@@ -443,7 +440,7 @@ canvas {
   margin-left: 1vw;
   line-height: 1.6;
   width: 90%;
-  color: #3C6B56;
+  color: #3c6b56;
 }
 .card__text02 .web__img02 {
   position: relative;
@@ -488,8 +485,6 @@ canvas {
   text-align: center;
 }
 
-
-
 /* 3 */
 .card__text03 {
   display: flex;
@@ -515,7 +510,7 @@ canvas {
   font-weight: 100;
   font-family: "Partizeno";
   /* text-align: center; */
-  color: #3C6B56;
+  color: #3c6b56;
 }
 .card__text03 .right .sub {
   font-family: "ChosunNm";
@@ -525,7 +520,7 @@ canvas {
   /* margin-left: 1vw; */
   line-height: 1.6;
   width: 90%;
-  color: #3C6B56;
+  color: #3c6b56;
 }
 .card__text03 .web__img03 {
   position: relative;
@@ -578,7 +573,7 @@ canvas {
   flex-wrap: nowrap;
   position: relative;
   padding-top: 10rem;
-  flex-direction: row-reverse
+  flex-direction: row-reverse;
 }
 .web__img04 img {
   flex: 0 0 65%;
@@ -597,7 +592,7 @@ canvas {
   /* text-align: center; */
   margin-left: 1vw;
 
-  color: #3C6B56;
+  color: #3c6b56;
 }
 .card__text04 .right .sub {
   font-family: "ChosunNm";
@@ -607,7 +602,7 @@ canvas {
   margin-left: 1vw;
   line-height: 1.6;
   width: 90%;
-  color: #3C6B56;
+  color: #3c6b56;
 }
 .card__text04 .web__img04 {
   position: relative;
@@ -652,7 +647,6 @@ canvas {
   text-align: center;
 }
 
-
 /* 5 */
 .card__text05 {
   display: flex;
@@ -679,7 +673,7 @@ canvas {
   /* text-align: center; */
   margin-left: 1vw;
 
-  color: #3C6B56;
+  color: #3c6b56;
 }
 .card__text05 .right .sub {
   font-family: "ChosunNm";
@@ -689,7 +683,7 @@ canvas {
   margin-left: 1vw;
   line-height: 1.6;
   width: 90%;
-  color: #3C6B56;
+  color: #3c6b56;
 }
 .card__text05 .web__img05 {
   position: relative;
@@ -734,7 +728,6 @@ canvas {
   text-align: center;
 }
 
-
 @media (max-width: 960px) {
   .card__text01,
   .card__text03,
@@ -744,7 +737,7 @@ canvas {
   .card__text02,
   .card__text04 {
     /* flex-direction: column-reverse; */
-    flex-direction: column
+    flex-direction: column;
   }
   .right {
     margin-top: 5vw;
@@ -756,9 +749,9 @@ canvas {
     left: 45%;
     margin-left: 1.5vw;
   }
-  .view::after  {
+  .view::after {
     left: 52%;
-    top: 56.5%
+    top: 56.5%;
   }
   .card__text03 .title,
   .card__text04 .title,
@@ -828,14 +821,14 @@ canvas {
 .script__text h3 span {
   opacity: 0;
 }
-.script__text h3 span.show  {
+.script__text h3 span.show {
   opacity: 1;
   transition: all 0.5s ease-out;
 }
 .script__text li span {
   opacity: 0;
 }
-.script__text li span.show  {
+.script__text li span.show {
   opacity: 1;
   transition-duration: 2s;
   /* animation: power2-out 5s; */
@@ -844,11 +837,11 @@ canvas {
 .script__text p span {
   opacity: 0;
 }
-.script__text p span.show  {
+.script__text p span.show {
   opacity: 1;
   /* animation: power2-out 0.1s; */
-  transition: all  5s ease-out;
-} 
+  transition: all 5s ease-out;
+}
 
 /* game */
 #game {
@@ -885,17 +878,17 @@ canvas {
 }
 
 .game__text h3 span {
-  opacity: 0; 
+  opacity: 0;
 }
-.game__text h3 span.show  {
+.game__text h3 span.show {
   opacity: 1;
   transition-timing-function: linear;
-  transition: all  0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .game__text p span {
   opacity: 0;
   min-width: 1.4vw;
-  transition: all 0.9s ease-in-out;  
+  transition: all 0.9s ease-in-out;
 }
 
 .game__text p span.show {
@@ -904,7 +897,7 @@ canvas {
 .game__text li span {
   opacity: 0;
 }
-.game__text li span.show  {
+.game__text li span.show {
   opacity: 1;
   animation: power2-out 2s;
   /* transition-duration: 2s */
@@ -917,7 +910,7 @@ canvas {
     align-items: center;
     justify-content: center;
   }
-} 
+}
 @media (max-width: 990px) {
   iframe {
     height: 30vh;
