@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/common.css" />
     <style>
       * {
         box-sizing: border-box;
@@ -25,6 +23,9 @@
         position: relative;
         overflow: hidden;
         background-color: #111;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         user-select: none;
       }
 
@@ -38,11 +39,12 @@
         position: relative;
         height: 100%;
         width: 100%;
+        cursor: -webkit-grab;
         cursor: grab;
-
-        &.is-grabbing {
-          cursor: grabbing;
-        }
+      }
+      .slider.is-grabbing {
+        cursor: -webkit-grabbing;
+        cursor: grabbing;
       }
 
       .slider__inner {
@@ -106,56 +108,32 @@
     </style>
   </head>
   <body>
-    <div class="main">
-      <div class="slider js-slider">
-        <div class="slider__inner js-slider__inner">
-          <div class="slide js-slide">
-            <div
-              class="slide__bg"
-              style="background-image: url('https://placekitten.com/g/800/400')"
-            ></div>
-          </div>
-          <div class="slide js-slide">
-            <div
-              class="slide__bg"
-              style="background-image: url('https://placekitten.com/g/800/400')"
-            ></div>
-          </div>
-          <div class="slide js-slide">
-            <div
-              class="slide__bg"
-              style="background-image: url('https://placekitten.com/g/800/400')"
-            ></div>
-          </div>
-          <div class="slide js-slide">
-            <div
-              class="slide__bg"
-              style="background-image: url('https://placekitten.com/g/800/400')"
-            ></div>
-          </div>
-          <div class="slide js-slide">
-            <div
-              class="slide__bg"
-              style="background-image: url('https://placekitten.com/g/800/400')"
-            ></div>
-          </div>
-          <div class="slide js-slide">
-            <div
-              class="slide__bg"
-              style="background-image: url('https://placekitten.com/g/800/400')"
-            ></div>
-          </div>
-          <div class="slide js-slide">
-            <div
-              class="slide__bg"
-              style="background-image: url('https://placekitten.com/g/800/400')"
-            ></div>
-          </div>
+    <div class="slider js-slider">
+      <div class="slider__inner js-slider__inner">
+        <div class="slide js-slide">
+          <div
+            class="slide__bg"
+            style="background-image: url('https://placekitten.com/g/800/400')"
+          ></div>
+        </div>
+        <div class="slide js-slide">
+          <div
+            class="slide__bg"
+            style="background-image: url('https://placekitten.com/g/800/400')"
+          ></div>
+        </div>
+        <div class="slide js-slide">
+          <div
+            class="slide__bg"
+            style="background-image: url('https://placekitten.com/g/800/400')"
+          ></div>
         </div>
       </div>
-
-      <div class="text text--bottom-left">Drag to explore</div>
     </div>
+
+    <div class="text text--bottom-left">Drag to explore</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script>
       function _getClosest(item, array, getDiff) {
         var closest, diff;
