@@ -12,17 +12,13 @@
     <link rel="stylesheet" href="assets/css/scroll.css" />
     <link rel="stylesheet" href="assets/css/slider.css" />
     <link rel="stylesheet" href="assets/css/style3.css" />
+    <link rel="stylesheet" href="assets/css/imgeffect.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        /* .scrollTop {
-          position: fixed;
-          left: 20px;
-          bottom: 20px;
-          z-index: 1000;
-          background: rgba(0,0,0,0.4);
-          color: #fff;
-          padding: 10px 30px;
-          border-radius: 50px;
-        }
+    
       .about__text p span {
         opacity: 0;
         transition: all 0.9s ease-in-out;
@@ -38,10 +34,13 @@
         opacity: 1;
         transition-timing-function: linear;
         transition: all 0.3s ease-out;
-      } */
+      }
+      
     </style>
   </head>
   <body>
+  
+
     <header id="header">
       <nav id="nav">
         <a class="menu-trigger" href="#">
@@ -182,36 +181,38 @@
               </div>
             </div>
           </div>
+
           <!-- card01 -->
           <div class="effectimg">
             <div class="reveal">
-              <div class="card__text01">
-                <div class="left">
-                  <div class="web__img01">
-                    <a
-                      href="https://pkh2860.github.io/webs_class/site/webClass/index.html"
-                      class="view"
-                    ></a>
-                    <img src="assets/img/web.jpg" alt="" />
+                <div class="card__text01">
+                  <div class="left">
+                    <div class="web__img01">
+                      <a
+                        href="https://pkh2860.github.io/webs_class/site/webClass/index.html"
+                        class="view"
+                      ></a>
+                      <img src="assets/img/web.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="text">
+                      <h4 class="title">WebStandard</h4>
+                      <p class="sub">
+                        기본 레이아웃을 바탕으로 카드타입, 이미지타입 등 섹션을<br />
+                        나눠서 작업하였습니다. 스와이퍼 플러그인을 사용하여
+                        이미지<br />
+                        슬라이더를 만들고 웹 접근성을 위해 ir기법을 이용해 대체<br />
+                        텍스트가 아닌 숨긴 텍스트를 사용했습니다.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div class="right">
-                  <div class="text">
-                    <h4 class="title">WebStandard</h4>
-                    <p class="sub">
-                      기본 레이아웃을 바탕으로 카드타입, 이미지타입 등 섹션을<br />
-                      나눠서 작업하였습니다. 스와이퍼 플러그인을 사용하여
-                      이미지<br />
-                      슬라이더를 만들고 웹 접근성을 위해 ir기법을 이용해 대체<br />
-                      텍스트가 아닌 숨긴 텍스트를 사용했습니다.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
-          <!-- card02 -->
+          
+          <!-- 02 -->
           <div class="effectimg">
             <div class="reveal">
               <div class="card__text02">
@@ -224,6 +225,7 @@
                     <img src="assets/img/web2.jpg" alt="" />
                   </div>
                 </div>
+
                 <div class="right">
                   <div class="text">
                     <h4 class="title">WebStandard</h4>
@@ -239,6 +241,8 @@
               </div>
             </div>
           </div>
+          
+
 
           <!-- card3 -->
           <div class="effectimg">
@@ -472,21 +476,9 @@
                   <li><a href="#">Tistory</a></li>
                   <li><a href="#">Github</a></li>
                 </ul>
-
             </div>
-          
           </div>
-         
         </section>
-
-        <!-- <div id="footer">
-            <h3>I will reply back
-              As soon as
-              I receive the email</h3>
-       
-        </div> -->
-
-
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
@@ -494,34 +486,49 @@
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script type="text/javascript" src="/parallax/js/skrollr.min.js"></script>
 
     <script src="assets/js/canvas.js"></script>
     <script src="assets/js/slider.js"></script>
     <script>
-       document.querySelectorAll(".banner__text em, .about__text h2").forEach((desc) => {
+
+
+        document.querySelectorAll(".banner__text em, .about__text h2, .site__text h3").forEach((desc) => {
           let splitText = desc.innerText;
-          let splitWrap = splitText
-            .split("")
-            .join("</span><span aria-hidden='true'>");
+          let splitWrap = splitText.split("").join("</span><span aria-hidden='true'>");
+
           splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
           desc.innerHTML = splitWrap;
           desc.setAttribute("aria-label", splitText);
         });
 
-// 
-      gsap.registerPlugin(ScrollTrigger);
+       
 
+
+
+
+      gsap.registerPlugin(ScrollTrigger);
+      let state = false
       const pageContainer = document.querySelector(".section");
 
       const scroller = new LocomotiveScroll({
         el: pageContainer,
-        smooth: true,
+        smooth: true
       });
 
       scroller.on("scroll", ScrollTrigger.update);
 
       ScrollTrigger.scrollerProxy(pageContainer, {
         scrollTop(value) {
+          if(scroller.scroll.instance.scroll.y >500 && !state){//
+            state = true;
+            let aboutText = document.querySelectorAll(".about__text span")
+        aboutText.forEach((el,index) => {
+          setTimeout(()=> {
+            el.classList.add("show")
+          },80 * (index + 1))
+        })
+          }//
           return arguments.length
             ? scroller.scrollTo(value, 0, 0)
             : scroller.scroll.instance.scroll.y;
@@ -531,11 +538,12 @@
             left: 0,
             top: 0,
             width: window.innerWidth,
-            height: window.innerHeight,
+            height: window.innerHeight
           };
         },
-        pinType: pageContainer.style.transform ? "transform" : "fixed",
+        pinType: pageContainer.style.transform ? "transform" : "fixed"
       });
+
 
       window.addEventListener("load", function () {
         let pinBoxes = document.querySelectorAll(".pin-wrap > *");
@@ -545,17 +553,17 @@
 
         gsap.to(".pin-wrap", {
           scrollTrigger: {
-            scroller: pageContainer,
+            scroller: pageContainer, 
             scrub: true,
             trigger: "#sectionPin",
             pin: true,
+            // anticipatePin: 1,
             start: "top top",
-            // end: pinWrapWidth,
+            // end: pinWrapWidth
             end: "+=5980",
-            scrub: 1,
           },
           x: -horizontalScrollLength,
-          ease: "none",
+          ease: "none"
         });
 
         ScrollTrigger.addEventListener("refresh", () => scroller.update());
@@ -563,7 +571,18 @@
         ScrollTrigger.refresh();
       });
 
+
+
       // 애니메이션
+      document.querySelectorAll(".banner__text em").forEach((desc) => {
+          let splitText = desc.innerText;
+          let splitWrap = splitText
+            .split("")
+            .join("</span><span aria-hidden='true'>");
+          splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+          desc.innerHTML = splitWrap;
+          desc.setAttribute("aria-label", splitText);
+        });
      
 
       gsap.set(".banner__text h1 em span", { opacity: 0, y: -500 });
@@ -580,31 +599,60 @@
         tl.to("#header", { duration: 0.3, autoAlpha: 1, top: 0 });
         tl.to("#canvas_bg", { duration: 0.3, autoAlpha: 1 });
       }, 1000);
-      
 
 
-        function scroll(){
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;  
-        document.querySelector(".scrollTop").innerText = Math.round(scrollTop); 
-        document.querySelectorAll("#about").forEach((item) => {
-              if (scrollTop > item.offsetTop) {
-                item.querySelectorAll(".about__text span").forEach((span, index) => {
-                    setTimeout(() => {
-                      span.classList.add("show");
-                    }, 50 * (index + 2));
-                  });
-                }
-             });
-              requestAnimationFrame(scroll);
-            } 
-            scroll();
-
-    
 
 
-      
+      // img 효과
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.7,
+      };
 
+      let revealCallback = (entries, self) => {
+        entries.forEach((entry) => {
+          let container = entry.target;
+          let img = entry.target.querySelector("img");
+          const easeInOut = "power3.out";
+          const revealAnim = gsap.timeline({ ease: easeInOut });
+
+          if (entry.isIntersecting) {
+            revealAnim.set(container, {
+              visibility: "visible",
+            });
+            revealAnim.fromTo(
+              container,
+              {
+                clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+                webkitClipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+              },
+              {
+                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                duration: 1,
+                ease: easeInOut,
+              }
+            );
+            revealAnim.from(img, 4, {
+              // scale: 1.4,
+              scale: 1,
+              ease: easeInOut,
+              delay: -1,
+              // delay: -3
+            });
+            self.unobserve(entry.target);
+          }
+        });
+      };
+
+      let revealObserver = new IntersectionObserver(revealCallback, options);
+
+      document.querySelectorAll(".reveal").forEach((reveal) => {
+        revealObserver.observe(reveal);
+      });
      
     </script>
+
   </body>
 </html>

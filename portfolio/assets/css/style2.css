@@ -333,7 +333,7 @@ canvas {
   position: relative;
   padding-top: 10rem;
 }
-.web__img01 img {
+.web__img img {
   flex: 0 0 65%;
   z-index: -1;
 }

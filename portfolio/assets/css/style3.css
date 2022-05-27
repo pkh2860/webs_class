@@ -230,6 +230,7 @@ canvas {
 #site {
   /* padding-top: 15vh; */
   padding-top: 50vh;
+  /* padding-bottom: 30vh; */
 }
 #site h3 {
   color: #3c6b56;
@@ -274,6 +275,7 @@ canvas {
   flex-wrap: nowrap;
   position: relative;
   padding-top: 10rem;
+  /* margin-bottom: 15vw; */
 }
 .card__text01 .web__img01 img {
   flex: 0 0 65%;
@@ -359,9 +361,10 @@ canvas {
   flex-wrap: nowrap;
   position: relative;
   flex-direction: row-reverse;
-  padding-top: 25rem;
+  padding-top: 15rem;
+  /* padding-top: 20rem; */
 }
-.card__text02 .web__img02 img {
+.web__img02 img {
   flex: 0 0 65%;
   z-index: -1;
 }
@@ -440,7 +443,7 @@ canvas {
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
-  padding-top: 25rem;
+  padding-top: 15rem;
 }
 .card__text03 .web__img03 img {
   flex: 0 0 65%;
@@ -520,7 +523,7 @@ canvas {
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
-  padding-top: 25rem;
+  padding-top: 15rem;
 
   flex-direction: row-reverse;
 }
@@ -603,8 +606,7 @@ canvas {
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
-  padding-top: 25rem;
-  padding-bottom: 10vh;
+padding-top: 15rem;
 }
 .card__text05 .web__img05 img {
   flex: 0 0 65%;
@@ -910,16 +912,14 @@ canvas {
   display: flex;
   flex-direction: column;
 }
-
 #footer .blog {
-  text-align: right;
-}
-.blog ul {
-  display: flex;
-}
-.blog li {
-  display: inline-block;
   font-family: "Saint Monica";
   font-size: 1vw;
   color: #3C6B56;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -2.2vw;
+}
+#footer .blog li {
+  margin-left: 6vh;
 }
