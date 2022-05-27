@@ -55,6 +55,9 @@ iframe {
   align-items: center;
   /* padding: 50px 10vw; */
   padding: 50px 40vw;
+  min-width: 650vw ;
+
+
 }
 .pin-wrap > * {
   min-width: 60vw;
@@ -107,7 +110,7 @@ iframe {
 }
 .banner__text {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
