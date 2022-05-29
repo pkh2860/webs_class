@@ -342,26 +342,10 @@ button {
 
 
 /*  */
-
-/* .slider__btn a {
-  position: absolute;
-  transform: translateY(-50%);
-  z-index: 100;
-  width: 50px;
-  height: 50px;
-  background: rgba(0, 0, 0, 0.4);
-  text-align: center;
-  line-height: 50px;
-  transition: all 0.2s;
-  display: block;
-  color: #fff;
-  text-decoration: none;
-} */
-.controls {
+/* .controls {
   position: relative;
   z-index: 1;
   display: flex;
-  /* justify-content: flex-end; */
   justify-content: center;
 
   padding: 0.25rem 0 0.25rem 0;
@@ -435,5 +419,5 @@ button {
   .pin-wrap {
     height: 100vh;
   }
-}
+} */
 
