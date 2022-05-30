@@ -35,7 +35,30 @@
         transition-timing-function: linear;
         transition: all 0.3s ease-out;
       }
-      
+
+      /* .site__text h3 span {
+  opacity: 0;
+}
+.site__text h3 span.show {
+  opacity: 1;
+  transition-duration: 2s;
+  transition: all 0.5s ease-out;
+}
+.site__text li span {
+  opacity: 0;
+}
+.site__text li span.show {
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+.site__text p span {
+  opacity: 0;
+}
+.site__text p span.show {
+  opacity: 1;
+  transition: all 5s ease-out;
+}
+       */
     </style>
   </head>
   <body>
@@ -67,10 +90,13 @@
               <h1>
                 <em>portfolio</em> <strong>2022</strong>
               </h1>
-              <p data-scroll data-scroll-speed="vertical" data-scroll-delay=horizontal">
-                <span>welcome to my portfolio</span> <br />
+              <p class="one" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+                <span>welcome to my portfolio</span> 
+              </p>
+              <p class="two"  data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
                 <span> We will become a developing frontend</span>
               </p>
+            
             </div>
           </div>
         </section>
@@ -79,7 +105,7 @@
           <div id="about">
             <div class="about__cont">
               <div class="container">
-                <div class="about__text">
+                <div class="about__text"   data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
                   <h2>About</h2>
                   <p>
                     <span>
@@ -152,7 +178,7 @@
         <div class="section">
           <div id="site">
             <div class="container">
-              <div class="site__text">
+              <div class="site__text"  data-scroll data-scroll-speed="3" data-scroll-direction="horizontal">
                 <h3>Site</h3>
                 <ul>
                   <li>
@@ -185,7 +211,7 @@
           <!-- card01 -->
           <div class="effectimg">
             <div class="reveal">
-                <div class="card__text01">
+                <div class="card__text01" data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
                   <div class="left">
                     <div class="web__img01">
                       <a
@@ -214,8 +240,8 @@
           
           <!-- 02 -->
           <div class="effectimg">
-            <div class="reveal">
-              <div class="card__text02">
+            <div class="reveal" >
+              <div class="card__text02"  data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
                 <div class="left">
                   <div class="web__img02">
                     <a
@@ -247,7 +273,7 @@
           <!-- card3 -->
           <div class="effectimg">
             <div class="reveal">
-              <div class="card__text03">
+              <div class="card__text03"  data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
                 <div class="left">
                   <div class="web__img03">
                     <a href="https://2860.netlify.app/" class="view"></a>
@@ -271,7 +297,7 @@
           <!-- card4 -->
           <div class="effectimg">
             <div class="reveal">
-              <div class="card__text04">
+              <div class="card__text04"  data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
                 <div class="left">
                   <div class="web__img04">
                     <a
@@ -299,7 +325,7 @@
           <!-- card5 -->
           <div class="effectimg">
             <div class="reveal">
-              <div class="card__text05">
+              <div class="card__text05"  data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
                 <div class="left">
                   <div class="web__img05">
                     <a href="#" class="view"></a>
@@ -328,6 +354,7 @@
           <div class="pin-wrap">
             <div id="script">
               <div class="script__text">
+              <div  data-scroll data-scroll-speed="4" data-scroll-direction="vertical">
                 <h3>Script</h3>
                 <ul>
                   <li>
@@ -343,20 +370,23 @@
                     <a href="#"><span> 4. Slider Effect</span> </a>
                   </li>
                 </ul>
-                <p>
-                  <span>
-                    스크립트와 제이쿼리를 이용하여 각 페이지마다 다양한 효과를
-                    주고<br
-                  /></span>
-                  <span>
-                    코드를 어떻게 만들었는지 보이기 위해 소스보기 버튼을
-                    만들어서<br
-                  /></span>
-                  <span>
-                    HTML, CSS, JAVASCRIPT 종류별로 나눠서 보여줄 수 있도록<br />
-                    만들었습니다.
-                  </span>
-                </p>
+              </div>
+                <div data-scroll data-scroll-speed="-4" data-scroll-direction="vertical">
+                  <p>
+                    <span>
+                      스크립트와 제이쿼리를 이용하여 각 페이지마다 다양한 효과를
+                      주고<br
+                    /></span>
+                    <span>
+                      코드를 어떻게 만들었는지 보이기 위해 소스보기 버튼을
+                      만들어서<br
+                    /></span>
+                    <span>
+                      HTML, CSS, JAVASCRIPT 종류별로 나눠서 보여줄 수 있도록<br />
+                      만들었습니다.
+                    </span>
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -374,15 +404,16 @@
                     </h1>
                   </a>
                 </div>
-                <p class="description">
-                  스크립트를 이용하여 문제를 만들고 푸는 퀴즈 이펙트를
-                  만들었습니다 정답과 오답에 각각 다른 효과를 줘서 정답이면<br />
-                  강아지가 웃고오답이면 강아지가 눈물을 흘리는효과를
-                  추가하였습니다 정답 확인하기 버튼을 클릭하면 정답이 나오고<br />
-                  1번~7번까지의 페이지 마다 해당하는 코드를 볼 수 있도록
-                  소스보기 버튼을 만들고 <br />소스보기를 클릭하거나 닫을때
-                  애니메이션 효과를 줘서 더 자연스럽게 만들었습니다.<br />
-                </p>
+                  <p class="description">
+                    스크립트를 이용하여 문제를 만들고 푸는 퀴즈 이펙트를
+                    만들었습니다 정답과 오답에 각각 다른 효과를 줘서 정답이면<br />
+                    강아지가 웃고오답이면 강아지가 눈물을 흘리는효과를
+                    추가하였습니다 정답 확인하기 버튼을 클릭하면 정답이 나오고<br />
+                    1번~7번까지의 페이지 마다 해당하는 코드를 볼 수 있도록
+                    소스보기 버튼을 만들고 <br />소스보기를 클릭하거나 닫을때
+                    애니메이션 효과를 줘서 더 자연스럽게 만들었습니다.<br />
+                  </p>
+               
               </div>
             </div>
 
@@ -521,14 +552,14 @@
       ScrollTrigger.scrollerProxy(pageContainer, {
         scrollTop(value) {
           if(scroller.scroll.instance.scroll.y >500 && !state){//
-            state = true;
+              state = true;
             let aboutText = document.querySelectorAll(".about__text span")
-        aboutText.forEach((el,index) => {
-          setTimeout(()=> {
-            el.classList.add("show")
-          },80 * (index + 1))
-        })
-          }//
+              aboutText.forEach((el,index) => {
+                setTimeout(()=> {
+                  el.classList.add("show")
+                },80 * (index + 1))
+              })
+           }//
           return arguments.length
             ? scroller.scrollTo(value, 0, 0)
             : scroller.scroll.instance.scroll.y;
@@ -606,53 +637,57 @@
 
 
       // img 효과
-      const options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.7,
-      };
+      // const options = {
+      //   root: null,
+      //   rootMargin: "0px",
+      //   threshold: 0.7,
+      // };
 
-      let revealCallback = (entries, self) => {
-        entries.forEach((entry) => {
-          let container = entry.target;
-          let img = entry.target.querySelector("img");
-          const easeInOut = "power3.out";
-          const revealAnim = gsap.timeline({ ease: easeInOut });
+      // let revealCallback = (entries, self) => {
+      //   entries.forEach((entry) => {
+      //     let container = entry.target;
+      //     let img = entry.target.querySelector(".left img");
+      //     let text = entry.target.querySelector(".right .text")
+      //     const easeInOut = "power3.out";
+      //     const revealAnim = gsap.timeline({ ease: easeInOut });
 
-          if (entry.isIntersecting) {
-            revealAnim.set(container, {
-              visibility: "visible",
-            });
-            revealAnim.fromTo(
-              container,
-              {
-                clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-                webkitClipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-              },
-              {
-                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-                webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-                duration: 1,
-                ease: easeInOut,
-              }
-            );
-            revealAnim.from(img, 4, {
-              // scale: 1.4,
-              scale: 1,
-              ease: easeInOut,
-              delay: -1,
-              // delay: -3
-            });
-            self.unobserve(entry.target);
-          }
-        });
-      };
+      //     if (entry.isIntersecting) {
+      //       revealAnim.set(container, {
+      //         visibility: "visible",
+      //       });
+      //       revealAnim.fromTo(
+      //         container,
+      //         {
+      //           clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+      //           webkitClipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"
+      //         },
+      //         {
+      //           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      //           webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      //           duration: 1,
+      //           ease: easeInOut,
+      //         }
+      //       );
+           
+      //       revealAnim.from(img, 5, {
+      //         // scale: 1.4,
+      //         scale: 1,
+      //         ease: easeInOut,
+      //         delay: -1,
+      //         // xPercent: 1,
+      //         // delay: -3
+      //       });
+          
+      //       self.unobserve(entry.target);
+      //     }
+      //   });
+      // };
 
-      let revealObserver = new IntersectionObserver(revealCallback, options);
+      // let revealObserver = new IntersectionObserver(revealCallback, options);
 
-      document.querySelectorAll(".reveal").forEach((reveal) => {
-        revealObserver.observe(reveal);
-      });
+      // document.querySelectorAll(".reveal").forEach((reveal) => {
+      //   revealObserver.observe(reveal);
+      // });
      
     </script>
 

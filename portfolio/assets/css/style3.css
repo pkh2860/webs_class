@@ -55,12 +55,12 @@ iframe {
   align-items: center;
   /* padding: 50px 10vw; */
   padding: 50px 40vw;
-  min-width: 650vw ;
 
-
+  /*  */
+  min-width: 500vw ;
 }
 .pin-wrap > * {
-  min-width: 60vw;
+  min-width: 70vw;
   /* min-width: 80vw; */
   padding: 0 5vw;
 }
@@ -130,7 +130,7 @@ iframe {
   position: absolute;
   bottom: 6vw;
 }
-.banner__text p {
+.banner__text .one {
   position: absolute;
   font-family: "Gmarket Sans";
   line-height: 1.5;
@@ -140,6 +140,19 @@ iframe {
   text-transform: uppercase;
   color: #3c6b56;
   bottom: -8vh;
+  margin-left: -4vh;
+}
+.banner__text .two {
+  position: absolute;
+  font-family: "Gmarket Sans";
+  line-height: 1.5;
+  /* font-size: 2.5vh; */
+  font-size: 1.2vw;
+  font-weight: 300;
+  text-transform: uppercase;
+  bottom: -12vh;
+  color: #3c6b56;
+  margin-left: 2.5vh;
 }
 canvas {
   width: 100%;
@@ -364,7 +377,7 @@ canvas {
   flex-wrap: nowrap;
   position: relative;
   flex-direction: row-reverse;
-  padding-top: 15rem;
+  padding-top: 20rem;
   /* padding-top: 20rem; */
 }
 .web__img02 img {
@@ -446,7 +459,8 @@ canvas {
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
-  padding-top: 15rem;
+  /* padding-top: 15rem; */
+  padding-top: 20rem;
 }
 .card__text03 .web__img03 img {
   flex: 0 0 65%;
@@ -526,7 +540,9 @@ canvas {
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
-  padding-top: 15rem;
+  /* padding-top: 15rem; */
+  padding-top: 20rem;
+
 
   flex-direction: row-reverse;
 }
@@ -609,7 +625,9 @@ canvas {
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
-padding-top: 15rem;
+/* padding-top: 15rem; */
+padding-top: 20rem;
+
 }
 .card__text05 .web__img05 img {
   flex: 0 0 65%;
