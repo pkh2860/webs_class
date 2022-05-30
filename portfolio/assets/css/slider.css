@@ -135,6 +135,9 @@ body {
   height: 55vh;
   pointer-events: none;
 }
+.about__slider .imgbg {
+  background-position: bottom;
+}
 
 .slide {
   display: flex;
