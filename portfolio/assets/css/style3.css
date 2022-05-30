@@ -56,7 +56,7 @@ iframe {
   /* padding: 50px 10vw; */
   padding: 50px 40vw;
 
-  /*  */
+  /* 가로 스크롤 길이 */
   min-width: 500vw ;
 }
 .pin-wrap > * {
