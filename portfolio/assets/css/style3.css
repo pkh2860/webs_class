@@ -54,17 +54,18 @@ iframe {
   /* padding: 50px 35vw; */
 
   /* 가로 스크롤 길이 */
-  min-width: 450vw;
+  min-width: 490vw;
 }
 .pin-wrap > * {
-  /* min-width: 70vw; */
-  min-width: 55vw;
+  min-width: 75vw;
+  /* min-width: 55vw; */
   padding: 0 5vw;
 }
 .pin {
   height: 80vh;
   width: auto;
   object-fit: cover;
+  text-align: center;
 }
 .pin01 {
   height: 80vh;
