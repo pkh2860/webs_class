@@ -168,7 +168,7 @@
         <div class="section">
           <div id="site">
             <div class="container">
-              <div class="site__text" data-scroll="" data-scroll-speed="2">
+              <div class="site__text" data-scroll="" data-scroll-speed="3">
                 <h3>Site</h3>
                 <ul>
                   <li>
@@ -201,7 +201,7 @@
 
           <!-- card01 -->
           <div class="effectimg">
-            <div class="reveal">
+
               <div class="card__text01" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
                 <div class="left">
                   <div class="web__img01">
@@ -226,13 +226,12 @@
                     </p>
                   </div>
                 </div>
-              </div>
+
             </div>
           </div>
 
           <!-- 02 -->
           <div class="effectimg">
-            <div class="reveal">
               <div class="card__text02" data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
                 <div class="left">
                   <div class="web__img02">
@@ -259,12 +258,10 @@
                   </div>
                 </div>
               </div>
-            </div>
           </div>
 
           <!-- card3 -->
           <div class="effectimg">
-            <div class="reveal">
               <div class="card__text03" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
                 <div class="left">
                   <div class="web__img03">
@@ -283,12 +280,10 @@
                   </div>
                 </div>
               </div>
-            </div>
           </div>
 
           <!-- card4 -->
           <div class="effectimg">
-            <div class="reveal">
               <div class="card__text04"data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal" >
                 <div class="left">
                   <div class="web__img04">
@@ -313,12 +308,10 @@
                   </p>
                 </div>
               </div>
-            </div>
           </div>
         </div>
         <!-- card5 -->
         <div class="effectimg">
-          <div class="reveal">
             <div class="card__text05" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
               <div class="left">
                 <div class="web__img05">
@@ -338,7 +331,6 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
 
         <!-- end -->
@@ -347,8 +339,8 @@
       <section id="sectionPin">
         <div class="pin-wrap">
           <div id="script">
-            <div class="script__text"  data-scroll="" data-scroll-speed="1">
-              <div data-scroll="">
+            <div class="script__text" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+              <div>
                 <h3 >Script</h3>
                 <ul>
                   <li>
@@ -383,11 +375,13 @@
               </div>
             </div>
           </div>
+       
 
           <div class="pin">
-            <iframe
+            <div class="reveal">
+              <iframe
               class="parallax"
-              src="https://pkh2860.github.io/webs_class/javascript/effect/parallaxEffect.html"
+              src="https://pkh2860.github.io/webs_class/javascript/effect/quizEffect.html"
               frameborder="0"
             ></iframe>
             <div>
@@ -408,10 +402,13 @@
                 효과를 줘서 더 자연스럽게 만들었습니다.<br />
               </p>
             </div>
+            </div>
+             
           </div>
 
           <div class="pin">
-            <iframe
+            <div class="reveal">
+              <iframe
               class="parallax"
               src="https://pkh2860.github.io/webs_class/javascript/effect/mouseEffect.html"
               frameborder="0"
@@ -433,10 +430,13 @@
                 보았습니다.<br />
               </p>
             </div>
+            </div>
+           
           </div>
 
           <div class="pin">
-            <iframe
+            <div class="reveal">
+              <iframe
               class="parallax"
               src="https://pkh2860.github.io/webs_class/javascript/effect/parallaxEffect.html"
               frameborder="0"
@@ -459,9 +459,12 @@
                 지남에 따라 한 자씩 천천히 올라오게 구현하였습니다
               </p>
             </div>
+            </div>
+           
           </div>
           <div class="pin">
-            <iframe
+            <div class="reveal">
+              <iframe
               class="parallax"
               src="https://pkh2860.github.io/webs_class/javascript/effect/sliderEffect.html"
               frameborder="0"
@@ -482,6 +485,8 @@
               </p>
             </div>
           </div>
+            </div>
+          
         </div>
       </section>
 
@@ -627,57 +632,53 @@
       }, 1000);
 
       // img 효과
-      // const options = {
-      //   root: null,
-      //   rootMargin: "0px",
-      //   threshold: 0.7,
-      // };
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.9
+      };
 
-      // let revealCallback = (entries, self) => {
-      //   entries.forEach((entry) => {
-      //     let container = entry.target;
-      //     let img = entry.target.querySelector(".left img");
-      //     let text = entry.target.querySelector(".right .text")
-      //     const easeInOut = "power3.out";
-      //     const revealAnim = gsap.timeline({ ease: easeInOut });
+      let revealCallback = (entries, self) => {
+        entries.forEach((entry) => {
+          let container = entry.target;
+          let img = entry.target.querySelector("img");
+          const easeInOut = "power3.out";
+          const revealAnim = gsap.timeline({ ease: easeInOut });
 
-      //     if (entry.isIntersecting) {
-      //       revealAnim.set(container, {
-      //         visibility: "visible",
-      //       });
-      //       revealAnim.fromTo(
-      //         container,
-      //         {
-      //           clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-      //           webkitClipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"
-      //         },
-      //         {
-      //           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-      //           webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-      //           duration: 1,
-      //           ease: easeInOut,
-      //         }
-      //       );
+          if (entry.isIntersecting) {
+            revealAnim.set(container, {
+              visibility: "visible"
+            });
+            revealAnim.fromTo(
+              container,
+              {
+                clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+                webkitClipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"
+              },
+              {
+                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                duration: 1,
+                ease: easeInOut
+              }
+            );
+            revealAnim.from(img, 4, {
+              scale: 1.4,
+              ease: easeInOut,
+              delay: -1
+            });
+            self.unobserve(entry.target);
+          }
+        });
+      };
 
-      //       revealAnim.from(img, 5, {
-      //         // scale: 1.4,
-      //         scale: 1,
-      //         ease: easeInOut,
-      //         delay: -1,
-      //         // xPercent: 1,
-      //         // delay: -3
-      //       });
+      let revealObserver = new IntersectionObserver(revealCallback, options);
 
-      //       self.unobserve(entry.target);
-      //     }
-      //   });
-      // };
+      document.querySelectorAll(".reveal").forEach((reveal) => {
+        revealObserver.observe(reveal);
+      });
 
-      // let revealObserver = new IntersectionObserver(revealCallback, options);
-
-      // document.querySelectorAll(".reveal").forEach((reveal) => {
-      //   revealObserver.observe(reveal);
-      // });
+      
     </script>
   </body>
 </html>
