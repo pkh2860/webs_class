@@ -5,7 +5,6 @@ body {
   /* max-width: 100%;
   width: 100%; */
   overscroll-behavior: none;
-  
 }
 
 section:not(#sectionPin) {
@@ -57,7 +56,7 @@ iframe {
   padding: 50px 40vw;
 
   /* 가로 스크롤 길이 */
-  min-width: 500vw ;
+  min-width: 500vw;
 }
 .pin-wrap > * {
   min-width: 70vw;
@@ -168,7 +167,6 @@ canvas {
 }
 .about__text {
   padding-bottom: 10vh;
-  
 }
 .about__cont {
   width: 100%;
@@ -200,7 +198,7 @@ canvas {
             display: none;
         }
     } */
-    /* @media (max-width: 540px) {
+/* @media (max-width: 540px) {
         #header #nav ul {
             flex-direction: column;
             align-items: center;
@@ -268,7 +266,7 @@ canvas {
   font-size: 1.9rem;
   color: #3c6b56;
 }
-.site__text p {
+.site__text .site_desc {
   font-weight: 100;
   font-family: "ChosunNm";
   margin-bottom: 5vw;
@@ -277,7 +275,7 @@ canvas {
   /* font-size: 2vh; */
   font-size: 2.5vh;
 }
-@media (max-width: 500px){
+@media (max-width: 500px) {
   #site {
     padding-top: 60vh;
   }
@@ -326,36 +324,35 @@ canvas {
 .card__text01 .web__img01 {
   position: relative;
 }
-.card__text01 .view {
-  /* padding-top: 0.6vw;
-    margin-left: 1.6rem; */
-  color: #fff;
-  font-size: 3vw;
-  font-weight: 100;
-  font-family: "Partizeno";
-  line-height: 1;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  /* position: absolute; */
-  /* text-align: center; */
-}
-.card__text01 .view::after {
+
+/* .card__text01 .view::after {
   content: "VIEW";
   width: 10vw;
   height: 10vw;
-  /* left: 36.9vw;
-  top: 23.6vw; */
-  /* left: 36.4vw; */
+
   left: 36.6vw;
   top: 23.5vw;
   transform: translate(-50%, -50%);
   position: absolute;
   z-index: 99999;
-  /* margin-top: 5rem; */
+
+} */
+.card__text01 .view {
+  color: #fff;
+  font-size: 3vw;
+  font-weight: 100;
+  font-family: "Partizeno";
+  line-height: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
 }
+
 .card__text01 .view::before {
   content: "";
+  margin: 0 auto;
   background-color: rgba(60, 107, 86, 0.5);
   width: 10vw;
   height: 10vw;
@@ -364,9 +361,8 @@ canvas {
   transform: translate(-50%, -50%);
   position: absolute;
   border-radius: 50%;
-  z-index: 99999;
+  z-index: -1;
   backdrop-filter: saturate(180%) blur(20px);
-  text-align: center;
 }
 
 /* card02 */
@@ -377,7 +373,7 @@ canvas {
   flex-wrap: nowrap;
   position: relative;
   flex-direction: row-reverse;
-  padding-top: 20rem;
+  padding-top: 40rem;
   /* padding-top: 20rem; */
 }
 .web__img02 img {
@@ -399,7 +395,6 @@ canvas {
 }
 .card__text02 .right .sub {
   font-family: "ChosunNm";
-  /* font-size: 1.2rem; */
   font-size: 1.2rem;
   margin-top: 0.9vw;
   margin-left: 2vw;
@@ -411,34 +406,21 @@ canvas {
   position: relative;
 }
 .card__text02 .view {
-  /* padding-top: 0.6vw;
-    margin-left: 1.6rem; */
   color: #fff;
   font-size: 3vw;
   font-weight: 100;
   font-family: "Partizeno";
   line-height: 1;
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /* position: absolute; */
-  /* text-align: center; */
-}
-.card__text02 .view::after {
-  content: "VIEW";
-  width: 10vw;
-  height: 10vw;
-  /* left: 52.6%;
-  top: 60%; */
-  left: 36.6vw;
-  top: 23.5vw;
-  transform: translate(-50%, -50%);
-  position: absolute;
   z-index: 99999;
-  /* margin-top: 5rem; */
 }
+
 .card__text02 .view::before {
   content: "";
+  margin: 0 auto;
   background-color: rgba(60, 107, 86, 0.5);
   width: 10vw;
   height: 10vw;
@@ -447,9 +429,8 @@ canvas {
   transform: translate(-50%, -50%);
   position: absolute;
   border-radius: 50%;
-  z-index: 99999;
+  z-index: -1;
   backdrop-filter: saturate(180%) blur(20px);
-  text-align: center;
 }
 
 /* card03 */
@@ -460,7 +441,7 @@ canvas {
   flex-wrap: nowrap;
   position: relative;
   /* padding-top: 15rem; */
-  padding-top: 20rem;
+  padding-top: 55rem;
 }
 .card__text03 .web__img03 img {
   flex: 0 0 65%;
@@ -492,34 +473,21 @@ canvas {
   position: relative;
 }
 .card__text03 .view {
-  /* padding-top: 0.6vw;
-    margin-left: 1.6rem; */
   color: #fff;
   font-size: 3vw;
   font-weight: 100;
   font-family: "Partizeno";
   line-height: 1;
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /* position: absolute; */
-  /* text-align: center; */
-}
-.card__text03 .view::after {
-  content: "VIEW";
-  width: 10vw;
-  height: 10vw;
-  /* left: 52.6%;
-    top: 60%; */
-  left: 36.6vw;
-  top: 23.5vw;
-  transform: translate(-50%, -50%);
-  position: absolute;
   z-index: 99999;
-  /* margin-top: 5rem; */
 }
+
 .card__text03 .view::before {
   content: "";
+  margin: 0 auto;
   background-color: rgba(60, 107, 86, 0.5);
   width: 10vw;
   height: 10vw;
@@ -528,9 +496,8 @@ canvas {
   transform: translate(-50%, -50%);
   position: absolute;
   border-radius: 50%;
-  z-index: 99999;
+  z-index: -1;
   backdrop-filter: saturate(180%) blur(20px);
-  text-align: center;
 }
 
 /* card04 */
@@ -541,8 +508,7 @@ canvas {
   flex-wrap: nowrap;
   position: relative;
   /* padding-top: 15rem; */
-  padding-top: 20rem;
-
+  padding-top: 65rem;
 
   flex-direction: row-reverse;
 }
@@ -577,34 +543,21 @@ canvas {
   position: relative;
 }
 .card__text04 .view {
-  /* padding-top: 0.6vw;
-      margin-left: 1.6rem; */
   color: #fff;
   font-size: 3vw;
   font-weight: 100;
   font-family: "Partizeno";
   line-height: 1;
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /* position: absolute; */
-  /* text-align: center; */
-}
-.card__text04 .view::after {
-  content: "VIEW";
-  width: 10vw;
-  height: 10vw;
-  /* left: 52.6%;
-  top: 60%; */
-  left: 36.6vw;
-  top: 23.5vw;
-  transform: translate(-50%, -50%);
-  position: absolute;
   z-index: 99999;
-  /* margin-top: 5rem; */
 }
+
 .card__text04 .view::before {
   content: "";
+  margin: 0 auto;
   background-color: rgba(60, 107, 86, 0.5);
   width: 10vw;
   height: 10vw;
@@ -613,9 +566,8 @@ canvas {
   transform: translate(-50%, -50%);
   position: absolute;
   border-radius: 50%;
-  z-index: 99999;
+  z-index: -1;
   backdrop-filter: saturate(180%) blur(20px);
-  text-align: center;
 }
 
 /* card05 */
@@ -625,9 +577,8 @@ canvas {
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
-/* padding-top: 15rem; */
-padding-top: 20rem;
-
+  /* padding-top: 15rem; */
+  padding-top: 75rem;
 }
 .card__text05 .web__img05 img {
   flex: 0 0 65%;
@@ -664,24 +615,16 @@ padding-top: 20rem;
   font-weight: 100;
   font-family: "Partizeno";
   line-height: 1;
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-.card__text05 .view::after {
-  content: "VIEW";
-  width: 10vw;
-  height: 10vw;
-  /* left: 52.6%;
-  top: 60%; */
-  left: 36.6vw;
-  top: 23.5vw;
-  transform: translate(-50%, -50%);
-  position: absolute;
   z-index: 99999;
 }
+
 .card__text05 .view::before {
   content: "";
+  margin: 0 auto;
   background-color: rgba(60, 107, 86, 0.5);
   width: 10vw;
   height: 10vw;
@@ -690,9 +633,8 @@ padding-top: 20rem;
   transform: translate(-50%, -50%);
   position: absolute;
   border-radius: 50%;
-  z-index: 99999;
+  z-index: -1;
   backdrop-filter: saturate(180%) blur(20px);
-  text-align: center;
 }
 
 /* card media */
@@ -905,19 +847,18 @@ padding-top: 20rem;
   font-family: "ChosunNm";
 }
 
-
 /* footer */
 #footer {
   width: 100%;
   height: 120vh;
 }
-#footer h3, 
+#footer h3,
 #footer .email {
   font-size: 8vw;
   font-family: "Partizeno";
   font-weight: 100;
   line-height: 1;
-  color: #3C6B56;
+  color: #3c6b56;
   margin-top: 17vw;
 }
 #footer .email {
@@ -929,14 +870,14 @@ padding-top: 20rem;
   margin-top: 5vw;
   font-family: "Saint Monica";
   font-size: 1vw;
-  color: #3C6B56;
+  color: #3c6b56;
   display: flex;
   flex-direction: column;
 }
 #footer .blog {
   font-family: "Saint Monica";
   font-size: 1vw;
-  color: #3C6B56;
+  color: #3c6b56;
   display: flex;
   justify-content: flex-end;
   margin-top: -2.2vw;
