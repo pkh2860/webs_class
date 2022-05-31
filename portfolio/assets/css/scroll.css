@@ -69,4 +69,10 @@ body {
 .box::-webkit-scrollbar {
   display: none;
 }
-.has-scroll-smooth {     position: fixed;     top: 0;     right: 0;     bottom: 0;     left: 0; }
+.has-scroll-smooth {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
