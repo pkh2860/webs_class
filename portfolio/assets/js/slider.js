@@ -145,7 +145,9 @@ function number(item, array) {
   });
 }
 
-function lerp(a, b, n) {return (1 - n) * a + n * b;}
+function lerp(a, b, n) {
+  return (1 - n) * a + n * b;
+}
 
 class Slider {
   constructor(options = {}) {
@@ -194,9 +196,8 @@ class Slider {
     this.max = -(this.sliderWidth + window.innerWidth);
 
     this.slides.forEach((slide, index) => {
-      slide.style.left = `${-600 +  index * slideWidth}px`;
+      slide.style.left = `${-650 + index * slideWidth}px`;
     });
-  
   }
 
   setPos(e) {
