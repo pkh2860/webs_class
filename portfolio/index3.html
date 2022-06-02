@@ -85,20 +85,10 @@
             <canvas id="canvas_bg"></canvas>
             <div class="banner__text">
               <h1><em>portfolio</em> <strong>2022</strong></h1>
-              <p
-                class="one"
-                data-scroll
-                data-scroll-speed="1"
-                data-scroll-direction="horizontal"
-              >
+              <p class="one" data-scroll data-scroll-speed="-0.5" data-scroll-direction="horizontal">
                 <span>welcome to my portfolio</span>
               </p>
-              <p
-                class="two"
-                data-scroll
-                data-scroll-speed="-1"
-                data-scroll-direction="horizontal"
-              >
+              <p class="two" data-scroll data-scroll-speed="0.5" data-scroll-direction="horizontal">
                 <span> We will become a developing frontend</span>
               </p>
             </div>
@@ -135,7 +125,7 @@
               </div>
               <!-- 슬라이드 -->
               <!-- Not mine -->
-              <div class="about__slider">
+              <div class="about__slider" data-scroll data-scroll-direction="horizontal" data-scroll-speed="5">
                 <div class="slider js-slider">
                   <div class="slider__inner js-slider__inner">
                     <div class="slide js-slide">
@@ -202,7 +192,7 @@
           <!-- card01 -->
           <div class="effectimg">
 
-              <div class="card__text01" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
+              <div class="card__text01" data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">
                 <div class="left">
                   <div class="web__img01">
                     <a
@@ -214,7 +204,7 @@
                     <img src="assets/img/web.jpg" alt="" />
                   </div>
                 </div>
-                <div class="right">
+                <div class="right" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
                   <div class="text">
                     <h4 class="title">WebStandard</h4>
                     <p class="sub">
@@ -245,7 +235,7 @@
                   </div>
                 </div>
 
-                <div class="right">
+                <div class="right" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
                   <div class="text">
                     <h4 class="title">WebStandard</h4>
                     <p class="sub">
@@ -324,9 +314,10 @@
                 <div class="text">
                   <h4 class="title">VUE.JS</h4>
                   <p class="sub">
-                    React를 이용해 기존의 HTML 구조의 사이트를 React 방식으로
-                    변경 후 YouTube API와 TMDB API를 이용하여 유튜브 영상 검색
-                    및 목록 영화 순위 관련 차트 페이지를 만들었습니다.
+                    Vue.js를 사용해 기존의 HTML구조의 사이트를 Vu.js방식으로 
+                    변경 하였고 Youtube API와 TMDB API를 이용해
+                    유튜브 영상 검색 및 영화 차트 순위 관련
+                    차트 페이지를 만들었습니다.
                   </p>
                 </div>
               </div>
@@ -491,15 +482,27 @@
       </section>
 
 
-      <section id="refer">
-        <h3>javascript reference</h3>
-        <p>자바스크립트를 이해하기 위해 필요한 변수,자료형 등의 개념들을
-          정리한 레퍼런스 페이지입니다.
-          조건문, 반복문 등의 다양한 문장들과 연산자 등을 자세한 예시를 들어
-          누구나 알아보기 쉽게 나타냈으며 이를 활용한 간단한 게임,애니메이션을 제작했습니다
-        </p>
-        <img src="assets/img/img07.jpg" alt="javascript">
-      </section>
+      <div id="refer">
+          <div class="text">
+            <h3 class="title">
+              <div class="title01" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">javascript</div>
+              <div class="title02" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">reference</div>
+            </h3>
+          </div>
+            <div class="refer__img" >
+              <img src="assets/img/img07.jpg" alt="javascript"  data-scroll="" data-scroll-speed="2"/>
+            </div>
+         
+          <div class="sub__a" data-scroll="" data-scroll-speed="1">
+            <p class="sub" >자바스크립트를 이해하기 위해 필요한 변수,자료형 등의
+              개념들을 정리한 레퍼런스 페이지입니다. <br>
+              조건문, 반복문 등의 다양한 문장들과 연산자 등을 자세한 예시를 들어 <br>
+              누구나 알아보기 쉽게 나타냈으며 이를 활용한 간단한 <br> 
+              게임,애니메이션을 제작했습니다
+            </p>
+              <a href="https://pkh2860.github.io/webs_class/javascript/index.html">VIEW</a>
+          </div>
+      </div>
 
       <section data-bgcolor="#e3857a" data-textcolor="#f1dba7">
         <div id="footer">
@@ -690,6 +693,20 @@
       });
 
       
+      const Menu = document.querySelector("#nav ul");
+
+    
+      // 메뉴
+      var burger = $(".menu-trigger");
+      burger.each(function (index) {
+        var $this = $(this);
+
+        $this.on("click", function (e) {
+          e.preventDefault();
+          Menu.classList.toggle("active");
+          $(this).toggleClass("active-" + (index + 1));
+        });
+      });
     </script>
   </body>
 </html>

@@ -45,36 +45,11 @@ img {
 }
 
 /*  */
-/* 
-.container {
-  margin: auto;
-  padding: 0 1rem;
-  max-width: 71.25rem;
-  width: 100%;
-} */
 
-/* * {
-  box-sizing: border-box;
-}
-*::before,
-*::after {
-  box-sizing: border-box;
-} */
-
-/* body {
-  font-family: "Barlow", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #8d8d8d;
-  background: #fff;
-  text-rendering: optimizeLegibility;
-  overflow-x: hidden;
-} */
 iframe {
-  /* width: 120vh; */
   width: 56vw;
-  height: 85vh;
+  /* height: 85vh; */
+  height: 50vw;
   object-fit: cover;
 }
 
@@ -292,8 +267,9 @@ button {
   }
 
   iframe {
-    /* height: 60vh; */
-    height: 59vh;
+    /* height: 59vh; */
+    height: 28vw;
+
   }
 
   .description {
