@@ -35,29 +35,53 @@
         transition: all 0.3s ease-out;
       }
 
-      /* .site__text h3 span {
-  opacity: 0;
-}
-.site__text h3 span.show {
-  opacity: 1;
-  transition-duration: 2s;
-  transition: all 0.5s ease-out;
-}
-.site__text li span {
-  opacity: 0;
-}
-.site__text li span.show {
-  opacity: 1;
-  transition: all 0.5s ease-out;
-}
-.site__text p span {
-  opacity: 0;
-}
-.site__text p span.show {
-  opacity: 1;
-  transition: all 5s ease-out;
-}
-       */
+      .reveal.show::before {
+            animation: reveal 1s;
+        }
+        .reveal.reveal-RTL.show::before {
+            animation: reveal-RTL 1s;
+        }
+        .reveal.reveal-TTB.show::before {
+            animation: reveal-TTB 1s;
+        }
+        .reveal.reveal-BTT.show::before {
+            animation: reveal-BTT 1s;
+        }
+
+        /* 두가지 */
+        .reveal.show::after {
+            animation: reveal 1000ms 300ms ;
+        }
+        .reveal.reveal-RTL.show::after {
+            animation: reveal-RTL 1000ms 300ms ;
+        }
+        .reveal.reveal-TTB.show::after {
+            animation: reveal-TTB 1000ms 300ms ;
+        }
+        .reveal.reveal-BTT.show::after {
+            animation: reveal-BTT 1000ms 300ms ;
+        }
+
+        @keyframes opacity {
+            0% {opacity: 0;}
+            60% {opacity: 0;}
+            70% {opacity: 1;}
+            100% {opacity: 1;}
+        }
+        @keyframes reveal {
+            0% {width: 0; left: 0;}
+            50% {width: 100%; left: 0;}
+            80% {width: 100%; left: 0;}
+            100% {width: 0; left: 100%;}
+        }
+        @keyframes reveal-RTL {
+            0% {width: 0; right: 0;}
+            50% {width: 100%; right: 0;}
+            80% {width: 100%; right: 0;}
+            100% {width: 0; right:100%;}
+        }
+
+      /*  */
     </style>
   </head>
   <body>
@@ -203,20 +227,18 @@
 
           <!-- card01 -->
           <div class="effectimg" >
-           
               <div class="card__text01">
                 <div class="left">
-                  <div class="web__img01" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
-                   
+                  <div class="web__img01 reveal01">
                     <a href="https://pkh2860.github.io/webs_class/site/webClass/index.html"
                       class="view">
                       VIEW
                     </a>
-                    <img src="assets/img/web.jpg" alt="" />
+                    <img src="assets/img/web.jpg" alt="webimg01" />
                   </div>
                 </div>
                 <div class="right">
-                  <div class="text"   data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+                  <div class="text reveal01 reveal-RTL">
                     <h4 class="title">WebStandard</h4>
                     <p class="sub">
                       기본 레이아웃을 바탕으로 카드타입, 이미지타입 등 섹션을<br />
@@ -227,7 +249,6 @@
                     </p>
                   </div>
                 </div>
-
             </div>
           </div>
 
@@ -235,7 +256,7 @@
           <div class="effectimg">
               <div class="card__text02" >
                 <div class="left">
-                  <div class="web__img02" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+                  <div class="web__img02 reveal01 reveal-RTL">
                     <a
                       href="https://pkh2860.github.io/webs_class/webstandard/index.html"
                       class="view"
@@ -247,7 +268,7 @@
                 </div>
 
                 <div class="right">
-                  <div class="text" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+                  <div class="text reveal01">
                     <h4 class="title">WebStandard</h4>
                     <p class="sub">
                       웹에서 사용되는 표준 기술이나 규칙적인 웹표준을 준수하여
@@ -263,15 +284,15 @@
 
           <!-- card3 -->
           <div class="effectimg">
-              <div class="card__text03" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+              <div class="card__text03">
                 <div class="left">
-                  <div class="web__img03">
+                  <div class="web__img03 reveal01">
                     <a href="https://2860.netlify.app/" class="view"> VIEW </a>
                     <img src="assets/img/react.jpg" alt="" />
                   </div>
                 </div>
                 <div class="right">
-                  <div class="text"  data-scroll data-scroll-speed="1.5" data-scroll-direction="horizontal">
+                  <div class="text reveal01 reveal-RTL">
                     <h4 class="title">REACT.JS</h4>
                     <p class="sub">
                       React를 이용해 기존의 HTML 구조의 사이트를 React 방식으로
@@ -285,16 +306,16 @@
 
           <!-- card4 -->
           <div class="effectimg">
-              <div class="card__text04"data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+              <div class="card__text04">
                 <div class="left">
-                  <div class="web__img04">
+                  <div class="web__img04 reveal01 reveal-RTL">
                     <a href="http://rmsgur2275.dothome.co.kr/php/pages/main.php" class="view">VIEW</a>
-                    <img src="assets/img/php.jpg" alt="" />
+                    <img src="assets/img/php.jpg" alt=""  />
                   </div>
                 </div>
 
                 <div class="right">
-                  <div class="text" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+                  <div class="text reveal01">
                   <h4 class="title">PHP</h4>
                   <p class="sub">
                     웹표준을 준수하여 만든 사이트입니다. 데이터 베이스를 연결해
@@ -308,16 +329,16 @@
         </div>
         <!-- card5 -->
         <div class="effectimg">
-            <div class="card__text05"data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+            <div class="card__text05">
               <div class="left">
-                <div class="web__img05">
+                <div class="web__img05 reveal01">
                   <a href="https://vue2860.netlify.app/" class="view"> VIEW </a>
                   <img src="assets/img/php.jpg" alt="" />
                 </div>
               </div>
 
               <div class="right">
-                <div class="text" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+                <div class="text reveal01 reveal-RTL">
                   <h4 class="title">VUE.JS</h4>
                   <p class="sub">
                     Vue.js를 사용해 기존의 HTML구조의 사이트를 Vu.js방식으로 
@@ -569,10 +590,9 @@
 
       ScrollTrigger.scrollerProxy(pageContainer, {
         scrollTop(value) {
-          if (scroller.scroll.instance.scroll.y > 500 && !state) {
-            //
+          if (scroller.scroll.instance.scroll.y > 3000 && !state) { //
             state = true;
-            let aboutText = document.querySelectorAll(".about__text span");
+            let aboutText = document.querySelectorAll(".card__text01 .reveal01");
             aboutText.forEach((el, index) => {
               setTimeout(() => {
                 el.classList.add("show");
@@ -608,8 +628,6 @@
             pin: true,
             //anticipatePin: 1,
             start: "top top",
-            // end: "+=5980",
-            // end: pinWrapWidth
             end: "+=8000",
           },
           x: -horizontalScrollLength,
@@ -704,11 +722,9 @@
         revealObserver.observe(reveal);
       });
 
-      
+        // 메뉴
       const Menu = document.querySelector("#nav ul");
 
-    
-      // 메뉴
       var burger = $(".menu-trigger");
       burger.each(function (index) {
         var $this = $(this);
@@ -719,6 +735,11 @@
           $(this).toggleClass("active-" + (index + 1));
         });
       });
+      
+
+      // 
+
+     
     </script>
   </body>
 </html>

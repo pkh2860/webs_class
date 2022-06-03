@@ -131,10 +131,10 @@ body {
 }
 .slide__bg {
   position: absolute;
-  top: 10%;
-  left: 10%;
-  bottom: 10%;
-  right: 10%;
+  top: 0;
+  left: 1%;
+  bottom: 0;
+  right: 2%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
