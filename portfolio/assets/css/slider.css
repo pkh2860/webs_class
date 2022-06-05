@@ -115,7 +115,10 @@ body {
 .about__slider .imgbg {
   background-position: bottom;
 }
+.about__slider .imgbg_01 {
+  background-position: top;
 
+}
 .slide {
   display: flex;
   align-items: center;

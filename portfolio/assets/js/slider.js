@@ -75,7 +75,7 @@ class Slider {
 
     this.slides.forEach((slide, index) => {
       // slide.style.left = `${index * slideWidth}px`;
-      slide.style.left = `${-500 + index * slideWidth}px`;
+      slide.style.left = `${550 +  index * slideWidth}px`;
     });
   }
 

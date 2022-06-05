@@ -609,20 +609,18 @@ canvas {
 }
 
 /* card05 */
-.card__text05 {
+/* .card__text05 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
-  /* padding-top: 15rem; */
 }
 .card__text05 .web__img05 img {
   flex: 0 0 65%;
   z-index: -1;
 }
 .card__text05 .text {
-  /* margin-top: -1rem; */
   margin-top: -1vw;
   margin-left: 2vw;
 }
@@ -637,7 +635,6 @@ canvas {
 }
 .card__text05 .right .sub {
   font-family: "ChosunNm";
-  /* font-size: 1.2rem; */
   font-size: 1.2rem;
   margin-top: 0.9vw;
   line-height: 1.6;
@@ -674,8 +671,73 @@ canvas {
   border-radius: 50%;
   z-index: -1;
   backdrop-filter: saturate(180%) blur(20px);
+} */
+
+.card__text05 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.card__text05 .web__img03 img {
+  flex: 0 0 65%;
+  z-index: -1;
+}
+.card__text05 .text {
+  /* margin-top: -1rem; */
+  margin-top: -1vw;
+  margin-left: 2vw;
+}
+.card__text05 .right {
+  /* flex: 2 2 20%; */
+}
+.card__text05 .right .title {
+  font-size: 4.9vw;
+  font-weight: 100;
+  font-family: "Partizeno";
+  color: #3c6b56;
+}
+.card__text05 .right .sub {
+  font-family: "ChosunNm";
+  /* font-size: 1.2rem; */
+  font-size: 1.2rem;
+  margin-top: 0.9vw;
+  line-height: 1.6;
+  width: 75%;
+  color: #3c6b56;
+}
+.card__text05 .web__img03 {
+  position: relative;
+}
+.card__text05 .view {
+  color: #fff;
+  font-size: 3vw;
+  font-weight: 100;
+  font-family: "Partizeno";
+  line-height: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  padding-top: 1vw;
 }
 
+.card__text05 .view::before {
+  content: "";
+  margin: 0 auto;
+  background-color: rgba(60, 107, 86, 0.5);
+  width: 10vw;
+  height: 10vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  backdrop-filter: saturate(180%) blur(20px);
+}
 /* card media */
 
 @media (max-width: 960px) {
