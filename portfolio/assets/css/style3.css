@@ -183,6 +183,22 @@ canvas {
   font-size: 2vh;
   font-family: "ChosunNm";
 }
+.about__text p span {
+  opacity: 0;
+  transition: all 0.9s ease-in-out;
+}
+
+.about__text p span.show {
+  opacity: 1;
+}
+.about__text h2 span {
+  opacity: 0;
+}
+.about__text h2 span.show {
+  opacity: 1;
+  transition-timing-function: linear;
+  transition: all 0.3s ease-out;
+}
 /* 메뉴 */
 .menu-trigger {
   margin-right: 70px;
@@ -1025,4 +1041,70 @@ canvas {
   text-align: center;
   position: absolute;
   width: 40%;
+}
+
+
+/* 리빌 */
+
+.reveal01 > span,
+.reveal01 > div,
+.reveal01 > a,
+.reveal01 > img,
+.reveal01 > h4,
+.reveal01 > p {
+    opacity: 0;
+}
+.reveal01.show > span,
+.reveal01.show > div,
+.reveal01.show > a,
+.reveal01.show > img,
+.reveal01.show > h4,
+.reveal01.show > p {
+    animation: opacity 1s linear forwards;
+}
+.reveal01 {
+    position: relative;
+}
+.reveal01::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    z-index: 1;
+}
+
+.reveal01.show::before {
+    animation: reveal 1s;
+}
+.reveal01.reveal-RTL.show::before {
+    animation: reveal-RTL 1s;
+}
+/* 두가지 */
+.reveal01.show::after {
+    animation: reveal 1000ms 300ms ;
+}
+.reveal01.reveal-RTL.show::after {
+    animation: reveal-RTL 1000ms 300ms ;
+}
+
+@keyframes opacity {
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    70% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes reveal {
+    0% {width: 0; left: 0;}
+    50% {width: 100%; left: 0;}
+    80% {width: 100%; left: 0;}
+    100% {width: 0; left: 100%;}
+}
+@keyframes reveal-RTL {
+    0% {width: 0; right: 0;}
+    50% {width: 100%; right: 0;}
+    80% {width: 100%; right: 0;}
+    100% {width: 0; right:100%;}
 }
