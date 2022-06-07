@@ -366,8 +366,7 @@ canvas {
   z-index: -1;
 }
 .card__text01 .text {
-  /* margin-top: -1rem; */
-  margin-top: -1vw;
+  margin-top: -0.9vw;
 }
 .card__text01 .right {
   flex: 2 2 20%;
@@ -433,8 +432,7 @@ canvas {
   z-index: -1;
 }
 .card__text02 .text {
-  /* margin-top: -1rem; */
-  margin-top: -1vw;
+  margin-top: -0.9vw;
 }
 .card__text02 .right {
   flex: 2 2 20%;
@@ -501,7 +499,7 @@ canvas {
 }
 .card__text03 .text {
   /* margin-top: -1rem; */
-  margin-top: -1vw;
+  margin-top: -0.9vw;
   margin-left: 2vw;
 }
 .card__text03 .right {
@@ -570,7 +568,7 @@ canvas {
 }
 .card__text04 .text {
   /* margin-top: -1rem; */
-  margin-top: -1vw;
+  margin-top: -0.9vw;
   margin-left: 2vw;
 }
 .card__text04 .right {
@@ -625,70 +623,6 @@ canvas {
 }
 
 /* card05 */
-/* .card__text05 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  position: relative;
-}
-.card__text05 .web__img05 img {
-  flex: 0 0 65%;
-  z-index: -1;
-}
-.card__text05 .text {
-  margin-top: -1vw;
-  margin-left: 2vw;
-}
-.card__text05 .right {
-  flex: 2 2 20%;
-}
-.card__text05 .right .title {
-  font-size: 4.9vw;
-  font-weight: 100;
-  font-family: "Partizeno";
-  color: #3c6b56;
-}
-.card__text05 .right .sub {
-  font-family: "ChosunNm";
-  font-size: 1.2rem;
-  margin-top: 0.9vw;
-  line-height: 1.6;
-  width: 75%;
-  color: #3c6b56;
-}
-.card__text05 .web__img05 {
-  position: relative;
-}
-.card__text05 .view {
-  color: #fff;
-  font-size: 3vw;
-  font-weight: 100;
-  font-family: "Partizeno";
-  line-height: 1;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 99999;
-  padding-top: 1vw;
-}
-
-.card__text05 .view::before {
-  content: "";
-  margin: 0 auto;
-  background-color: rgba(60, 107, 86, 0.5);
-  width: 10vw;
-  height: 10vw;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  border-radius: 50%;
-  z-index: -1;
-  backdrop-filter: saturate(180%) blur(20px);
-} */
-
 .card__text05 {
   display: flex;
   flex-wrap: wrap;
@@ -701,12 +635,8 @@ canvas {
   z-index: -1;
 }
 .card__text05 .text {
-  /* margin-top: -1rem; */
   margin-top: -0.9vw;
   margin-left: 2vw;
-}
-.card__text05 .right {
-  /* flex: 2 2 20%; */
 }
 .card__text05 .right .title {
   font-size: 4.9vw;
@@ -716,7 +646,6 @@ canvas {
 }
 .card__text05 .right .sub {
   font-family: "ChosunNm";
-  /* font-size: 1.2rem; */
   font-size: 1.2rem;
   margin-top: 0.9vw;
   line-height: 1.6;
@@ -807,9 +736,6 @@ canvas {
 }
 
 /* script */
-#script {
-  /* padding-top: 60vh; */
-}
 #script h3 {
   color: #3c6b56;
   font-size: 15vw;
@@ -840,7 +766,6 @@ canvas {
   margin-bottom: 5vw;
   line-height: 1.6;
   color: #3c6b56;
-  /* font-size: 2vh; */
   font-size: 2.5vh;
 }
 .script__text h3 span {
@@ -885,9 +810,6 @@ canvas {
   font-size: 2.5vh;
 }
 
-#game {
-  /* height: 60vw; */
-}
 .game__text {
   padding-bottom: 15vh;
 }

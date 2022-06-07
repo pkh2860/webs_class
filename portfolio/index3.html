@@ -267,7 +267,7 @@
           <div class="card__text05">
             <div class="left">
               <div class="web__img05 reveal01">
-                <a href="https://2860.netlify.app/" class="view"> VIEW </a>
+                <a href="https://vue2860.netlify.app" class="view"> VIEW </a>
                 <img src="assets/img/vue02.jpg" alt="react" />
               </div>
             </div>
@@ -535,27 +535,34 @@
           } //
           let siteimg = document.querySelector(".web__img02")
           let siteText = document.querySelector(".web__img02_text")
-          if (scroller.scroll.instance.scroll.y > 4000) {
-            siteimg.classList.add("show")
-            siteText.classList.add("show")
+          if (scroller.scroll.instance.scroll.y > 3600) {
+                siteimg.classList.add("show")
+                siteText.classList.add("show")
           } 
           let siteimg03 = document.querySelector(".web__img03")
           let siteText03 = document.querySelector(".card__text03 .right")
           if(scroller.scroll.instance.scroll.y > 4600) {
-            siteimg03.classList.add("show")
-            siteText03.classList.add("show")
+          
+                siteimg03.classList.add("show")
+                siteText03.classList.add("show")
+             
+            
           } 
           let siteimg04 = document.querySelector(".web__img04")
           let siteText04 = document.querySelector(".web__img04_text")
           if(scroller.scroll.instance.scroll.y > 5800) {
-            siteimg04.classList.add("show")
-            siteText04.classList.add("show")
+         
+                siteimg04.classList.add("show")
+                siteText04.classList.add("show")
+            
           } 
           let siteimg05 = document.querySelector(".web__img05")
           let siteText05 = document.querySelector(".card__text05 .right")
           if(scroller.scroll.instance.scroll.y > 6700) {
-            siteimg05.classList.add("show")
-            siteText05.classList.add("show")
+          
+                siteimg05.classList.add("show")
+              siteText05.classList.add("show")
+           
           } 
           return arguments.length
             ? scroller.scrollTo(value, 0, 0)

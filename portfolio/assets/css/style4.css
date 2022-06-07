@@ -1,0 +1,25 @@
+body {
+    background: #ebebeb;
+    transition: 0.3s ease-out;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+}
+  /* nav */
+#nav ul {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgba(227, 227, 227, 0.6);
+    z-index: 99999;
+}
+#nav ul li {
+    padding: 20px;  
+}
+#nav ul li a {
+    font-family: "Jura";
+    font-size: 23px;
+    font-weight: 100;
+    color: #3c6b56;
+}
