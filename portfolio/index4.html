@@ -33,10 +33,91 @@
         </nav>
       </header>
 
-
       <main id="main">
+          <section id="intro" class="section1" data-textcolor="#fff" data-bgcolor="#FC9700">
+            <div id="banner">
+              <canvas id="canvas_bg"></canvas>
+              <div class="banner__text">
+                <h1><em>portfolio</em> <strong>2022</strong></h1>
+                <p class="one" data-scroll data-scroll-speed="-0.5" data-scroll-direction="horizontal">
+                  <span>welcome to my portfolio</span>
+                </p>
+                <p class="two" data-scroll data-scroll-speed="0.5" data-scroll-direction="horizontal">
+                  <span> We will become a developing frontend</span>
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="about" class="section2">
+            <div class="container">
+              <h2 class="title">about</h2>
+              <p class="desc">
+                안녕하세요 신입 웹퍼블리셔/프론트엔드 개발자 박근혁입니다.
+                처음에는 코딩의 코자도 모르고 알지도 못하는것에 도전하는것이
+                <br />
+                많이 낯설고 무서웠습니다 그래도 용기를 내서 국비지원 학원을
+                알아보고 바로 다니기 시작했습니다<br />
+                처음에는 알지도 못하는 언어들이 나오고 이 일을 정말 할 수
+                있을까 의문이 들었지만 하다가 오류가 나면 앉은 자리에서
+                시간가는줄 모르고<br />
+                틀린 부분을 고치면 뿌듯함이 느껴졌습니다 배움은 조금 느려도
+                포기하지 않고 알아보려고 노력하였습니다.<br />
+                짧으면 짧고 길면 긴 6개월이 저에게는 너무나 짧게 느껴졌고
+                아직 배움이 부족하다고 생각합니다.<br />
+                앞으로도 계속 발전하고 노력하는 개발자가 되겠습니다.
+              </p>
+            </div>
+
+            <div class="about__img">
+              <div class="img01"></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+           
+            
+          </section>
+
+
+          <section id="sectionPin" class="section3">
+            <h2 class="title">script</h2>
+            <div class="pin-wrap">
+              <div class="sec03_1">
+                <div class="site_img"></div>
+                <p></p>
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <div class="sec03_2"></div>
+              <div class="sec03_3"></div>
+              <div class="sec03_4"></div>
+            </div>
+          </section>
           
-      </main>
+          <section id="sectionPin" class="section4">
+            <div></div>
+          </section>
+
+          <section id="sectionPin05" class="section5">
+            <div class="pin-wrap05">
+              <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+              <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+              <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+              <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+            </div>
+          </section>
+
+
+          <section id="sectionPin" class="section6">
+            <div></div>
+          </section>
+
+        </main>
+
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -45,11 +126,97 @@
       <script type="text/javascript" src="/parallax/js/skrollr.min.js"></script>
 
       <script src="assets/js/canvas.js"></script>
-      <script src="assets/js/slider.js"></script>
       <script src="assets/js/prism.js"></script>
 
       <script>
-          
+      gsap.registerPlugin(ScrollTrigger);
+
+      const pageContainer = document.querySelector("#main");
+
+      /* SMOOTH SCROLL */
+      const scroller = new LocomotiveScroll({
+        el: pageContainer,
+        smooth: true
+      });
+
+      scroller.on("scroll", ScrollTrigger.update);
+
+      ScrollTrigger.scrollerProxy(pageContainer, {
+        scrollTop(value) {
+          return arguments.length
+            ? scroller.scrollTo(value, 0, 0)
+            : scroller.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+          return {
+            left: 0,
+            top: 0,
+            width: window.innerWidth,
+            height: window.innerHeight
+          };
+        },
+        pinType: pageContainer.style.transform ? "transform" : "fixed"
+      });
+
+      window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+        let pinWrap = document.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
+        // Pinning and horizontal scrolling
+
+        gsap.to(".pin-wrap", {
+          scrollTrigger: {
+            scroller: pageContainer, //locomotive-scroll
+            scrub: true,
+            trigger: "#sectionPin",
+            pin: true,
+            // anticipatePin: 1,
+            start: "top top",
+            end: pinWrapWidth
+          },
+          x: -horizontalScrollLength,
+          ease: "none"
+        });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        ScrollTrigger.refresh();
+      });
+
+      // 2
+
+      window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap05 > *");
+        let pinWrap = document.querySelector(".pin-wrap05");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
+      
+
+        gsap.to(".pin-wrap05", {
+          scrollTrigger: {
+            scroller: pageContainer, //locomotive-scroll
+            scrub: true,
+            trigger: "#sectionPin05",
+            pin: true,
+            // anticipatePin: 1,
+            start: "top top",
+            // end: pinWrapWidth
+            end: "+=4500"
+          },
+          x: -horizontalScrollLength,
+          ease: "none"
+        });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        ScrollTrigger.refresh();
+      });
+
+
+
       </script>
 </body>
 </html>

@@ -64,7 +64,11 @@
   width: 98%;
   margin: 0 auto;
   /* background: rgba(0,0,0,0.3); */
-
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
 
 #contents {
   min-height: 70vh;
