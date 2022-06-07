@@ -702,7 +702,7 @@ canvas {
 }
 .card__text05 .text {
   /* margin-top: -1rem; */
-  margin-top: -1vw;
+  margin-top: -0.9vw;
   margin-left: 2vw;
 }
 .card__text05 .right {
@@ -1072,7 +1072,8 @@ canvas {
     top: 0;
     width: 0;
     height: 100%;
-    background: #fff;
+    /* background: #fff; */
+    background: #ebebeb;
     z-index: 1;
 }
 
