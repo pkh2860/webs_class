@@ -240,6 +240,10 @@ iframe {
     font-weight: 100;
     font-family: "Partizeno";
   }
+  .section3 .text li {
+    list-style-type: circle;
+    margin-left: 20px;
+  }
   .section3 .sec03_1 {
     display: flex;
     align-items: flex-start;

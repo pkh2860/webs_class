@@ -402,7 +402,7 @@
             // anticipatePin: 1,
             start: "top top",
             // end: pinWrapWidth
-            end: "+=6500"
+            end: "+=6100"
           },
           x: -horizontalScrollLength,
           ease: "none"
@@ -413,6 +413,41 @@
         ScrollTrigger.refresh();
       });
 
+
+      document.querySelectorAll(".banner__text em").forEach((desc) => {
+        let splitText = desc.innerText;
+        let splitWrap = splitText
+          .split("")
+          .join("</span><span aria-hidden='true'>");
+        splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+        desc.innerHTML = splitWrap;
+        desc.setAttribute("aria-label", splitText);
+      });
+
+      gsap.set(".banner__text h1 em span", { opacity: 0, y: -500 });
+      gsap.set(".banner__text strong", { opacity: 0 });
+      gsap.set(".banner__text p", { opacity: 0 });
+      gsap.set("#header", { opacity: 0, top: -100 });
+      gsap.set("#canvas_bg", { opacity: 0 });
+
+      setTimeout(() => {
+        const tl = gsap.timeline();
+        tl.to(".banner__text h1 em span", {
+          duration: 1.0,
+          stagger: 0.1,
+          y: 0,
+          autoAlpha: 1,
+          ease: "power2.Out",
+        });
+        tl.to(".banner__text strong", { duration: 0.3, autoAlpha: 1 });
+        tl.to(".banner__text p", {
+          duration: 0.3,
+          autoAlpha: 1,
+          ease: "power2.out",
+        });
+        tl.to("#header", { duration: 0.3, autoAlpha: 1, top: 0 });
+        tl.to("#canvas_bg", { duration: 0.3, autoAlpha: 1 });
+      }, 1000);
 
 
       </script>
