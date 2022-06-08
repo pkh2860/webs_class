@@ -54,16 +54,36 @@ iframe {
     left: 0;
   }
   .section5 .pin-wrap05 {
-    /* height: 100vh; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
   }
   .pin-wrap05 > * {
     min-width: 70vw;
-    padding: 0 5vw;
+    /* padding: 0 5vw; */
+    padding-right: 5vw;
   } 
 
+  #sectionPin07 {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    left: 0;
+  }
+
+  .pin-wrap07 {
+    /* height: 100vh; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding: 0 10vw; */
+
+  }
+  .pin-wrap07 > * {
+    min-width: 80vw;
+    /* padding: 0 3vw;*/
+    margin-right:23rem;
+  }
 
   /* nav */
 #nav ul {
@@ -195,18 +215,22 @@ iframe {
     background-size:cover;
   } 
  /* btn */
+  .btn {
+    margin-top: 20px;
+
+  }
   .btn a {
     font-family: "ChosunNm";
     font-size: 1vw;
     line-height: 1.6;
     color: #fff;
-    width: 80%;
-    padding: 10px 0;
+    width: 65%;
+    padding:3px 0;
     text-align: center;
     display: block;
     border: 1px solid #3c6b56;
     background-color: #3c6b56;
-    margin: 20px auto;
+    margin: 10px auto;
   }
   /* section3 */
   .section3 .title {
@@ -336,4 +360,109 @@ iframe {
     margin-left: 2vw;
     line-height: 1.6;
     color: #3c6b56;
+  }
+/*  */
+
+  /* section7 */
+
+  .section7 .title {
+    color: #3c6b56;
+    font-size: 8vw;
+    line-height: 1.3;
+    font-weight: 100;
+    font-family: "Partizeno";
+  }
+  .section7 .sec07_1 {
+    display: flex;
+    align-items: flex-start;
+    gap: 3%;
+  }
+  .sec07_1 .site_img {
+    flex: 0 0 60%;
+  }
+  .sec07_1 .text {
+    display: flex;
+    flex-direction: column;
+    /* width: 23%; */
+    flex: 0 0 30%;
+  }
+  .sec07_1 .text h3 {
+    font-size: 2vw;
+    font-family: "Partizeno";
+    color: #3c6b56;
+    font-weight: 100;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .sec07_1 .text p {
+    font-family: "ChosunNm";
+    font-size: 1vw;
+    line-height: 1.6;
+    color: #3c6b56;
+    margin-top: 0.9vw;
+    margin-left: 20px;
+  }
+
+
+
+  .section7 .sec07_2 {
+    display: flex;
+    align-items: flex-start;
+    gap: 3%;
+  }
+  .sec07_2 .site_img {
+    flex: 0 0 60%;
+  }
+  .sec07_2 .text {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 30%;
+  }
+  .sec07_2 .text h3 {
+    font-size: 2vw;
+    font-family: "Partizeno";
+    color: #3c6b56;
+    font-weight: 100;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .sec07_2 .text p {
+    font-family: "ChosunNm";
+    font-size: 1vw;
+    line-height: 1.6;
+    color: #3c6b56;
+    margin-top: 0.9vw;
+    margin-left: 20px;
+  }
+
+  /* 3 */
+  .section7 .sec07_3 {
+    display: flex;
+    align-items: flex-start;
+    gap: 3%;
+  }
+  .sec07_3 .site_img {
+    flex: 0 0 60%;
+  }
+  .sec07_3 .text {
+    display: flex;
+    flex-direction: column;
+    /* width: 23%; */
+    flex: 0 0 30%;
+  }
+  .sec07_3 .text h3 {
+    font-size: 2vw;
+    font-family: "Partizeno";
+    color: #3c6b56;
+    font-weight: 100;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .sec07_3 .text p {
+    font-family: "ChosunNm";
+    font-size: 1vw;
+    line-height: 1.6;
+    color: #3c6b56;
+    margin-top: 0.9vw;
+    margin-left: 20px;
   }

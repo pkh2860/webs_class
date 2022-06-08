@@ -215,8 +215,77 @@
           </section>
 
 
-          <section id="sectionPin" class="section6">
-            <div></div>
+          <div class="section6">
+          </div>
+
+          <section id="sectionPin07" class="section7">
+            <div id="site02">
+              <h2 class="title">site</h2>
+              <div class="pin-wrap07">
+                <div class="sec07_1">
+                  <div class="site_img">
+                    <img src="assets/img/php.jpg" alt="php">
+                  </div>
+                  <div class="text">
+                    <h3>PHP</h3>
+                    <p>
+                      웹표준을 준수하여 만든 사이트입니다. 데이터 베이스를 연결해
+                      로그인,회원가입이 가능합니다. 메인에는 최신 글과 댓글을
+                      보여주는 페이지를 구성하였고 게시판 작성, 수정, 삭제등
+                      기능들을 구현하였습니다.
+                    </p>
+                  
+                      <div class="btn">
+                        <a href="#">사이트 보기</a>
+                        <a href="#">코드 보기</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="sec07_2">
+                  <div class="site_img">
+                    <img src="assets/img/react.jpg" alt="react">
+                  </div>
+                  <div class="text">
+                    <h3>REACT.JS</h3>
+                    <p>
+                      React를 이용해 기존의 HTML 구조의 사이트를 React 방식으로
+                      변경 후 YouTube API와 TMDB API를 이용하여 유튜브 영상 검색
+                      및 목록 영화 순위 관련 차트 페이지를 만들었습니다.
+                    </p>
+                 
+                    <div class="btn">
+                      <a href="#">사이트 보기</a>
+                      <a href="#">코드 보기</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sec07_3">
+                  <div class="site_img">
+                    <img src="assets/img/vue02.jpg" alt="vue" />
+                  </div>
+                  <div class="text">
+                    <h3>Vue.JS</h3>
+                    <p>
+                      Vue.js를 사용해 기존의 HTML구조의 사이트를 Vu.js방식으로 
+                    변경 하였고 Youtube API와 TMDB API를 이용해
+                    유튜브 영상 검색 및 영화 차트 순위 관련
+                    차트 페이지를 만들었습니다.
+                    </p>
+                 
+                    <div class="btn">
+                      <a href="#">사이트 보기</a>
+                      <a href="#">코드 보기</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          
+          </section>
+
+          
+          <section class="section8">
           </section>
 
         </main>
@@ -307,6 +376,33 @@
             start: "top top",
             // end: pinWrapWidth
             end: "+=4500"
+          },
+          x: -horizontalScrollLength,
+          ease: "none"
+        });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        ScrollTrigger.refresh();
+      });
+
+      // 3
+      window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap07 > *");
+        let pinWrap = document.querySelector(".pin-wrap07");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+
+        gsap.to(".pin-wrap07", {
+          scrollTrigger: {
+            scroller: pageContainer, //locomotive-scroll
+            scrub: true,
+            trigger: "#sectionPin07",
+            pin: true,
+            // anticipatePin: 1,
+            start: "top top",
+            // end: pinWrapWidth
+            end: "+=6500"
           },
           x: -horizontalScrollLength,
           ease: "none"
