@@ -99,3 +99,17 @@
       format("truetype");
   font-display: swap;
 }
+
+
+/* 이롭게 바탕체 */
+@font-face {
+  font-family: 'IropkeBatang';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/IropkeBatang.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/IropkeBatang.woff2') format('woff2'),
+       url('../fonts/IropkeBatang.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/iropke/IropkeBatang.ttf') format("truetype");
+  font-display: swap;
+}

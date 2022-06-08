@@ -4,10 +4,13 @@
     display: flex;
     left: 0;
 }
+h2,h3 {
+    font-weight: 100;
+}
 .section5, .section7 {
     width: 100%;
     height: 100vh;
-    background: #111;
+    /* background: #111; */
     color: #fff;
 }
 .section6 .pin-wrap {
@@ -137,14 +140,16 @@ body {
     width: 700px;
     height: 100%;
     margin-right: 1%;
-    background: url(https://images.unsplash.com/photo-1621762782296-a131155befee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) no-repeat center center;
+    background: url(../img/img004.jpg) no-repeat center top -300px;
     background-size: cover;
 }
 .sec1_about .imgWrap > div:nth-child(2){
-    background: url(https://images.unsplash.com/photo-1558220829-f1856c69ee83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80) no-repeat center top -500px;
+    background: url(../img/me02.jpg) no-repeat center top -50px;
+    background-size: cover;
 }
 .sec1_about .imgWrap > div:nth-child(3){
-    background: url(https://images.unsplash.com/photo-1652553344265-22cef245efff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) no-repeat center top -200px;
+    background: url(../img/img001.jpg) no-repeat center top -200px;
+    background-size:cover;
 }
 /* section2 */
 .section2 {
@@ -199,19 +204,20 @@ body {
     height: 100%;
 }
 .site .left.bg1 {
-    background: url(https://pkh2860.github.io/webs_class/portfolio/assets/img/web.jpg) no-repeat;
+    background: url(../img/web01.jpg) no-repeat;
     background-size: cover;
 }
 .site .left.bg2 {
-    background: url(https://pkh2860.github.io/webs_class/portfolio/assets/img/web2.jpg) no-repeat;
+    background: url(../img/web02.jpg) no-repeat;
     background-size: cover;
 }
 .site .left.bg3 {
-    background: url(https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) no-repeat;
+    background: url(../img/img07.jpg) no-repeat;
     background-size: cover;
+    background-position: bottom;
 }
 .site .left.bg4 {
-    background: url(https://pkh2860.github.io/webs_class/portfolio/assets/img/web2.jpg) no-repeat;
+    background: url(../img/apple.jpg) no-repeat;
     background-size: cover;
 }
 .site .right {
@@ -345,3 +351,126 @@ body {
     width: 40vw;
     margin: 0 auto;
 }
+/* section5 */
+.section5 {
+    height: 500px;  
+}
+/* section6 */
+
+.section6 {
+    position: relative;
+}
+.section6 .pin-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.section6 .pin-wrap .sec6_1  {
+    min-width: 90vw;
+    height: 80vh;
+    margin-top: 20vh;
+}
+.section6 .pin-wrap .sec6_2  {
+    min-width: 90vw;
+    height: 80vh;
+    margin-top: 20vh;
+}
+.section6 .pin-wrap .sec6_3  {
+    min-width: 90vw;
+    height: 80vh;
+    margin-top: 20vh;
+}
+/* .section6 .pin-wrap .sec6_4  {
+    min-width: 90vw;
+    height: 80vh;
+    margin-top: 20vh;
+} */
+.section6 .sec6_title {
+    position: absolute;
+    left: 0; top: 0;
+    color: #3C6B56;
+    font-family: "Partizeno";
+    font-weight: normal;
+    font-size: 10vh;
+    height: 20vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+}
+.sec6_title h2 {
+    font-weight: 100;
+}
+.site02 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.site02 .left {
+    width: 80%;
+    height: 100%;
+}
+.site02 .left.bg1 {
+    background: url(../img/react.jpg) no-repeat;
+    background-size: cover;
+}
+.site02 .left.bg2 {
+    background: url(../img/php.jpg) no-repeat;
+    background-size: cover;
+}
+.site02 .left.bg3 {
+    background: url(../img/vue.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+/* .site02 .left.bg4 {
+    background: url(../img/flex.jpg) no-repeat;
+    background-size: cover;
+} */
+.site02 .right {
+    width: 20%;
+    height: 100%;
+    white-space: normal;
+    padding: 0 2% 2% 2%;
+}
+.site02 .right h3 {
+    color: #3C6B56;
+    font-family: "Partizeno";
+    font-size: 2vw;
+    line-height: 1;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.site02 .right p {
+    color: #3C6B56;
+    font-family: 'IropkeBatang';
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 100;
+
+}
+.site02 .right ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.site02 .right li {
+    color: #3C6B56;
+    font-family: 'IropkeBatang';
+    font-size: 16px;
+    line-height: 1.6;
+    list-style-type: disc;
+    font-weight: 100;
+
+}
+.site02 .right .btn {
+    margin-top: 20px;
+}
+.site02 .right .btn a {
+    background: #3C6B56;
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+
