@@ -86,7 +86,7 @@ body {
 .sec1_text p {
     position: absolute;
     left: 0;
-    bottom: -5vh;
+    bottom: -8vh;
     font-size: 1.3vw;
     font-family: 'GmarketSans';
     font-weight: 300;
@@ -149,6 +149,10 @@ body {
 }
 .sec1_about .imgWrap > div:nth-child(3){
     background: url(../img/img001.jpg) no-repeat center top -200px;
+    background-size:cover;
+}
+.sec1_about .imgWrap > div:nth-child(4){
+    background: url(../img/img002.jpg) no-repeat center top -200px;
     background-size:cover;
 }
 /* section2 */
