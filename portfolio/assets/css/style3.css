@@ -558,17 +558,14 @@ canvas {
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
-
   flex-direction: row-reverse;
 }
-.card__text04 .web__img04 img {
+.web__img04 img {
   flex: 0 0 65%;
   z-index: -1;
 }
 .card__text04 .text {
-  /* margin-top: -1rem; */
   margin-top: -0.9vw;
-  margin-left: 2vw;
 }
 .card__text04 .right {
   flex: 2 2 20%;
@@ -577,20 +574,22 @@ canvas {
   font-size: 4.9vw;
   font-weight: 100;
   font-family: "Partizeno";
-  /* text-align: center; */
+  text-align: center;
   color: #3c6b56;
 }
 .card__text04 .right .sub {
   font-family: "ChosunNm";
-  /* font-size: 1.2rem; */
   font-size: 1.2rem;
   margin-top: 0.9vw;
+  margin-left: 2vw;
   line-height: 1.6;
   width: 75%;
   color: #3c6b56;
 }
 .card__text04 .web__img04 {
   position: relative;
+  width: 150vh;
+  height: 80vh;
 }
 .card__text04 .view {
   color: #fff;
