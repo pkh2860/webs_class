@@ -618,7 +618,7 @@ body {
     /* width: 1200px;
     height: 700px; */
     width: 60vw;
-    height: 36vw;
+    height: 40vw;
     display: inline-block;
 }
 .sec7_1 p {
@@ -628,14 +628,13 @@ body {
     line-height: 1.6;
     font-weight: 100;
 }
-
 .sec7_2 {
     display: flex;
     text-align: center;
-    /* justify-content: center; */
     flex-direction: column;
     align-content: center;
     align-items: center;
+    margin-top: 15vh;
 }
 
 .sec7_2 h3 {
@@ -653,7 +652,7 @@ body {
     /* width: 1200px;
     height: 700px; */
     width: 60vw;
-    height: 36vw;
+    height: 40vw;
     display: inline-block;
 }
 .sec7_2 p {
