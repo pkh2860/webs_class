@@ -1,0 +1,151 @@
+.horizontal-scroll {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    left: 0;
+}
+.section5, .section7 {
+    width: 100%;
+    height: 100vh;
+    background: #111;
+    color: #fff;
+}
+.section6 .pin-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.section6 .pin-wrap > div {
+    min-width: 60vw;
+}
+
+
+body {
+    background: #EBEBEB;
+    font-weight: 100;
+}
+
+/*  */
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10000;
+}
+#nav {
+    text-align: center;
+    margin: 5px;
+}
+#nav ul {
+    display: flex;
+    align-items: center;            
+    justify-content: center;
+}
+#nav ul li a {
+    display: inline-block;
+    padding: 20px 30px;
+    color: #3C6B56;
+    font-family: 'Jura';
+    font-size: 22px;
+}
+
+/* container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+/* sec1_1  */
+.section1 {
+    
+    position: relative;
+}
+
+.sec1_text {
+    height: 100vh;
+    position: relative;
+}
+.sec1_text_wrap {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+
+}
+.sec1_text h1 {
+    white-space: nowrap;
+
+}
+.sec1_text em {
+    font-size: 17vw;
+    color: #3c6b56;
+    font-family: "Partizeno";
+}
+.sec1_text em span {
+    display: inline-block;
+}
+.sec1_text p {
+    position: absolute;
+    left: 0;
+    bottom: -5vh;
+    font-size: 1.3vw;
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    color: #3c6b56;
+}
+.sec1_text p span {
+    display: block;
+}
+.sec1_text strong {
+    font-size: 3vw;
+    color: #B99E56;
+    font-family: "Saint Monica";
+}
+
+.sec1_about {
+    padding: 200px 0;
+    width: 100%;
+    overflow: hidden;
+}
+.sec1_about h2 {
+    font-size: 14vw;
+    color: #3c6b56;
+    font-family: "Partizeno";
+    line-height: 1.2;
+}
+.sec1_about p {
+    color: #3C6B56;
+    font-family: 'IropkeBatang';
+    font-size: 20px;
+    line-height: 1.6;
+}
+.sec1_about .imgWrap {
+    margin: 100px 0 100px -300px;
+    height: 400px;
+    overflow: hidden;
+    width: 3000px;
+}
+.sec1_about .imgWrap > div {
+    float: left;
+    width: 700px;
+    height: 100%;
+    margin-right: 1%;
+
+    background: url(../img/img002.jpg) no-repeat center top -200px;
+    background-size:cover;
+}
+.sec1_about .imgWrap > div:nth-child(2){
+    background: url(../img/img001.JPG) no-repeat center top -200px;
+    background-size:cover;
+  
+}
+.sec1_about .imgWrap > div:nth-child(3){
+   
+    background: url(../img/img004.jpg) no-repeat center top -300px;
+    background-size: cover;
+}
