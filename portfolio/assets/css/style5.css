@@ -153,8 +153,10 @@ body {
 }
 /* sec1_1  */
 .section1 {
+    
     position: relative;
 }
+
 .sec1_text {
     height: 100vh;
     position: relative;
@@ -164,15 +166,16 @@ body {
     left: 50%; top: 50%;
     transform: translate(-50%, -50%);
     z-index: 20;
+
 }
 .sec1_text h1 {
     white-space: nowrap;
+
 }
 .sec1_text em {
     font-size: 17vw;
-    color: #3C6B56;
+    color: #3c6b56;
     font-family: "Partizeno";
-    font-weight: 100;
 }
 .sec1_text em span {
     display: inline-block;
@@ -180,11 +183,11 @@ body {
 .sec1_text p {
     position: absolute;
     left: 0;
-    bottom: -8vh;
+    bottom: -5vh;
     font-size: 1.3vw;
     font-family: 'GmarketSans';
     font-weight: 300;
-    color: #3C6B56;
+    color: #3c6b56;
 }
 .sec1_text p span {
     display: block;
@@ -193,7 +196,6 @@ body {
     font-size: 3vw;
     color: #B99E56;
     font-family: "Saint Monica";
-    font-weight: 100;
 }
 #canvas_bg {
     position: absolute;
@@ -234,20 +236,19 @@ body {
     width: 700px;
     height: 100%;
     margin-right: 1%;
-    background: url(../img/img004.jpg) no-repeat center top -300px;
-    background-size: cover;
-}
-.sec1_about .imgWrap > div:nth-child(2){
-    background: url(../img/me02.jpg) no-repeat center top -50px;
-    background-size: cover;
-}
-.sec1_about .imgWrap > div:nth-child(3){
-    background: url(../img/img001.JPG) no-repeat center top -200px;
-    background-size:cover;
-}
-.sec1_about .imgWrap > div:nth-child(4){
+
     background: url(../img/img002.jpg) no-repeat center top -200px;
     background-size:cover;
+}
+.sec1_about .imgWrap > div:nth-child(2){
+    background: url(../img/img001.JPG) no-repeat center top -200px;
+    background-size:cover;
+  
+}
+.sec1_about .imgWrap > div:nth-child(3){
+   
+    background: url(../img/img004.jpg) no-repeat center top -300px;
+    background-size: cover;
 }
 /* section2 */
 .section2 {
