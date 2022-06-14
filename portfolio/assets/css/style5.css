@@ -236,7 +236,6 @@ body {
     width: 700px;
     height: 100%;
     margin-right: 1%;
-
     background: url(../img/img002.jpg) no-repeat center top -200px;
     background-size:cover;
 }
@@ -577,7 +576,7 @@ body {
     margin-top: 50vh;
 }
 
-.reference .view {
+/* .reference .view {
     background: #3C6B56;
     color: #fff;
     margin-top: 20px;
@@ -590,7 +589,6 @@ body {
 .sec7_1 {
     display: flex;
     text-align: center;
-    /* justify-content: center; */
     flex-direction: column;
     align-content: center;
     align-items: center;
@@ -616,8 +614,6 @@ body {
 .reference .bg1 {
     background: url(../img/flexrefe.png) no-repeat;
     background-size:cover;
-    /* width: 1200px;
-    height: 700px; */
     width: 60vw;
     height: 40vw;
     display: inline-block;
@@ -650,8 +646,6 @@ body {
 .reference .bg2 {
     background: url(../img/gridrefe.png) no-repeat;
     background-size:cover;
-    /* width: 1200px;
-    height: 700px; */
     width: 60vw;
     height: 40vw;
     display: inline-block;
@@ -662,13 +656,18 @@ body {
     font-size: 16px;
     line-height: 1.6;
     font-weight: 100;
-}
+} */
 
 
 
 /* footer */
 .section8 {
     height: 70vh;
+}
+#footer {
+    display: flex;
+    position: relative;
+    flex-direction: row-reverse
 }
 #footer h3,
 #footer .email {
@@ -703,6 +702,15 @@ body {
 #footer .blog li {
   margin-left: 6vh;
 }
-
+#footer .meimg {
+    margin-top: 10em;
+    z-index: -1;
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    /* margin-right: 1%; */
+    background: url(../img/me.jpg) no-repeat center;
+    background-size:cover;
+}
 
 
