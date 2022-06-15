@@ -665,7 +665,7 @@ body {
     height: 70vh;
 }
 #footer {
-    display: flex;
+    /* display: flex; */
     position: relative;
     flex-direction: row-reverse
 }
